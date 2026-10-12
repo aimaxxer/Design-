@@ -71,9 +71,9 @@ function StatCard({ stat, shape }: { stat: Stat; shape: (typeof CARD_SHAPES)[num
 const EARNING_TONES = ['bg-navy-3/45', 'bg-teal', 'bg-sky']
 const EARNING_SHARES = [18000, 7200, 6300]
 
-/** Same 16:9 chamfered frame as the photos, so data cells and photo cells line up in the bento. */
+/** Same 20:9 chamfered frame as the photos, so data cells and photo cells line up in the bento. */
 function Frame({ children }: { children: ReactNode }) {
-  return <div className="chamfer-16 flex aspect-[16/9] flex-col justify-center bg-frost px-5 py-6 sm:px-8">{children}</div>
+  return <div className="chamfer-16 flex aspect-[20/9] flex-col justify-center bg-frost px-5 py-4 sm:px-8 sm:py-6">{children}</div>
 }
 
 function EarningsVisual() {
@@ -82,8 +82,8 @@ function EarningsVisual() {
     <figure>
       <Frame>
       <p className="text-[11px] uppercase tracking-[0.14em] text-navy-3">{partnerKit.earningsTotalLabel}</p>
-      <p className="font-firs tabular mt-2 text-[40px] leading-none text-navy sm:text-[52px]">{partnerKit.earningsTotal}</p>
-      <div className="mt-6 flex h-3 w-full gap-1">
+      <p className="font-firs tabular mt-1.5 text-[34px] leading-none text-navy sm:mt-2 sm:text-[52px]">{partnerKit.earningsTotal}</p>
+      <div className="mt-4 flex h-2.5 w-full gap-1 sm:mt-6 sm:h-3">
         {EARNING_SHARES.map((v, i) => (
           <span
             key={i}
@@ -93,7 +93,7 @@ function EarningsVisual() {
           />
         ))}
       </div>
-      <dl className="mt-4 grid grid-cols-3 gap-3">
+      <dl className="mt-3 grid grid-cols-3 gap-3 sm:mt-4">
         {partnerKit.earnings.map((e, i) => (
           <div key={e.label}>
             <dt className="flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-navy-3">
@@ -113,7 +113,7 @@ function EarningsVisual() {
 function PhotoVisual({ src, alt, caption, children }: { src: string; alt: string; caption: string; children?: ReactNode }) {
   return (
     <figure>
-      <div className="chamfer-16 relative aspect-[16/9] overflow-hidden bg-frost">
+      <div className="chamfer-16 relative aspect-[20/9] overflow-hidden bg-frost">
         <img
           src={asset(src)}
           alt={alt}
@@ -132,19 +132,19 @@ function FunnelVisual() {
   return (
     <figure>
       <Frame>
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3">
         {partnerKit.funnel.map((f, i) => (
           <div key={f.label} className="flex items-center gap-4">
             <span className="w-[76px] shrink-0 text-[11px] uppercase tracking-[0.14em] text-navy-3">{f.label}</span>
             <span
               data-kit-bar
-              className={cn('chamfer-6 h-9 origin-left', i === 2 ? 'bg-teal' : 'bg-teal/25')}
+              className={cn('chamfer-6 h-7 origin-left sm:h-9', i === 2 ? 'bg-teal' : 'bg-teal/25')}
               style={{ width: `calc(${f.width * 100}% - 92px)` }}
             />
           </div>
         ))}
       </div>
-      <p className="font-firs mt-5 text-[26px] leading-none text-navy sm:text-[32px]">{partnerKit.funnelResult} <span className="text-[15px] text-navy-2">{partnerKit.funnelResultLabel}</span></p>
+      <p className="font-firs mt-4 text-[24px] leading-none text-navy sm:mt-5 sm:text-[32px]">{partnerKit.funnelResult} <span className="text-[15px] text-navy-2">{partnerKit.funnelResultLabel}</span></p>
       </Frame>
       <figcaption className="mt-4 text-[12px] text-navy-3">{partnerKit.funnelCaption}</figcaption>
     </figure>
