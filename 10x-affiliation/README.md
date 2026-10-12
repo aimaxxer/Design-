@@ -57,8 +57,10 @@ can route to the right partner manager.
   template prompt, re-encoded for the web. Swap in 10X-owned Higgsfield loops when credits allow:
   same file names, start frame = end frame, and refresh the posters in `public/videos/posters/`.
 - The three `glass-*.webp` stills were restored from heavily compressed 1024px copies with
-  Real-ESRGAN x4plus, then set back to the flat studio grey (#EFF2F1) and saved at 1600px, WebP
-  quality 88. Don't re-compress them harder: the soft, blocky look comes straight back.
+  Real-ESRGAN x4plus, then set back to the flat studio grey (#EFF2F1) and saved at 2048px, WebP
+  quality 92. glass-1 and glass-2 are also graded to match glass-3 (cyan-teal glass, orange copper,
+  purple sheen pulled into teal, deeper shadows). Don't re-compress them harder: the soft, blocky
+  look comes straight back.
 - The three videos and their posters were rebuilt to match the glass-3 swirl: each frame upscaled
   with Real-ESRGAN (realesr-animevideov3, x2 from a half-size copy), set back to the original
   background level, then graded (blues pulled to a 190deg cyan-teal with +55% saturation, copper
