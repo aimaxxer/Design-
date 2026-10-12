@@ -320,6 +320,7 @@ export const trader = {
   titleLine2: 'Stop watching them blow up.',
   body: 'Put 10x buying power behind every deposit. Your clients trade bigger from day one, and you earn 2-3x more on the same audience. As they perform, 10X scales them further, so your best referrals keep growing, and so do your earnings.',
   image: '/images/coins-trader.webp',
+  imageAlt: 'Three 10X coins turning slowly in the air',
   stats: [
     { value: '10X', label: 'Buying power' },
     { value: '2-3x', label: 'More rebates for you' },

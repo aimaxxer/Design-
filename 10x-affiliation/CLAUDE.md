@@ -50,6 +50,8 @@ src/
     sections/              Hero, Problems, Results, Calculator, Trader, Apply, Qualifier
     ui/                    ChamferButton, ChamferFrame, Field inputs, Accordion, LoopVideo, Ph, Logo
     bits/                  React Bits components
+  coin/                    Live 3D 10X coins (three.js) for the 10X Trader panel. coin3d/logo/stage/motion
+                           are copied unchanged from the 10x-trader project; trio.ts is the panel's scene
 public/videos, public/images   Self-hosted media (see README "Media")
 ```
 
@@ -66,6 +68,8 @@ public/videos, public/images   Self-hosted media (see README "Media")
   Keep that pattern so reduced-motion users get the static page.
 - TT Firs Neue ships one weight from the CDN. `.font-firs` disables synthetic bold; `font-semibold`
   on Firs headings is intentional (the template asks for it) and has no visual effect.
+- The coins (`src/coin/`) must stay identical to the 10x-trader project's coin: change placement and
+  motion in `trio.ts` only. three.js is lazy-loaded by `CoinTrio`; keep it out of the main bundle.
 - `Ph` renders placeholder values from `content.ts` with an amber dashed outline on the dev server
   only. Production shows the plain text, so fill placeholders before launch.
 

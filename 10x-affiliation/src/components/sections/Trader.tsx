@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { useRef, type ReactNode } from 'react'
 import { ChamferButton } from '@/components/ui/ChamferButton'
+import { CoinTrio } from '@/components/ui/CoinTrio'
 import { Ph } from '@/components/ui/Ph'
 import { cta, trader } from '@/content'
 import { asset } from '@/lib/asset'
@@ -56,7 +57,7 @@ export function Trader() {
           ease: 'expo.out',
           scrollTrigger: { trigger: '[data-trader-glass]', start: 'top 85%', once: true },
         })
-        gsap.to('[data-trader-glass] img', {
+        gsap.to('[data-trader-media]', {
           yPercent: -6,
           ease: 'none',
           scrollTrigger: { trigger: '[data-trader-glass]', start: 'top bottom', end: 'bottom top', scrub: true },
@@ -117,7 +118,9 @@ export function Trader() {
           <div data-trader-glass className="mx-auto w-full max-w-[460px] lg:col-span-5">
             <div className="aspect-square w-full" style={{ clipPath: GLASS_CLIP, backgroundColor: 'rgba(255,255,255,0.8)', padding: '1.5px' }}>
               <div className="h-full w-full overflow-hidden bg-[#eef1f1]" style={{ clipPath: GLASS_CLIP }}>
-                <img src={asset(trader.image)} alt="" loading="lazy" decoding="async" className="h-[112%] w-full object-cover" />
+                <div data-trader-media className="h-[112%] w-full">
+                  <CoinTrio poster={asset(trader.image)} label={trader.imageAlt} className="h-full w-full" />
+                </div>
               </div>
             </div>
           </div>

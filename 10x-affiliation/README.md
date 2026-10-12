@@ -60,10 +60,14 @@ can route to the right partner manager.
   sculpture from `glass.mp4` (frames 121 and 91), upscaled with Real-ESRGAN x4plus, set on glass-3's
   grey, graded like the videos and framed like glass-3: top-right, cropped by the top edge, ending
   above each card's caption. 2048px, WebP quality 92.
-- `coins-trader.webp` (the 10X Trader panel) is a still of three 10X coins rendered with the coin
-  model from the 10x-trader project (`src/coin/coin3d.ts`) exactly as that project builds it: blue
-  preset, brand blue #4bbdf0, engraved mark, its own studio environment and renderer settings. Only
-  the placement is new. Rendered at 3200px over #EEF1F1 and saved at 2048px, WebP quality 92.
+- The 10X Trader panel's coins are live three.js (`src/coin/`): `coin3d.ts`, `logo.ts`, `stage.ts`
+  and `motion.ts` are copied unchanged from the 10x-trader project, so the coin is exactly that
+  site's coin; `trio.ts` only places the three coins and gives each its own slow turn (19-23s) and
+  float, and they can be dragged to spin. three.js loads in its own chunk when the panel nears the
+  viewport (`components/ui/CoinTrio.tsx`). `coins-trader.webp` is a still of the same scene and
+  first pose: it shows until the canvas is ready, then cross-fades out, and it stays if WebGL is
+  unavailable. Under prefers-reduced-motion the coins hold still. If you move the coins in
+  `trio.ts`, re-render the poster to match.
 - The `glass-*.webp` stills were restored from heavily compressed 1024px copies with
   Real-ESRGAN x4plus, then set back to the flat studio grey (#EFF2F1) and saved at 2048px, WebP
   quality 92. glass-1 and glass-2 are also graded to match glass-3 (cyan-teal glass, orange copper,
