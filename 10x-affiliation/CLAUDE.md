@@ -78,7 +78,8 @@ public/videos, public/images   Self-hosted media (see README "Media")
 - Copy: no em dashes or en dashes anywhere visible; use periods, commas or colons. Ranges use a
   hyphen ("2-3x", "500-2,000 lots").
 - One label per intent: the primary CTA is always `cta.primary` ("Book my strategy call"), and
-  `cta.short` on small buttons.
+  `cta.short` on small buttons. The one exception is the 10X Trader section's button, `trader.cta`
+  ("Get access to 10X Trader"), which still goes to the application.
 - Shapes: chamfered corners (`chamfer-6/8/10/16/24`), never rounded cards. Borders are a 1px
   clipped layer behind a clipped face (`bg-line p-px` > `bg-white`), because clip-path cuts off
   real CSS borders.

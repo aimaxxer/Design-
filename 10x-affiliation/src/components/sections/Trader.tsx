@@ -4,7 +4,7 @@ import { useRef, type ReactNode } from 'react'
 import { ChamferButton } from '@/components/ui/ChamferButton'
 import { CoinTrio } from '@/components/ui/CoinTrio'
 import { Ph } from '@/components/ui/Ph'
-import { cta, trader } from '@/content'
+import { trader } from '@/content'
 import { asset } from '@/lib/asset'
 import { cn } from '@/lib/cn'
 
@@ -109,7 +109,7 @@ export function Trader() {
 
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
               <ChamferButton href="#apply" data-move-focus size="md">
-                {cta.primary}
+                {trader.cta}
               </ChamferButton>
               <span className="text-[13px] text-navy-3">{trader.access}</span>
             </div>

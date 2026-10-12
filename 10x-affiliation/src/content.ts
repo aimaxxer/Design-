@@ -326,6 +326,7 @@ export const trader = {
     { value: '2-3x', label: 'More rebates for you' },
     { value: 'Scales', label: 'As your traders perform' },
   ],
+  cta: 'Get access to 10X Trader',
   access: 'For selected partners only',
   howTitle: 'How 10X Trader works',
   howSub: 'One example client',
