@@ -2,7 +2,9 @@
   "enabledPlugins": {
     "hyperframes@hyperframes": true,
     "humanizer@humanizer": true,
-    "expo@expo-plugins": true
+    "expo@expo-plugins": true,
+    "supabase@supabase-agent-skills": true,
+    "postgres-best-practices@supabase-agent-skills": true
   },
   "extraKnownMarketplaces": {
     "hyperframes": {
@@ -21,6 +23,12 @@
       "source": {
         "source": "github",
         "repo": "expo/skills"
+      }
+    },
+    "supabase-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "supabase/agent-skills"
       }
     }
   }
