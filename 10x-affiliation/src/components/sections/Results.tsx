@@ -43,11 +43,17 @@ function StatValue({ stat }: { stat: Stat }) {
 function StatCard({ stat, shape }: { stat: Stat; shape: (typeof CARD_SHAPES)[number] }) {
   return (
     <figure data-stat-card className={cn('relative w-full', shape.offset)}>
-      <div className="h-[280px] w-full sm:h-[340px]" style={{ clipPath: shape.clip, backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '1.5px' }}>
+      <div className="relative h-[280px] w-full sm:h-[340px]" style={{ clipPath: shape.clip, backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '1.5px' }}>
         <div
           data-stat-img
-          className="h-full w-full overflow-hidden bg-cover bg-center"
+          className="h-full w-full overflow-hidden bg-cover bg-top"
           style={{ clipPath: shape.clip, backgroundImage: `url(${asset(stat.image)})`, mixBlendMode: 'plus-darker' }}
+        />
+        {/* The render's own studio grey fades up behind the caption, so the glass never runs into the text. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-[1.5px] bg-gradient-to-t from-[#eff2f1] from-30% via-[#eff2f1]/75 via-50% to-transparent to-75%"
+          style={{ clipPath: shape.clip }}
         />
       </div>
       <figcaption className={cn('absolute', shape.text)}>
