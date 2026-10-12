@@ -278,7 +278,7 @@ export function Results() {
           <h2 id="results-title" className="font-firs text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px] lg:text-[54px]">
             {results.titleLine1}
             <br />
-            {results.titleLine2}
+            <span className="text-navy-3">{results.titleLine2}</span>
           </h2>
           <div className="max-w-xl">
             {results.paragraphs.map((p, i) => (
