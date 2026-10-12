@@ -46,7 +46,7 @@ function StatCard({ stat, shape }: { stat: Stat; shape: (typeof CARD_SHAPES)[num
       <div className="h-[280px] w-full sm:h-[340px]" style={{ clipPath: shape.clip, backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '1.5px' }}>
         <div
           data-stat-img
-          className="h-full w-full overflow-hidden bg-cover bg-center"
+          className="media-warm h-full w-full overflow-hidden bg-cover bg-center"
           style={{ clipPath: shape.clip, backgroundImage: `url(${asset(stat.image)})`, mixBlendMode: 'plus-darker' }}
         />
       </div>
@@ -54,7 +54,7 @@ function StatCard({ stat, shape }: { stat: Stat; shape: (typeof CARD_SHAPES)[num
         <p className="font-firs text-gradient inline-block text-[36px] font-semibold uppercase leading-none sm:text-[52px]">
           <StatValue stat={stat} />
         </p>
-        <p className="mt-3 max-w-[66%] text-[14px] leading-[1.4] text-navy">{stat.text}</p>
+        <p className="mt-3 max-w-[66%] text-[14px] leading-[1.4] text-ink">{stat.text}</p>
       </figcaption>
     </figure>
   )
@@ -62,7 +62,7 @@ function StatCard({ stat, shape }: { stat: Stat; shape: (typeof CARD_SHAPES)[num
 
 /* ---------------------------------- Partner kit visuals ---------------------------------- */
 
-const EARNING_TONES = ['bg-navy-3/45', 'bg-teal', 'bg-sky']
+const EARNING_TONES = ['bg-ink-3/45', 'bg-accent', 'bg-champagne']
 const EARNING_SHARES = [18000, 7200, 6300]
 
 /** Same 16:9 chamfered frame as the photos, so data cells and photo cells line up in the bento. */
@@ -75,8 +75,8 @@ function EarningsVisual() {
   return (
     <figure>
       <Frame>
-      <p className="text-[11px] uppercase tracking-[0.14em] text-navy-3">{partnerKit.earningsTotalLabel}</p>
-      <p className="font-firs tabular mt-2 text-[40px] leading-none text-navy sm:text-[52px]">{partnerKit.earningsTotal}</p>
+      <p className="text-[11px] uppercase tracking-[0.14em] text-ink-3">{partnerKit.earningsTotalLabel}</p>
+      <p className="font-firs tabular mt-2 text-[40px] leading-none text-ink sm:text-[52px]">{partnerKit.earningsTotal}</p>
       <div className="mt-6 flex h-3 w-full gap-1">
         {EARNING_SHARES.map((v, i) => (
           <span
@@ -90,16 +90,16 @@ function EarningsVisual() {
       <dl className="mt-4 grid grid-cols-3 gap-3">
         {partnerKit.earnings.map((e, i) => (
           <div key={e.label}>
-            <dt className="flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-navy-3">
+            <dt className="flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-ink-3">
               <span aria-hidden className={cn('size-2 shrink-0', EARNING_TONES[i])} />
               {e.label}
             </dt>
-            <dd className="font-firs tabular mt-1.5 text-[18px] leading-none text-navy sm:text-[22px]">{e.amount}</dd>
+            <dd className="font-firs tabular mt-1.5 text-[18px] leading-none text-ink sm:text-[22px]">{e.amount}</dd>
           </div>
         ))}
       </dl>
       </Frame>
-      <figcaption className="mt-4 text-[12px] text-navy-3">{partnerKit.earningsCaption}</figcaption>
+      <figcaption className="mt-4 text-[12px] text-ink-3">{partnerKit.earningsCaption}</figcaption>
     </figure>
   )
 }
@@ -117,7 +117,7 @@ function PhotoVisual({ src, alt, caption, children }: { src: string; alt: string
         />
       </div>
       {children}
-      <figcaption className="mt-3 text-[12px] text-navy-3">{caption}</figcaption>
+      <figcaption className="mt-3 text-[12px] text-ink-3">{caption}</figcaption>
     </figure>
   )
 }
@@ -129,18 +129,18 @@ function FunnelVisual() {
       <div className="space-y-3">
         {partnerKit.funnel.map((f, i) => (
           <div key={f.label} className="flex items-center gap-4">
-            <span className="w-[76px] shrink-0 text-[11px] uppercase tracking-[0.14em] text-navy-3">{f.label}</span>
+            <span className="w-[76px] shrink-0 text-[11px] uppercase tracking-[0.14em] text-ink-3">{f.label}</span>
             <span
               data-kit-bar
-              className={cn('chamfer-6 h-9 origin-left', i === 2 ? 'bg-teal' : 'bg-teal/25')}
+              className={cn('chamfer-6 h-9 origin-left', i === 2 ? 'bg-accent' : 'bg-accent/25')}
               style={{ width: `calc(${f.width * 100}% - 92px)` }}
             />
           </div>
         ))}
       </div>
-      <p className="font-firs mt-5 text-[26px] leading-none text-navy sm:text-[32px]">{partnerKit.funnelResult} <span className="text-[15px] text-navy-2">{partnerKit.funnelResultLabel}</span></p>
+      <p className="font-firs mt-5 text-[26px] leading-none text-ink sm:text-[32px]">{partnerKit.funnelResult} <span className="text-[15px] text-ink-2">{partnerKit.funnelResultLabel}</span></p>
       </Frame>
-      <figcaption className="mt-4 text-[12px] text-navy-3">{partnerKit.funnelCaption}</figcaption>
+      <figcaption className="mt-4 text-[12px] text-ink-3">{partnerKit.funnelCaption}</figcaption>
     </figure>
   )
 }
@@ -154,8 +154,8 @@ function KitVisual({ id }: { id: KitBlock['id'] }) {
       <dl className="mt-4 flex gap-8">
         {partnerKit.traderStats.map((s) => (
           <div key={s.label}>
-            <dt className="text-[11px] uppercase tracking-[0.14em] text-navy-3">{s.label}</dt>
-            <dd className="font-firs tabular mt-1.5 text-[22px] leading-none text-navy">{s.value}</dd>
+            <dt className="text-[11px] uppercase tracking-[0.14em] text-ink-3">{s.label}</dt>
+            <dd className="font-firs tabular mt-1.5 text-[22px] leading-none text-ink">{s.value}</dd>
           </div>
         ))}
       </dl>
@@ -172,13 +172,13 @@ function KitCell({ block, index }: { block: KitBlock; index: number }) {
       <div className="chamfer-24 flex h-full flex-col gap-8 bg-white p-6 sm:p-8">
         <KitVisual id={block.id} />
         <div className="mt-auto">
-          <h4 className="font-firs text-[24px] leading-tight text-navy sm:text-[28px]">{block.title}</h4>
-          <p className="mt-1.5 text-[15px] text-navy-2">{block.text}</p>
+          <h4 className="font-firs text-[24px] leading-tight text-ink sm:text-[28px]">{block.title}</h4>
+          <p className="mt-1.5 text-[15px] text-ink-2">{block.text}</p>
           <ul className="mt-5 grid gap-x-6 gap-y-3 sm:grid-cols-3">
             {block.items.map(([t, d]) => (
               <li key={t} className="border-t border-line pt-3">
-                <p className="text-[14px] font-semibold text-navy">{t}</p>
-                <p className="mt-1 text-[13px] leading-snug text-navy-2">{d}</p>
+                <p className="text-[14px] font-semibold text-ink">{t}</p>
+                <p className="mt-1 text-[13px] leading-snug text-ink-2">{d}</p>
               </li>
             ))}
           </ul>
@@ -203,10 +203,10 @@ function ProofCard({ item }: { item: (typeof proof.videos)[number] }) {
         )}
       </div>
       <figcaption className="mt-4">
-        <p className="text-[14px] font-semibold text-navy">
-          <Ph value={item.name} /> <span className="font-normal text-navy-3">/</span> <Ph value={item.meta} />
+        <p className="text-[14px] font-semibold text-ink">
+          <Ph value={item.name} /> <span className="font-normal text-ink-3">/</span> <Ph value={item.meta} />
         </p>
-        <p className="mt-1 text-[14px] leading-snug text-navy-2">
+        <p className="mt-1 text-[14px] leading-snug text-ink-2">
           <Ph value={item.quote} />
         </p>
       </figcaption>
@@ -268,7 +268,7 @@ export function Results() {
     <section id="results" ref={root} aria-labelledby="results-title" className="relative overflow-hidden bg-frost px-6 py-20 sm:px-10 sm:py-28">
       <div className="relative z-20 mx-auto max-w-7xl">
         {/* Template's founders row: heading left, copy right. */}
-        <div data-results-copy className="flex flex-col gap-8 text-navy lg:flex-row lg:items-start lg:justify-between">
+        <div data-results-copy className="flex flex-col gap-8 text-ink lg:flex-row lg:items-start lg:justify-between">
           <h2 id="results-title" className="font-firs text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px] lg:text-[54px]">
             {results.titleLine1}
             <br />
@@ -285,7 +285,7 @@ export function Results() {
               className="group mt-6 inline-flex items-center gap-3 text-[14px] font-medium transition-transform duration-200 ease-[var(--ease-out-strong)] hover:-translate-y-0.5"
             >
               {results.link.label}
-              <span aria-hidden className="chamfer-8 grid size-8 place-items-center bg-navy p-px">
+              <span aria-hidden className="chamfer-8 grid size-8 place-items-center bg-ink p-px">
                 <span className="chamfer-8 grid h-full w-full place-items-center bg-frost transition-colors duration-200 group-hover:bg-white">
                   <ArrowUpRight strokeWidth={1.75} className="size-3.5" />
                 </span>
@@ -302,23 +302,23 @@ export function Results() {
 
         {/* What you get as a partner */}
         <div className="mt-24 sm:mt-32">
-          <div data-kit-head className="max-w-2xl text-navy">
+          <div data-kit-head className="max-w-2xl text-ink">
             <h3 className="font-firs text-[30px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[40px]">{partnerKit.title}</h3>
-            <p className="mt-4 text-[17px] leading-[1.5] text-navy-2">{partnerKit.intro}</p>
+            <p className="mt-4 text-[17px] leading-[1.5] text-ink-2">{partnerKit.intro}</p>
           </div>
           <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
             {partnerKit.blocks.map((b, i) => (
               <KitCell key={b.id} block={b} index={i} />
             ))}
           </div>
-          <p className="mt-6 text-[13px] text-navy-3">{partnerKit.footnote}</p>
+          <p className="mt-6 text-[13px] text-ink-3">{partnerKit.footnote}</p>
         </div>
 
         {/* Proof */}
         <div className="mt-24 sm:mt-32">
-          <div data-proof-head className="text-navy">
+          <div data-proof-head className="text-ink">
             <h3 className="font-firs text-[30px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[40px]">{proof.title}</h3>
-            <p className="mt-4 text-[17px] leading-[1.5] text-navy-2">{proof.sub}</p>
+            <p className="mt-4 text-[17px] leading-[1.5] text-ink-2">{proof.sub}</p>
           </div>
           <div data-proof-grid className="mt-10 grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-3">
             {proof.videos.map((v, i) => (
@@ -328,10 +328,10 @@ export function Results() {
           <dl className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {proof.results.map((r, i) => (
               <div key={i} data-proof-result className="border-t border-line-strong pt-5">
-                <dt className="font-firs text-[26px] leading-tight text-navy sm:text-[32px]">
+                <dt className="font-firs text-[26px] leading-tight text-ink sm:text-[32px]">
                   <Ph value={r.value} />
                 </dt>
-                <dd className="mt-2 text-[14px] text-navy-2">
+                <dd className="mt-2 text-[14px] text-ink-2">
                   <Ph value={r.label} />
                 </dd>
               </div>
@@ -343,7 +343,7 @@ export function Results() {
       <div
         aria-hidden
         className="pointer-events-none absolute bottom-0 left-0 z-10 h-40 w-full sm:h-56"
-        style={{ background: 'linear-gradient(to bottom, rgba(240, 240, 240, 0) 0%, rgba(240, 240, 240, 0.7) 60%, #F0F0F0 100%)' }}
+        style={{ background: 'linear-gradient(to bottom, rgba(242, 238, 233, 0) 0%, rgba(242, 238, 233, 0.7) 60%, #F2EEE9 100%)' }}
       />
     </section>
   )

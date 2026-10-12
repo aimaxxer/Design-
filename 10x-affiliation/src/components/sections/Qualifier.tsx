@@ -88,25 +88,25 @@ function OptionList({
             />
             <span
               className={cn(
-                'chamfer-10 block p-px transition-colors duration-150 peer-focus-visible:bg-teal',
-                selected ? 'bg-teal' : 'bg-line-strong group-hover:bg-[#8fb0bd]',
+                'chamfer-10 block p-px transition-colors duration-150 peer-focus-visible:bg-accent',
+                selected ? 'bg-accent' : 'bg-line-strong group-hover:bg-line-hover',
               )}
             >
               <span
                 className={cn(
                   'chamfer-10 flex items-center gap-4 px-4 py-3.5 transition-[background-color,transform] duration-150 group-active:scale-[0.99] sm:px-5',
-                  selected ? 'bg-[#e3eef1]' : 'bg-white',
+                  selected ? 'bg-tint' : 'bg-white',
                 )}
               >
                 <span
                   aria-hidden
-                  className={cn('grid size-[18px] shrink-0 place-items-center border transition-colors', selected ? 'border-teal bg-teal' : 'border-navy-3/60')}
+                  className={cn('grid size-[18px] shrink-0 place-items-center border transition-colors', selected ? 'border-accent bg-accent' : 'border-ink-3/60')}
                 >
                   {selected && <Check strokeWidth={3} className="size-3 text-white" />}
                 </span>
                 <span className="flex min-w-0 flex-col">
-                  <span className={cn('font-medium text-navy', large ? 'font-firs text-[20px] leading-tight' : 'text-[15px]')}>{o.label}</span>
-                  {o.sub && <span className="text-[13px] text-navy-3">{o.sub}</span>}
+                  <span className={cn('font-medium text-ink', large ? 'font-firs text-[20px] leading-tight' : 'text-[15px]')}>{o.label}</span>
+                  {o.sub && <span className="text-[13px] text-ink-3">{o.sub}</span>}
                 </span>
               </span>
             </span>
@@ -248,7 +248,7 @@ export function Qualifier() {
           {view === 'form' && (
             <motion.form key="form" noValidate onSubmit={onSubmit} exit={exit} transition={transition} aria-labelledby={`${uid}-q`}>
               {/* Progress */}
-              <div className="flex items-center justify-between gap-4 text-[11px] font-medium uppercase tracking-[0.14em] text-navy-3">
+              <div className="flex items-center justify-between gap-4 text-[11px] font-medium uppercase tracking-[0.14em] text-ink-3">
                 <span className="tabular">
                   Step {String(step + 1).padStart(2, '0')} / {String(qualifier.steps.length).padStart(2, '0')}
                 </span>
@@ -257,7 +257,7 @@ export function Qualifier() {
               <ol className="mt-3 grid grid-cols-6 gap-1.5" aria-label="Qualifier progress">
                 {qualifier.steps.map((s, i) => (
                   <li key={s} aria-current={i === step ? 'step' : undefined}>
-                    <span aria-hidden className={cn('chamfer-6 block h-1.5 transition-colors duration-300', i < step ? 'bg-teal' : i === step ? 'bg-teal/60' : 'bg-line')} />
+                    <span aria-hidden className={cn('chamfer-6 block h-1.5 transition-colors duration-300', i < step ? 'bg-accent' : i === step ? 'bg-accent/60' : 'bg-line')} />
                     <span className="sr-only">
                       Step {i + 1}: {s}
                       {i < step ? ' (done)' : ''}
@@ -268,7 +268,7 @@ export function Qualifier() {
 
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div key={step} initial={enter} animate={{ opacity: 1, x: 0 }} exit={exit} transition={transition} className="mt-8">
-                  <h3 id={`${uid}-q`} ref={headingRef} tabIndex={-1} className="font-firs text-[24px] leading-tight text-navy outline-none sm:text-[28px]">
+                  <h3 id={`${uid}-q`} ref={headingRef} tabIndex={-1} className="font-firs text-[24px] leading-tight text-ink outline-none sm:text-[28px]">
                     <span className="sr-only">
                       Step {step + 1} of {qualifier.steps.length}:{' '}
                     </span>
@@ -366,9 +366,9 @@ export function Qualifier() {
                             aria-describedby={errors.region ? `${id('region')}-error` : `${id('region')}-hint`}
                           />
                         </Field>
-                        <p className="text-[12px] text-navy-3 sm:col-span-2">
+                        <p className="text-[12px] text-ink-3 sm:col-span-2">
                           {qualifier.contact.privacy}{' '}
-                          <a href={links.privacy} className="underline hover:text-navy">
+                          <a href={links.privacy} className="underline hover:text-ink">
                             Privacy policy
                           </a>
                           .
@@ -380,7 +380,7 @@ export function Qualifier() {
               </AnimatePresence>
 
               {status === 'error' && (
-                <div role="alert" className="mt-6 border-l-2 border-neg bg-neg/5 px-4 py-3 text-[13px] leading-relaxed text-navy">
+                <div role="alert" className="mt-6 border-l-2 border-neg bg-neg/5 px-4 py-3 text-[13px] leading-relaxed text-ink">
                   {qualifier.error}
                 </div>
               )}
@@ -390,18 +390,18 @@ export function Qualifier() {
                   <button
                     type="button"
                     onClick={() => go(step - 1)}
-                    className="inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.14em] text-navy-2 transition-colors hover:text-navy"
+                    className="inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.14em] text-ink-2 transition-colors hover:text-ink"
                   >
                     <ArrowLeft aria-hidden strokeWidth={1.75} className="size-3.5" />
                     Back
                   </button>
                 ) : (
-                  <span className="text-[12px] text-navy-3">Free, no obligation</span>
+                  <span className="text-[12px] text-ink-3">Free, no obligation</span>
                 )}
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="chamfer-10 group inline-flex items-center gap-2 whitespace-nowrap bg-teal px-6 py-4 text-[11px] font-medium uppercase tracking-[0.14em] text-white transition-[filter,transform] duration-200 ease-[var(--ease-out-strong)] hover:brightness-125 active:scale-[0.97] disabled:cursor-wait disabled:opacity-80 sm:text-[12px]"
+                  className="chamfer-10 group inline-flex items-center gap-2 whitespace-nowrap bg-cta-gloss px-6 py-4 text-[11px] font-medium uppercase tracking-[0.14em] text-white transition-[filter,transform] duration-200 ease-[var(--ease-out-strong)] hover:brightness-125 active:scale-[0.97] disabled:cursor-wait disabled:opacity-80 sm:text-[12px]"
                 >
                   {status === 'submitting' ? (
                     <>
@@ -435,21 +435,21 @@ export function Qualifier() {
 
           {view === 'result' && (
             <motion.div key="result" initial={enter} animate={{ opacity: 1, x: 0 }} exit={exit} transition={transition} className="flex min-h-[460px] flex-col">
-              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-teal">
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
                 Result: {partner ? qualifier.partnerTrack.label : qualifier.growthTrack.label}
               </p>
-              <h3 ref={headingRef} tabIndex={-1} className="font-firs mt-4 text-[28px] leading-[1.1] text-navy outline-none sm:text-[34px]">
+              <h3 ref={headingRef} tabIndex={-1} className="font-firs mt-4 text-[28px] leading-[1.1] text-ink outline-none sm:text-[34px]">
                 {firstName}, {partner ? qualifier.partnerTrack.title : qualifier.growthTrack.title}
               </h3>
-              <p className="mt-4 max-w-[52ch] text-[15px] leading-relaxed text-navy-2">
+              <p className="mt-4 max-w-[52ch] text-[15px] leading-relaxed text-ink-2">
                 {partner ? qualifier.partnerTrack.text : qualifier.growthTrack.text}
               </p>
               {partner && (
                 <ol className="mt-6 grid gap-2.5">
                   {qualifier.partnerTrack.points.map((p, i) => (
                     <li key={p} className="chamfer-10 flex items-baseline gap-4 bg-frost px-5 py-4">
-                      <span className="tabular text-[12px] font-medium text-teal">{String(i + 1).padStart(2, '0')}</span>
-                      <span className="text-[15px] text-navy">{p}</span>
+                      <span className="tabular text-[12px] font-medium text-accent">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="text-[15px] text-ink">{p}</span>
                     </li>
                   ))}
                 </ol>
@@ -461,13 +461,13 @@ export function Qualifier() {
                     focusNext.current = true
                     setView('booking')
                   }}
-                  className="chamfer-10 group inline-flex w-full items-center justify-center gap-2 bg-teal px-6 py-4 text-[12px] font-medium uppercase tracking-[0.14em] text-white transition-[filter,transform] duration-200 hover:brightness-125 active:scale-[0.97]"
+                  className="chamfer-10 group inline-flex w-full items-center justify-center gap-2 bg-cta-gloss px-6 py-4 text-[12px] font-medium uppercase tracking-[0.14em] text-white transition-[filter,transform] duration-200 hover:brightness-125 active:scale-[0.97]"
                 >
                   {cta.primary}
                   <CalendarDays aria-hidden strokeWidth={1.75} className="size-4" />
                 </button>
-                <p className="mt-3 text-center text-[12px] text-navy-3">
-                  Reference <span className="tabular font-medium tracking-wider text-navy">{reference}</span>
+                <p className="mt-3 text-center text-[12px] text-ink-3">
+                  Reference <span className="tabular font-medium tracking-wider text-ink">{reference}</span>
                 </p>
               </div>
             </motion.div>
@@ -475,7 +475,7 @@ export function Qualifier() {
 
           {view === 'booking' && (
             <motion.div key="booking" initial={enter} animate={{ opacity: 1, x: 0 }} transition={transition}>
-              <h3 ref={headingRef} tabIndex={-1} className="font-firs text-[28px] leading-[1.1] text-navy outline-none sm:text-[34px]">
+              <h3 ref={headingRef} tabIndex={-1} className="font-firs text-[28px] leading-[1.1] text-ink outline-none sm:text-[34px]">
                 {qualifier.booking.title}
               </h3>
               <div className="mt-6">
@@ -489,19 +489,19 @@ export function Qualifier() {
                   />
                 ) : (
                   <div className="chamfer-16 flex min-h-[260px] flex-col items-center justify-center gap-3 border border-dashed border-warn/70 bg-frost px-6 py-10 text-center">
-                    <CalendarDays aria-hidden strokeWidth={1.5} className="size-8 text-teal" />
-                    <p className="text-[12px] font-medium tracking-[0.08em] text-navy">{qualifier.booking.placeholder}</p>
-                    <p className="max-w-[46ch] text-[12px] leading-relaxed text-navy-3">{qualifier.booking.placeholderHint}</p>
+                    <CalendarDays aria-hidden strokeWidth={1.5} className="size-8 text-accent" />
+                    <p className="text-[12px] font-medium tracking-[0.08em] text-ink">{qualifier.booking.placeholder}</p>
+                    <p className="max-w-[46ch] text-[12px] leading-relaxed text-ink-3">{qualifier.booking.placeholderHint}</p>
                   </div>
                 )}
               </div>
               <div className="mt-7 grid gap-6 sm:grid-cols-[1fr_auto] sm:items-end">
                 <div>
-                  <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-navy-3">{qualifier.booking.afterTitle}</p>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-ink-3">{qualifier.booking.afterTitle}</p>
                   <ul className="mt-3 space-y-2">
                     {qualifier.booking.after.map((item) => (
-                      <li key={item} className="flex items-center gap-2.5 text-[15px] text-navy">
-                        <Check aria-hidden strokeWidth={2} className="size-4 text-teal" />
+                      <li key={item} className="flex items-center gap-2.5 text-[15px] text-ink">
+                        <Check aria-hidden strokeWidth={2} className="size-4 text-accent" />
                         {item}
                       </li>
                     ))}
@@ -512,7 +512,7 @@ export function Qualifier() {
                     href={links.telegram}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-[13px] font-medium text-teal underline-offset-4 hover:underline"
+                    className="inline-flex items-center gap-2 text-[13px] font-medium text-accent underline-offset-4 hover:underline"
                   >
                     <Send aria-hidden strokeWidth={1.75} className="size-4" />
                     {qualifier.booking.telegram}

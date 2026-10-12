@@ -48,7 +48,7 @@ export default function App() {
               <a
                 href="#apply"
                 data-move-focus
-                className="chamfer-10 absolute left-4 top-4 z-50 -translate-y-24 bg-navy px-4 py-3 text-[12px] font-medium text-white focus:translate-y-0"
+                className="chamfer-10 absolute left-4 top-4 z-50 -translate-y-24 bg-ink px-4 py-3 text-[12px] font-medium text-white focus:translate-y-0"
               >
                 Skip to the application
               </a>

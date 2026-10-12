@@ -54,18 +54,18 @@ export function Hero() {
     >
       <div data-hero-parallax className="absolute inset-0">
         <div data-hero-video className="absolute inset-0">
-          <LoopVideo name="hero" mobileName="hero-sm" eager className="h-full w-full object-cover" />
+          <LoopVideo name="hero" mobileName="hero-sm" eager className="media-warm h-full w-full object-cover" />
         </div>
       </div>
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
-      {/* A soft veil behind the copy keeps navy type above 7:1 where the glass ribbons cross it. */}
+      {/* A soft veil behind the copy keeps the espresso type above 7:1 where the glass ribbons cross it. */}
       <div
         aria-hidden
-        className="absolute inset-0 [background:radial-gradient(58%_50%_at_50%_52%,rgba(240,245,247,0.82),rgba(240,245,247,0.45)_55%,transparent_82%)]"
+        className="absolute inset-0 [background:radial-gradient(58%_50%_at_50%_52%,rgba(248,246,242,0.82),rgba(248,246,242,0.45)_55%,transparent_82%)]"
       />
 
       <header data-hero-bar className="relative z-20 flex items-center justify-between px-4 pt-5 text-white sm:px-10 sm:pt-8">
-        <a href="#top" aria-label="10X Affiliation, back to top" className="drop-shadow-[0_1px_8px_rgba(5,30,45,0.35)]">
+        <a href="#top" aria-label="10X Affiliation, back to top" className="drop-shadow-[0_1px_8px_rgba(28,25,22,0.35)]">
           <Logo />
         </a>
         <ChamferButton href="#apply" data-move-focus>
@@ -76,7 +76,7 @@ export function Hero() {
 
       <div
         data-hero-copy
-        className="relative z-10 flex flex-1 flex-col items-center px-6 pb-24 pt-24 text-center text-navy sm:pt-32 lg:pt-36"
+        className="relative z-10 flex flex-1 flex-col items-center px-6 pb-24 pt-24 text-center text-ink sm:pt-32 lg:pt-36"
       >
         <p data-hero-eyebrow className="mb-6 text-[11px] font-medium uppercase tracking-[0.3em] opacity-90 sm:text-[12px]">
           {hero.eyebrow}
@@ -99,7 +99,7 @@ export function Hero() {
             className="block pb-[0.08em]"
           />
           <span data-hero-line2 className="block">
-            <ShinyText text={hero.line2} color="#154359" shineColor="#4bbdf0" speed={2.8} delay={4} angle={110} />
+            <ShinyText text={hero.line2} color="#1c1916" shineColor="#c8b08e" speed={2.8} delay={4} angle={110} />
           </span>
         </h1>
 
@@ -116,7 +116,7 @@ export function Hero() {
           </ChamferButton>
           <a
             href="#problems"
-            className="group inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.14em] text-navy transition-colors duration-200 hover:text-teal sm:text-[12px]"
+            className="group inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.14em] text-ink transition-colors duration-200 hover:text-accent sm:text-[12px]"
           >
             {hero.secondary}
             <ArrowDown

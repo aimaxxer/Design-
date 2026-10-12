@@ -33,14 +33,14 @@ export function TopNav({ active }: { active: number }) {
             aria-current={current ? 'location' : undefined}
             className={cn(
               'relative whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.14em] transition-colors duration-200',
-              current ? 'text-navy' : 'text-neutral-800 hover:text-neutral-500',
+              current ? 'text-ink' : 'text-ink-2 hover:text-ink',
             )}
           >
             {item.label}
             <span
               aria-hidden
               className={cn(
-                'absolute -bottom-1.5 left-0 h-px w-full origin-left bg-teal transition-transform duration-300 ease-[var(--ease-out-strong)]',
+                'absolute -bottom-1.5 left-0 h-px w-full origin-left bg-accent transition-transform duration-300 ease-[var(--ease-out-strong)]',
                 current ? 'scale-x-100' : 'scale-x-0',
               )}
             />
@@ -105,7 +105,7 @@ export function MobileCta({ active }: { active: number }) {
       <a
         href="#apply"
         data-move-focus
-        className="chamfer-10 group inline-flex items-center gap-2 whitespace-nowrap bg-teal px-5 py-3 text-[11px] font-medium uppercase tracking-[0.14em] text-white shadow-[0_12px_32px_-12px_rgba(6,99,119,0.6)] transition-transform active:scale-[0.97]"
+        className="chamfer-10 group inline-flex items-center gap-2 whitespace-nowrap bg-cta-gloss px-5 py-3 text-[11px] font-medium uppercase tracking-[0.14em] text-white shadow-[0_12px_32px_-12px_rgba(30,27,24,0.5)] transition-transform active:scale-[0.97]"
       >
         {cta.short}
         <ArrowUpRight aria-hidden strokeWidth={1.75} className="size-3.5" />

@@ -12,12 +12,12 @@ import { cn } from '@/lib/cn'
 function Fix({ problem }: { problem: Problem }) {
   return (
     <>
-      <p className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-teal">
+      <p className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
         <Check aria-hidden strokeWidth={2} className="size-3.5" />
         With 10X Affiliation
       </p>
       <h3 className="font-firs mt-3 text-[24px] leading-tight sm:text-[28px]">{problem.fixTitle}</h3>
-      <p className="mx-auto mt-3 max-w-[42ch] text-[14px] leading-relaxed text-navy-2 sm:text-[15px]">{problem.fixText}</p>
+      <p className="mx-auto mt-3 max-w-[42ch] text-[14px] leading-relaxed text-ink-2 sm:text-[15px]">{problem.fixText}</p>
     </>
   )
 }
@@ -31,7 +31,7 @@ function WallCard({ problem, active, onSelect }: { problem: Problem; active: boo
         aria-pressed={active}
         aria-controls={`wall-fix wall-inline-${problem.id}`}
         onClick={onSelect}
-        className="group relative min-h-[5em] w-full py-3 text-navy transition-transform duration-200 ease-[var(--ease-out-strong)] hover:-translate-y-0.5 active:scale-[0.98]"
+        className="group relative min-h-[5em] w-full py-3 text-ink transition-transform duration-200 ease-[var(--ease-out-strong)] hover:-translate-y-0.5 active:scale-[0.98]"
       >
         <ChamferFrame active={active} />
         <span className="relative flex min-h-[calc(5em-24px)] flex-col items-center justify-center px-6 text-center">
@@ -50,7 +50,7 @@ function WallCard({ problem, active, onSelect }: { problem: Problem; active: boo
         )}
       >
         <div className="overflow-hidden">
-          <div className="px-3 pb-3 pt-5 text-center text-navy">
+          <div className="px-3 pb-3 pt-5 text-center text-ink">
             <Fix problem={problem} />
           </div>
         </div>
@@ -121,21 +121,21 @@ export function Problems() {
       <div className="relative z-20 mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_auto_1fr] lg:gap-12">
         {column(0, 3, 'left')}
 
-        <div className="order-1 flex flex-col items-center text-navy lg:order-2">
+        <div className="order-1 flex flex-col items-center text-ink lg:order-2">
           <div data-problems-head className="text-center">
             <p className="text-[12px] uppercase tracking-[0.24em]">{problemsIntro.label}</p>
             <h2 id="problems-title" className="font-firs mt-2 text-[44px] font-semibold uppercase leading-none tracking-tight sm:text-[54px]">
               {problemsIntro.title}
             </h2>
-            <p className="mx-auto mt-4 max-w-[34ch] text-[14px] leading-relaxed text-navy-2">{problemsIntro.hint}</p>
+            <p className="mx-auto mt-4 max-w-[34ch] text-[14px] leading-relaxed text-ink-2">{problemsIntro.hint}</p>
           </div>
 
           <div data-problems-visual className="relative mt-6 size-[220px] sm:mt-8 sm:size-[380px] lg:size-[460px]">
             {/* Feathered edges: the render's studio grey melts into the section instead of reading as a box. */}
             <LoopVideo
               name="glass"
-              alt="A glass sculpture turning slowly, its folds catching blue and copper light"
-              className="h-full w-full object-cover [mask-image:radial-gradient(closest-side,black_72%,transparent)]"
+              alt="A glass sculpture turning slowly, its folds catching warm champagne light"
+              className="media-warm h-full w-full object-cover [mask-image:radial-gradient(closest-side,black_72%,transparent)]"
             />
           </div>
 
@@ -162,7 +162,7 @@ export function Problems() {
       <div
         aria-hidden
         className="pointer-events-none absolute bottom-0 left-0 z-10 h-40 w-full sm:h-56"
-        style={{ background: 'linear-gradient(to bottom, rgba(240, 245, 247, 0) 0%, rgba(240, 245, 247, 0.7) 60%, #F0F5F7 100%)' }}
+        style={{ background: 'linear-gradient(to bottom, rgba(248, 246, 242, 0) 0%, rgba(248, 246, 242, 0.7) 60%, #F8F6F2 100%)' }}
       />
     </section>
   )
