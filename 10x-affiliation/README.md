@@ -62,8 +62,9 @@ can route to the right partner manager.
   above each card's caption. 2048px, WebP quality 92.
 - The 10X Trader panel's coins are live three.js (`src/coin/`): `coin3d.ts`, `logo.ts`, `stage.ts`
   and `motion.ts` are copied unchanged from the 10x-trader project, so the coin is exactly that
-  site's coin; `trio.ts` only places the three coins and gives each its own slow turn (19-23s) and
-  float, and they can be dragged to spin. three.js loads in its own chunk when the panel nears the
+  site's coin; `trio.ts` only places the three coins and rocks them gently in place (a 3.2s loop:
+  ~14deg sway, ~8deg tip, a slight float, each coin a little out of step) so the light sweeps
+  across their faces. They can be dragged to spin and then ease back to face front. three.js loads in its own chunk when the panel nears the
   viewport (`components/ui/CoinTrio.tsx`). `coins-trader.webp` is a still of the same scene and
   first pose: it shows until the canvas is ready, then cross-fades out, and it stays if WebGL is
   unavailable. Under prefers-reduced-motion the coins hold still. If you move the coins in

@@ -5,8 +5,10 @@ import { bindCoinDrag, createStage } from './stage'
 
 /**
  * Three 10X coins for the 10X Trader panel: the coin, studio and stage from the 10x-trader
- * project, unchanged; only the placement and the idle motion live here. Each coin turns on its
- * own leaned axis at its own pace and floats a little, and can be dragged to spin.
+ * project, unchanged; only the placement and the idle motion live here. The idle motion is a
+ * gentle rock in place: the three coins sway left-right and tip forward-back together in a 3.2s
+ * loop (a little out of step), so the studio light sweeps across their faces, and they float a
+ * touch. Each coin can be dragged to spin; it then eases back to face front and rocks on.
  *
  * The first frame is framed exactly like public/images/coins-trader.webp (the poster underneath),
  * so the canvas can cross-fade in over it without a jump.
@@ -16,13 +18,20 @@ const TAU = Math.PI * 2
 const FOV = 24
 /** Where the coins sit in the square poster: left, top, right, bottom (0-1). */
 const BOX = [0.13, 0.24, 0.87, 0.76] as const
+/** Rock loop length (s) and its amplitudes (radians): sway about the vertical, tip about the horizontal, roll. */
+const ROCK_PERIOD = 3.2
+const SWAY = 0.24 // ~14 deg
+const TIP = 0.14 // ~8 deg
+const ROLL = 0.06 // ~3.5 deg
+/** The rock grows in over the first second, so the first frame is exactly the poster. */
+const EASE_IN = 0.8
 
 type Vec3 = [number, number, number]
-/** Position, size and pose of each coin (the poster's layout); seconds per turn; float phase. */
-const COINS: { pos: Vec3; scale: number; rot: Vec3; period: number; phase: number }[] = [
-  { pos: [-2.25, -0.75, 0.2], scale: 0.86, rot: [0.1, 0.78, -0.22], period: 19, phase: 0 },
-  { pos: [-0.15, 0.7, -0.6], scale: 0.96, rot: [0.1, -0.3, 0.06], period: 23, phase: 2.1 },
-  { pos: [2.05, -0.15, 0.4], scale: 1.08, rot: [0.1, -0.42, 0.16], period: 21, phase: 4.2 },
+/** Position, size and pose of each coin (the poster's layout), and its offset in the rock loop (radians). */
+const COINS: { pos: Vec3; scale: number; rot: Vec3; phase: number }[] = [
+  { pos: [-2.25, -0.75, 0.2], scale: 0.86, rot: [0.1, 0.78, -0.22], phase: 0 },
+  { pos: [-0.15, 0.7, -0.6], scale: 0.96, rot: [0.1, -0.3, 0.06], phase: 0.45 },
+  { pos: [2.05, -0.15, 0.4], scale: 1.08, rot: [0.1, -0.42, 0.16], phase: 0.9 },
 ]
 
 export interface CoinTrioHandle {
@@ -31,19 +40,21 @@ export interface CoinTrioHandle {
 
 /** Returns null when WebGL is unavailable, so the caller keeps its poster. */
 export function mountCoinTrio(container: HTMLElement, opts: { label: string; onReady?: () => void }): CoinTrioHandle | null {
-  // float (bob, drag tumble) → pose (the poster's rotation) → spin about the coin's own axis
+  // float (bob, drag tumble) → rock (the idle sway) → pose (the poster's rotation) → spin (drag)
   const rigs = COINS.map((c, i) => {
     const float = new THREE.Group()
+    const rock = new THREE.Group()
     const pose = new THREE.Group()
     const spinG = new THREE.Group()
     float.position.set(...c.pos)
     float.scale.setScalar(c.scale)
     pose.rotation.set(...c.rot)
-    float.add(pose)
+    float.add(rock)
+    rock.add(pose)
     pose.add(spinG)
     const coin: Coin3D = createCoin3D({ finish: 'engraved', preset: 'blue', tint: BRAND_BLUE, seed: i })
     spinG.add(coin.group)
-    return { c, float, spinG, coin, motion: new CoinMotion() }
+    return { c, float, rock, spinG, coin, motion: new CoinMotion() }
   })
 
   // Frame the starting pose the way the poster was rendered: fit the coins into BOX of a square view.
@@ -89,12 +100,17 @@ export function mountCoinTrio(container: HTMLElement, opts: { label: string; onR
     { fov: FOV, preset: 'blue', tint: BRAND_BLUE, maxPixelRatio: 1.75, label: opts.label },
     {
       step(dt, clock, animate) {
+        const ease = animate ? 1 - Math.exp(-clock / EASE_IN) : 0
         for (const r of rigs) {
-          if (animate && !r.motion.dragging) r.motion.spin += (dt * TAU) / r.c.period
+          // After a drag, ease back to face front (the nearest whole turn) while any flick dies down.
+          if (!r.motion.dragging) r.motion.spin += (Math.round(r.motion.spin / TAU) * TAU - r.motion.spin) * (1 - Math.exp(-dt * 2.5))
           const extra = r.motion.step(dt, clock, animate)
           r.spinG.rotation.y = r.motion.spin + extra
           r.float.quaternion.copy(r.motion.tumble)
-          r.float.position.y = r.c.pos[1] + (animate ? Math.sin(clock + r.c.phase) * bob * r.c.scale : 0)
+          // Sway and tip a quarter-loop apart, so each coin's face traces a small ellipse and the light sweeps across it.
+          const a = (clock * TAU) / ROCK_PERIOD + r.c.phase
+          r.rock.rotation.set(Math.cos(a) * TIP * ease, Math.sin(a) * SWAY * ease, Math.sin(a + 1) * ROLL * ease)
+          r.float.position.y = r.c.pos[1] + Math.sin(a + 0.6) * bob * r.c.scale * ease
         }
       },
       busy: (animate) => animate || rigs.some((r) => !r.motion.settled),
