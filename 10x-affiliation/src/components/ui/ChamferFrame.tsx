@@ -15,7 +15,7 @@ export function ChamferFrame({ active = false, className, fill }: { active?: boo
       <polygon
         points="14,0 100,0 100,86 86,100 0,100 0,14"
         fill={fill ?? (active ? 'rgba(255, 255, 255, 0.92)' : 'rgba(255, 255, 255, 0)')}
-        stroke={active ? 'rgba(122, 96, 75, 0.9)' : 'rgba(122, 96, 75, 0.25)'}
+        stroke={active ? 'rgba(6, 99, 119, 0.9)' : 'rgba(6, 99, 119, 0.25)'}
         strokeWidth={1}
         vectorEffect="non-scaling-stroke"
         className="transition-[stroke,fill] duration-300"

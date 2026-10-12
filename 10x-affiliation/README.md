@@ -3,8 +3,7 @@
 Partner-acquisition landing page for IBs, affiliates, PAMM managers and trading communities.
 Content comes from the "10X Affiliation Funnel" design canvas (landing, qualifier, booking). The layout
 follows the Launchex Awards template: an inset rounded shell, a notch nav, chamfered clip-paths,
-TT Firs Neue + Inter. The colours follow the Nami reference: warm cream grounds,
-espresso type and buttons, a bronze accent and champagne highlights.
+TT Firs Neue + Inter, and a navy/teal palette.
 
 React + Vite + Tailwind v4 + TypeScript + lucide-react, with GSAP ScrollTrigger, Lenis and Motion.
 
@@ -55,8 +54,7 @@ can route to the right partner manager.
 
 - `public/videos/hero.mp4`, `hero-sm.mp4` (phones, centre crop), `glass.mp4`, and the
   `public/images/glass-*.webp` stat images: the abstract glass renders supplied with the Launchex
-  template prompt, re-encoded for the web. They are blue glass; the `.media-warm` CSS filter tints
-  them to champagne metal on the page. Swap in 10X-owned Higgsfield loops when credits allow:
+  template prompt, re-encoded for the web. Swap in 10X-owned Higgsfield loops when credits allow:
   same file names, start frame = end frame, and refresh the posters in `public/videos/posters/`.
 - Broker logos and partner photos were exported from the funnel canvas.
 - TT Firs Neue loads from onlinewebfonts as the template specifies; it needs a licence before launch.

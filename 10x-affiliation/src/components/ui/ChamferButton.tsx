@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
-type Variant = 'primary' | 'light' | 'outline'
+type Variant = 'teal' | 'light' | 'outline'
 
 type Props = {
   variant?: Variant
@@ -21,7 +21,7 @@ const arrow = (
 )
 
 /** The template's chamfered CTA: clipped corners, uppercase label, arrow that nudges up-right on hover. */
-export function ChamferButton({ variant = 'primary', size = 'sm', icon, className, children, ...rest }: Props) {
+export function ChamferButton({ variant = 'teal', size = 'sm', icon, className, children, ...rest }: Props) {
   const sizing =
     size === 'sm' ? 'px-4 py-2.5 text-[10px] sm:px-5 sm:py-3 sm:text-[11px]' : 'px-6 py-4 text-[11px] sm:px-7 sm:text-[12px]'
   const label = (
@@ -33,15 +33,15 @@ export function ChamferButton({ variant = 'primary', size = 'sm', icon, classNam
   const base = 'chamfer-10 group inline-flex select-none whitespace-nowrap font-medium uppercase tracking-[0.14em]'
 
   if (variant === 'outline') {
-    // A 1px ink edge made from a clipped layer behind a clipped white face.
+    // A 1px navy edge made from a clipped layer behind a clipped white face.
     return (
       <a
         {...rest}
-        className={cn(base, 'bg-ink/80 p-px transition-transform duration-150 ease-[var(--ease-out-strong)] active:scale-[0.97]', className)}
+        className={cn(base, 'bg-navy/80 p-px transition-transform duration-150 ease-[var(--ease-out-strong)] active:scale-[0.97]', className)}
       >
         <span
           className={cn(
-            'chamfer-10 inline-flex w-full items-center justify-center gap-2 bg-white text-ink transition-colors duration-200 group-hover:bg-frost',
+            'chamfer-10 inline-flex w-full items-center justify-center gap-2 bg-white text-navy transition-colors duration-200 group-hover:bg-frost',
             sizing,
           )}
         >
@@ -58,8 +58,8 @@ export function ChamferButton({ variant = 'primary', size = 'sm', icon, classNam
         base,
         'items-center justify-center gap-2 transition-[filter,background-color,transform] duration-200 ease-[var(--ease-out-strong)] active:scale-[0.97]',
         sizing,
-        // White on the espresso fill is 17:1; the template lifts it with brightness on hover.
-        variant === 'primary' ? 'bg-cta-gloss text-white hover:brightness-125' : 'bg-white text-ink hover:bg-frost',
+        // White on #066377 is 6.9:1; the template lifts it with brightness on hover.
+        variant === 'teal' ? 'bg-teal text-white hover:brightness-125' : 'bg-white text-navy hover:bg-frost',
         className,
       )}
     >

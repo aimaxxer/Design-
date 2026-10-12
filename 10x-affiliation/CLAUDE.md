@@ -12,8 +12,7 @@ booking a 30-minute strategy call.
 
 The layout follows a "Launchex Awards" template brief: a white inset shell with a rounded card that
 scrolls internally, a notch nav hanging from the top, chamfered clip-path corners everywhere, TT Firs
-Neue for display type and Inter for body. The palette comes from the Nami reference: warm cream
-grounds, espresso #1C1916 text and espresso buttons, a bronze #7A604B accent and champagne highlights.
+Neue for display type and Inter for body, navy #154359 text and one teal #066377 action colour.
 
 Tone: premium and institutional but accessible to retail traders. Claims stay realistic, with no
 hype numbers beyond the ones already in `src/content.ts`.
@@ -79,12 +78,9 @@ public/videos, public/images   Self-hosted media (see README "Media")
 - Shapes: chamfered corners (`chamfer-6/8/10/16/24`), never rounded cards. Borders are a 1px
   clipped layer behind a clipped face (`bg-line p-px` > `bg-white`), because clip-path cuts off
   real CSS borders.
-- Colours come from the `@theme` tokens (`ink`, `ink-2`, `ink-3`, `umber`, `accent`, `cta`,
-  `champagne`, `tint`, `mist`, `frost`, `line`, `line-strong`, `line-hover`). Text tokens pass WCAG AA
-  on both section grounds. Primary CTAs use `.bg-cta-gloss` (espresso with a soft top gloss);
-  `accent` (bronze) is for links, accent words, data bars and selected states; `champagne` is never text.
-- `.media-warm` tints the abstract glass renders to champagne metal. Never put it on photos of people.
-- Section grounds alternate `mist` (#F2EEE9) and `frost` (#F8F6F2). Each section ends with a
+- Colours come from the `@theme` tokens (`navy`, `navy-2`, `navy-3`, `teal`, `sky`, `mist`,
+  `frost`, `line`, `line-strong`). Text tokens pass WCAG AA on both section grounds.
+- Section grounds alternate `mist` (#F0F0F0) and `frost` (#F0F5F7). Each section ends with a
   bottom fade into the next section's colour.
 - Motion: one scroll-scrubbed signature moment (the 10X Trader "how it works" panels). Everything
   else is a one-time reveal on enter.
