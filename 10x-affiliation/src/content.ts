@@ -319,7 +319,7 @@ export const trader = {
   titleLine1: 'Your referrals are your assets.',
   titleLine2: 'Stop watching them blow up.',
   body: 'Put 10x buying power behind every deposit. Your clients trade bigger from day one, and you earn 2-3x more on the same audience. As they perform, 10X scales them further, so your best referrals keep growing, and so do your earnings.',
-  image: '/images/glass-2.webp',
+  image: '/images/coins-trader.webp',
   stats: [
     { value: '10X', label: 'Buying power' },
     { value: '2-3x', label: 'More rebates for you' },

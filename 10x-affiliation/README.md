@@ -60,6 +60,9 @@ can route to the right partner manager.
   sculpture from `glass.mp4` (frames 121 and 91), upscaled with Real-ESRGAN x4plus, set on glass-3's
   grey, graded like the videos and framed like glass-3: top-right, cropped by the top edge, ending
   above each card's caption. 2048px, WebP quality 92.
+- `coins-trader.webp` (the 10X Trader panel) is a still of three 10X coins rendered with the coin
+  model from the 10x-trader project (`src/coin/coin3d.ts`): two silver coins with blue marks and a
+  blue coin with a silver mark, rendered at 3200px over #EEF1F1 and saved at 2048px, WebP quality 92.
 - The `glass-*.webp` stills were restored from heavily compressed 1024px copies with
   Real-ESRGAN x4plus, then set back to the flat studio grey (#EFF2F1) and saved at 2048px, WebP
   quality 92. glass-1 and glass-2 are also graded to match glass-3 (cyan-teal glass, orange copper,
