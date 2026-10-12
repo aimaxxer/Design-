@@ -1,0 +1,13 @@
+{
+  "name": "10x-stat-renders",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bundle": "esbuild scene.js --bundle --format=iife --loader:.json=json --outfile=bundle.js --log-level=warning"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10",
+    "playwright": "1.56.1",
+    "three": "0.180.0"
+  }
+}

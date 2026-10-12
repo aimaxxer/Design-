@@ -56,8 +56,11 @@ can route to the right partner manager.
   `public/images/glass-*.webp` stat images: the abstract glass renders supplied with the Launchex
   template prompt, re-encoded for the web. Swap in 10X-owned Higgsfield loops when credits allow:
   same file names, start frame = end frame, and refresh the posters in `public/videos/posters/`.
-- The three `glass-*.webp` stills were restored from heavily compressed 1024px copies with
+- The `glass-*.webp` stills were restored from heavily compressed 1024px copies with
   Real-ESRGAN x4plus, then set back to the flat studio grey (#EFF2F1) and saved at 1600px, WebP
   quality 88. Don't re-compress them harder: the soft, blocky look comes straight back.
+- `stat-rebate.webp` (coin stacks and rising arrow) and `stat-multiplier.webp` (the 10X coin with
+  orbiting coins) are Three.js renders in the site palette on the same #EFF2F1 ground: chrome,
+  sky-tinted glass and teal marks, rendered at 3200px and saved at 1600px.
 - Broker logos and partner photos were exported from the funnel canvas.
 - TT Firs Neue loads from onlinewebfonts as the template specifies; it needs a licence before launch.

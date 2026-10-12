@@ -135,12 +135,12 @@ export const results = {
       prefix: '+',
       suffix: '%',
       text: 'Average rebate increase, negotiated on the combined volume of all our partners.',
-      image: '/images/glass-1.webp',
+      image: '/images/stat-rebate.webp',
     },
     {
       display: '2-3x',
       text: 'More rebates per 10X Trader client, from the same deposits.',
-      image: '/images/glass-2.webp',
+      image: '/images/stat-multiplier.webp',
     },
     {
       count: 1,
