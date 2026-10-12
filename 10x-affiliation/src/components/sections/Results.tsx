@@ -198,7 +198,7 @@ function KitCell({ block, index }: { block: KitBlock; index: number }) {
 
 function ProofCard({ item }: { item: (typeof proof.videos)[number] }) {
   return (
-    <figure data-proof-card className="flex flex-col">
+    <figure data-proof-card className="flex h-full flex-col">
       <div className="chamfer-16 relative aspect-[16/10] overflow-hidden bg-frost">
         {item.video ? (
           <video controls preload="none" poster={asset(item.image)} className="h-full w-full object-cover">
@@ -208,7 +208,7 @@ function ProofCard({ item }: { item: (typeof proof.videos)[number] }) {
           <img src={asset(item.image)} alt={item.alt} loading="lazy" decoding="async" className="h-full w-full object-cover" />
         )}
       </div>
-      <figcaption className="mt-4">
+      <figcaption className="mb-6 mt-4">
         <p className="text-[14px] font-semibold text-navy">
           <Ph value={item.name} /> <span className="font-normal text-navy-3">/</span> <Ph value={item.meta} />
         </p>
@@ -216,6 +216,15 @@ function ProofCard({ item }: { item: (typeof proof.videos)[number] }) {
           <Ph value={item.quote} />
         </p>
       </figcaption>
+      {/* Each partner's financial difference, pinned to the bottom so the three line up. */}
+      <dl className="mt-auto border-t border-line-strong pt-5">
+        <dt className="font-firs text-[26px] leading-tight text-navy sm:text-[28px]">
+          <Ph value={item.result.value} />
+        </dt>
+        <dd className="mt-2 text-[14px] text-navy-2">
+          <Ph value={item.result.label} />
+        </dd>
+      </dl>
     </figure>
   )
 }
@@ -263,7 +272,7 @@ export function Results() {
             })
         })
         reveal('[data-proof-head] > *', '[data-proof-head]')
-        reveal('[data-proof-card], [data-proof-result]', '[data-proof-grid]', { stagger: 0.1 })
+        reveal('[data-proof-card]', '[data-proof-grid]', { stagger: 0.1 })
       })
       return () => mm.revert()
     },
@@ -331,18 +340,6 @@ export function Results() {
               <ProofCard key={i} item={v} />
             ))}
           </div>
-          <dl className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {proof.results.map((r, i) => (
-              <div key={i} data-proof-result className="border-t border-line-strong pt-5">
-                <dt className="font-firs text-[26px] leading-tight text-navy sm:text-[32px]">
-                  <Ph value={r.value} />
-                </dt>
-                <dd className="mt-2 text-[14px] text-navy-2">
-                  <Ph value={r.label} />
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
 

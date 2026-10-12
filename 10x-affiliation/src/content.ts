@@ -246,6 +246,7 @@ export const proof = {
       meta: ph('[Region]'),
       quote: ph('[Testimonial video: one-line quote]'),
       duration: '0:42',
+      result: { value: ph('[$X] → [$Y] per lot'), label: 'After moving their book' },
     },
     {
       video: '',
@@ -255,6 +256,7 @@ export const proof = {
       meta: ph('[Members]'),
       quote: ph('[Testimonial video: one-line quote]'),
       duration: '0:57',
+      result: { value: ph('[+X%] monthly rebates'), label: 'After adding 10X Trader' },
     },
     {
       video: '',
@@ -264,11 +266,8 @@ export const proof = {
       meta: ph('[Platform]'),
       quote: ph('[Testimonial video: one-line quote]'),
       duration: '1:12',
+      result: { value: ph('[+$X] a month in rebates'), label: ph('Within [X] months of switching') },
     },
-  ],
-  results: [
-    { value: ph('[$X] → [$Y] per lot'), label: ph('[IB name], after moving their book') },
-    { value: ph('[+X%] monthly rebates'), label: ph('[Community], after adding 10X Trader') },
   ],
 }
 
