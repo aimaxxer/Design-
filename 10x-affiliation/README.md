@@ -56,9 +56,10 @@ can route to the right partner manager.
   `public/images/glass-*.webp` stat images: the abstract glass renders supplied with the Launchex
   template prompt, re-encoded for the web. Swap in 10X-owned Higgsfield loops when credits allow:
   same file names, start frame = end frame, and refresh the posters in `public/videos/posters/`.
-- `hero-glass-1.webp` and `hero-glass-2.webp` (the +40% and 2-3x cards) are square crops of hero
-  frames 120 (1086px at x 834, flipped vertically) and 1 (980px at x 473, rotated 180deg), upscaled with Real-ESRGAN
-  x4plus to 2048px and given the hero's grade, so the cards carry the hero's glass.
+- `sculpture-1.webp` and `sculpture-2.webp` (the +40% and 2-3x cards) are poses of the glass
+  sculpture from `glass.mp4` (frames 121 and 91), upscaled with Real-ESRGAN x4plus, set on glass-3's
+  grey, graded like the videos and framed like glass-3: top-right, cropped by the top edge, ending
+  above each card's caption. 2048px, WebP quality 92.
 - The `glass-*.webp` stills were restored from heavily compressed 1024px copies with
   Real-ESRGAN x4plus, then set back to the flat studio grey (#EFF2F1) and saved at 2048px, WebP
   quality 92. glass-1 and glass-2 are also graded to match glass-3 (cyan-teal glass, orange copper,
