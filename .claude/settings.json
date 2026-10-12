@@ -1,7 +1,8 @@
 {
   "enabledPlugins": {
     "hyperframes@hyperframes": true,
-    "humanizer@humanizer": true
+    "humanizer@humanizer": true,
+    "expo@expo-plugins": true
   },
   "extraKnownMarketplaces": {
     "hyperframes": {
@@ -14,6 +15,12 @@
       "source": {
         "source": "github",
         "repo": "blader/humanizer"
+      }
+    },
+    "expo-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "expo/skills"
       }
     }
   }
