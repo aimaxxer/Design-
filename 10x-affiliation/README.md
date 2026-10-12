@@ -59,5 +59,10 @@ can route to the right partner manager.
 - The three `glass-*.webp` stills were restored from heavily compressed 1024px copies with
   Real-ESRGAN x4plus, then set back to the flat studio grey (#EFF2F1) and saved at 1600px, WebP
   quality 88. Don't re-compress them harder: the soft, blocky look comes straight back.
+- The three videos and their posters were rebuilt to match the glass-3 swirl: each frame upscaled
+  with Real-ESRGAN (realesr-animevideov3, x2 from a half-size copy), set back to the original
+  background level, then graded (blues pulled to a 190deg cyan-teal with +55% saturation, copper
+  pulled to orange with +30%, deeper shadows, a light sharpen) and encoded with x264 `-tune
+  animation` (hero crf 24, hero-sm crf 24 cut from the hero at 703x1086+608+0, glass crf 28).
 - Broker logos and partner photos were exported from the funnel canvas.
 - TT Firs Neue loads from onlinewebfonts as the template specifies; it needs a licence before launch.
