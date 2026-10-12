@@ -122,8 +122,8 @@ export const problems: Problem[] = [
 /* -------------------------------------------------------------------------- */
 
 export const results = {
-  titleLine1: "You're leaving money",
-  titleLine2: 'on the table',
+  titleLine1: "You're leaving money on the table.",
+  titleLine2: 'Every single trade.',
   paragraphs: [
     'Most IBs only negotiate their rate. What you actually earn depends on three things: your rate, how many leads convert and how long they keep trading.',
     'We raise all three. Then 10X Trader multiplies them.',
