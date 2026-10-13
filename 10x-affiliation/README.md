@@ -57,9 +57,10 @@ can route to the right partner manager.
   template prompt, re-encoded for the web. Swap in 10X-owned Higgsfield loops when credits allow:
   same file names, start frame = end frame, and refresh the posters in `public/videos/posters/`.
 - `sculpture-1.webp` and `sculpture-2.webp` (the +40% and 2-3x cards) are poses of the glass
-  sculpture from `glass.mp4` (frames 121 and 91), upscaled with Real-ESRGAN x4plus, set on glass-3's
-  grey, graded like the videos and framed like glass-3: top-right, cropped by the top edge, ending
-  above each card's caption. 2048px, WebP quality 92.
+  sculpture from `glass.mp4` (frames 121 and 91), re-rendered sharp in Higgsfield (~1200px objects),
+  watermark removed, set on glass-3's grey, lightly graded to glass-3's teal and copper (no extra
+  sharpening) and framed like glass-3: top-right, cropped by the top edge, ending above each card's
+  caption. 2048px, WebP quality 92.
 - The 10X Trader panel's coins are live three.js (`src/coin/`): `coin3d.ts`, `logo.ts`, `stage.ts`
   and `motion.ts` are copied unchanged from the 10x-trader project, so the coin is exactly that
   site's coin; `trio.ts` only places the three coins and rocks them gently in place (a 3.2s loop:
