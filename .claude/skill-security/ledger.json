@@ -19,6 +19,9 @@
     "MEDIUM RP1 MCP Rug Pull @ README.md:45",
     "MEDIUM RP1 MCP Rug Pull @ README.md:55"
    ],
+   "high": [
+    "AR2@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -45,6 +48,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:76",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:125"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -66,11 +70,12 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:207",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:234",
     "MEDIUM E1 External Transmission @ SKILL.md:145",
-    "MEDIUM E1 External Transmission @ SKILL.md:145",
     "MEDIUM E1 External Transmission @ SKILL.md:215",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:237",
-    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:240"
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:240",
+    "MEDIUM E1 External Transmission @ SKILL.md:408"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -93,9 +98,9 @@
     "MEDIUM RP1 MCP Rug Pull @ references/setup.md:33",
     "MEDIUM RP1 MCP Rug Pull @ references/setup.md:34",
     "MEDIUM RP1 MCP Rug Pull @ references/setup.md:464",
-    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:469",
-    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:24"
+    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:469"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -119,9 +124,17 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:194",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:226",
     "HIGH AS2 MCP Config Access @ references/controllers.md:135",
-    "HIGH AS2 MCP Config Access @ references/controllers.md:135",
     "HIGH TM1 Tool Parameter Abuse @ references/logs-and-crashes.md:32",
-    "HIGH TM1 Tool Parameter Abuse @ references/logs-and-crashes.md:44"
+    "HIGH TM1 Tool Parameter Abuse @ references/logs-and-crashes.md:44",
+    "HIGH TM2 Chaining Abuse @ references/logs-and-crashes.md:57"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "AS2@references/controllers.md",
+    "PE3@SKILL.md",
+    "PE3@references/troubleshooting.md",
+    "TM1@references/logs-and-crashes.md",
+    "TM2@references/logs-and-crashes.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -148,6 +161,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:84",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:143"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -167,6 +181,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:235"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -192,6 +207,9 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:96",
     "LOW TR1 Overly Broad Trigger @ SKILL.md:1"
    ],
+   "high": [
+    "LP1@scripts/fetch.js"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -216,6 +234,7 @@
     "MEDIUM RA2 Session Persistence @ SKILL.md:222",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:271"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -234,14 +253,13 @@
    },
    "top": [
     "MEDIUM RA2 Session Persistence @ SKILL.md:38",
-    "MEDIUM RA2 Session Persistence @ SKILL.md:38",
     "MEDIUM RA2 Session Persistence @ SKILL.md:191",
     "MEDIUM RA2 Session Persistence @ SKILL.md:195",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:188",
-    "MEDIUM RA2 Session Persistence @ SKILL.md:191",
     "MEDIUM RA2 Session Persistence @ references/native-module.md:29",
-    "MEDIUM RA2 Session Persistence @ references/native-module.md:29"
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:287"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -269,6 +287,9 @@
     "MEDIUM RP1 MCP Rug Pull @ references/brownfield-isolated.md:259",
     "MEDIUM RP1 MCP Rug Pull @ references/brownfield-isolated.md:434"
    ],
+   "high": [
+    "AE1@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -293,8 +314,13 @@
     "HIGH PE3 Credential Access @ SKILL.md:465",
     "HIGH PE3 Credential Access @ SKILL.md:317",
     "HIGH PE3 Credential Access @ SKILL.md:412",
-    "HIGH PE3 Credential Access @ SKILL.md:465",
-    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:387"
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:387",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:470"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "PE3@SKILL.md",
+    "PE3@references/expo-router-loaders.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -315,6 +341,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:373"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -335,6 +362,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:150",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:179"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -354,6 +382,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:422"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -372,14 +401,15 @@
    },
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1",
-    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:3",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:4",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:68",
     "MEDIUM RP1 MCP Rug Pull @ agents/openai.yaml:4",
     "MEDIUM RP1 MCP Rug Pull @ references/catalog.md:5",
-    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:4"
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:57",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:76"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -406,6 +436,7 @@
     "MEDIUM RA2 Session Persistence @ references/config-plugin.md:30",
     "MEDIUM RP1 MCP Rug Pull @ references/create-expo-module.md:37"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -431,6 +462,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:198",
     "MEDIUM P4 Behavior Manipulation @ references/icons.md:228"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -455,6 +487,9 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:95",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:112"
    ],
+   "high": [
+    "AE1@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -474,6 +509,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:111"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -494,6 +530,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:237",
     "MEDIUM EA2 Autonomous Decision Making @ references/tabs.md:420"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -519,6 +556,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:84",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:31"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -539,6 +577,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:18",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:98"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -565,6 +604,7 @@
     "MEDIUM RP1 MCP Rug Pull @ references/new-architecture.md:54",
     "MEDIUM RP1 MCP Rug Pull @ references/new-architecture.md:76"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -586,6 +626,7 @@
     "MEDIUM RP1 MCP Rug Pull @ references/verify-on-device.md:32",
     "MEDIUM RP1 MCP Rug Pull @ references/verify-on-device.md:37"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -611,7 +652,14 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:279",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:280",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:281",
-    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:50"
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:113"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "P2@modes/cinematic/cinematic-cream/template.html",
+    "P2@references/example-renders/memory-wall.html",
+    "P6@scripts/make-composition.cjs",
+    "TM2@scripts/render-and-composite.sh"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -634,11 +682,16 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:80",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:112",
     "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:176",
-    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:176",
     "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:469",
     "HIGH AR2 Anti-Refusal Statement @ scripts/audio.test.mjs:187",
     "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
-    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:32"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "AR2@scripts/audio.test.mjs",
+    "P2@scripts/assemble-index.mjs"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -663,6 +716,9 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:91",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:100",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:38"
+   ],
+   "high": [
+    "PE3@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -690,6 +746,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:150",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:158"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -716,6 +773,10 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:53",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:56",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:95"
+   ],
+   "high": [
+    "AR2@SKILL.md",
+    "P2@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -745,6 +806,29 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:43",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:49"
    ],
+   "high": [
+    "AE1@SKILL.md",
+    "AR2@references/motion-blur.md",
+    "P2@adapters/html-in-canvas-patterns.md",
+    "P2@examples/brand-reveal-assemble-zoom.html",
+    "P2@examples/comparison-split-cards.html",
+    "P2@examples/concept-demo-decode-pan.html",
+    "P2@examples/cta-morph-press.html",
+    "P2@examples/cta-orbit-collapse.html",
+    "P2@examples/demo-page-scroll-spotlight.html",
+    "P2@examples/hook-counter-burst.html",
+    "P2@examples/metric-video-text-pivot.html",
+    "P2@examples/problem-mockup-overwhelm.html",
+    "P2@examples/proof-logo-chain.html",
+    "P2@examples/takeover-ticker-displace.html",
+    "P2@examples/workflow-approve-press.html",
+    "P2@rules/control-target-sync.md",
+    "P2@rules/cursor-click-ripple.md",
+    "P2@rules/depth-scatter-assemble.md",
+    "P2@rules/hacker-flip-3d.md",
+    "P2@rules/motion-blur-streak.md",
+    "P2@rules/svg-icon-enrichment.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -771,6 +855,9 @@
     "MEDIUM RP1 MCP Rug Pull @ references/diagnosis.md:157",
     "MEDIUM RP1 MCP Rug Pull @ references/diagnosis.md:158",
     "MEDIUM P9 Whitespace Padding @ references/fx-registry.md:13"
+   ],
+   "high": [
+    "AE1@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -799,6 +886,11 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:22",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:23"
    ],
+   "high": [
+    "P2@SKILL.md",
+    "PE3@references/lambda.md",
+    "TM1@references/cloud.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -825,6 +917,10 @@
     "MEDIUM P9 Whitespace Padding @ SKILL.md:23",
     "MEDIUM P9 Whitespace Padding @ SKILL.md:25",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:28"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "P2@references/sub-compositions.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -854,6 +950,30 @@
     "HIGH P2 Hidden Instructions @ frame-presets/blockframe/caption-skin.html:1",
     "HIGH P2 Hidden Instructions @ frame-presets/blockframe/frame-showcase.html:814"
    ],
+   "high": [
+    "AE1@SKILL.md",
+    "AR2@references/typography.md",
+    "P2@frame-presets/biennale-yellow/caption-skin.html",
+    "P2@frame-presets/biennale-yellow/frame-showcase.html",
+    "P2@frame-presets/blockframe/caption-skin.html",
+    "P2@frame-presets/blockframe/frame-showcase.html",
+    "P2@frame-presets/blue-professional/caption-skin.html",
+    "P2@frame-presets/blue-professional/frame-showcase.html",
+    "P2@frame-presets/bold-poster/caption-skin.html",
+    "P2@frame-presets/bold-poster/frame-showcase.html",
+    "P2@frame-presets/broadside/caption-skin.html",
+    "P2@frame-presets/broadside/frame-showcase.html",
+    "P2@frame-presets/capsule/frame-showcase.html",
+    "P2@frame-presets/cartesian/frame-showcase.html",
+    "P2@frame-presets/cobalt-grid/frame-showcase.html",
+    "P2@frame-presets/code-editorial/frame-showcase.html",
+    "P2@frame-presets/coral/caption-skin.html",
+    "P2@frame-presets/coral/frame-showcase.html",
+    "P2@frame-presets/creative-mode/frame-showcase.html",
+    "P2@frame-presets/daisy-days/frame-showcase.html",
+    "P2@frame-presets/editorial-forest/caption-skin.html",
+    "P2@frame-presets/editorial-forest/frame-showcase.html"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -880,6 +1000,7 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:214",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:215"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -907,6 +1028,10 @@
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:109",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:110"
    ],
+   "high": [
+    "AE1@SKILL.md",
+    "AR2@references/component-quality-bar.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -925,14 +1050,15 @@
    },
    "top": [
     "MEDIUM P9 Whitespace Padding @ SKILL.md:29",
-    "MEDIUM P9 Whitespace Padding @ SKILL.md:29",
     "MEDIUM P9 Whitespace Padding @ SKILL.md:31",
     "MEDIUM P9 Whitespace Padding @ SKILL.md:33",
     "MEDIUM P9 Whitespace Padding @ SKILL.md:34",
     "MEDIUM P9 Whitespace Padding @ SKILL.md:35",
     "MEDIUM P9 Whitespace Padding @ SKILL.md:36",
-    "MEDIUM P9 Whitespace Padding @ SKILL.md:37"
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:37",
+    "MEDIUM MP2 Context Window Stuffing @ SKILL.md:115"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -957,9 +1083,17 @@
     "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.mjs:67",
     "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.mjs:71",
     "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.test.mjs:138",
-    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.test.mjs:138",
     "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.test.mjs:152",
-    "HIGH PE3 Credential Access @ audio/scripts/gemini-pipeline.test.mjs:67"
+    "HIGH PE3 Credential Access @ audio/scripts/gemini-pipeline.test.mjs:67",
+    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.mjs:75"
+   ],
+   "high": [
+    "P2@scripts/audio-duck.mjs",
+    "PE3@audio/references/tts.md",
+    "PE3@audio/scripts/gemini-pipeline.test.mjs",
+    "PE3@audio/scripts/lib/heygen.mjs",
+    "PE3@audio/scripts/lib/heygen.test.mjs",
+    "TM1@audio/scripts/heygen-voice.test.mjs"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -983,10 +1117,14 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:109",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:54",
     "HIGH P2 Hidden Instructions @ samples/asset-fusion/_ref-circle-highlight.html:6",
-    "HIGH P2 Hidden Instructions @ samples/asset-fusion/_ref-circle-highlight.html:6",
     "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:16",
-    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:69"
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:69",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:89"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "P2@samples/asset-fusion/_ref-circle-highlight.html"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -1010,10 +1148,14 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:105",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:186",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:138",
-    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:186",
     "HIGH P2 Hidden Instructions @ references/templates/logo-split-lockup-pulse/index.html:21",
     "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
-    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:33"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "P2@references/templates/logo-split-lockup-pulse/index.html"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -1035,12 +1177,16 @@
    "top": [
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:66",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:88",
-    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:66",
-    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:88",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:108",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:140",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:202",
-    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:177"
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:177",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:475",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "P2@scripts/assemble-index.mjs"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -1063,11 +1209,17 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:103",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:135",
     "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:238",
-    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:238",
     "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:617",
     "HIGH PE3 Credential Access @ scripts/audio.test.mjs:27",
     "HIGH AR2 Anti-Refusal Statement @ scripts/audio.test.mjs:245",
-    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1"
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "AR2@scripts/audio.test.mjs",
+    "P2@scripts/assemble-index.mjs",
+    "PE3@scripts/audio.test.mjs"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -1097,6 +1249,10 @@
     "MEDIUM TR2 Shadow Command Trigger @ SKILL.md:1",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
    ],
+   "high": [
+    "AE1@SKILL.md",
+    "P2@references/sequencing.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -1116,13 +1272,18 @@
    },
    "top": [
     "HIGH P2 Hidden Instructions @ SKILL.md:61",
-    "HIGH P2 Hidden Instructions @ SKILL.md:61",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:434",
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:475",
     "HIGH P2 Hidden Instructions @ references/standalone-harness.md:33",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:14",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:169",
-    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:491"
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:491",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:499"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "P2@SKILL.md",
+    "P2@references/standalone-harness.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -1145,11 +1306,22 @@
     "HIGH P2 Hidden Instructions @ references/frames/hairline.html:1",
     "HIGH P2 Hidden Instructions @ references/frames/polaroid.html:1",
     "HIGH P2 Hidden Instructions @ references/layouts/overlay.html:1",
-    "HIGH P2 Hidden Instructions @ references/layouts/overlay.html:1",
-    "HIGH P2 Hidden Instructions @ references/layouts/pip.html:1",
     "HIGH P2 Hidden Instructions @ references/layouts/pip.html:1",
     "HIGH P2 Hidden Instructions @ references/layouts/split.html:1",
-    "HIGH P2 Hidden Instructions @ references/layouts/split.html:1"
+    "HIGH P2 Hidden Instructions @ references/layouts/stack.html:1",
+    "HIGH P2 Hidden Instructions @ references/styles/minimal.html:1",
+    "HIGH P2 Hidden Instructions @ references/styles/swiss.html:1"
+   ],
+   "high": [
+    "P2@references/frames/hairline.html",
+    "P2@references/frames/polaroid.html",
+    "P2@references/layouts/overlay.html",
+    "P2@references/layouts/pip.html",
+    "P2@references/layouts/split.html",
+    "P2@references/layouts/stack.html",
+    "P2@references/styles/minimal.html",
+    "P2@references/styles/swiss.html",
+    "P2@references/styles/xhs.html"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -1174,10 +1346,16 @@
     "HIGH PE3 Credential Access @ CHANGELOG.md:20",
     "HIGH PE3 Credential Access @ SKILL.md:38",
     "HIGH PE3 Credential Access @ SKILL.md:43",
-    "HIGH PE3 Credential Access @ SKILL.md:43",
     "HIGH PE3 Credential Access @ SKILL.md:115",
     "HIGH YR1 YARA rule 'info_stealer': Information stealer patterns (credential harvesting, browser data theft) [malware] @ SKILL.md:3",
-    "HIGH PE3 Credential Access @ SKILL.md:43"
+    "HIGH PE3 Credential Access @ SKILL.md:92",
+    "HIGH PE3 Credential Access @ SKILL.md:112"
+   ],
+   "high": [
+    "AS2@SKILL.md",
+    "PE3@CHANGELOG.md",
+    "PE3@SKILL.md",
+    "YR1@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13",
@@ -1195,6 +1373,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13",
    "plugins": [
@@ -1211,6 +1390,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1223,6 +1403,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1235,6 +1416,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1247,6 +1429,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1259,6 +1442,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1271,6 +1455,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1283,6 +1468,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1295,6 +1481,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1307,6 +1494,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1319,6 +1507,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1331,6 +1520,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1343,6 +1533,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1355,6 +1546,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1367,6 +1559,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1381,8 +1574,10 @@
     "HIGH": 2
    },
    "top": [
-    "HIGH P2 Hidden Instructions @ SKILL.md:136",
     "HIGH P2 Hidden Instructions @ SKILL.md:136"
+   ],
+   "high": [
+    "P2@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -1400,6 +1595,9 @@
    "top": [
     "HIGH AR2 Anti-Refusal Statement @ SKILL.md:260"
    ],
+   "high": [
+    "AR2@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1412,6 +1610,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1427,6 +1626,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:33"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -1445,6 +1647,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:245",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:559"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1457,6 +1660,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1473,6 +1677,9 @@
    "top": [
     "HIGH AR2 Anti-Refusal Statement @ SKILL.md:188"
    ],
+   "high": [
+    "AR2@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1485,6 +1692,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1497,6 +1705,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1509,6 +1718,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1525,6 +1735,9 @@
    "top": [
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:120"
    ],
+   "high": [
+    "AE1@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1537,6 +1750,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1557,6 +1771,7 @@
     "MEDIUM E1 External Transmission @ references/mcp-servers.md:81",
     "MEDIUM E1 External Transmission @ examples/customized-mcp.json:24"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1581,6 +1796,11 @@
     "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:267",
     "MEDIUM AS3 Skill Enumeration @ references/component-schemas.md:7"
    ],
+   "high": [
+    "AE1@SKILL.md",
+    "MP3@SKILL.md",
+    "RA1@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1593,6 +1813,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1605,6 +1826,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1617,6 +1839,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1635,6 +1858,9 @@
     "HIGH RA1 Self-Modification @ SKILL.md:169",
     "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1"
    ],
+   "high": [
+    "RA1@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1647,6 +1873,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1659,6 +1886,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1671,6 +1899,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -1687,6 +1916,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:137"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1699,6 +1929,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1711,6 +1942,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1723,6 +1955,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1735,6 +1968,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1747,6 +1981,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1759,6 +1994,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1771,6 +2007,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1783,6 +2020,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1795,6 +2033,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1807,6 +2046,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1819,6 +2059,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1831,6 +2072,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1843,6 +2085,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1855,6 +2098,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1867,6 +2111,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1879,6 +2124,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1891,6 +2137,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1903,6 +2150,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1915,6 +2163,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1927,6 +2176,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1939,6 +2189,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1951,6 +2202,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1963,6 +2215,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1975,6 +2228,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1987,6 +2241,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -1999,6 +2254,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2011,6 +2267,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2023,6 +2280,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2035,6 +2293,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2047,6 +2306,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2059,6 +2319,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2071,6 +2332,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2087,6 +2349,9 @@
    "top": [
     "HIGH E4 Context Leakage @ SKILL.md:271"
    ],
+   "high": [
+    "E4@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2099,6 +2364,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2115,6 +2381,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:55"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2127,6 +2394,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2139,6 +2407,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2155,6 +2424,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:91"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2167,6 +2437,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2182,6 +2453,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2199,6 +2473,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2214,6 +2491,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2231,6 +2511,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2246,6 +2529,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2263,6 +2549,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:10"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2278,6 +2567,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2295,6 +2587,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2310,6 +2605,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2327,6 +2625,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2342,6 +2643,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2359,6 +2663,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2374,6 +2681,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2391,6 +2701,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2406,6 +2719,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2423,6 +2739,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2438,6 +2757,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2455,6 +2777,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2470,6 +2795,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2487,6 +2815,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2502,6 +2833,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:10"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2519,6 +2853,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2534,6 +2871,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2551,6 +2891,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2566,6 +2909,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2583,6 +2929,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:10"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2598,6 +2947,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2615,6 +2967,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2630,6 +2985,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2647,6 +3005,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2662,6 +3023,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2679,6 +3043,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2694,6 +3061,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2711,6 +3081,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2726,6 +3099,9 @@
    },
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "high": [
+    "AR1@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2743,6 +3119,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2758,6 +3137,9 @@
    },
    "top": [
     "HIGH AR2 Anti-Refusal Statement @ SKILL.md:101"
+   ],
+   "high": [
+    "AR2@SKILL.md"
    ],
    "complete": true,
    "scanned_at": "2026-10-13"
@@ -2777,6 +3159,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ reference/matching_and_exceptions.md:80",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:64"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2789,6 +3172,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2807,6 +3191,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:84",
     "MEDIUM P7 Indirect Prompt Extraction @ reference/capture.md:18"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2832,6 +3217,11 @@
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:181",
     "LOW PE1 Excessive Permissions @ reference/gotchas.md:72"
    ],
+   "high": [
+    "AR2@SKILL.md",
+    "AR2@reference/gotchas.md",
+    "AR2@reference/paths.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2849,6 +3239,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:9",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:85"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2861,6 +3252,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2878,6 +3270,7 @@
     "MEDIUM E1 External Transmission @ reference/canva-api.md:3",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:373"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2894,6 +3287,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:199"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2910,6 +3304,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:65"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2922,6 +3317,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -2934,6 +3330,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2953,6 +3350,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ reference/lightweight_crm.md:85",
     "MEDIUM P9 Whitespace Padding @ reference/hubspot-fields.md:7"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2969,6 +3367,9 @@
    "top": [
     "HIGH AR1 Anti-Refusal Statement @ SKILL.md:18"
    ],
+   "high": [
+    "AR1@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2981,6 +3382,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -2993,6 +3395,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3011,6 +3414,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:107",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:130"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3030,6 +3434,9 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:98",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:135"
    ],
+   "high": [
+    "AR2@reference/reply_drafting.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3047,6 +3454,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:3",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:100"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3059,6 +3467,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3080,6 +3489,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:48",
     "LOW EA3 Scope Creep @ reference/interview-guide-structure.md:73"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3097,6 +3507,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:82",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:105"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3114,6 +3525,7 @@
     "MEDIUM TR2 Shadow Command Trigger @ SKILL.md:1",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:67"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3126,6 +3538,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3145,6 +3558,9 @@
     "HIGH AR2 Anti-Refusal Statement @ SKILL.md:89",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:93"
    ],
+   "high": [
+    "AR2@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3157,6 +3573,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3173,6 +3590,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ reference/sequence_patterns.md:32"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3185,6 +3603,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3202,6 +3621,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:96",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:65"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3219,6 +3639,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:38",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:74"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3235,6 +3656,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:175"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3251,6 +3673,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:83"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3268,6 +3691,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:85",
     "MEDIUM EA2 Autonomous Decision Making @ reference/saved_reports.md:9"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3280,6 +3704,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3297,6 +3722,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:3",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:66"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3314,6 +3740,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:99",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:3"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3331,6 +3758,9 @@
    "top": [
     "HIGH AR2 Anti-Refusal Statement @ reference/gotchas.md:56",
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:60"
+   ],
+   "high": [
+    "AR2@reference/gotchas.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -3350,6 +3780,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:45",
     "MEDIUM EA2 Autonomous Decision Making @ reference/onboard-checklist.md:65"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3366,6 +3797,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:201"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3384,6 +3816,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:440",
     "MEDIUM EA2 Autonomous Decision Making @ reference/shopify-assets.md:68"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3400,6 +3833,7 @@
    "top": [
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:44"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3412,6 +3846,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3424,6 +3859,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3436,6 +3872,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3448,6 +3885,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3464,6 +3902,9 @@
    "top": [
     "HIGH AR2 Anti-Refusal Statement @ SKILL.md:20"
    ],
+   "high": [
+    "AR2@SKILL.md"
+   ],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3476,6 +3917,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3488,6 +3930,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3500,6 +3943,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3512,6 +3956,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3527,6 +3972,9 @@
    },
    "top": [
     "HIGH P2 Hidden Instructions @ references/report-writer.md:23"
+   ],
+   "high": [
+    "P2@references/report-writer.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -3544,11 +3992,13 @@
    },
    "top": [
     "HIGH P2 Hidden Instructions @ SKILL.md:272",
-    "HIGH P2 Hidden Instructions @ SKILL.md:272",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:51",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:99",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1006",
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1007"
+   ],
+   "high": [
+    "P2@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -3562,6 +4012,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3586,6 +4037,14 @@
     "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
     "MEDIUM AST4 subprocess module call @ scripts/accept_changes.py:68"
    ],
+   "high": [
+    "E2@scripts/office/soffice.py",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd",
+    "TM1@SKILL.md",
+    "TM2@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3602,6 +4061,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3614,6 +4074,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3626,6 +4087,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3645,6 +4107,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ references/sheets.md:128",
     "MEDIUM AST4 subprocess module call @ scripts/render_export.py:123"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3657,6 +4120,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3673,6 +4137,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3690,6 +4155,10 @@
     "HIGH YR4 YARA rule 'agent_skill_prompt_injection_hidden_instructions': Prompt injection or hidden instructions embedded in AI agent skill text [agent_skills] @ SKILL.md:3",
     "HIGH P1 Instruction Override @ SKILL.md:14"
    ],
+   "high": [
+    "P1@SKILL.md",
+    "YR4@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3702,6 +4171,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3718,6 +4188,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:149"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3730,6 +4201,7 @@
    "max_issue_severity": "NONE",
    "counts": {},
    "top": [],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3748,6 +4220,7 @@
     "MEDIUM TR2 Shadow Command Trigger @ SKILL.md:1",
     "LOW EA3 Scope Creep @ assets/fonts/Fraunces-OFL.txt:86"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3765,6 +4238,7 @@
     "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
     "MEDIUM TR3 Keyword Baiting Trigger @ SKILL.md:1"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3789,6 +4263,15 @@
     "HIGH E2 Env Variable Harvesting @ scripts/office/soffice.py:28",
     "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1"
    ],
+   "high": [
+    "AE1@SKILL.md",
+    "E2@scripts/office/soffice.py",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd",
+    "TM1@SKILL.md",
+    "TM2@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3806,6 +4289,7 @@
     "MEDIUM P9 Whitespace Padding @ SKILL.md:230",
     "MEDIUM P9 Whitespace Padding @ SKILL.md:231"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3822,6 +4306,7 @@
    "top": [
     "MEDIUM RP1 MCP Rug Pull @ SKILL.md:21"
    ],
+   "high": [],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3838,6 +4323,7 @@
    "top": [
     "LOW EA3 Scope Creep @ SKILL.md:12"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -3854,6 +4340,10 @@
    "top": [
     "HIGH AR3 Anti-Refusal Statement @ SKILL.md:446",
     "HIGH P6 Direct Prompt Extraction @ SKILL.md:770"
+   ],
+   "high": [
+    "AR3@SKILL.md",
+    "P6@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -3872,6 +4362,10 @@
     "HIGH MP3 Memory Manipulation @ SKILL.md:479",
     "HIGH P6 Direct Prompt Extraction @ SKILL.md:1032"
    ],
+   "high": [
+    "MP3@SKILL.md",
+    "P6@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3887,6 +4381,9 @@
    },
    "top": [
     "HIGH P6 Direct Prompt Extraction @ SKILL.md:1254"
+   ],
+   "high": [
+    "P6@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -3904,6 +4401,9 @@
    "top": [
     "HIGH P6 Direct Prompt Extraction @ SKILL.md:1040"
    ],
+   "high": [
+    "P6@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3920,6 +4420,9 @@
    "top": [
     "HIGH P6 Direct Prompt Extraction @ SKILL.md:903"
    ],
+   "high": [
+    "P6@SKILL.md"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3935,6 +4438,9 @@
    },
    "top": [
     "HIGH AS1 Agent Config Directory Access @ SKILL.md:85"
+   ],
+   "high": [
+    "AS1@SKILL.md"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -3960,6 +4466,12 @@
     "MEDIUM RA2 Session Persistence @ SKILL.md:238",
     "MEDIUM AST4 subprocess module call @ eval-viewer/generate_review.py:291"
    ],
+   "high": [
+    "AE1@SKILL.md",
+    "AS1@scripts/run_eval.py",
+    "E2@scripts/improve_description.py",
+    "E2@scripts/run_eval.py"
+   ],
    "complete": false,
    "scanned_at": "2026-10-13"
   },
@@ -3978,6 +4490,7 @@
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:59",
     "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:95"
    ],
+   "high": [],
    "complete": true,
    "scanned_at": "2026-10-13"
   },
@@ -4001,6 +4514,13 @@
     "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd:1",
     "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd:1",
     "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd:1"
+   ],
+   "high": [
+    "AE1@SKILL.md",
+    "E2@scripts/office/soffice.py",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd",
+    "P2@scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd"
    ],
    "complete": false,
    "scanned_at": "2026-10-13"
@@ -4057,5 +4577,6 @@
    }
   }
  },
- "skillspector": "2.12.0"
+ "skillspector": "2.12.0",
+ "pending": {}
 }
