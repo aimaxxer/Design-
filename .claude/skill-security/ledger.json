@@ -1,0 +1,4061 @@
+{
+ "skills": {
+  "marketplace:blader/humanizer": {
+   "hash": "1c7467fe419d068ac5b6133f02e66759265b174c4ff98857efb922b5852bcad0",
+   "status": "flagged",
+   "score": 42,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2,
+    "MEDIUM": 4
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:165",
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:167",
+    "MEDIUM RP1 MCP Rug Pull @ AGENTS.md:32",
+    "MEDIUM RP1 MCP Rug Pull @ README.md:40",
+    "MEDIUM RP1 MCP Rug Pull @ README.md:45",
+    "MEDIUM RP1 MCP Rug Pull @ README.md:55"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "humanizer@humanizer"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/eas-app-stores": {
+   "hash": "902a9d1310a686433b8d8a0d999f4ebcc34554f252b104d1a8ab538b3f6d6298",
+   "status": "pass",
+   "score": 30,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 32
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:46",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:57",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:60",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:63",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:70",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:73",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:76",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:125"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/eas-hosting": {
+   "hash": "ac510fa3ce2c07a781b6630b15bccd56caa1f4304b6e79917c3f638fe0d8bf64",
+   "status": "pass",
+   "score": 22,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 10
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:12",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:207",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:234",
+    "MEDIUM E1 External Transmission @ SKILL.md:145",
+    "MEDIUM E1 External Transmission @ SKILL.md:145",
+    "MEDIUM E1 External Transmission @ SKILL.md:215",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:237",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:240"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/eas-observe": {
+   "hash": "85015cf91a544af9842a9f6f0d6f2b9905bdbe7c3ac2c85b825236a68b572407",
+   "status": "pass",
+   "score": 12,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 7
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:51",
+    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:24",
+    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:33",
+    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:34",
+    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:464",
+    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:469",
+    "MEDIUM RP1 MCP Rug Pull @ references/setup.md:24"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/eas-simulator": {
+   "hash": "d52513d7129df36d21f14d498ab1709a35927aa4655906066e4462f26392b908",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 9,
+    "MEDIUM": 108
+   },
+   "top": [
+    "HIGH PE3 Credential Access @ SKILL.md:34",
+    "HIGH PE3 Credential Access @ references/troubleshooting.md:11",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:194",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:226",
+    "HIGH AS2 MCP Config Access @ references/controllers.md:135",
+    "HIGH AS2 MCP Config Access @ references/controllers.md:135",
+    "HIGH TM1 Tool Parameter Abuse @ references/logs-and-crashes.md:32",
+    "HIGH TM1 Tool Parameter Abuse @ references/logs-and-crashes.md:44"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/eas-update": {
+   "hash": "001231fe97ba226b39f6a1d5f287485102b6fea14253361ad8313016731f1f4e",
+   "status": "pass",
+   "score": 12,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 7
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:6",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:29",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:35",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:78",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:84",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:143"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/eas-update-insights": {
+   "hash": "16b5cd76f7bbd924b502238e5f886982daaf227b2802e92be8ec9ab6f054f80c",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:235"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/eas-workflows": {
+   "hash": "fad090f5d57294a962842b25fcd87090be25222d0b7770b78c34687d8e41b1f3",
+   "status": "flagged",
+   "score": 43,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1,
+    "MEDIUM": 3,
+    "LOW": 1
+   },
+   "top": [
+    "HIGH LP1 MCP Least Privilege @ scripts/fetch.js:1",
+    "MEDIUM E1 External Transmission @ SKILL.md:24",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:84",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:96",
+    "LOW TR1 Overly Broad Trigger @ SKILL.md:1"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-animation": {
+   "hash": "f1975146275ab3e16538e3ae402908b3fee018e1758e4f3d341b86783c81feff",
+   "status": "pass",
+   "score": 19,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 6
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ RECIPES.md:10",
+    "MEDIUM RP1 MCP Rug Pull @ RECIPES.md:258",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:80",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:212",
+    "MEDIUM RA2 Session Persistence @ SKILL.md:222",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:271"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-app-clip": {
+   "hash": "a585204efbbf4edf917938b15c825c34b6c1cba42768daaff05467c26e8109ff",
+   "status": "pass",
+   "score": 23,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 9
+   },
+   "top": [
+    "MEDIUM RA2 Session Persistence @ SKILL.md:38",
+    "MEDIUM RA2 Session Persistence @ SKILL.md:38",
+    "MEDIUM RA2 Session Persistence @ SKILL.md:191",
+    "MEDIUM RA2 Session Persistence @ SKILL.md:195",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:188",
+    "MEDIUM RA2 Session Persistence @ SKILL.md:191",
+    "MEDIUM RA2 Session Persistence @ references/native-module.md:29",
+    "MEDIUM RA2 Session Persistence @ references/native-module.md:29"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-brownfield": {
+   "hash": "45956c80cc6d3bc653bf9a4b3df57c758a41028cd5d7e6df685246a82ca4dbfe",
+   "status": "flagged",
+   "score": 74,
+   "severity": "HIGH",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2,
+    "MEDIUM": 38
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:36",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:37",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:55",
+    "MEDIUM RP1 MCP Rug Pull @ references/brownfield-integrated.md:31",
+    "MEDIUM RP1 MCP Rug Pull @ references/brownfield-isolated.md:47",
+    "MEDIUM RP1 MCP Rug Pull @ references/brownfield-isolated.md:95",
+    "MEDIUM RP1 MCP Rug Pull @ references/brownfield-isolated.md:259",
+    "MEDIUM RP1 MCP Rug Pull @ references/brownfield-isolated.md:434"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-data-fetching": {
+   "hash": "2442dea10ea69fef699609c9b1e9cc9cce2e5bee4ff148fa8016a7bd3d2fda96",
+   "status": "flagged",
+   "score": 85,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 10,
+    "MEDIUM": 10
+   },
+   "top": [
+    "HIGH PE3 Credential Access @ SKILL.md:298",
+    "HIGH PE3 Credential Access @ SKILL.md:410",
+    "HIGH PE3 Credential Access @ SKILL.md:314",
+    "HIGH PE3 Credential Access @ SKILL.md:465",
+    "HIGH PE3 Credential Access @ SKILL.md:317",
+    "HIGH PE3 Credential Access @ SKILL.md:412",
+    "HIGH PE3 Credential Access @ SKILL.md:465",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:387"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-design-system": {
+   "hash": "b4bc34f493567104945607f77cf64b5740f051c05345b248005418261a28eabe",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:373"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-dev-client": {
+   "hash": "92b5a69364111a185170a457ff068188005adb9c853e6c3ce06ba5069f58855f",
+   "status": "pass",
+   "score": 10,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:150",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:179"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-dom": {
+   "hash": "af7f3dfcb43688eecaa8be88b3fe20ab8fcc4fd24fb827e1f09e9affb7efffc5",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:422"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-examples": {
+   "hash": "39c9f5561a2fff92c7df13d9449b2af9900e425795abbd6f23bb8158b46e2abf",
+   "status": "pass",
+   "score": 12,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 11
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:3",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:4",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:68",
+    "MEDIUM RP1 MCP Rug Pull @ agents/openai.yaml:4",
+    "MEDIUM RP1 MCP Rug Pull @ references/catalog.md:5",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:4"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-module": {
+   "hash": "d646c11e536506a68d57bbf008c900f2c2b4ef0ebee3d59e82fe980333b7bafc",
+   "status": "caution",
+   "score": 37,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 21
+   },
+   "top": [
+    "MEDIUM RA2 Session Persistence @ SKILL.md:33",
+    "MEDIUM RA2 Session Persistence @ references/config-plugin.md:29",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:148",
+    "MEDIUM RP1 MCP Rug Pull @ references/config-plugin.md:3",
+    "MEDIUM RP1 MCP Rug Pull @ references/config-plugin.md:90",
+    "MEDIUM RA2 Session Persistence @ references/config-plugin.md:23",
+    "MEDIUM RA2 Session Persistence @ references/config-plugin.md:30",
+    "MEDIUM RP1 MCP Rug Pull @ references/create-expo-module.md:37"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-native-ui": {
+   "hash": "178d732a658c4753c1788e66adc125ff801b5eca88be787778fd7bc24eecaba6",
+   "status": "pass",
+   "score": 19,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 7
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:33",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:35",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:41",
+    "MEDIUM RP1 MCP Rug Pull @ references/webgpu-three.md:500",
+    "MEDIUM RP1 MCP Rug Pull @ references/webgpu-three.md:501",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:198",
+    "MEDIUM P4 Behavior Manipulation @ references/icons.md:228"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-overview": {
+   "hash": "c33f41222ee549d93ad2b820be3024123deb52efb154a95a2e8e3eb275423f05",
+   "status": "flagged",
+   "score": 49,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2,
+    "MEDIUM": 3
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:21",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:26",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:81",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:95",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:112"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-project-structure": {
+   "hash": "1dbea26d99ae96307b5e203654d0b56a7aa69460ee9f623f256aded2e46d4029",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:111"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-router": {
+   "hash": "d4158dc75dd0f5e90df638da5389ad4809dbc529e603923c6f408116d21ab48d",
+   "status": "pass",
+   "score": 14,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:237",
+    "MEDIUM EA2 Autonomous Decision Making @ references/tabs.md:420"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-skill-feedback": {
+   "hash": "4b62debaf3ec18d21d623a7b528616ae653cc45543fd19a49364ed0e97f3117e",
+   "status": "pass",
+   "score": 19,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 7
+   },
+   "top": [
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:3",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:14",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:20",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:84",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:31"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-ui": {
+   "hash": "44d43238ad4f42d61932f86dfa13535e84530ab326d8c697a2c192a2d53a7be8",
+   "status": "pass",
+   "score": 10,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:18",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:98"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-upgrade": {
+   "hash": "a135f7935af351d0c30db0a20bcc91ce3a63e73144a4d4eb4cf72c082686ff66",
+   "status": "pass",
+   "score": 12,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 15
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:25",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:35",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:36",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:44",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:64",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:74",
+    "MEDIUM RP1 MCP Rug Pull @ references/new-architecture.md:54",
+    "MEDIUM RP1 MCP Rug Pull @ references/new-architecture.md:76"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:expo/skills/plugins/expo/skills/expo-web-to-native": {
+   "hash": "33aec051f996abc051e8c3a2013be392d2612f670f2dff1d46786ee104751a87",
+   "status": "pass",
+   "score": 12,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 3
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:88",
+    "MEDIUM RP1 MCP Rug Pull @ references/verify-on-device.md:32",
+    "MEDIUM RP1 MCP Rug Pull @ references/verify-on-device.md:37"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "expo@expo-plugins"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/embedded-captions": {
+   "hash": "4cbe4e0dc2e7ce586a7f062cd3e3ead09efb93b00a9125b58e3a034df046610b",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 34,
+    "MEDIUM": 227
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:18",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:96",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:155",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:50",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:279",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:280",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:281",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:50"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/faceless-explainer": {
+   "hash": "4a733060952e910ecc866fa96532928d6dadc6d688350c62fadf5e1fe0c0695a",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 6,
+    "MEDIUM": 25
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:80",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:112",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:176",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:176",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:469",
+    "HIGH AR2 Anti-Refusal Statement @ scripts/audio.test.mjs:187",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/figma": {
+   "hash": "10bd594b5d1fe008f1e05c31f45eb020698b6a4cc38e834aa14fb0e0d43f489c",
+   "status": "flagged",
+   "score": 38,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1,
+    "MEDIUM": 4
+   },
+   "top": [
+    "HIGH PE3 Credential Access @ SKILL.md:28",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:91",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:100",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:38"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/general-video": {
+   "hash": "7c7b8341f33da2a5436a1072338ea42afe117bfa9933be0900005eab415c5e97",
+   "status": "pass",
+   "score": 32,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 21
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:15",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:20",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:27",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:46",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:107",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:120",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:150",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:158"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes": {
+   "hash": "58abb0a9aad94001401dc01e5a8c2725ff0206da4d363b084097f33d87d9cd95",
+   "status": "flagged",
+   "score": 84,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2,
+    "MEDIUM": 90
+   },
+   "top": [
+    "HIGH P2 Hidden Instructions @ SKILL.md:40",
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:50",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:21",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:35",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:53",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:56",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:95"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-animation": {
+   "hash": "4ab7ad446ec92608423eeae580fd700bf15397160db767c122aefe3675909ef5",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 42,
+    "MEDIUM": 88,
+    "LOW": 1
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:16",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:29",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:36",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:82",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:37",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:42",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:43",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:49"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-audio": {
+   "hash": "b2efa26282e79a7506e5cdc04b2d1051c41bd0bf876e27036518aa0f0dca10f8",
+   "status": "flagged",
+   "score": 68,
+   "severity": "HIGH",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 4,
+    "MEDIUM": 11
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:77",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:285",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:291",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:366",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:381",
+    "MEDIUM RP1 MCP Rug Pull @ references/diagnosis.md:157",
+    "MEDIUM RP1 MCP Rug Pull @ references/diagnosis.md:158",
+    "MEDIUM P9 Whitespace Padding @ references/fx-registry.md:13"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-cli": {
+   "hash": "3a5acfd7e51f7dc02fb1fa1dc028ebe7f43934e50e684f8a6afb414d2aa0960e",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 3,
+    "MEDIUM": 316
+   },
+   "top": [
+    "HIGH P2 Hidden Instructions @ SKILL.md:31",
+    "HIGH TM1 Tool Parameter Abuse @ references/cloud.md:148",
+    "HIGH PE3 Credential Access @ references/lambda.md:35",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:16",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:20",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:21",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:22",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:23"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-core": {
+   "hash": "24231d50e64af8393f43232e272836015b12bf77aa1c79db16078968e9c62a11",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 5,
+    "MEDIUM": 42
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:26",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:80",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:81",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:27",
+    "HIGH P2 Hidden Instructions @ references/sub-compositions.md:45",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:23",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:25",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:28"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-creative": {
+   "hash": "fc4b83cbf674697fed8dbcdd6a622b7e9799fd56667d3435d5f68944c50b6652",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 51,
+    "MEDIUM": 13,
+    "LOW": 4
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:54",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:58",
+    "HIGH P2 Hidden Instructions @ frame-presets/biennale-yellow/caption-skin.html:1",
+    "HIGH P2 Hidden Instructions @ frame-presets/biennale-yellow/frame-showcase.html:710",
+    "HIGH P2 Hidden Instructions @ frame-presets/biennale-yellow/frame-showcase.html:799",
+    "HIGH P2 Hidden Instructions @ frame-presets/biennale-yellow/frame-showcase.html:1040",
+    "HIGH P2 Hidden Instructions @ frame-presets/blockframe/caption-skin.html:1",
+    "HIGH P2 Hidden Instructions @ frame-presets/blockframe/frame-showcase.html:814"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-keyframes": {
+   "hash": "7aa30eafc9dcac0ef684390df34182728d6067cfdca15188807c802342a8d70c",
+   "status": "pass",
+   "score": 24,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 16
+   },
+   "top": [
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:29",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:32",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:33",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:34",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:37",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:38",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:214",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:215"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-registry": {
+   "hash": "d830f60ed9fa64926a63120a5a50a0202837ba94eca9d07ad2d7adbe5dc0e888",
+   "status": "flagged",
+   "score": 69,
+   "severity": "HIGH",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2,
+    "MEDIUM": 35
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:143",
+    "HIGH AR2 Anti-Refusal Statement @ references/component-quality-bar.md:33",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:94",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:95",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:107",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:108",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:109",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:110"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/hyperframes-studio": {
+   "hash": "0613842e8e65b1e53ab871053c9e1897da17f036b7150ebf940087ba55da5185",
+   "status": "pass",
+   "score": 26,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 18
+   },
+   "top": [
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:29",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:29",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:31",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:33",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:34",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:35",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:36",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:37"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/media-use": {
+   "hash": "453ca1838356b476bbc0115fdd09c0e31f303710870c1d81a14d8ab99a78092a",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 18,
+    "MEDIUM": 139,
+    "LOW": 1
+   },
+   "top": [
+    "HIGH PE3 Credential Access @ audio/references/tts.md:74",
+    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.mjs:6",
+    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.mjs:67",
+    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.mjs:71",
+    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.test.mjs:138",
+    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.test.mjs:138",
+    "HIGH PE3 Credential Access @ audio/scripts/lib/heygen.test.mjs:152",
+    "HIGH PE3 Credential Access @ audio/scripts/gemini-pipeline.test.mjs:67"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/motion-graphics": {
+   "hash": "9a7c9dfb6f5868f534263dfdcc103122aee790a67d774558661c7d2cd260f179",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 5,
+    "MEDIUM": 66
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:32",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:109",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:54",
+    "HIGH P2 Hidden Instructions @ samples/asset-fusion/_ref-circle-highlight.html:6",
+    "HIGH P2 Hidden Instructions @ samples/asset-fusion/_ref-circle-highlight.html:6",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:16",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:69"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/music-to-video": {
+   "hash": "d7b37223e36a91778aa655b1595f8d7fd14ef4021599ea41c1c45b8faafad066",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 6,
+    "MEDIUM": 17
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:103",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:105",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:186",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:138",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:186",
+    "HIGH P2 Hidden Instructions @ references/templates/logo-split-lockup-pulse/index.html:21",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/pr-to-video": {
+   "hash": "249b3819521833a10556cc94f006214c3f9495b380152f4bbd914ce633349f06",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 10,
+    "MEDIUM": 45
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:66",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:88",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:66",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:88",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:108",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:140",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:202",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:177"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/product-launch-video": {
+   "hash": "dc2b10d49fe478cab14bea3af051ff67475b981d867b08d25d1541b2c63c0591",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 7,
+    "MEDIUM": 26
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:103",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:135",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:238",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:238",
+    "HIGH P2 Hidden Instructions @ scripts/assemble-index.mjs:617",
+    "HIGH PE3 Credential Access @ scripts/audio.test.mjs:27",
+    "HIGH AR2 Anti-Refusal Statement @ scripts/audio.test.mjs:245",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/remotion-to-hyperframes": {
+   "hash": "3debe0a6cd95b0c95771dc88d012dc86360f0def3eb273a34e1d4d7dbb6d4347",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 5,
+    "MEDIUM": 43,
+    "LOW": 16
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:48",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:58",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:63",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:106",
+    "HIGH P2 Hidden Instructions @ references/sequencing.md:36",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM TR2 Shadow Command Trigger @ SKILL.md:1",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/slideshow": {
+   "hash": "81baf395b5fe453daf22037d4d3c61111adcc96e91091a7bd83b2149be74a2c8",
+   "status": "flagged",
+   "score": 92,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 5,
+    "MEDIUM": 13
+   },
+   "top": [
+    "HIGH P2 Hidden Instructions @ SKILL.md:61",
+    "HIGH P2 Hidden Instructions @ SKILL.md:61",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:434",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:475",
+    "HIGH P2 Hidden Instructions @ references/standalone-harness.md:33",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:14",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:169",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:491"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:heygen-com/hyperframes/skills/talking-head-recut": {
+   "hash": "2cd3146994fb9c2f313dc78a206abb9938d341ac7b624b10d064441428e9e4c7",
+   "status": "flagged",
+   "score": 63,
+   "severity": "HIGH",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 13,
+    "MEDIUM": 24
+   },
+   "top": [
+    "HIGH P2 Hidden Instructions @ references/frames/hairline.html:1",
+    "HIGH P2 Hidden Instructions @ references/frames/polaroid.html:1",
+    "HIGH P2 Hidden Instructions @ references/layouts/overlay.html:1",
+    "HIGH P2 Hidden Instructions @ references/layouts/overlay.html:1",
+    "HIGH P2 Hidden Instructions @ references/layouts/pip.html:1",
+    "HIGH P2 Hidden Instructions @ references/layouts/pip.html:1",
+    "HIGH P2 Hidden Instructions @ references/layouts/split.html:1",
+    "HIGH P2 Hidden Instructions @ references/layouts/split.html:1"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "hyperframes@hyperframes"
+   ]
+  },
+  "marketplace:supabase/agent-skills/skills/supabase": {
+   "hash": "a5f461e428839907c2bf03bb5adfd5f7642ecf2105644ae00b0a90f73e55175b",
+   "status": "flagged",
+   "score": 83,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 12,
+    "MEDIUM": 1,
+    "LOW": 1
+   },
+   "top": [
+    "HIGH PE3 Credential Access @ CHANGELOG.md:8",
+    "HIGH PE3 Credential Access @ CHANGELOG.md:20",
+    "HIGH PE3 Credential Access @ SKILL.md:38",
+    "HIGH PE3 Credential Access @ SKILL.md:43",
+    "HIGH PE3 Credential Access @ SKILL.md:43",
+    "HIGH PE3 Credential Access @ SKILL.md:115",
+    "HIGH YR1 YARA rule 'info_stealer': Information stealer patterns (credential harvesting, browser data theft) [malware] @ SKILL.md:3",
+    "HIGH PE3 Credential Access @ SKILL.md:43"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "postgres-best-practices@supabase-agent-skills",
+    "supabase@supabase-agent-skills"
+   ]
+  },
+  "marketplace:supabase/agent-skills/skills/supabase-postgres-best-practices": {
+   "hash": "d91704aad316b865a244ff5f1c98d5cec9756eb53d80e2b6c71d8470575224a3",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13",
+   "plugins": [
+    "postgres-best-practices@supabase-agent-skills",
+    "supabase@supabase-agent-skills"
+   ]
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/brief": {
+   "hash": "14c46249c18ec6e13182e781914d3146fe953501a40417999adb1c17f308c136",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/compliance-check": {
+   "hash": "d6c3228f7a0de5426ad6fc7f32e9d2ffb8a22900fe8cc0e852c16549296e32cc",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/legal-response": {
+   "hash": "029666739b020a9fd499970ed17e85adcef294baeb99bbd5eac39bf63213eca7",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/legal-risk-assessment": {
+   "hash": "36199929dc5baf9cba0c2a7933c70248f8b1f6535c69162ce47265445807f563",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/meeting-briefing": {
+   "hash": "78e3b7c5528c788cdee3cc37fd7f6f2d2e5b87b26b3b0147b2ab4e7d682e259f",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/review-contract": {
+   "hash": "3fdfcb0df161300e22349182ba5c4ca8064801204ee9bc218690bd7ca00804b6",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/signature-request": {
+   "hash": "772922619dc28870d57f935069e56d5bfa9652e621f90169e3963064bf0452e3",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/triage-nda": {
+   "hash": "7e7c9bc4942ea885ffb14522c24c0734f7fb4348aca5bad4643b464291549105",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:113d9de1-9423-4897-bc97-40c269f80b02/skills/vendor-check": {
+   "hash": "efe231dfd645b9e28a16e8cd6e9817a8122f6ceea5c6f5bc7ade6efefb77e17d",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:apollo/skills/enrich-lead": {
+   "hash": "be1062f98b569ad058c97135bb8847cacdb68017a522ecda3b7adfaec9e6b8bf",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:apollo/skills/prospect": {
+   "hash": "8834395060acc47dd2432614ce1b7ef3033131870e325520106f59f9983f20f2",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:apollo/skills/sequence-load": {
+   "hash": "ff21b37bc636580dbe646b0fb51f869a0877092add9520a85916237f7017545d",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/blog-generator/skills/blog-generator": {
+   "hash": "4437cccef779ad81a14a382265d391196b8d98f2861675dc8c1adb94ce7e41b6",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/code/skills/code": {
+   "hash": "878e97bf864990da80e4e361d0194d4345213f53210f06ec5a33d1adaca6a548",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/designer/skills/designer": {
+   "hash": "4ffc9c1d962c07323aeea78ae7b37ac3d31dbcfa854f68c1d59b5ecd1847a34f",
+   "status": "flagged",
+   "score": 26,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2
+   },
+   "top": [
+    "HIGH P2 Hidden Instructions @ SKILL.md:136",
+    "HIGH P2 Hidden Instructions @ SKILL.md:136"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/diagram-builder/skills/diagram-builder": {
+   "hash": "ef17d3c45b99e876dfd2d0d7f2d357d4b650d16f0213e3315fcfaaa59568a0c3",
+   "status": "flagged",
+   "score": 20,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:260"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/image-generator/skills/image-generator": {
+   "hash": "608c0699a83bcdd81d927eaa550066a456e123683a1b99f96069ca8f0be24026",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/logo-generator/skills/logo-generator": {
+   "hash": "77199e5c4f950a0b7ccbc198b7fde1dd4bb78a45628cb108b5bfc9b7936a7ec5",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:33"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/pdf-make/skills/pdf-make": {
+   "hash": "810b491c0cf9ef0cebaae4c427c42f4db0bc04cbfc4be04d7f31479d83d6623a",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:245",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:559"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/presentation-generator/skills/presentation-generator": {
+   "hash": "d6ec432190cc57d66a9d1606d23139196402a4c4293663b3a58fba48f0480f16",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/plugins/writer/skills/writer": {
+   "hash": "f98d7ea12addc16ce9c7b698c20b030ddb4f42377b9cdac294551d12e2b7e54a",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:188"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/skills/b12-website-editor": {
+   "hash": "ef0e616d1292552b08080c07b5c8eb98faa5d31eb5bb0bf4c260da710add714b",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:b12-claude-plugin/skills/website-generator": {
+   "hash": "38115e2ff44f34920aa6579458d2b53faf1cb34864183921da09640c9f1f8d46",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:brand-voice/skills/brand-voice-enforcement": {
+   "hash": "3b17bc019d9d041cf641b12527452684a62286463eacfd6ba032b9ffeacc62dd",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:brand-voice/skills/discover-brand": {
+   "hash": "9a07c7266d80141c4c60e0b97ac326787f3dcb76c1db17c650c8a3e0e2468661",
+   "status": "flagged",
+   "score": 25,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:120"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:brand-voice/skills/guideline-generation": {
+   "hash": "128c6c4f5dfdb7dc7b8887102ed28db87041fdc5e929389da41e1cdf33f2b047",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:cowork-plugin-management/skills/cowork-plugin-customizer": {
+   "hash": "766cdea6d2929f17e0d024e94d3ddc4f1da4803c51dc4e557ed53c250540b2e9",
+   "status": "pass",
+   "score": 24,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 5
+   },
+   "top": [
+    "MEDIUM AS3 Skill Enumeration @ SKILL.md:72",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:78",
+    "MEDIUM E1 External Transmission @ examples/customized-mcp.json:5",
+    "MEDIUM E1 External Transmission @ references/mcp-servers.md:81",
+    "MEDIUM E1 External Transmission @ examples/customized-mcp.json:24"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:cowork-plugin-management/skills/create-cowork-plugin": {
+   "hash": "3e223b73822afa6aa7c16db53f14ec7ab9a085d9b1ad4fb3618e6113f16993dd",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 7,
+    "MEDIUM": 8
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:86",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:218",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:266",
+    "HIGH MP3 Memory Manipulation @ SKILL.md:147",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:238",
+    "HIGH RA1 Self-Modification @ SKILL.md:259",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:267",
+    "MEDIUM AS3 Skill Enumeration @ references/component-schemas.md:7"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/analyze": {
+   "hash": "4b040247ed815e96c6bb4bc701722d6649b59adda02c7e9e72c029445f728a58",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/build-dashboard": {
+   "hash": "baebf32018816fea1eb3cac9d3137d4a17a59e7e3a4f7c7532d8e2bd9541562f",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/create-viz": {
+   "hash": "c69e73514aca0f86809cd4e9fe78c0de268ecdba906753df853b54ba536abf0a",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/data-context-extractor": {
+   "hash": "897346f2dd9b9a47d0832b50fb9b199ccac36972be569f078ba45b737dc99479",
+   "status": "flagged",
+   "score": 28,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1,
+    "MEDIUM": 1
+   },
+   "top": [
+    "HIGH RA1 Self-Modification @ SKILL.md:169",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/data-visualization": {
+   "hash": "5d941c50489d3f6efd49c84b07fb234f0a3e436ea75aea96d2baa158e4affd2a",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/explore-data": {
+   "hash": "b39f95a5e28a131fe136e86dac5e06ba9496a7ada8ce1c04f82dfa39a9810caa",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/sql-queries": {
+   "hash": "8d816b5ede4e32a32b00abfbfb079eb23eb99fb913cd4fecd28adca57514fcde",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/statistical-analysis": {
+   "hash": "76e7c1a729a15a74c27712ceae551054502aaa418f6d180af7a08e599780bca7",
+   "status": "pass",
+   "score": 8,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:137"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/validate-data": {
+   "hash": "824373580111458589706eb8d59c037431d02a0d2ac18fea70789d45c6b53cdb",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:data/skills/write-query": {
+   "hash": "6fa2b25fc3be41bcb46ece722a22af5a068c0af98b57d7bc8e405963a3e4d5cc",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:design/skills/accessibility-review": {
+   "hash": "bb8c372d8ee19be33d5d79d6b5c75fe7ca58876c399019fdf1429f5ed4a80a87",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:design/skills/design-critique": {
+   "hash": "fc09dd674aae3dc072518d17b3d61b3cfc4e531d85f9f4dea2a49147aa751ef3",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:design/skills/design-handoff": {
+   "hash": "0f4c45eec7b3fc5f472831aefec0c5e8855e2d61ae680cae94f05de2729eb9f8",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:design/skills/design-system": {
+   "hash": "3a1b88b05cbd40796839d0087ff81ad626f5b57fa05899e7246e34ddd49a8a6f",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:design/skills/research-synthesis": {
+   "hash": "8738c852e7982efb93aba5ae32d0635329165b9ae1196a585cf99047306f9848",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:design/skills/user-research": {
+   "hash": "1afef2d286f89e43de930ca24bc7b47ce5cf5a1eec1acf10ff2ac2796bae4bea",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:design/skills/ux-copy": {
+   "hash": "09b12f9caaff0fc2cb9eefc58ae9949e1a91ee84e416dd4946122bd0f1a5dd68",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/brand-review": {
+   "hash": "4d41378cd643c4a31d9dc88cb33f61246fa703edcdddb09841110ddc87e709d5",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/campaign-plan": {
+   "hash": "14558e764473340695aac71c37ac1b489d196ce84a9c57074155d56eb025c4fd",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/competitive-brief": {
+   "hash": "e31bf58fc81bb2c835237d23f2326ccf6012ff3a5d6a41a9a55b3fbdec33a5b7",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/content-creation": {
+   "hash": "61b015f11268415cc057e5d66ab43b2b752a66f06138175420c3b6b9c3cdec0f",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/draft-content": {
+   "hash": "50232f912b1b89c44445914ebea660412dbdb114539a0c805fd5ab4892728aee",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/email-sequence": {
+   "hash": "efed93acbf48372d0fcd7fb90dcec89583ac02e22075a6ecc30d4f03cb0632d8",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/performance-report": {
+   "hash": "62a421e6649f12d4e2b87435b84d455e26c9d931bbfe15f1dfe2f3b51456d1b4",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:marketing/skills/seo-audit": {
+   "hash": "ca41e20866cdb4078d6ccb9d30d0d385fa2db0e576e90141822875e4f3b05f78",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/capacity-plan": {
+   "hash": "aedb429fd616e9521f01e70c5797e6475891b524b64c5040503611079de1ae7f",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/change-request": {
+   "hash": "5d3a34df1dd1afa099f30fc458e2654f481b82470e4550dd4894ef6d5603af04",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/compliance-tracking": {
+   "hash": "25c78c5d3b1bd751467c76bd7d6d78b4e22b61268e2b11ea04343d744dc9bd76",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/process-doc": {
+   "hash": "194b7f8d0dbb1f57597284f3c9694c4bec685fdfcb6289fa4c24f57975e966e8",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/process-optimization": {
+   "hash": "aa7d6eda73a10746a8ec6d58762ac4671fc6b234adee0d1e8cd04e499c89b528",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/risk-assessment": {
+   "hash": "cc7d223c1dd1cba472c6ae8637aa08ea8925df0e3134b686501b146f7d5cbe60",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/runbook": {
+   "hash": "d494bdd5b43fc516a33942752aa7bf5865a891d6191030abc9fd453036fb3c9b",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/status-report": {
+   "hash": "adebe7b4d56be91cd30e5514a02198217bec7eb05de0fd090e755a54f622c38a",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:operations/skills/vendor-review": {
+   "hash": "2b140591e1145635c7a59ab3736e007adcdc404eb959a8873b1442ee0f4af391",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:pdf-viewer/skills/view-pdf": {
+   "hash": "0d3607c3ae665453b5b43d8d2054ca6611619f97472ee3cb4e1c06a318a30459",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/competitive-brief": {
+   "hash": "5667c14acaf3ffdd7cc61d04c15a89933edc95ea7e1c4c3629b3c26d5b433018",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/metrics-review": {
+   "hash": "58ecfe1aa2aad803dc7121b07fb8c8b8acddcc3dd82cc4f6853caf684429fcf0",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/product-brainstorming": {
+   "hash": "0ad134e0d0c620a645e411df1ec697d978513122eeb8d968a8868485ccacf8a0",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/roadmap-update": {
+   "hash": "c343236f12411ab04fb909fc80028d5304b8183516ebaaef2a6a0596d1d7c2f5",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/sprint-planning": {
+   "hash": "4f2b2dcab2f705a77eeb8f710c3235cb7a67fe2d50233ec50d626aec8eb4ba1e",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/stakeholder-update": {
+   "hash": "6b2d626e45253f468b273004af9f5f77df00a4e4b3ed3f616aa551af92cf1b7a",
+   "status": "flagged",
+   "score": 18,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH E4 Context Leakage @ SKILL.md:271"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/synthesize-research": {
+   "hash": "4d85bd91235b76aeedfeeee63bfd022d2fcaf69043ea0314fbb2d949c667e379",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:product-management/skills/write-spec": {
+   "hash": "dc26deba3e57a36d994f4dae143241c427c529d53ed25015162959f9c4f40b5d",
+   "status": "pass",
+   "score": 8,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:55"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:productivity/skills/memory-management": {
+   "hash": "a0d82f2aa63757bc909c42503bf9dd8db04cbe182912fca2bde63bd79a2d0e6f",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:productivity/skills/start": {
+   "hash": "63f46ac95e070ffc4ef088342f9dd0a0892d6bd0c249396fa3f1cfd250e1f6bf",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:productivity/skills/task-management": {
+   "hash": "7b590ee5a76a25fb71962a22586b05b13139592fe9aa46a57a961b1a25238f60",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:91"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:productivity/skills/update": {
+   "hash": "03cf6194c8e1f30721576b4cbc82a8c51c23ff23b61865132144d00b913e6724",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/account-context": {
+   "hash": "0583966692f446a3305fdd0024bcb80eb5756fb8326b2a9c36747033ccf102b4",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/account-plan": {
+   "hash": "fa78b2c568be2d8c4822bbdeed7eadc919db47374f85c16631972fda96e36281",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/account-research": {
+   "hash": "c15d328eedf148caca2608664104dcf8b980f4b30b10d309d314a56952906a57",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/account-tiering": {
+   "hash": "91c222068d6c076926525b6d761c697896742bff8610c1203b3a9bdb1f16520b",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/call-prep": {
+   "hash": "727b9b6b9c9109d324a1e981256736c064d3b603b9ad146e2b2edb75612b103d",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/call-summary": {
+   "hash": "206ddf3ddd98db4ad0a73754028c93560a540c4e06ff4f37b1818f893aa305da",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:10"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/close-plan": {
+   "hash": "e11172dc5c008a81470561ad2d97eb6b388baef822d46f3437bf940bf3483c6f",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/competitive-intelligence": {
+   "hash": "7bccec6ff8661c37ded1822922a349bb3f76bd5fe4bbdfb9ffdd93fcbd28bcf0",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/create-an-asset": {
+   "hash": "52b0a978c4a95bbc5753ea2343263e638a230ab33164c4d363000a98b4540ed7",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/crm-hygiene-check": {
+   "hash": "2ceb65a16487a288e8651592f7dca67b10bcff489f7bd66e3abeac7761250301",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/customer-health": {
+   "hash": "d1165e7d307ecb1659c219c037e551a392adfd5cb8c205309a28a96cf0f7a06c",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/customer-voice": {
+   "hash": "3d4e3de44b0f2ce109b78b63c8be7d6e73284b77eb7fc2881b2e2fbc1859b942",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/daily-briefing": {
+   "hash": "28e8f013187ed7c5639a1fa91575ff602834292993f0bf50847b45db7b0ad1bf",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/deal-advance-gap": {
+   "hash": "cf35a0b61b3324eb3baf78d66af4d2da5a0c205aae2db7775bc633015a5d7db9",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/deal-review": {
+   "hash": "885e9f375a24453d8e9e0ecb8b1e1da78d04dcac96bf42d3b35082fb2ec6b187",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/deal-signals": {
+   "hash": "72eb3c1be7497fd9bdbdc026a2796f0a266c8e2d08c215f53970d3538769d762",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/deal-slip-scenario": {
+   "hash": "9c4f973d45a1087497defc596f86ceedd04f54db30c30024bbd8a755a70bba7e",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/draft-outreach": {
+   "hash": "0358411bd4cbb813bbcb55bcb76ec361ee6a3713786cfd53db1931a0edaff34f",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/end-of-day": {
+   "hash": "4fe4ad8949a3bfbc42cdf59990ac9324ebf1ebf6b81dcea83ce44c04e763648e",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/expansion-whitespace": {
+   "hash": "d5e3c66808e29a23292d87f0a42dd200adbc0996217c4c5cea4609385f830d08",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/forecast": {
+   "hash": "ad52d22cee61903784925c770b0875daa0dd40c9daa2060d1f1984e0531e5d14",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:10"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/handle-objection": {
+   "hash": "5acbc5ef6011030fdc8d13d9fa9479cd0abd859b30dd5aba9950e9ffd30f6f26",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/inbox-sweep": {
+   "hash": "73fb889fea9d8c75b6f7d1e303d9385f58cdcd503f53fd0dc08af93996802f11",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/lead-triage": {
+   "hash": "a0af4a5405e50906ca9d1bdab946240c778c10c054cd195961ad2a7c17722601",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/log-activity": {
+   "hash": "cea7c8d79d8f9080175a573bb46768b51471283e8687cd861276cf968b38191a",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/pipeline-review": {
+   "hash": "645ce6f9bfeeaf0b3077c098ec555d29d943016a1ff68ca552a5fae0c922b4ca",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:10"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/renewal-radar": {
+   "hash": "e5d83810a2aefc3b223543c7230d45c5a7301af10b0c31f5b6e01fc832855f64",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/rep-context": {
+   "hash": "8e8b9d6b70fa785cda83cbb4267862da689f1ef2b720b7390670bf43bdd19b18",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/route-lead": {
+   "hash": "f73ca1e8505a04cae67d390590065ce047a0c1edef7f63aa40de5e7690cb8819",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/schedule-meeting": {
+   "hash": "c2a6fc699853ef15a5bb57c5f42e532dfd94bd9b923edc321c8a1d67be89d0de",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/setup": {
+   "hash": "bfc2e2bb8e541d1283d894f2b462c513caf95f79765897e5214f64125511f915",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/stakeholder-map": {
+   "hash": "1db266b1780799e65fa87519754659203013fab363f7e49b28f0a7483ac4b00e",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/team-pipeline": {
+   "hash": "71637f8034fdd5095399db62adab1f4e5eba042259740babac9204cecf2c73eb",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/update-opportunity": {
+   "hash": "1e7c94b6593b77b1331322054b37da652170326b4c4fcd3eba4b1c55289fd23e",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/weekly-wrap": {
+   "hash": "38cc86a428029df2e35feda8e2b44d1ade862c25b2a8bdbf08a356a0b9501990",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:sales/skills/win-loss-review": {
+   "hash": "4fb8a140148315ee0d215f489747c4c09f897ca1325783f585026c3baefdc565",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:9"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/ad-manager": {
+   "hash": "e5f02687c96000559e720409b0e64882a98b97c32dd81fe49afeeee2a8665003",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:101"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/ap-processor": {
+   "hash": "3e23fc456d844c9d8d2b485a4e2730eedb9e185a054a2b3b097c9b769d8b4f3b",
+   "status": "pass",
+   "score": 13,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 3
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:120",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/matching_and_exceptions.md:80",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:64"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/brand-style": {
+   "hash": "23e574b8bd10210ffa7979aa8fa50f8b31824bf7e216b547572619df488e23d1",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/build-agent": {
+   "hash": "114c5e35c6c0487de62075dafccf01a508bef5cc613f237c392f17aeeecbfd7d",
+   "status": "pass",
+   "score": 19,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 3
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:3",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:84",
+    "MEDIUM P7 Indirect Prompt Extraction @ reference/capture.md:18"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/build-connector": {
+   "hash": "7e99ff1c8e4bf5a8137148e8ca48fcca71f381fff36e10b2c0b84187ab498169",
+   "status": "flagged",
+   "score": 49,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 5,
+    "MEDIUM": 2,
+    "LOW": 1
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:70",
+    "HIGH AR2 Anti-Refusal Statement @ reference/paths.md:58",
+    "HIGH AR2 Anti-Refusal Statement @ reference/gotchas.md:151",
+    "HIGH AR2 Anti-Refusal Statement @ reference/gotchas.md:231",
+    "HIGH AR2 Anti-Refusal Statement @ reference/paths.md:70",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:63",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:181",
+    "LOW PE1 Excessive Permissions @ reference/gotchas.md:72"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/business-pulse": {
+   "hash": "e24460a8319c35fd0bc819f37eb76c136ff640b564cbff64f39e13a1f56ff68c",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:9",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:85"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/call-list": {
+   "hash": "937acebd4cdf556cb7a71cd5c1878ef8c17a18e24958e6f1dd778742939c71e7",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/canva-creator": {
+   "hash": "2cf0cb312a41bff2e844ad157395f8bb27509f46ec9e75af33ecfaf39c5c7c41",
+   "status": "pass",
+   "score": 12,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM E1 External Transmission @ reference/canva-api.md:3",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:373"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/cash-flow-snapshot": {
+   "hash": "90e324aa46a75878e73ff4a694f8212de4f6c2f4aa58dd9b652dc6daa2ff3d24",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:199"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/close-month": {
+   "hash": "4861738b80b57511f697ac4f8fbf006c485172af3d35339a7fed7eb012e02052",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:65"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/content-strategy": {
+   "hash": "05d82da1947809d411831399bf24f54f3f28a4e15ad6819dc626633dffa6c9a4",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/contract-review": {
+   "hash": "17f14af2fa95c1748486950b569659463f2130eb6360f49425b52ffbc45ffcce",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/crm-autopilot": {
+   "hash": "9076c326918ac4a9206f1a70413c84abaf634e1f6497b4588255dcbdeeffccbc",
+   "status": "pass",
+   "score": 20,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 4
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:110",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:112",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/lightweight_crm.md:85",
+    "MEDIUM P9 Whitespace Padding @ reference/hubspot-fields.md:7"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/grant-rfp-writer": {
+   "hash": "310d17697e6126c6e9b3c2cc1e0bdef8b72e1a3a2a1ffafceca0fb425ff30053",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR1 Anti-Refusal Statement @ SKILL.md:18"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/grow-pipeline": {
+   "hash": "1348586d128b094916479561faf331c9e3f6d473bfe35f6ab75292b058bc0602",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/growth-pulse": {
+   "hash": "6cacb70cdf92a662d905ebb4bc768afc44f869a30bf07b7e1ca1c3136a5e65ea",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/hiring-screener": {
+   "hash": "188f79fcdd5eb1340a9a242ddc54576b4b1022db6b2ee57b05aceeba47f6c8b4",
+   "status": "pass",
+   "score": 13,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 3
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:67",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:107",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:130"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/inbox-manager": {
+   "hash": "9d55bd9b55ff235d777357cb9609e19bc4e00d9029da964d85fc2afaac513050",
+   "status": "flagged",
+   "score": 25,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1,
+    "MEDIUM": 2
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ reference/reply_drafting.md:19",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:98",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:135"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/inventory-planner": {
+   "hash": "ad4d023daa27280776aba04a035596dd09e0059b0cf11f259de93f7888d99160",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:3",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:100"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/invoice-chase": {
+   "hash": "b59994c7ba0acf017a6ada933d01b37b492ac49b01190df27a668aaa30cef555",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/job-post-builder": {
+   "hash": "d301f8182b820cc368541247c8b6d6148019d77cb434fc07fcc9294dc1c47bc9",
+   "status": "pass",
+   "score": 16,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 4,
+    "LOW": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:37",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:39",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:6",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:48",
+    "LOW EA3 Scope Creep @ reference/interview-guide-structure.md:73"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/lead-finder": {
+   "hash": "8cab1a9817c76fa3d89acf7e95a230c3d79ea8caf95c1926e5bca57370de4e36",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:82",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:105"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/lead-triage": {
+   "hash": "2bcdaee2b943a0c9c88b6be5e712754d9cc58bcf9c31ec437aecbda13f202415",
+   "status": "pass",
+   "score": 14,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM TR2 Shadow Command Trigger @ SKILL.md:1",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:67"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/marketing-monday": {
+   "hash": "1ff4e6b55c237d043020cb224b6f71c23c74eebc173d7093fac298a256c383e0",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/monday-brief": {
+   "hash": "74f73a5bf156b241d76846813a80721efb9990f86c34efaf19e0637f88827247",
+   "status": "flagged",
+   "score": 31,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2,
+    "MEDIUM": 2
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:31",
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:89",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:93"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/month-end-prep": {
+   "hash": "9c9c0938a5012f7be970d22c333a4f2e7fcdd39693ce23a539ec4bc10b2d3afd",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/outreach-composer": {
+   "hash": "d412e6ec1549c19a002b62a1c55ace38a4edce68d9ea441dfd21971516a2dffc",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ reference/sequence_patterns.md:32"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/pay-the-bills": {
+   "hash": "6374363f8d936961773955302e354208fbb0b0d3f990f94c9d70a58d223119b5",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/payroll-prep": {
+   "hash": "6afe94d284d7057bb0fbc110a916ce987a8b1ac7c89e115d910171ac341e32e3",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:96",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:65"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/plan-payroll": {
+   "hash": "4a904c43e0278626df9d4e4f9a99d7c76cfe39e7fc9e33a747239b052f8e0ee5",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:38",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:74"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/proposal-builder": {
+   "hash": "329fe21e77d3fb7d946799442c0af660bf0d0815be6c8417f9b408b0a00b2980",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:175"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/reactivate": {
+   "hash": "1b2e0fbc3f815f8107a229a2295cd015a60e35dfae2c869fc7f1e2e2d6231c39",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:83"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/report-builder": {
+   "hash": "63cda6feda193b67a157d7c6023c1aa498e343dd837ce98e671dd36a53bff0f5",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:85",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/saved_reports.md:9"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/report-pack": {
+   "hash": "4cb72a8197d71c90ca4ac0d9589fc8e0816d42d96e408634de51883cb77c6e3b",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/restock": {
+   "hash": "b296452bd902c480cbf1c4b1853ff4a0d2f58ef5d26827b703c13216a53daa6a",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:3",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:66"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/review-reputation": {
+   "hash": "acedee942062f32ca7e4613c24dcf0be0edf838467ff861aadd5a50a238d1bf9",
+   "status": "pass",
+   "score": 11,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:99",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:3"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/seo-ai-visibility": {
+   "hash": "1273d1fa0b62ffa125f81c56738b1da662e52e0c3ac8c74611d506acf2829488",
+   "status": "flagged",
+   "score": 28,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1,
+    "MEDIUM": 1
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ reference/gotchas.md:56",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:60"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/smb-onboard": {
+   "hash": "774f72afb98bb37486a81ef2c1146a61028d9aa86dd9ef91324251229d930e62",
+   "status": "pass",
+   "score": 20,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 3
+   },
+   "top": [
+    "MEDIUM MP2 Context Window Stuffing @ SKILL.md:60",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:45",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/onboard-checklist.md:65"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/smb-router": {
+   "hash": "8b02746cf4c165d6c0e9b0c0cf451174b74446555334c392e736953e35295b46",
+   "status": "pass",
+   "score": 8,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:201"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/social-content-engine": {
+   "hash": "b2ece871aaf263843b99dc10ced697fcdc114ee136908c979f491815ecb0bb31",
+   "status": "pass",
+   "score": 16,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 3
+   },
+   "top": [
+    "MEDIUM E1 External Transmission @ reference/canva-api.md:3",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/gotchas.md:440",
+    "MEDIUM EA2 Autonomous Decision Making @ reference/shopify-assets.md:68"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/speed-to-lead": {
+   "hash": "4c5efa4d2e1b368690012f75a0af29c04b15978b2c8d467b0ae28374506eb99a",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:44"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/tax-prep": {
+   "hash": "33d6d9e8ae7bed0c847a7fb018cb044655a7d4215943a39384d1ffde136ab667",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/tax-season-organizer": {
+   "hash": "b2b9a489d44f8168ae348493209d0026795a5d61f55aab9b42962ec7540b224f",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "plugins:small-business/skills/ticket-deflector": {
+   "hash": "483187f05362d656c692326872f5c2f29614baabeacf2a7bb40aa3cb6c8fec4a",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "project:skill-inspector": {
+   "hash": "b7b2996309c217b8c821d50877704ecf77f96bbf2d6fd560335f4ccd48ff47fd",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:articulate": {
+   "hash": "001eebcdbf0850cb360ed6d2d3b8c409f4dbb87ee69b779faf6fad684ec83c70",
+   "status": "flagged",
+   "score": 20,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AR2 Anti-Refusal Statement @ SKILL.md:20"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:brand-guidelines": {
+   "hash": "0a55cd1c641d82f76ea022f9e1b8606f6ee725e149b5166b06b77a9262072bc9",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:built-in-browser": {
+   "hash": "0c99eb40d84988fbd0a69a330b7f35aa7019fe56da133a762fd6c9c8192f8f14",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:chrome-browser": {
+   "hash": "6056843a24bdc8172d4aa0380d082edfac978a36a031bdad7553c3c31d309b0a",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:computer-use": {
+   "hash": "fa6b8ac04d6b1b6c8caec07d7aa3b11a263243f5b700447564b73e32b2edd5b2",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:deep-research": {
+   "hash": "4f0350d3b49138d2b49524d9c0ff84d537cbfe1d25e9b42d19f0d38a2c29419a",
+   "status": "flagged",
+   "score": 17,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH P2 Hidden Instructions @ references/report-writer.md:23"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:design-taste-frontend": {
+   "hash": "f0eb1b8053d9773ab3b48a7bee653abc568e8e87184ca167f6b811c887aeed8e",
+   "status": "flagged",
+   "score": 46,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2,
+    "MEDIUM": 4
+   },
+   "top": [
+    "HIGH P2 Hidden Instructions @ SKILL.md:272",
+    "HIGH P2 Hidden Instructions @ SKILL.md:272",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:51",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:99",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1006",
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:1007"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:docs": {
+   "hash": "93a898732535917c5bf2c4e47c7cceef68fdb64e478e1de3de6e910143944192",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:docx": {
+   "hash": "73b2998170175a1cbbd095461c9846bce839e155bb4df9769ce99a782db1a907",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 6,
+    "MEDIUM": 20
+   },
+   "top": [
+    "HIGH TM1 Tool Parameter Abuse @ SKILL.md:58",
+    "HIGH TM2 Chaining Abuse @ SKILL.md:58",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd:1",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd:1",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd:1",
+    "HIGH E2 Env Variable Harvesting @ scripts/office/soffice.py:28",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM AST4 subprocess module call @ scripts/accept_changes.py:68"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:emil-kowalski-design": {
+   "hash": "6f274f556c6f9d2b28eb05381cd53b9188dcfee00823e85459a22ae8d75a4afc",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:frontend-design": {
+   "hash": "7bb463826eb8f1ad72d55118a66041bcb6974f1a2da069f9bdd798d62be18f21",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:frontend-patterns": {
+   "hash": "cc07c8436025c5a64c56179eb1d95eeb5993bfbfac70d1c66eaea8e6d18a7154",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:google-workspace": {
+   "hash": "17306d3c73ba8fbf04f1edf37be8e71128269a4175570c4c96fe124729b25d3d",
+   "status": "pass",
+   "score": 27,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 4
+   },
+   "top": [
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:81",
+    "MEDIUM EA2 Autonomous Decision Making @ references/sheets.md:128",
+    "MEDIUM AST4 subprocess module call @ scripts/render_export.py:123"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:gsap-animations": {
+   "hash": "0102f2e7d0aaf9739bf1fded467a8afa6af0db9f99132a840f165423b8142d43",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:impeccable-design": {
+   "hash": "d6943c1cc9a4981a32d7e4bf73fda8331673292335eba4b4c5fa0f8f2b8212e5",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:8"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:import-memory": {
+   "hash": "04fbbb3efb5b218de9df5d7f341bc8487312a26ee45ce5edf27d7d0717a7b3da",
+   "status": "flagged",
+   "score": 40,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2
+   },
+   "top": [
+    "HIGH YR4 YARA rule 'agent_skill_prompt_injection_hidden_instructions': Prompt injection or hidden instructions embedded in AI agent skill text [agent_skills] @ SKILL.md:3",
+    "HIGH P1 Instruction Override @ SKILL.md:14"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:instagram-lead-automation": {
+   "hash": "77046e5530217373e282a294b75155a8393290248d8263189c740194a8cb9960",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:instagram-lead-stack-reference": {
+   "hash": "11c5eef21968094c02fe821f700f78daa9069ae4e70dd7b5f5e41ccfa46bbce8",
+   "status": "pass",
+   "score": 7,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:149"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:lenis-smooth-scroll": {
+   "hash": "2e23fdc427ba29c626febbbed6f4aa563ca5d1de0b547bd3943fc552bae4d070",
+   "status": "pass",
+   "score": 0,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "NONE",
+   "counts": {},
+   "top": [],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:morning": {
+   "hash": "663d639e5b8d122e0ff15cfa5ee7137b5190c82a6547e409457165d3b7f1e863",
+   "status": "pass",
+   "score": 10,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1,
+    "LOW": 1
+   },
+   "top": [
+    "MEDIUM TR2 Shadow Command Trigger @ SKILL.md:1",
+    "LOW EA3 Scope Creep @ assets/fonts/Fraunces-OFL.txt:86"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:pdf": {
+   "hash": "2e55b77515e3323cb6ef10833fe2a4c1a86c55f23a9004b86e363812521b83f0",
+   "status": "pass",
+   "score": 15,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM TR3 Keyword Baiting Trigger @ SKILL.md:1"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:pptx": {
+   "hash": "f60651d1a6156fbaced8bcdacee502b370f8427e29bc1c2556478b54a3c89841",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 7,
+    "MEDIUM": 19
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:28",
+    "HIGH TM1 Tool Parameter Abuse @ SKILL.md:80",
+    "HIGH TM2 Chaining Abuse @ SKILL.md:80",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd:1",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd:1",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd:1",
+    "HIGH E2 Env Variable Harvesting @ scripts/office/soffice.py:28",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:prompt-reasoning-optimisation-pro": {
+   "hash": "84306a44222fd7d59f457357a50404bd43e2f1882b0a4611b9ae6157b89fae82",
+   "status": "pass",
+   "score": 10,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 2
+   },
+   "top": [
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:230",
+    "MEDIUM P9 Whitespace Padding @ SKILL.md:231"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:react-bits": {
+   "hash": "e5b2e011a0e0208080614330c8db312e87783b731192ffec96494228e760019e",
+   "status": "pass",
+   "score": 10,
+   "severity": "LOW",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 1
+   },
+   "top": [
+    "MEDIUM RP1 MCP Rug Pull @ SKILL.md:21"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:ruthless": {
+   "hash": "e2cde6747387ea1b06c17d467846298e9004932e476ba4f2da1647747c048cac",
+   "status": "pass",
+   "score": 3,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "LOW",
+   "counts": {
+    "LOW": 1
+   },
+   "top": [
+    "LOW EA3 Scope Creep @ SKILL.md:12"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:seedance-3d-cgi": {
+   "hash": "1194a69bbc54aa7f197b00a61562907cf5249eefe6eaf09747529785dd128206",
+   "status": "flagged",
+   "score": 41,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2
+   },
+   "top": [
+    "HIGH AR3 Anti-Refusal Statement @ SKILL.md:446",
+    "HIGH P6 Direct Prompt Extraction @ SKILL.md:770"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:seedance-brand-story": {
+   "hash": "7479546eeaf37d3410e8e6f6b92f35097b2feb5045f4ccab1370ded1a71f0d00",
+   "status": "flagged",
+   "score": 41,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 2
+   },
+   "top": [
+    "HIGH MP3 Memory Manipulation @ SKILL.md:479",
+    "HIGH P6 Direct Prompt Extraction @ SKILL.md:1032"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:seedance-cinematic": {
+   "hash": "8a8c4f3f8565f34b806c7cc56512cbab7987972dcaab3d2735acc911f8f8a543",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH P6 Direct Prompt Extraction @ SKILL.md:1254"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:seedance-motion-design-ad": {
+   "hash": "61879015b1ff9712bb705e0ad6a3eb740b896beb3cd97f996c23fd4dcd1f1157",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH P6 Direct Prompt Extraction @ SKILL.md:1040"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:seedance-product-360": {
+   "hash": "5dde5881b8f8270f0a291799b1e69861095bfa2f3cf4f2d170577d66ce44fb8f",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH P6 Direct Prompt Extraction @ SKILL.md:903"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:session-start-hook": {
+   "hash": "1728db367f0909244d351ba1e9769d3591e898128a30bd79c9b573db6610f1fd",
+   "status": "flagged",
+   "score": 21,
+   "severity": "MEDIUM",
+   "recommendation": "CAUTION",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 1
+   },
+   "top": [
+    "HIGH AS1 Agent Config Directory Access @ SKILL.md:85"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:skill-creator": {
+   "hash": "c1b1807c06f055118e2ec54351fae3e02e0b6ec9c430e54cb3ec3b240216a9eb",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 5,
+    "MEDIUM": 5
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:364",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:416",
+    "HIGH E2 Env Variable Harvesting @ scripts/improve_description.py:33",
+    "HIGH E2 Env Variable Harvesting @ scripts/run_eval.py:83",
+    "HIGH AS1 Agent Config Directory Access @ scripts/run_eval.py:23",
+    "MEDIUM LP3 MCP Least Privilege @ SKILL.md:1",
+    "MEDIUM RA2 Session Persistence @ SKILL.md:238",
+    "MEDIUM AST4 subprocess module call @ eval-viewer/generate_review.py:291"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  },
+  "user:slack-weekly-review": {
+   "hash": "bb180828a72dba0d6358cfd556b42dc1d02e8bf957981868a70471665061e9b9",
+   "status": "pass",
+   "score": 13,
+   "severity": "LOW",
+   "recommendation": "SAFE",
+   "max_issue_severity": "MEDIUM",
+   "counts": {
+    "MEDIUM": 3
+   },
+   "top": [
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:57",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:59",
+    "MEDIUM EA2 Autonomous Decision Making @ SKILL.md:95"
+   ],
+   "complete": true,
+   "scanned_at": "2026-10-13"
+  },
+  "user:xlsx": {
+   "hash": "b2d022e4cb0b144e18fe462425f8c9cf48bc028ff6927a57dd2542dd8a32c794",
+   "status": "flagged",
+   "score": 100,
+   "severity": "CRITICAL",
+   "recommendation": "DO_NOT_INSTALL",
+   "max_issue_severity": "HIGH",
+   "counts": {
+    "HIGH": 9,
+    "MEDIUM": 20
+   },
+   "top": [
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:23",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:37",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:57",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:68",
+    "HIGH AE1 Incomplete referenced artifact analysis @ SKILL.md:75",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd:1",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd:1",
+    "HIGH P2 Hidden Instructions @ scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd:1"
+   ],
+   "complete": false,
+   "scanned_at": "2026-10-13"
+  }
+ },
+ "marketplaces": {
+  "blader/humanizer": {
+   "marketplace": "humanizer",
+   "commit": "225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8",
+   "plugins": {
+    "humanizer": {
+     "skills": 1
+    }
+   }
+  },
+  "expo/skills": {
+   "marketplace": "expo-plugins",
+   "commit": "d4f484024fec15196bfd3c272e953e3f983972cf",
+   "plugins": {
+    "expo": {
+     "skills": 24,
+     "hooks": "hooks/hooks.json",
+     "mcp_servers": [
+      "expo"
+     ]
+    }
+   }
+  },
+  "heygen-com/hyperframes": {
+   "marketplace": "hyperframes",
+   "commit": "e8eb358fe21d6f1a611e04f8df27ca366b337ce9",
+   "plugins": {
+    "hyperframes": {
+     "skills": 21
+    }
+   }
+  },
+  "supabase/agent-skills": {
+   "marketplace": "supabase-agent-skills",
+   "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+   "plugins": {
+    "postgres-best-practices": {
+     "skills": 2,
+     "mcp_servers": [
+      "supabase"
+     ]
+    },
+    "supabase": {
+     "skills": 2,
+     "mcp_servers": [
+      "supabase"
+     ]
+    }
+   }
+  }
+ },
+ "skillspector": "2.12.0"
+}
