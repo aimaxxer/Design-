@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+/*
+ * 10X Trader tokens, from the Launchex framework brief:
+ * white inset shell, navy type, one action colour sampled from the 10X coin, two pale section grounds.
+ */
+@theme {
+  --color-shell: #ffffff;
+  --color-mist: #f0f0f0; /* benefits, calculator, faq */
+  --color-frost: #f0f5f7; /* hero, model, comparison */
+  --color-navy: #154359; /* primary text */
+  --color-navy-2: #3f6274; /* secondary text: 5:1+ on both grounds */
+  --color-navy-3: #557080; /* tertiary text: 4.5:1+ on both grounds */
+  --color-deep: #014d7e; /* the coin's shadow side */
+  --color-accent: #0068a2; /* the coin's body colour, the one action colour: white text is 6:1 on it */
+  --color-sky: #4bbdf0; /* highlights only, never text on light */
+  --color-line: #d7e2e7;
+  --color-line-strong: #b7cbd3;
+  --color-pos: #0b7a5c;
+  --color-neg: #b42318;
+  --color-warn: #b7791f;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-firs: "TT Firs Neue", "Inter", system-ui, sans-serif;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+html,
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  color: var(--color-navy);
+  color-scheme: light;
+  /* The page scrolls inside the inset card, never the document. */
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.font-firs {
+  font-family: "TT Firs Neue", "Inter", system-ui, sans-serif;
+  /* The hosted cut ships one weight: never fake-bold it. */
+  font-synthesis-weight: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: rgb(75 189 240 / 0.32);
+  color: var(--color-navy);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+input,
+select,
+textarea {
+  caret-color: var(--color-accent);
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* One chamfered shape system for buttons, inputs and panels. */
+.chamfer-10 {
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+.chamfer-8 {
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+.chamfer-6 {
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+.chamfer-16 {
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+}
+.chamfer-24 {
+  clip-path: polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px);
+}
+
+/* The template's stat numerals. */
+.text-gradient {
+  background-image: linear-gradient(294deg, #014d7e 20%, #4bbdf0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hide number-input spinners: the field is typed into, the slider does the stepping. */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Section counter: the new number rolls up into place. */
+@keyframes counter-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Calculator fields: a coin-blue hairline under inline inputs that sit inside the sentence. */
+.inline-field {
+  border: 0;
+  border-bottom: 1.5px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0 0.05em;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 160ms var(--ease-out-strong), background-color 160ms var(--ease-out-strong);
+}
+.inline-field:hover {
+  background-color: rgb(0 104 162 / 0.06);
+}
+.inline-field:focus-visible {
+  background-color: rgb(0 104 162 / 0.08);
+  border-bottom-color: var(--color-navy);
+}
+select.inline-field {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 0.7em;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 0.32em) 58%, calc(100% - 0.12em) 58%;
+  background-size: 0.2em 0.2em;
+  background-repeat: no-repeat;
+}
+select.inline-field option {
+  color: var(--color-navy);
+  font-size: 16px;
+}
+
+/* Benefit detail under the coin: the new text settles in as the coin turns. */
+@keyframes detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
