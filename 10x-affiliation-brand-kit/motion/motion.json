@@ -1,0 +1,463 @@
+{
+  "name": "10X Affiliation motion",
+  "source": "Values read from the 10X Affiliation site code (GSAP timelines, CSS keyframes) and the 10X Trader coin code.",
+  "fps": {
+    "social": 30,
+    "showreel": 60
+  },
+  "afterEffectsHowTo": "For each curve: on the first keyframe set outgoing influence and outgoing speed = speedFactor x (change / duration); on the last keyframe set incoming influence and speed = speedFactor x (change / duration). speedFactor 0 means speed 0. Easing plugins (Flow, Ease Copy, Motion Tools) take the cubicBezier values directly.",
+  "easing": {
+    "ease-out-strong": {
+      "cubicBezier": [
+        0.23,
+        1,
+        0.32,
+        1
+      ],
+      "css": "cubic-bezier(0.23, 1, 0.32, 1)",
+      "use": "Every entrance, hover and state change. The site CSS curve. Default for type and UI moves.",
+      "afterEffects": {
+        "firstKeyframeOutgoing": {
+          "influence": 23.0,
+          "speedFactor": 4.348
+        },
+        "lastKeyframeIncoming": {
+          "influence": 68.0,
+          "speedFactor": 0.0
+        }
+      }
+    },
+    "ease-reveal": {
+      "cubicBezier": [
+        0.16,
+        1,
+        0.3,
+        1
+      ],
+      "css": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "use": "Close cubic match for GSAP expo.out, which drives every scroll reveal and the hero on the site. Use for big rises and image settles.",
+      "afterEffects": {
+        "firstKeyframeOutgoing": {
+          "influence": 16.0,
+          "speedFactor": 6.25
+        },
+        "lastKeyframeIncoming": {
+          "influence": 70.0,
+          "speedFactor": 0.0
+        }
+      }
+    },
+    "ease-in-out-strong": {
+      "cubicBezier": [
+        0.77,
+        0,
+        0.175,
+        1
+      ],
+      "css": "cubic-bezier(0.77, 0, 0.175, 1)",
+      "use": "Things that move while on screen: camera moves, morphs, a panel sliding across.",
+      "afterEffects": {
+        "firstKeyframeOutgoing": {
+          "influence": 77.0,
+          "speedFactor": 0.0
+        },
+        "lastKeyframeIncoming": {
+          "influence": 82.5,
+          "speedFactor": 0.0
+        }
+      }
+    },
+    "ease-soft-out": {
+      "cubicBezier": [
+        0.25,
+        0.46,
+        0.45,
+        0.94
+      ],
+      "css": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      "use": "GSAP power2.out. Video and image fade-ins (the hero video).",
+      "afterEffects": {
+        "firstKeyframeOutgoing": {
+          "influence": 25.0,
+          "speedFactor": 1.84
+        },
+        "lastKeyframeIncoming": {
+          "influence": 55.0,
+          "speedFactor": 0.109
+        }
+      }
+    },
+    "smoothstep": {
+      "cubicBezier": [
+        0.3333,
+        0,
+        0.6667,
+        1
+      ],
+      "css": "cubic-bezier(0.3333, 0, 0.6667, 1)",
+      "use": "The coin intro turn (3p^2 - 2p^3, exact as a bezier).",
+      "afterEffects": {
+        "firstKeyframeOutgoing": {
+          "influence": 33.3,
+          "speedFactor": 0.0
+        },
+        "lastKeyframeIncoming": {
+          "influence": 33.3,
+          "speedFactor": 0.0
+        }
+      }
+    },
+    "linear": {
+      "css": "linear",
+      "use": "Loops only: coin turn, marquee bands, slow drifts."
+    }
+  },
+  "durations": [
+    {
+      "name": "press",
+      "ms": 150,
+      "frames30": 4,
+      "frames60": 9,
+      "use": "Press feedback: scale to 0.97."
+    },
+    {
+      "name": "ui",
+      "ms": 200,
+      "frames30": 6,
+      "frames60": 12,
+      "use": "Hover colour, arrow nudge 2px up-right."
+    },
+    {
+      "name": "panel",
+      "ms": 300,
+      "frames30": 9,
+      "frames60": 18,
+      "use": "Accordion and step changes (220ms crossfade, 16px slide, 3px blur)."
+    },
+    {
+      "name": "counter-roll",
+      "ms": 420,
+      "frames30": 13,
+      "frames60": 25,
+      "use": "Slide counter: new number rises from 100% below with a fade. ease-out-strong."
+    },
+    {
+      "name": "card",
+      "ms": 900,
+      "frames30": 27,
+      "frames60": 54,
+      "use": "Card in a grid: rise 22px, 90ms apart."
+    },
+    {
+      "name": "reveal",
+      "ms": 1100,
+      "frames30": 33,
+      "frames60": 66,
+      "use": "Default block reveal: rise 24px and fade, 80ms apart."
+    },
+    {
+      "name": "hero",
+      "ms": 1300,
+      "frames30": 39,
+      "frames60": 78,
+      "use": "Headline characters, 40ms apart. Also the final call to action (rise 40px)."
+    },
+    {
+      "name": "line-two",
+      "ms": 1400,
+      "frames30": 42,
+      "frames60": 84,
+      "use": "Second headline line: rise 28px, blur 10px to sharp."
+    },
+    {
+      "name": "count",
+      "ms": 1600,
+      "frames30": 48,
+      "frames60": 96,
+      "use": "Count-up numerals (spring, no overshoot, settles by about 2.2s)."
+    },
+    {
+      "name": "image",
+      "ms": 1800,
+      "frames30": 54,
+      "frames60": 108,
+      "use": "Image settle: scale 1.14 to 1, 120ms apart."
+    },
+    {
+      "name": "hero-video",
+      "ms": 2200,
+      "frames30": 66,
+      "frames60": 132,
+      "use": "Background video: fade in, scale 1.06 to 1, ease-soft-out."
+    },
+    {
+      "name": "shine",
+      "ms": 2800,
+      "frames30": 84,
+      "frames60": 168,
+      "use": "One shine pass across the accent line; then 4s rest."
+    },
+    {
+      "name": "coin-turn",
+      "ms": 6000,
+      "frames30": 180,
+      "frames60": 360,
+      "use": "One full coin turn in loops (the site idles at 14s a turn)."
+    }
+  ],
+  "stagger": {
+    "blocks": {
+      "ms": 80,
+      "frames30": 2,
+      "frames60": 5
+    },
+    "cards": {
+      "ms": 90,
+      "frames30": 3,
+      "frames60": 5
+    },
+    "images": {
+      "ms": 120,
+      "frames30": 4,
+      "frames60": 7
+    },
+    "chars": {
+      "ms": 40,
+      "frames30": 1,
+      "frames60": 2
+    }
+  },
+  "moves": [
+    {
+      "name": "Hero sequence",
+      "source": "Site hero timeline (GSAP). Times are when each part starts.",
+      "steps": [
+        {
+          "at": 0.0,
+          "what": "Background video or image",
+          "from": {
+            "opacity": 0,
+            "scale": 1.06
+          },
+          "duration": 2.2,
+          "ease": "ease-soft-out"
+        },
+        {
+          "at": 0.3,
+          "what": "Top bar / logo",
+          "from": {
+            "opacity": 0,
+            "y": -10
+          },
+          "duration": 1.0,
+          "ease": "ease-reveal"
+        },
+        {
+          "at": 0.4,
+          "what": "Eyebrow",
+          "from": {
+            "opacity": 0,
+            "y": 14
+          },
+          "duration": 1.0,
+          "ease": "ease-reveal"
+        },
+        {
+          "at": 0.6,
+          "what": "Headline line 1, per character",
+          "from": {
+            "opacity": 0,
+            "yPercent": 60,
+            "rotateX": -50
+          },
+          "duration": 1.3,
+          "stagger": 0.04,
+          "ease": "ease-reveal"
+        },
+        {
+          "at": 1.0,
+          "what": "Headline line 2, as one piece",
+          "from": {
+            "opacity": 0,
+            "y": 28,
+            "blur": 10
+          },
+          "duration": 1.4,
+          "ease": "ease-reveal"
+        },
+        {
+          "at": 1.15,
+          "what": "Sub line",
+          "from": {
+            "opacity": 0,
+            "y": 16
+          },
+          "duration": 1.1,
+          "ease": "ease-reveal"
+        },
+        {
+          "at": 1.3,
+          "what": "Buttons / call to action",
+          "from": {
+            "opacity": 0,
+            "y": 12
+          },
+          "duration": 1.0,
+          "stagger": 0.08,
+          "ease": "ease-reveal"
+        },
+        {
+          "at": 4.0,
+          "what": "Shine sweep on line 2, repeating",
+          "detail": "2.8s per pass, 4s between passes, 110deg band 40% wide, navy to sky"
+        }
+      ]
+    },
+    {
+      "name": "Rise and settle",
+      "from": {
+        "opacity": 0,
+        "y": 24
+      },
+      "duration": 1.1,
+      "stagger": 0.08,
+      "ease": "ease-reveal",
+      "variants": [
+        {
+          "what": "cards",
+          "y": 22,
+          "duration": 0.9,
+          "stagger": 0.09
+        },
+        {
+          "what": "grid cells",
+          "y": 32,
+          "duration": 1.2
+        },
+        {
+          "what": "final call to action",
+          "y": 40,
+          "duration": 1.3
+        }
+      ],
+      "note": "Scale y by 1080/site width when you need more travel on a 1080 canvas: 24px on the site reads as about 40px on a post."
+    },
+    {
+      "name": "Image settle",
+      "from": {
+        "scale": 1.14
+      },
+      "duration": 1.8,
+      "stagger": 0.12,
+      "ease": "ease-reveal",
+      "note": "Imagery inside a mask: the mask holds, the picture settles."
+    },
+    {
+      "name": "Shine sweep",
+      "pass": 2.8,
+      "rest": 4.0,
+      "angle": 110,
+      "bandWidthPercent": 40,
+      "softness": 0.8,
+      "colors": [
+        "#154359",
+        "#4bbdf0"
+      ],
+      "note": "On the accent line or a big number only. Never on body text."
+    },
+    {
+      "name": "Count-up",
+      "duration": 1.6,
+      "spring": {
+        "mass": 1,
+        "stiffness": 62.5,
+        "damping": 45
+      },
+      "note": "Overdamped: no overshoot. Exact curve: 1 - (r2*e^(r1*t) - r1*e^(r2*t)) / (r2 - r1), r1 = -1.435, r2 = -43.565 (t in seconds). Reaches 95% at about 2.1s."
+    },
+    {
+      "name": "Counter roll",
+      "duration": 0.42,
+      "from": {
+        "opacity": 0,
+        "yPercent": 100
+      },
+      "ease": "ease-out-strong"
+    },
+    {
+      "name": "Bar grow",
+      "from": {
+        "scaleX": 0
+      },
+      "anchor": "bar base",
+      "duration": 1.1,
+      "delay": 0.25,
+      "stagger": 0.12,
+      "ease": "ease-reveal",
+      "note": "Value labels land a beat after their bar."
+    },
+    {
+      "name": "Multiply (10X Trader)",
+      "steps": [
+        {
+          "what": "Deposit block holds"
+        },
+        {
+          "what": "Credit block grows",
+          "from": {
+            "scaleX": 0
+          },
+          "to": {
+            "scaleX": 1
+          },
+          "note": "to 9x the deposit width"
+        },
+        {
+          "what": "Buying power total fades from 15% to 100% opacity",
+          "at": 0.7,
+          "duration": 0.4
+        }
+      ]
+    },
+    {
+      "name": "Coin turn",
+      "loop": 6.0,
+      "ease": "linear",
+      "float": {
+        "amplitude": "5.2% of the coin radius",
+        "cycles": "one sine per loop"
+      },
+      "tilt": {
+        "lean": -12,
+        "tipDegrees": 6
+      },
+      "intro": {
+        "duration": 1.6,
+        "turns": 1,
+        "ease": "smoothstep"
+      },
+      "idle": "14s per turn on the site"
+    },
+    {
+      "name": "Press",
+      "to": {
+        "scale": 0.97
+      },
+      "duration": 0.15,
+      "ease": "ease-out-strong"
+    },
+    {
+      "name": "Exit",
+      "rule": "Leave faster than you came: 60% of the entry time, same curve family, 50% of the travel."
+    }
+  ],
+  "rules": [
+    "30 fps for social, 60 fps for showreels and the site.",
+    "Everything eases. Linear only for loops (coin turn, ticker bands).",
+    "Nothing bounces, shakes, glitches or whip-pans. No spring overshoot.",
+    "Hold every message at least 1.5s after it lands; read time is about 0.3s a word on top.",
+    "Type enters with the hero sequence or rise and settle; imagery settles from scale 1.14.",
+    "One hero motion per frame: the coin, a number or the headline, not all three at once.",
+    "Under reduced motion or for stills, show the end frame."
+  ]
+}

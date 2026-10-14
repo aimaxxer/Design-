@@ -1,0 +1,38 @@
+10X Affiliation core
+  #154359  navy
+  #3f6274  navy-2
+  #557080  navy-3
+  #185b7b  deep
+  #066377  teal
+  #4bbdf0  sky
+  #f0f5f7  frost
+  #f0f0f0  mist
+  #ffffff  white
+  #d7e2e7  line
+  #b7cbd3  line-strong
+
+10X on dark
+  #c6d7df  ink-2-on-navy
+  #8fb0bd  ink-3-on-navy
+  #bfeafc  accent-on-deep
+  #1b4b62  card-on-navy
+
+10X coin
+  #4bbdf0  coin-tint
+  #258fc3  coin-light
+  #0077b0  coin-body
+  #035587  coin-shadow
+  #001d35  coin-edge
+  #6ca9cb  coin-sheen
+
+10X grounds
+  #1f5f7d  navy-light
+  #0e3245  navy-dark
+  #0a7189  deep-light
+  #0b4a5f  deep-dark
+  #eaf3f6  sky-top
+  #d6e8ef  sky-bottom
+  #2a8fc0  figure-mid
+  #eef1ee  mist-post
+  #fbfcfc  white-post
+

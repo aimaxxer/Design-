@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>10X Affiliation Brand Book</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: a brand manual in the posts' own system. Navy hero band, frost pages, white chamfered panels,
+   a sticky chapter bar, and live motion specimens that replay the site's exact timings. */
+@font-face{font-family:"Inter Kit";src:url(fonts/Inter-Light.otf) format("opentype");font-weight:300;font-display:swap}
+@font-face{font-family:"Inter Kit";src:url(fonts/Inter-Regular.otf) format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter Kit";src:url(fonts/Inter-Medium.otf) format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"Inter Kit";src:url(fonts/Inter-SemiBold.otf) format("opentype");font-weight:600;font-display:swap}
+@font-face{font-family:"Inter Kit";src:url(fonts/Inter-Bold.otf) format("opentype");font-weight:700;font-display:swap}
+:root{
+  --ground:#f0f5f7; --panel:#ffffff; --ink:#154359; --ink-2:#3f6274; --ink-3:#557080;
+  --line:#d7e2e7; --line-2:#b7cbd3; --accent:#066377; --on-accent:#ffffff; --hi:#4bbdf0;
+  --band:#154359; --band-2:#0e3245; --band-ink:#ffffff; --band-ink-2:#c6d7df; --code:#e7eff2; --figure-from:#185b7b;
+  --font:"Inter Kit","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --ease-out-strong:cubic-bezier(.23,1,.32,1); --ease-reveal:cubic-bezier(.16,1,.3,1);
+  --cut:16px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0e3245; --panel:#154359; --ink:#ffffff; --ink-2:#c6d7df; --ink-3:#8fb0bd;
+  --line:#2a5a72; --line-2:#3d6d85; --accent:#4bbdf0; --on-accent:#154359; --hi:#4bbdf0;
+  --band:#0a2836; --band-2:#071d28; --band-ink:#ffffff; --band-ink-2:#c6d7df; --code:#1b4b62; --figure-from:#bfeafc; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ground:#0e3245; --panel:#154359; --ink:#ffffff; --ink-2:#c6d7df; --ink-3:#8fb0bd;
+  --line:#2a5a72; --line-2:#3d6d85; --accent:#4bbdf0; --on-accent:#154359; --hi:#4bbdf0;
+  --band:#0a2836; --band-2:#071d28; --band-ink:#ffffff; --band-ink-2:#c6d7df; --code:#1b4b62; --figure-from:#bfeafc; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 16px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--hi);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.cut{clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2);margin:0}
+h1,h2,h3{text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,5vw,56px);font-weight:700;line-height:.98;letter-spacing:-.022em;text-transform:uppercase}
+h3{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+p{margin:0;max-width:65ch}
+.lede{font-size:18px;color:var(--ink-2)}
+.small{font-size:13px;color:var(--ink-3)}
+code,.mono{font-family:var(--mono);font-size:.86em}
+code{background:var(--code);padding:1px 5px}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{background:radial-gradient(110% 80% at 85% 0%,#1f5f7d 0%,var(--band) 48%,var(--band-2) 100%);color:var(--band-ink)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.7fr);gap:32px;align-items:center;padding-block:40px 48px}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:16px;grid-column:1/-1}
+.brandrow img{height:40px;width:auto}
+.brandrow span{font-size:12px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--band-ink-2)}
+.hero h1{font-size:clamp(34px,6.2vw,80px);font-weight:700;line-height:.94;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#4bbdf0 0%,#2a8fc0 45%,#9fd9f5 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero p{color:var(--band-ink-2);font-size:18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts span{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border:1px solid rgba(191,234,252,.35);color:#bfeafc;--cut:8px}
+.hero .coin{position:relative;aspect-ratio:1;max-width:460px;width:100%;justify-self:center}
+.hero .coin img{width:100%;height:auto;animation:float 6s ease-in-out infinite;filter:drop-shadow(0 30px 40px rgba(4,30,44,.45))}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.2%)}}
+
+/* chapter bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--panel);border-bottom:1px solid var(--line)}
+.bar nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:10px}
+.bar nav::-webkit-scrollbar{display:none}
+.bar a{flex:none;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;padding:9px 12px;--cut:6px}
+.bar a:hover,.bar a.on{background:var(--ink);color:var(--panel)}
+.themebtn{margin-left:auto;flex:none;font:600 11px/1 var(--font);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);background:none;border:1px solid var(--line-2);padding:8px 12px;cursor:pointer;--cut:6px}
+
+/* sections */
+section.ch{padding-block:72px;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 48px;align-items:end;margin-bottom:40px}
+.head .eyebrow{grid-column:1/-1}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.panel{background:var(--panel);padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel.flush{padding:0;overflow:hidden}
+.cap{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.cap b{font-size:14px;font-weight:600}
+.cap .mono{color:var(--ink-3);font-size:12px;overflow-wrap:anywhere}
+.label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+ul.rules{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+ul.rules li{position:relative;padding-left:26px;min-width:0;overflow-wrap:break-word}
+ul.rules li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;background:var(--hi);transform:rotate(45deg)}
+ul.rules.no li::before{background:none;border:1.5px solid #e06a60;width:10px;height:10px;top:8px;left:1px;transform:none;border-radius:50%}
+.tablewrap{overflow-x:auto;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:14px 16px;border-bottom:1px solid var(--line-2);white-space:nowrap}
+td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.copybtn{font:500 12px/1.3 var(--mono);color:var(--ink);background:var(--code);border:0;padding:6px 8px;cursor:pointer;text-align:left;max-width:100%;overflow-wrap:anywhere}
+.copybtn:hover{background:var(--line)}
+.copybtn.done{background:var(--accent);color:var(--on-accent)}
+.btn{font:600 12px/1 var(--font);letter-spacing:.16em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);border:0;padding:12px 16px;cursor:pointer;--cut:10px;align-self:flex-start}
+
+/* essentials */
+.ib{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ib .yes,.ib .nope{padding:28px;display:flex;flex-direction:column;gap:10px}
+.ib .yes{background:var(--panel)}
+.ib .nope{background:transparent;border:1.5px dashed var(--line-2)}
+.ib .word{font-size:clamp(48px,8vw,88px);font-weight:700;letter-spacing:-.022em;line-height:1}
+.ib .nope .word{color:var(--ink-3);text-decoration:line-through;text-decoration-thickness:4px;text-decoration-color:#e06a60}
+
+/* logo */
+.logobox{aspect-ratio:16/9;display:grid;place-items:center;padding:12%}
+.logobox img{width:100%;max-width:360px;height:auto}
+.logobox.dark{background:radial-gradient(110% 70% at 85% 0%,#1f5f7d 0%,#154359 48%,#0e3245 100%)}
+.logobox.light{background:#f0f5f7}
+.logobox.white{background:#ffffff}
+.clear{position:relative;max-width:100%;padding:38px;outline:1px dashed #4bbdf0;outline-offset:0;background:repeating-linear-gradient(45deg,rgba(75,189,240,.12) 0 6px,transparent 6px 12px)}
+.clear img{background:#ffffff;width:300px;max-width:100%;height:auto}
+
+/* colour */
+.sw{display:flex;flex-direction:column;gap:0;min-width:0}
+.sw .chip{aspect-ratio:4/3;padding:14px;display:flex;align-items:flex-end;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;--cut:14px}
+.sw .meta{background:var(--panel);padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.sw .meta .row{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.sw .meta p{font-size:12.5px;line-height:1.45;color:var(--ink-3)}
+.ground{aspect-ratio:4/5;padding:16px;display:flex;flex-direction:column;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.ratio{display:flex;height:56px}
+.ratio div{display:flex;align-items:center;padding:0 14px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;overflow:hidden}
+
+/* type */
+.spec{display:flex;flex-direction:column;gap:0}
+.spec .row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:22px 0;border-top:1px solid var(--line);align-items:baseline}
+.spec .row:last-child{border-bottom:1px solid var(--line)}
+.spec .meta{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--ink-3)}
+.spec .meta b{font-size:13px;color:var(--ink);font-weight:600}
+.spec .sample{min-width:0;overflow-wrap:anywhere;color:var(--ink)}
+.alpha{font-size:clamp(28px,4vw,44px);line-height:1.15;letter-spacing:-.01em;overflow-wrap:anywhere}
+.weights{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:28px}
+
+/* coin + imagery */
+.poses{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.pose{background:radial-gradient(90% 90% at 50% 40%,#1f5f7d 0%,#154359 60%,#0e3245 100%);padding:10px;display:flex;flex-direction:column;gap:6px;--cut:12px}
+.pose span{font:500 11px/1.3 var(--mono);color:#c6d7df;overflow-wrap:anywhere}
+.turns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.turns video{width:100%;aspect-ratio:1;object-fit:cover}
+.thumbs{display:grid;gap:10px}
+.thumbs figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.thumbs img{width:100%;object-fit:cover;background:var(--line)}
+.thumbs figcaption{font:500 11px/1.35 var(--mono);color:var(--ink-3);overflow-wrap:anywhere}
+.t6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.t6 img{aspect-ratio:1}
+.t45 img{aspect-ratio:4/5}
+.t916 img{aspect-ratio:9/16}
+
+/* layout */
+.formats{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end}
+.fmt{display:flex;flex-direction:column;gap:8px}
+.fmt .box{background:var(--panel);border:1.5px solid var(--line-2);display:grid;place-items:center;font:500 12px/1.3 var(--mono);color:var(--ink-3);text-align:center}
+.overlay{position:relative}
+.overlay img.ov{position:absolute;inset:0;width:100%;height:100%}
+.families{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.families figure{margin:0;display:flex;flex-direction:column;gap:6px}
+.families img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.families figcaption{font-size:12px;color:var(--ink-2)}
+.families figcaption b{display:block;font-size:13px;color:var(--ink);font-weight:600}
+
+/* motion */
+.curves{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.curve svg{width:100%;height:auto;overflow:visible}
+.curve .track{position:relative;height:18px;background:var(--code)}
+.curve .dot{position:absolute;left:0;top:3px;width:12px;height:12px;background:var(--hi);transform:rotate(45deg)}
+.stage{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px;align-items:start}
+.frame{aspect-ratio:4/5;position:relative;overflow:hidden;background:radial-gradient(110% 70% at 85% 0%,#1f5f7d 0%,#154359 48%,#0e3245 100%);color:#fff;--cut:14px}
+.frame .bg{position:absolute;inset:0;background:url(imagery/textures/texture-4.jpg) center/cover;opacity:.32;mix-blend-mode:screen}
+.frame .fhd{position:absolute;left:8%;right:8%;top:6%;display:flex;justify-content:space-between;align-items:center}
+.frame .fhd img{height:16px;width:auto}
+.frame .fhd span{font-size:8px;letter-spacing:.26em;font-weight:500;color:#c6d7df}
+.frame .fbody{position:absolute;left:8%;right:8%;top:30%;display:flex;flex-direction:column;gap:12px}
+.frame .feb{font-size:9px;letter-spacing:.3em;font-weight:500;color:#c6d7df}
+.frame .fh{font-size:clamp(24px,3.2vw,34px);font-weight:700;line-height:.98;letter-spacing:-.022em;text-transform:uppercase;perspective:600px}
+.frame .fh .l1 .w{display:inline-block;white-space:nowrap}
+.frame .fh .l1 .w span{display:inline-block;transform-origin:50% 100%}
+.frame .fh .l2{display:block;color:#4bbdf0}
+.frame .fsub{font-size:12px;line-height:1.45;color:#c6d7df;max-width:28ch}
+.frame .fcta{display:flex;gap:8px;flex-wrap:wrap}
+.frame .fcta span{font-size:8px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;background:#4bbdf0;color:#154359;padding:8px 10px;--cut:6px}
+.frame .fcta span+span{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.tl{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tl .row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center;font-size:12.5px}
+.tl .row .name{color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl .lane{position:relative;height:16px;background:var(--code)}
+.tl .seg{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,var(--accent),var(--hi))}
+.tl .seg i{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 1px,transparent 1px 6px)}
+.tl .axis{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px}
+.tl .ticks{position:relative;height:18px;font:500 10px/1 var(--mono);color:var(--ink-3)}
+.tl .ticks span{position:absolute;top:4px;transform:translateX(-50%)}
+.tl .ph{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink);left:0;opacity:0}
+.moves{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.moves .wide{grid-column:span 2}
+.demo{min-height:150px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:var(--ground);padding:18px;--cut:12px}
+.count{font-size:64px;font-weight:300;letter-spacing:-.05em;line-height:.9;background:linear-gradient(100deg,#4bbdf0 0%,#2a8fc0 45%,var(--figure-from) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.bars2{display:flex;flex-direction:column;gap:10px}
+.bars2 .b{height:22px;transform-origin:0 50%;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.bars2 .b1{width:62%;background:var(--line-2);color:var(--ink)}
+.bars2 .b2{width:87%;background:linear-gradient(100deg,#4bbdf0 0%,#2a8fc0 45%,#185b7b 100%);color:#fff}
+.roll{display:flex;align-items:center;gap:14px;font-size:22px;font-weight:500;letter-spacing:.26em;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.roll .win{position:relative;height:1.2em;width:2.3ch;overflow:hidden}
+.roll .win span{position:absolute;left:0;top:0;line-height:1.2em;color:var(--ink)}
+.roll i{display:block;width:40px;height:1.5px;background:currentColor;opacity:.55}
+.shine{font-size:40px;font-weight:700;letter-spacing:-.022em;text-transform:uppercase;line-height:1;background:linear-gradient(110deg,var(--ink) 0%,var(--ink) 40%,#4bbdf0 50%,var(--ink) 60%,var(--ink) 100%) 100% 0/300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6.8s linear infinite}
+@keyframes shine{0%{background-position:100% 0}41.2%,100%{background-position:0 0}}
+.rise{display:flex;flex-direction:column;gap:8px}
+.rise div{height:12px;background:var(--line-2)}
+.rise div:nth-child(1){width:40%;background:var(--ink-3)}
+.rise div:nth-child(2){width:92%}.rise div:nth-child(3){width:80%}.rise div:nth-child(4){width:50%;background:var(--accent)}
+.settle{aspect-ratio:16/9;overflow:hidden;--cut:12px}
+.settle img{width:100%;height:100%;object-fit:cover}
+.mult{display:flex;flex-direction:column;gap:10px}
+.mult .rowm{display:flex;height:30px}
+.mult .dep{width:10%;background:#154359}
+.mult .cred{width:90%;transform-origin:0 50%;background:linear-gradient(90deg,#066377,#4bbdf0)}
+.mult .tot{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.mult .keys{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3)}
+.risk{font-size:11px;color:var(--ink-3)}
+.storyboard{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.beat{background:var(--panel);padding:16px;display:flex;flex-direction:column;gap:8px;--cut:12px}
+.beat .tc{font:600 12px/1 var(--mono);color:var(--accent)}
+.beat b{font-size:14px}
+.beat p{font-size:13px;color:var(--ink-2);line-height:1.5}
+pre.tree{margin:0;padding:24px;background:var(--panel);font:13px/1.65 var(--mono);color:var(--ink-2);overflow-x:auto}
+pre.tree b{color:var(--ink);font-weight:600}
+.apps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+footer{padding-block:40px 56px;color:var(--ink-3);font-size:13px}
+
+@media (max-width:980px){
+  .g4,.curves{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .moves,.apps,.g3,.storyboard{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .t6{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stage{grid-template-columns:minmax(0,1fr)}
+  .stage .frame{max-width:360px}
+}
+@media (max-width:680px){
+  .hero .wrap,.head,.g2,.ib,.turns{grid-template-columns:minmax(0,1fr)}
+  .hero .coin{max-width:300px}
+  .moves,.apps,.g3,.storyboard{grid-template-columns:minmax(0,1fr)}
+  .moves .wide{grid-column:auto}
+  .t6{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .spec .row{grid-template-columns:minmax(0,1fr);gap:8px}
+  .tl .row,.tl .axis{grid-template-columns:96px minmax(0,1fr)}
+  section.ch{padding-block:52px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .coin img{animation:none}.shine{animation:none;background-position:0 0}.curve .dot{animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><img src="logo/lockup-white.svg" alt="10X Affiliation"><span>Brand book · October 2026</span></div>
+    <div class="copy">
+      <p class="eyebrow" style="color:#bfeafc">For motion and social</p>
+      <h1>THE PARTNER INFRASTRUCTURE <em>BEHIND TOP IB’s</em></h1>
+      <p>Colours, type, the coin, imagery, layout and the site’s exact motion curves and timings. Every file named here is in the kit folder next to this page, so you can build locally in After Effects, Premiere, Resolve or Figma.</p>
+      <div class="facts"><span class="cut">1080 × 1350 · 30 fps</span><span class="cut">Inter</span><span class="cut">cubic-bezier(.23, 1, .32, 1)</span></div>
+    </div>
+    <div class="coin">
+      <img src="book/coin-hero-900.png" alt="The 10X coin" width="900" height="900">
+    </div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <nav aria-label="Chapters">
+      <a class="cut" href="#essentials">Essentials</a><a class="cut" href="#logo">Logo</a><a class="cut" href="#colour">Colour</a><a class="cut" href="#type">Type</a><a class="cut" href="#coin">Coin</a><a class="cut" href="#imagery">Imagery</a><a class="cut" href="#layout">Layout</a><a class="cut" href="#motion">Motion</a><a class="cut" href="#files">Files</a>
+      <button class="themebtn cut" id="theme" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</div>
+
+<main>
+<!-- ESSENTIALS -->
+<section class="ch" id="essentials"><div class="wrap">
+  <div class="head"><p class="eyebrow">Essentials</p><h2>Say it like a desk, not a promoter</h2><p class="lede">Institutional and calm, sharp on social as long as every claim holds up. Speak to the partner as “you”, about “your clients” and “your flow”. We are “we”.</p></div>
+  <div class="ib" style="margin-bottom:16px">
+    <div class="yes cut"><span class="label">Always</span><div class="word">IB’s</div><p>Capital IB, curly apostrophe, lowercase s. It stays lowercase inside uppercase headlines too: type the headline in capitals and leave All Caps off.</p></div>
+    <div class="nope cut"><span class="label">Never</span><div class="word">IBS</div><p>An All Caps style or text transform turns IB’s into IBS. Check every headline, pill and caption before export.</p></div>
+  </div>
+  <div class="grid g3">
+    <div class="panel cut"><h3>Writing rules</h3><ul class="rules">
+      <li>Headlines UPPERCASE; body in sentence case.</li>
+      <li>Short declarative sentences. Periods do the work.</li>
+      <li>No em or en dashes. Ranges take a hyphen: 2-3x.</li>
+      <li>Lead with the money, then the mechanism.</li>
+      <li>One number per frame. Examples are labelled “Example”.</li></ul></div>
+    <div class="panel cut"><h3>Claims we can make</h3><ul class="rules">
+      <li><b>+40%</b> average rebate increase</li>
+      <li><b>2-3x</b> more rebates per 10X Trader client</li>
+      <li>Offer <b>within 1 hour</b> of the strategy call</li>
+      <li><b>No fees.</b> The broker pays us, not you.</li>
+      <li>10X Trader: <b>1:9 credit</b>, so <b>10x buying power</b></li></ul></div>
+    <div class="panel cut"><h3>Never write</h3><ul class="rules no">
+      <li>bonus, free, guaranteed, risk-free</li>
+      <li>a profit promise or a credit cap</li>
+      <li>elevate, unlock your potential, game-changer, passive income</li>
+      <li>emoji or hashtags inside the design</li></ul>
+      <p class="small">Any frame that explains 10X Trader mechanics carries the risk line: “Leveraged trading carries a high level of risk. 10X Trader is not available in the US.”</p></div>
+  </div>
+  <div class="tablewrap cut" style="margin-top:16px"><table>
+    <thead><tr><th>Call to action</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td><b>Book my strategy call</b> (short: Book call)</td><td>Site, end cards, buttons in posts</td></tr>
+      <tr><td><b>Link in bio</b></td><td>Footer of the current post batches</td></tr>
+      <tr><td><b>Comment 10X</b></td><td>Listed for Instagram in the Source of Truth. Pick one call to action per campaign.</td></tr>
+      <tr><td><b>Chat on WhatsApp</b> · <b>Join the partner channel on Telegram</b></td><td>Direct channels</td></tr>
+    </tbody></table></div>
+</div></section>
+
+<!-- LOGO -->
+<section class="ch" id="logo"><div class="wrap">
+  <div class="head"><p class="eyebrow">Logo</p><h2>The mark and the lockup</h2><p class="lede">The 10X mark beside “affiliation” over “partner program”, exactly as in the post header. Text is outlined in every file, so nothing depends on fonts.</p></div>
+  <div class="grid g3">
+    <figure class="panel flush cut" style="margin:0"><div class="logobox dark"><img src="logo/lockup-white.svg" alt="White lockup on navy"></div><figcaption class="cap" style="padding:14px 16px"><b>White on navy, deep, imagery</b><span class="mono">logo/lockup-white.svg</span></figcaption></figure>
+    <figure class="panel flush cut" style="margin:0"><div class="logobox light"><img src="logo/lockup-navy.svg" alt="Navy lockup on frost"></div><figcaption class="cap" style="padding:14px 16px"><b>Navy on mist, frost, white, sky</b><span class="mono">logo/lockup-navy.svg</span></figcaption></figure>
+    <figure class="panel flush cut" style="margin:0"><div class="logobox white" style="grid-template-columns:auto auto;gap:28px"><img src="logo/10x-mark-navy.svg" alt="10X mark" style="max-width:150px"><img src="logo/app-icon.svg" alt="App icon" style="max-width:96px"></div><figcaption class="cap" style="padding:14px 16px"><b>Mark and app icon</b><span class="mono">logo/10x-mark-*.svg · app-icon.svg</span></figcaption></figure>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="panel cut"><h3>Clear space and size</h3>
+      <div class="clear" style="align-self:flex-start"><img src="logo/lockup-navy.svg" alt="Lockup with clear space"></div>
+      <p class="small">Keep the height of the 10X mark clear on every side (the hatched band). In a 1080-wide post the mark is 38px tall, top-left at 80px from the edge, 70px from the top. Smallest on screen: mark 16px tall.</p></div>
+    <div class="panel cut"><h3>In motion</h3><ul class="rules">
+      <li>The lockup arrives with the header: fade and rise 10px, 1s, starting 0.3s in.</li>
+      <li>It never spins, bounces, scales up or animates letter by letter.</li>
+      <li>The 10X coin is the only 3D or moving form of the mark.</li>
+      <li>White lockup on navy, deep and dark imagery; navy lockup on light grounds. Never teal, never sky.</li>
+      <li>For After Effects, import the PDFs in <code>logo/pdf</code> and turn on Continuously Rasterize. PNGs at 2600px are in <code>logo/png</code>.</li></ul></div>
+  </div>
+</div></section>
+
+<!-- COLOUR -->
+<section class="ch" id="colour"><div class="wrap">
+  <div class="head"><p class="eyebrow">Colour</p><h2>Navy type, cool grounds, one action colour</h2><p class="lede">About 80% ground, 15% navy type and 5% teal or sky. Click a value to copy it. Swatches for Illustrator and Photoshop are in <code>tokens/10x-affiliation.ase</code>.</p></div>
+  <div class="grid g4" id="swatches"></div>
+  <p class="label" style="margin:40px 0 14px">Grounds used in the posts</p>
+  <div class="grid g3" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">
+    <div class="ground cut" style="background:#eef1ee;color:#154359"><span>Mist</span><code style="background:none;padding:0">#eef1ee</code></div>
+    <div class="ground cut" style="background:#fbfcfc;color:#154359;box-shadow:inset 0 0 0 1px #d7e2e7"><span>White</span><code style="background:none;padding:0">#fbfcfc</code></div>
+    <div class="ground cut" style="background:#f0f5f7;color:#154359;box-shadow:inset 0 0 0 1px #d7e2e7"><span>Frost</span><code style="background:none;padding:0">#f0f5f7</code></div>
+    <div class="ground cut" style="background:linear-gradient(170deg,#eaf3f6 0%,#d6e8ef 100%);color:#154359"><span>Sky</span><code style="background:none;padding:0">170° #eaf3f6 → #d6e8ef</code></div>
+    <div class="ground cut" style="background:radial-gradient(110% 70% at 85% 0%,#1f5f7d 0%,#154359 48%,#0e3245 100%);color:#fff"><span>Navy</span><code style="background:none;padding:0;color:#c6d7df">radial from top right · #1f5f7d → #154359 (48%) → #0e3245</code></div>
+    <div class="ground cut" style="background:linear-gradient(160deg,#0a7189 0%,#066377 40%,#0b4a5f 100%);color:#fff"><span>Deep</span><code style="background:none;padding:0;color:#bfeafc">160° #0a7189 → #066377 (40%) → #0b4a5f</code></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="panel cut"><span class="label">Figure gradient</span><div style="font-size:96px;font-weight:300;letter-spacing:-.055em;line-height:.9;background:linear-gradient(100deg,#4bbdf0 0%,#2a8fc0 45%,#185b7b 100%);-webkit-background-clip:text;background-clip:text;color:transparent">+40%</div><p class="small"><code>linear-gradient(100deg, #4bbdf0 0%, #2a8fc0 45%, #185b7b 100%)</code>. Big numbers, highlighted bars and accent strokes only. Never on words.</p></div>
+    <div class="panel cut"><span class="label">Proportion on a light frame</span><div class="ratio"><div style="flex:80;background:#eef1ee;color:#154359">Ground 80%</div><div style="flex:15;background:#154359;color:#fff">Navy 15%</div><div style="flex:5;background:#066377"></div></div><div class="ratio"><div style="flex:80;background:#154359;color:#fff">Navy ground 80%</div><div style="flex:15;background:#ffffff;color:#154359">White 15%</div><div style="flex:5;background:#4bbdf0"></div></div><p class="small">Light frames take teal as the accent; navy and deep frames take sky. Status colours always come with a word: loss <code>#b42318</code> (on dark <code>#ff9b93</code>).</p></div>
+  </div>
+</div></section>
+
+<!-- TYPE -->
+<section class="ch" id="type"><div class="wrap">
+  <div class="head"><p class="eyebrow">Type</p><h2>One family, Inter, in five weights</h2><p class="lede">Every post is set in Inter 4. The files are in <code>fonts/</code> (OFL licence). Keep Inter, not Inter Display: the layouts were fitted to Inter and Display sets about 4% narrower. The site’s headline face, TT Firs Neue, needs a licence before it can be used.</p></div>
+  <div class="panel cut" style="margin-bottom:16px"><div class="weights"><span style="font-weight:300">Light 300</span><span style="font-weight:400">Regular 400</span><span style="font-weight:500">Medium 500</span><span style="font-weight:600">SemiBold 600</span><span style="font-weight:700">Bold 700</span></div><div class="alpha">AaBbCc 0123456789 +40% $0 2-3x IB’s</div></div>
+  <p class="label" style="margin-bottom:10px">Post scale, in pixels on a 1080-wide canvas, shown at half size</p>
+  <div class="spec">
+    <div class="row"><div class="meta"><b>Headline</b>Bold 700 · 84px (70-140) · leading 0.98 · tracking -0.022em (-22 in AE) · capitals</div><div class="sample" style="font-size:42px;font-weight:700;line-height:.98;letter-spacing:-.022em">YOUR FLOW IS WORTH MORE</div></div>
+    <div class="row"><div class="meta"><b>Big number</b>Light 300 · 330px · leading 0.9 · tracking -0.055em · figure gradient</div><div class="sample" style="font-size:165px;font-weight:300;line-height:.9;letter-spacing:-.055em;background:linear-gradient(100deg,#4bbdf0 0%,#2a8fc0 45%,var(--figure-from) 100%);-webkit-background-clip:text;background-clip:text;color:transparent">2-3x</div></div>
+    <div class="row"><div class="meta"><b>Subhead</b>Regular 400 · 62px · leading 1.08 · tracking -0.025em</div><div class="sample" style="font-size:31px;line-height:1.08;letter-spacing:-.025em">More rebates. Same deposits.</div></div>
+    <div class="row"><div class="meta"><b>Stat</b>SemiBold 600 · 92px · tracking -0.035em · tabular figures</div><div class="sample tnum" style="font-size:46px;font-weight:600;line-height:1;letter-spacing:-.035em">+40%</div></div>
+    <div class="row"><div class="meta"><b>Body</b>Regular 400 · 31px · leading 1.45 · 30 words at most</div><div class="sample" style="font-size:15.5px;line-height:1.45;color:var(--ink-2)">We only earn when your flow does. Your offer within 1 hour of the call.</div></div>
+    <div class="row"><div class="meta"><b>Eyebrow</b>Medium 500 · 20px · tracking 0.3em (300 in AE) · capitals</div><div class="sample" style="font-size:10px;font-weight:500;letter-spacing:.3em;color:var(--ink-2)">FOR IB’s &amp; AFFILIATES</div></div>
+    <div class="row"><div class="meta"><b>Counter, footer, pill</b>Medium 500 · 18px · tracking 0.26em · capitals</div><div class="sample tnum" style="font-size:9px;font-weight:500;letter-spacing:.26em;color:var(--ink-2)">01 / 07 &nbsp;&nbsp; LINK IN BIO ↗</div></div>
+    <div class="row"><div class="meta"><b>Button</b>Medium 500 · 23px · tracking 0.2em · teal, chamfer 10</div><div class="sample"><span class="cut" style="display:inline-block;font-size:11.5px;font-weight:500;letter-spacing:.2em;background:#066377;color:#fff;padding:15px 22px;--cut:5px">BOOK MY STRATEGY CALL ↗</span></div></div>
+  </div>
+</div></section>
+
+<!-- COIN -->
+<section class="ch" id="coin"><div class="wrap">
+  <div class="head"><p class="eyebrow">The 10X coin</p><h2>The hero object, from the site’s own code</h2><p class="lede">Rendered from the 10X Trader site’s three.js coin: engraved glass, brand sky tint, studio light. Use it as the one hero per frame, at 55-75% of the short side alone or 30-40% beside a headline.</p></div>
+  <div class="poses" style="margin-bottom:16px">
+    <figure class="pose" style="margin:0"><img src="book/coin-hero.png" alt="Hero pose" loading="lazy"><span>coin-hero.png</span></figure>
+    <figure class="pose" style="margin:0"><img src="book/coin-lean-right.png" alt="Lean right pose" loading="lazy"><span>coin-lean-right.png</span></figure>
+    <figure class="pose" style="margin:0"><img src="book/coin-front.png" alt="Front pose" loading="lazy"><span>coin-front.png</span></figure>
+    <figure class="pose" style="margin:0"><img src="book/coin-near-front.png" alt="Near front pose" loading="lazy"><span>coin-near-front.png</span></figure>
+    <figure class="pose" style="margin:0"><img src="book/coin-three-quarter.png" alt="Three-quarter pose" loading="lazy"><span>coin-three-quarter.png</span></figure>
+    <figure class="pose" style="margin:0"><img src="book/coin-cutout.png" alt="Cut-out finish" loading="lazy"><span>coin-cutout.png</span></figure>
+    <figure class="pose" style="margin:0"><img src="book/coin-edge.png" alt="Edge-on pose" loading="lazy"><span>coin-edge.png</span></figure>
+  </div>
+  <p class="small" style="margin-bottom:24px">2048px transparent PNGs in <code>coin/stills</code>. The same poses are in the posts.</p>
+  <div class="turns">
+    <figure class="panel flush cut" style="margin:0"><video src="coin/video/coin-turn-navy-1080.mp4" poster="book/coin-turn-navy-poster.jpg" autoplay muted loop playsinline aria-label="Coin turn on navy"></video><figcaption class="cap" style="padding:14px 16px"><b>6s turn, one float per loop</b><span class="mono">coin/video/coin-turn-navy-1080.mp4</span></figcaption></figure>
+    <div class="panel cut"><h3>Files for motion</h3><ul class="rules">
+      <li><code>coin/turn/</code>: the 6-second seamless turn as 180 transparent PNGs at 1080px, 30 fps. Import as a PNG sequence.</li>
+      <li><code>coin/video/coin-turn-alpha-1080.webm</code>: the same turn with alpha (VP9), for web and Remotion.</li>
+      <li><code>coin/video/coin-turn-navy-1080.mp4</code>, <code>-frost-1080.mp4</code> and <code>coin-turn-story-1080x1920.mp4</code>: ready on a ground.</li>
+      <li><code>coin-studio/index.html</code>: open it in Chrome to render any pose, size (up to 2048), length, frame rate, tint or finish as a PNG sequence. It runs offline.</li></ul>
+      <h3 style="margin-top:8px">Coin rules</h3><ul class="rules">
+      <li>Turn: linear, 6s per turn (14s when idling). Intro: one turn in 1.6s, smoothstep, ending still.</li>
+      <li>Float: 5.2% of its radius, one gentle sine per loop. Lean -12°, tipped 6° toward you.</li>
+      <li>It may turn, float and catch light. It never bounces, squashes, rains, stacks like casino chips or explodes.</li>
+      <li>On navy, deep, frost, mist and white. Not on photos; one coin per frame as the hero.</li></ul></div>
+  </div>
+</div></section>
+
+<!-- IMAGERY -->
+<section class="ch" id="imagery"><div class="wrap">
+  <div class="head"><p class="eyebrow">Imagery</p><h2>Glass, light and texture. No people, no props</h2><p class="lede">Blue and copper glass sculptures and macro textures from the site. They sit behind type with a veil or inside a chamfered frame. No stock traders, cars, watches or charts that imply returns.</p></div>
+  <p class="label" style="margin-bottom:10px">Sculptures · <span class="mono" style="letter-spacing:0;text-transform:none">imagery/sculptures</span></p>
+  <div class="thumbs t6" id="sculptures" style="margin-bottom:28px"></div>
+  <div class="grid g2" style="gap:28px">
+    <div><p class="label" style="margin-bottom:10px">Macro textures, 1080 × 1350 · <span class="mono" style="letter-spacing:0;text-transform:none">imagery/textures</span></p><div class="thumbs t45" id="textures" style="grid-template-columns:repeat(3,minmax(0,1fr))"></div></div>
+    <div><p class="label" style="margin-bottom:10px">Aurora gradients · <span class="mono" style="letter-spacing:0;text-transform:none">imagery/gradients</span></p><div class="thumbs t45" id="auroras" style="grid-template-columns:repeat(4,minmax(0,1fr))"></div>
+      <p class="label" style="margin:24px 0 10px">Story grounds, 1080 × 1920 · <span class="mono" style="letter-spacing:0;text-transform:none">imagery/story</span></p><div class="thumbs t916" id="story" style="grid-template-columns:repeat(4,minmax(0,1fr))"></div></div>
+  </div>
+  <div class="grid g3" style="margin-top:28px">
+    <figure class="panel flush cut" style="margin:0"><video src="imagery/video/hero-glass-vertical-720x1112.mp4" poster="book/hero-glass-poster.jpg" autoplay muted loop playsinline style="aspect-ratio:4/5;object-fit:cover;width:100%" aria-label="Glass hero loop"></video><figcaption class="cap" style="padding:14px 16px"><b>Hero glass loop, 8s</b><span class="mono">imagery/video/hero-glass-*.mp4</span></figcaption></figure>
+    <figure class="panel flush cut" style="margin:0"><video src="imagery/video/glass-loop-960.mp4" poster="book/glass-loop-poster.jpg" autoplay muted loop playsinline style="aspect-ratio:4/5;object-fit:cover;width:100%" aria-label="Glass loop"></video><figcaption class="cap" style="padding:14px 16px"><b>Glass loop, 10s</b><span class="mono">imagery/video/glass-loop-960.mp4</span></figcaption></figure>
+    <div class="panel cut"><h3>Using imagery in motion</h3><ul class="rules">
+      <li>Inside a mask, imagery settles from 114% to 100% over 1.8s while the mask holds.</li>
+      <li>Full-bleed grounds drift slowly: 100% to 104% over the clip, linear.</li>
+      <li>The hero video fades in while scaling from 106% to 100% over 2.2s.</li>
+      <li>Behind type, add a veil in the ground colour (navy at 50-60%, or a frost glass card).</li>
+      <li>Hero stills from the video are in <code>imagery/photo</code>.</li></ul></div>
+  </div>
+</div></section>
+
+<!-- LAYOUT -->
+<section class="ch" id="layout"><div class="wrap">
+  <div class="head"><p class="eyebrow">Layout</p><h2>Formats, margins and safe zones</h2><p class="lede">An 80px margin on every 1080-wide canvas. Drop the overlays from <code>templates/safe-zones</code> into your comp as guide layers; they never render.</p></div>
+  <div class="grid g2" style="align-items:start">
+    <div class="grid g2" style="gap:12px">
+      <figure class="overlay cut" style="margin:0;--cut:10px"><img src="examples/post-11-no-fees.jpg" alt="Post with safe-zone overlay" loading="lazy"><img class="ov" src="templates/safe-zones/safe-1080x1350.png" alt=""></figure>
+      <div class="tablewrap cut" style="align-self:start"><table><tbody>
+        <tr><td>Canvas</td><td class="n">1080 × 1350</td></tr><tr><td>Side margins</td><td class="n">80</td></tr><tr><td>Header top</td><td class="n">70</td></tr>
+        <tr><td>Content</td><td class="n">196 to 1182</td></tr><tr><td>Footer bottom</td><td class="n">66</td></tr><tr><td>Logo mark</td><td class="n">38 tall</td></tr><tr><td>Grid crop (3:4)</td><td class="n">34 each side</td></tr></tbody></table></div>
+    </div>
+    <div class="tablewrap cut"><table>
+      <thead><tr><th>Format</th><th>Size</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td>Post, carousel</td><td class="n">1080 × 1350</td><td>Default for feed. 30 fps when animated.</td></tr>
+        <tr><td>Square</td><td class="n">1080 × 1080</td><td>Coin loops, quote cards.</td></tr>
+        <tr><td>Story, Reel</td><td class="n">1080 × 1920</td><td>Keep the top 250 and bottom 340 free of text.</td></tr>
+        <tr><td>Landscape</td><td class="n">1920 × 1080</td><td>YouTube, LinkedIn video, decks. 96px title safe.</td></tr>
+        <tr><td>Link image</td><td class="n">1600 × 900</td><td>X and LinkedIn previews.</td></tr>
+      </tbody></table></div>
+  </div>
+  <p class="label" style="margin:40px 0 14px">Layout families from the design kit</p>
+  <div class="families" id="families"></div>
+</div></section>
+
+<!-- MOTION -->
+<section class="ch" id="motion"><div class="wrap">
+  <div class="head"><p class="eyebrow">Motion</p><h2>Precise, quiet, expensive</h2><p class="lede">Things arrive from a short distance and settle. Nothing bounces, shakes or flashes. Every number below is read from the site’s code; the full set is in <code>motion/motion.json</code>, with ready expressions in <code>motion/after-effects-expressions.md</code>.</p></div>
+
+  <p class="label" style="margin-bottom:14px">Curves</p>
+  <div class="curves" id="curves"></div>
+
+  <p class="label" style="margin:40px 0 14px">After Effects keyframe velocity</p>
+  <div class="tablewrap cut"><table>
+    <thead><tr><th>Curve</th><th>Bezier</th><th>First key, outgoing</th><th>Last key, incoming</th></tr></thead>
+    <tbody>
+      <tr><td><b>ease-out-strong</b></td><td class="n mono">0.23, 1, 0.32, 1</td><td class="n">influence 23% · speed 4.35 × avg</td><td class="n">influence 68% · speed 0</td></tr>
+      <tr><td><b>ease-reveal</b> (GSAP expo.out)</td><td class="n mono">0.16, 1, 0.3, 1</td><td class="n">influence 16% · speed 6.25 × avg</td><td class="n">influence 70% · speed 0</td></tr>
+      <tr><td><b>ease-in-out-strong</b></td><td class="n mono">0.77, 0, 0.175, 1</td><td class="n">influence 77% · speed 0</td><td class="n">influence 82.5% · speed 0</td></tr>
+      <tr><td><b>ease-soft-out</b> (power2.out)</td><td class="n mono">0.25, 0.46, 0.45, 0.94</td><td class="n">influence 25% · speed 1.84 × avg</td><td class="n">influence 55% · speed 0.11 × avg</td></tr>
+      <tr><td><b>smoothstep</b> (coin intro)</td><td class="n mono">0.333, 0, 0.667, 1</td><td class="n">influence 33.3% · speed 0</td><td class="n">influence 33.3% · speed 0</td></tr>
+    </tbody></table></div>
+  <p class="small" style="margin-top:10px">avg = change ÷ duration. A 40px rise over 1.1s with ease-reveal starts at 6.25 × 40 ÷ 1.1 = 227 px/s.</p>
+
+  <p class="label" style="margin:40px 0 14px">The hero sequence</p>
+  <div class="stage">
+    <div class="frame cut" id="frame" aria-label="Hero sequence specimen">
+      <div class="bg" data-k="bg"></div>
+      <div class="fhd" data-k="bar"><img src="logo/lockup-white.svg" alt=""><span>01 / 07</span></div>
+      <div class="fbody">
+        <div class="feb" data-k="eyebrow">FOR IB’s &amp; AFFILIATES</div>
+        <div class="fh"><span class="l1" data-k="l1">Your flow is worth more</span><span class="l2" data-k="l2">your deal just doesn’t show it</span></div>
+        <div class="fsub" data-k="sub">We only earn when your flow does.</div>
+        <div class="fcta" data-k="cta"><span class="cut">Book my strategy call</span><span class="cut">Link in bio</span></div>
+      </div>
+    </div>
+    <div class="panel cut">
+      <div class="tl" id="timeline"></div>
+      <button class="btn cut" id="playhero" type="button">Play the sequence</button>
+      <p class="small">Start times and lengths from the site’s hero timeline. Line 1 rises per character, 40ms apart, from 60% below with a -50° tilt. Line 2 arrives as one piece through a 10px blur. Exits run at 60% of the entry time.</p>
+    </div>
+  </div>
+
+  <p class="label" style="margin:40px 0 14px">Signature moves</p>
+  <div class="moves">
+    <div class="panel cut"><div class="demo cut"><div class="count" id="count">+40%</div></div><h3>Count-up</h3><p class="small">Spring with mass 1, stiffness 62.5, damping 45. No overshoot, lands at about 2.1s. Expression in the kit.</p><button class="btn cut" data-play="count" type="button">Replay</button></div>
+    <div class="panel cut"><div class="demo cut"><div class="bars2" id="bars"><div class="b b1">Old deal</div><div class="b b2">New deal +40%</div></div></div><h3>Bar grow</h3><p class="small">Scale X from 0 at the bar’s base, 1.1s ease-reveal, 0.25s delay, 120ms apart.</p><button class="btn cut" data-play="bars" type="button">Replay</button></div>
+    <div class="panel cut"><div class="demo cut"><div class="roll"><div class="win" id="roll"><span>01</span></div><i></i><span>07</span></div></div><h3>Counter roll</h3><p class="small">The new number rises from 100% below with a fade, 420ms ease-out-strong.</p><button class="btn cut" data-play="roll" type="button">Replay</button></div>
+    <div class="panel cut"><div class="demo cut"><div class="rise" id="rise"><div></div><div></div><div></div><div></div></div></div><h3>Rise and settle</h3><p class="small">Fade and rise 24px (40px on a post), 1.1s ease-reveal, 80ms apart in reading order.</p><button class="btn cut" data-play="rise" type="button">Replay</button></div>
+    <div class="panel cut"><div class="demo cut" style="padding:0;background:none"><div class="settle cut"><img id="settle" src="imagery/textures/texture-5.jpg" alt="Texture settling"></div></div><h3>Image settle</h3><p class="small">Scale 114% to 100%, 1.8s ease-reveal, 120ms apart. The frame holds still.</p><button class="btn cut" data-play="settle" type="button">Replay</button></div>
+    <div class="panel cut"><div class="demo cut"><div class="shine">Same deposits</div></div><h3>Shine sweep</h3><p class="small">A 110° band, navy to sky, 40% wide. One pass in 2.8s, then 4s of rest. Accent lines and big numbers only.</p></div>
+    <div class="panel cut wide"><div class="demo cut"><div class="mult" id="mult"><div class="keys"><span>Deposit</span><span>1:9 credit</span></div><div class="rowm"><div class="dep"></div><div class="cred"></div></div><div class="tot" id="multtot">10x buying power</div></div></div><h3>Multiply, the 10X Trader moment</h3><p class="small">The deposit block holds, the credit block grows to nine times its width, then the total fades in from 15% at 0.7s over 0.4s.</p><p class="risk">Leveraged trading carries a high level of risk. 10X Trader is not available in the US.</p><button class="btn cut" data-play="mult" type="button">Replay</button></div>
+    <div class="panel cut"><h3>Rules for every edit</h3><ul class="rules">
+      <li>30 fps for social, 60 fps for showreels.</li>
+      <li>Linear only for loops: the coin turn and ticker bands.</li>
+      <li>Hold each message at least 1.5s after it lands.</li>
+      <li>One hero move per frame: the coin, a number or the headline.</li>
+      <li>Camera moves use ease-in-out-strong. No whip pans or glitches.</li></ul></div>
+  </div>
+
+  <p class="label" style="margin:40px 0 14px">Durations</p>
+  <div class="tablewrap cut"><table id="durations"><thead><tr><th>Token</th><th>ms</th><th>frames at 30</th><th>frames at 60</th><th>Use</th></tr></thead><tbody></tbody></table></div>
+
+  <p class="label" style="margin:40px 0 14px">Example: post-07 as an 8-second Reel, 1080 × 1920, 30 fps</p>
+  <div class="storyboard">
+    <div class="beat"><span class="tc">00:00:00:00</span><b>Ground</b><p>Navy ground; texture-4 fades in from 106%, 2.2s ease-soft-out.</p></div>
+    <div class="beat"><span class="tc">00:00:00:09</span><b>Header</b><p>Lockup and 01 / 01 counter rise 10px, 1s ease-reveal. Below the top 250px.</p></div>
+    <div class="beat"><span class="tc">00:00:00:18</span><b>Eyebrow</b><p>“The average uplift” rises 14px, 1s.</p></div>
+    <div class="beat"><span class="tc">00:00:00:24</span><b>Number</b><p>+40% counts up from 0, spring, lands near 00:00:03:27.</p></div>
+    <div class="beat"><span class="tc">00:00:01:12</span><b>Headline</b><p>“More per lot for our partners.” Line 1 per character, 40ms apart; line 2 through blur.</p></div>
+    <div class="beat"><span class="tc">00:00:02:00</span><b>Bars</b><p>Old deal, then new deal +40%, scale X, 1.1s, 120ms apart.</p></div>
+    <div class="beat"><span class="tc">00:00:04:00</span><b>Shine</b><p>One shine pass across +40%, 2.8s. Everything holds.</p></div>
+    <div class="beat"><span class="tc">00:00:07:00</span><b>Out</b><p>Blocks leave in reverse, 0.66s each, 24px travel. Cut to the end card with Book my strategy call.</p></div>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="tablewrap cut"><table>
+      <thead><tr><th>Export</th><th>Setting</th></tr></thead>
+      <tbody><tr><td>Codec</td><td>H.264 MP4, high profile, about 16 Mbps</td></tr><tr><td>Frame rate</td><td>30 fps constant</td></tr><tr><td>Audio</td><td>AAC, 48 kHz stereo</td></tr><tr><td>Colour</td><td>sRGB / Rec.709, 8-bit</td></tr><tr><td>Masters with alpha</td><td>PNG sequence or ProRes 4444</td></tr></tbody></table></div>
+    <div class="panel cut"><h3>Reduced motion and stills</h3><p class="small">When a frame must work without motion (a thumbnail, a cover, reduced-motion viewers), use the last frame: the finished layout. Every post in the batches is that end frame.</p></div>
+  </div>
+</div></section>
+
+<!-- FILES -->
+<section class="ch" id="files"><div class="wrap">
+  <div class="head"><p class="eyebrow">Files</p><h2>What is in the kit</h2><p class="lede">Open this page from the kit folder and every path resolves. Start with the fonts, then the After Effects setup script.</p></div>
+  <div class="grid g2" style="align-items:start">
+<pre class="tree"><b>10x-affiliation-brand-kit/</b>
+├─ <b>index.html</b>          this brand book
+├─ <b>coin/</b>
+│  ├─ stills/        7 poses, 2048px PNG with alpha
+│  ├─ turn/          180-frame 6s turn, 1080px PNG
+│  └─ video/         alpha WebM, navy, frost, story MP4
+├─ <b>coin-studio/</b>       render any coin sequence offline
+├─ <b>logo/</b>              SVG, pdf/ (for AE), png/
+├─ <b>fonts/</b>             Inter 300-700 + OFL licence
+├─ <b>tokens/</b>            tokens.json, tokens.css,
+│                     10x-affiliation.ase, colors.txt
+├─ <b>motion/</b>            motion.json, AE expressions,
+│                     10x-brand-comps.jsx
+├─ <b>imagery/</b>           sculptures, textures, gradients,
+│                     story, photo, video
+├─ <b>templates/</b>         safe-zones/ guide overlays
+├─ <b>examples/</b>          approved posts for reference
+└─ <b>book/</b>              previews used by this page</pre>
+    <div class="apps" style="grid-template-columns:minmax(0,1fr)">
+      <div class="panel cut"><h3>After Effects</h3><ul class="rules">
+        <li>Install the five Inter fonts from <code>fonts/</code>.</li>
+        <li>File › Scripts › Run Script File › <code>motion/10x-brand-comps.jsx</code>. It builds post, square, story and landscape comps with the navy ground, sample type, the coin and safe-zone guides.</li>
+        <li>Import <code>coin/turn</code> as a PNG sequence at 30 fps; add <code>loopOut("cycle")</code> on Time Remap.</li>
+        <li>Paste curves and count-ups from <code>motion/after-effects-expressions.md</code>.</li></ul></div>
+      <div class="panel cut"><h3>Premiere Pro, Resolve, CapCut</h3><ul class="rules">
+        <li>Premiere and Resolve import numbered PNG sequences with alpha; use the MP4s on a ground anywhere else.</li>
+        <li>Set the sequence to 1080 × 1350 or 1080 × 1920 at 30 fps and lay the safe-zone PNG on the top track, disabled for export.</li></ul></div>
+      <div class="panel cut"><h3>Figma, Jitter, Rive, Lottie</h3><ul class="rules">
+        <li>Paste the bezier numbers into the custom easing field.</li>
+        <li>Variables and styles come from <code>tokens/tokens.json</code>; CSS projects can link <code>tokens/tokens.css</code>.</li></ul></div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">10X Affiliation brand book, built from the partner site, the 10X Trader coin and the approved post batches. Inter is licensed under the SIL Open Font License; the coin renderer includes three.js (MIT).</div></footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Theme toggle: auto, light, dark.
+  var modes = ['auto', 'light', 'dark'], mode = 0, tb = document.getElementById('theme');
+  try { var saved = localStorage.getItem('tenx-theme'); if (saved) mode = Math.max(0, modes.indexOf(saved)); } catch (e) {}
+  function applyTheme() {
+    if (modes[mode] === 'auto') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', modes[mode]);
+    tb.textContent = 'Theme: ' + modes[mode];
+  }
+  tb.addEventListener('click', function () { mode = (mode + 1) % 3; applyTheme(); try { localStorage.setItem('tenx-theme', modes[mode]); } catch (e) {} });
+  applyTheme();
+
+  function copy(btn, text) {
+    function done() { btn.classList.add('done'); var t = btn.textContent; btn.textContent = 'Copied'; setTimeout(function () { btn.classList.remove('done'); btn.textContent = t; }, 900); }
+    try { navigator.clipboard.writeText(text).then(done, function () { select(btn); }); } catch (e) { select(btn); }
+  }
+  function select(el) { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+  // Swatches
+  var SW = [
+    ['Navy', '#154359', '21 67 89', 'Headlines and body on light grounds. The navy ground.', '#fff'],
+    ['Navy 2', '#3f6274', '63 98 116', 'Secondary text, eyebrows, counters.', '#fff'],
+    ['Navy 3', '#557080', '85 112 128', 'Captions and footnotes.', '#fff'],
+    ['Deep', '#185b7b', '24 91 123', 'Dark end of the figure gradient.', '#fff'],
+    ['Teal', '#066377', '6 99 119', 'The action colour on light frames. One per frame.', '#fff'],
+    ['Sky', '#4bbdf0', '75 189 240', 'Highlights and bars; the accent on navy.', '#154359'],
+    ['Frost', '#f0f5f7', '240 245 247', 'Cool light ground.', '#154359'],
+    ['Mist', '#f0f0f0', '240 240 240', 'Neutral light ground (posts use #eef1ee).', '#154359'],
+    ['Line', '#d7e2e7', '215 226 231', 'Hairlines on light grounds.', '#154359'],
+    ['Line strong', '#b7cbd3', '183 203 211', 'Dividers, empty bars.', '#154359'],
+    ['Coin body', '#0077b0', '0 119 176', 'The coin as rendered. 10X Trader accent is #0068a2.', '#fff'],
+    ['Coin shadow', '#035587', '3 85 135', 'Coin shadow side.', '#fff']
+  ];
+  var sw = document.getElementById('swatches');
+  SW.forEach(function (c) {
+    var d = document.createElement('div'); d.className = 'sw';
+    d.innerHTML = '<div class="chip cut" style="background:' + c[1] + ';color:' + c[4] + (c[1] === '#f0f5f7' || c[1] === '#f0f0f0' ? ';box-shadow:inset 0 0 0 1px #d7e2e7' : '') + '"><span>' + c[0] + '</span></div>' +
+      '<div class="meta"><div class="row"><button class="copybtn" type="button">' + c[1] + '</button><span class="small mono">RGB ' + c[2] + '</span></div><p>' + c[3] + '</p></div>';
+    var b = d.querySelector('.copybtn'); b.addEventListener('click', function () { copy(b, c[1]); });
+    sw.appendChild(d);
+  });
+
+  // Imagery grids
+  function thumbs(id, files, dir) {
+    var el = document.getElementById(id);
+    files.forEach(function (f) {
+      var fig = document.createElement('figure');
+      fig.innerHTML = '<img src="' + dir + f + '" alt="' + f.replace(/\.jpg$/, '').replace(/-/g, ' ') + '" loading="lazy"><figcaption>' + f + '</figcaption>';
+      el.appendChild(fig);
+    });
+  }
+  var sc = []; for (var i = 1; i <= 12; i++) sc.push('glass-' + (i < 10 ? '0' : '') + i + '.jpg');
+  thumbs('sculptures', sc.concat(['orb-1.jpg', 'orb-2.jpg', 'orb-3.jpg', 'glass-coins-trio.jpg']).slice(0, 12), 'imagery/sculptures/');
+  thumbs('textures', ['texture-1.jpg', 'texture-2.jpg', 'texture-3.jpg', 'texture-4.jpg', 'texture-5.jpg', 'texture-6.jpg'], 'imagery/textures/');
+  thumbs('auroras', ['aurora-1.jpg', 'aurora-2.jpg', 'aurora-3.jpg', 'aurora-4.jpg'], 'imagery/gradients/');
+  thumbs('story', ['aurora-story.jpg', 'texture-story-1.jpg', 'texture-story-2.jpg'], 'imagery/story/');
+
+  // Layout families
+  var FAM = [
+    ['ib-01-money-on-the-table-01.jpg', 'Manifesto', 'Oversized headline, coin'],
+    ['post-01-flow-worth-more.jpg', 'Aurora', 'Gradient ground, site coin'],
+    ['ib-05-walls-you-hit-01.jpg', 'Ticker', 'Headline over moving bands'],
+    ['ib-03-referrals-are-assets-01.jpg', 'Arch window', 'Texture in an arch'],
+    ['post-05-inside-a-deal.jpg', 'Deal sheet', 'Terms as a document'],
+    ['post-07-plus-40.jpg', 'Bar chart', 'Two bars, one uplift'],
+    ['post-11-no-fees.jpg', 'Big number', 'One figure, one line'],
+    ['post-10-make-them-pay.jpg', 'Glass card', 'Frosted card on macro'],
+    ['ib-16-myths-about-switching-02.jpg', 'Myth and fact', 'Two-part answer'],
+    ['kit-e-phone.jpg', 'Phone', 'Notifications as proof'],
+    ['kit-d-ruler.jpg', 'Ruler', 'A scale with pins'],
+    ['kit-i-bento.jpg', 'Bento', 'Glass objects in cells'],
+    ['kit-st-cta.jpg', 'Story CTA', '1080 × 1920 end card'],
+    ['post-09-same-deposits.jpg', 'Object hero', 'One object, two notes']
+  ];
+  var fam = document.getElementById('families');
+  FAM.forEach(function (f) {
+    var fig = document.createElement('figure');
+    fig.innerHTML = '<img class="cut" style="--cut:10px" src="examples/' + f[0] + '" alt="' + f[1] + ' layout" loading="lazy"><figcaption><b>' + f[1] + '</b>' + f[2] + '</figcaption>';
+    fam.appendChild(fig);
+  });
+
+  // Curves: plotted from the bezier itself, with a dot that runs the curve.
+  var CURVES = [
+    ['ease-out-strong', [0.23, 1, 0.32, 1], 'Entrances, hovers, state changes', 0.9],
+    ['ease-reveal', [0.16, 1, 0.3, 1], 'Reveals and settles (expo.out)', 1.1],
+    ['ease-in-out-strong', [0.77, 0, 0.175, 1], 'Moves while on screen, camera', 1.1],
+    ['ease-soft-out', [0.25, 0.46, 0.45, 0.94], 'Video and image fades', 1.1]
+  ];
+  var cv = document.getElementById('curves');
+  CURVES.forEach(function (c, i) {
+    var b = c[1], s = 160, p = function (x, y) { return (20 + x * s).toFixed(1) + ',' + (20 + (1 - y) * s).toFixed(1); };
+    var el = document.createElement('div'); el.className = 'panel cut curve';
+    el.innerHTML =
+      '<svg viewBox="0 0 200 200" role="img" aria-label="' + c[0] + ' curve">' +
+      '<rect x="20" y="20" width="160" height="160" fill="none" stroke="var(--line)" stroke-width="1"/>' +
+      '<line x1="20" y1="100" x2="180" y2="100" stroke="var(--line)" stroke-dasharray="2 4"/><line x1="100" y1="20" x2="100" y2="180" stroke="var(--line)" stroke-dasharray="2 4"/>' +
+      '<line x1="' + p(0, 0).split(',')[0] + '" y1="' + p(0, 0).split(',')[1] + '" x2="' + p(b[0], b[1]).split(',')[0] + '" y2="' + p(b[0], b[1]).split(',')[1] + '" stroke="var(--ink-3)" stroke-width="1"/>' +
+      '<line x1="' + p(1, 1).split(',')[0] + '" y1="' + p(1, 1).split(',')[1] + '" x2="' + p(b[2], b[3]).split(',')[0] + '" y2="' + p(b[2], b[3]).split(',')[1] + '" stroke="var(--ink-3)" stroke-width="1"/>' +
+      '<circle cx="' + p(b[0], b[1]).split(',')[0] + '" cy="' + p(b[0], b[1]).split(',')[1] + '" r="3.5" fill="var(--panel)" stroke="var(--ink-3)"/>' +
+      '<circle cx="' + p(b[2], b[3]).split(',')[0] + '" cy="' + p(b[2], b[3]).split(',')[1] + '" r="3.5" fill="var(--panel)" stroke="var(--ink-3)"/>' +
+      '<path d="M' + p(0, 0) + ' C' + p(b[0], b[1]) + ' ' + p(b[2], b[3]) + ' ' + p(1, 1) + '" fill="none" stroke="var(--hi)" stroke-width="3"/>' +
+      '<text x="20" y="196" font-size="10" fill="var(--ink-3)" font-family="ui-monospace,monospace">time</text><text x="4" y="24" font-size="10" fill="var(--ink-3)" font-family="ui-monospace,monospace" transform="rotate(-90 12 24)">value</text></svg>' +
+      '<div class="track"><div class="dot"></div></div>' +
+      '<div class="cap"><b>' + c[0] + '</b><button class="copybtn" type="button">cubic-bezier(' + b.join(', ') + ')</button></div><p class="small">' + c[2] + '</p>';
+    var btn = el.querySelector('.copybtn'); btn.addEventListener('click', function () { copy(btn, 'cubic-bezier(' + b.join(', ') + ')'); });
+    cv.appendChild(el);
+    if (!reduce && el.animate) {
+      var dot = el.querySelector('.dot'), track = el.querySelector('.track');
+      var run = function () {
+        var w = track.clientWidth - 12;
+        dot.animate([{ transform: 'translateX(0) rotate(45deg)' }, { transform: 'translateX(' + w + 'px) rotate(45deg)' }],
+          { duration: c[3] * 1000, easing: 'cubic-bezier(' + b.join(',') + ')', fill: 'forwards' });
+      };
+      run(); setInterval(run, c[3] * 1000 + 1400);
+    }
+  });
+
+  // Durations table
+  var D = [['press', 150, 'Press feedback, scale to 0.97'], ['ui', 200, 'Hover colour, arrow nudge'], ['panel', 300, 'Accordions and step changes'],
+    ['counter-roll', 420, 'Slide counter number rolls up'], ['card', 900, 'Cards rise 22px, 90ms apart'], ['reveal', 1100, 'Blocks rise 24px and fade, 80ms apart'],
+    ['hero', 1300, 'Headline characters, 40ms apart; final call to action'], ['line-two', 1400, 'Second headline line through blur'],
+    ['count', 1600, 'Count-up (spring settles by about 2.1s)'], ['image', 1800, 'Image settle from 114%'], ['hero-video', 2200, 'Background video fade and scale from 106%'],
+    ['shine', 2800, 'One shine pass, then 4s rest'], ['coin-turn', 6000, 'One coin turn, linear']];
+  var tb2 = document.querySelector('#durations tbody');
+  D.forEach(function (d) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td><b>' + d[0] + '</b></td><td class="n">' + d[1] + '</td><td class="n">' + Math.round(d[1] * 0.03) + 'f</td><td class="n">' + Math.round(d[1] * 0.06) + 'f</td><td>' + d[2] + '</td>';
+    tb2.appendChild(tr);
+  });
+
+  // Hero sequence: the site's GSAP timeline, replayed with the Web Animations API.
+  var REVEAL = 'cubic-bezier(0.16,1,0.3,1)', SOFT = 'cubic-bezier(0.25,0.46,0.45,0.94)', S = 1 / 3; // the frame is a third of 1080
+  var STEPS = [
+    { k: 'bg', name: 'Ground / video', at: 0, dur: 2.2, ease: SOFT, from: { opacity: 0, transform: 'scale(1.06)' }, to: { opacity: 0.32, transform: 'scale(1)' } },
+    { k: 'bar', name: 'Header', at: 0.3, dur: 1.0, from: { opacity: 0, transform: 'translateY(' + (-10 * 1.5 * S) + 'px)' } },
+    { k: 'eyebrow', name: 'Eyebrow', at: 0.4, dur: 1.0, from: { opacity: 0, transform: 'translateY(' + (14 * 1.5 * S) + 'px)' } },
+    { k: 'l1', name: 'Line 1, per char', at: 0.6, dur: 1.3, chars: true },
+    { k: 'l2', name: 'Line 2, blur', at: 1.0, dur: 1.4, from: { opacity: 0, transform: 'translateY(' + (28 * 1.5 * S) + 'px)', filter: 'blur(' + (10 * S * 1.5) + 'px)' }, to: { opacity: 1, transform: 'none', filter: 'blur(0px)' } },
+    { k: 'sub', name: 'Sub line', at: 1.15, dur: 1.1, from: { opacity: 0, transform: 'translateY(' + (16 * 1.5 * S) + 'px)' } },
+    { k: 'cta', name: 'Buttons', at: 1.3, dur: 1.0, stagger: 0.08, from: { opacity: 0, transform: 'translateY(' + (12 * 1.5 * S) + 'px)' } }
+  ];
+  var frame = document.getElementById('frame');
+  var l1 = frame.querySelector('[data-k="l1"]'), words = l1.textContent.split(' ');
+  l1.textContent = '';
+  words.forEach(function (w, wi) {
+    var ws = document.createElement('span'); ws.className = 'w';
+    w.split('').forEach(function (ch) { var s = document.createElement('span'); s.textContent = ch; ws.appendChild(s); });
+    l1.appendChild(ws);
+    if (wi < words.length - 1) l1.appendChild(document.createTextNode(' '));
+  });
+  var chars = l1.querySelectorAll('.w span');
+  var END = 3.2, tl = document.getElementById('timeline');
+  STEPS.forEach(function (st) {
+    var end = st.at + st.dur + (st.chars ? (chars.length - 1) * 0.04 : 0) + (st.stagger ? st.stagger : 0);
+    var row = document.createElement('div'); row.className = 'row';
+    row.innerHTML = '<span class="name">' + st.name + '</span><div class="lane"><div class="seg" style="left:' + (st.at / END * 100) + '%;width:' + ((end - st.at) / END * 100) + '%">' + (st.chars ? '<i></i>' : '') + '</div></div>';
+    tl.appendChild(row);
+  });
+  var axis = document.createElement('div'); axis.className = 'axis';
+  var ticks = '<span class="name"></span><div class="ticks">';
+  for (var t = 0; t <= 3; t++) ticks += '<span style="left:' + (t / END * 100) + '%">' + t + 's</span>';
+  axis.innerHTML = ticks + '</div>'; tl.appendChild(axis);
+  var lanes = tl.querySelectorAll('.lane'), heads = [];
+  lanes.forEach(function (l) { var h = document.createElement('div'); h.className = 'ph'; l.appendChild(h); heads.push(h); });
+
+  function playHero() {
+    if (reduce || !frame.animate) return;
+    STEPS.forEach(function (st) {
+      var el = frame.querySelector('[data-k="' + st.k + '"]');
+      if (st.chars) {
+        chars.forEach(function (c, i) {
+          c.animate([{ opacity: 0, transform: 'translateY(60%) rotateX(-50deg)' }, { opacity: 1, transform: 'translateY(0) rotateX(0deg)' }],
+            { duration: st.dur * 1000, delay: (st.at + i * 0.04) * 1000, easing: REVEAL, fill: 'backwards' });
+        });
+      } else if (st.stagger) {
+        Array.prototype.forEach.call(el.children, function (c, i) {
+          c.animate([st.from, { opacity: 1, transform: 'none' }], { duration: st.dur * 1000, delay: (st.at + i * st.stagger) * 1000, easing: REVEAL, fill: 'backwards' });
+        });
+      } else {
+        el.animate([st.from, st.to || { opacity: 1, transform: 'none' }], { duration: st.dur * 1000, delay: st.at * 1000, easing: st.ease || REVEAL, fill: 'backwards' });
+      }
+    });
+    heads.forEach(function (h) {
+      h.animate([{ left: '0%', opacity: 1 }, { left: '100%', opacity: 1 }], { duration: END * 1000, easing: 'linear' });
+    });
+  }
+  document.getElementById('playhero').addEventListener('click', playHero);
+
+  // Signature move specimens
+  var r1 = -1.435, r2 = -43.565;
+  var countEl = document.getElementById('count');
+  function playCount() {
+    if (reduce) return;
+    var t0 = performance.now();
+    (function step(now) {
+      var t = (now - t0) / 1000, p = 1 - (r2 * Math.exp(r1 * t) - r1 * Math.exp(r2 * t)) / (r2 - r1);
+      countEl.textContent = '+' + Math.round(40 * p) + '%';
+      if (t < 3.4) requestAnimationFrame(step); else countEl.textContent = '+40%';
+    })(t0);
+  }
+  function playBars() {
+    if (reduce || !document.body.animate) return;
+    document.querySelectorAll('#bars .b').forEach(function (b, i) {
+      b.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 1100, delay: 250 + i * 120, easing: REVEAL, fill: 'backwards' });
+    });
+  }
+  var rollWin = document.getElementById('roll'), rollN = 1, rollTimer = null;
+  function setRoll(n, animate) {
+    var old = rollWin.querySelector('span'), s = document.createElement('span');
+    s.textContent = (n < 10 ? '0' : '') + n; rollWin.appendChild(s);
+    if (animate && s.animate) {
+      s.animate([{ opacity: 0, transform: 'translateY(100%)' }, { opacity: 1, transform: 'none' }], { duration: 420, easing: 'cubic-bezier(0.23,1,0.32,1)' });
+      old.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-100%)' }], { duration: 250, easing: 'cubic-bezier(0.23,1,0.32,1)', fill: 'forwards' }).onfinish = function () { old.remove(); };
+    } else old.remove();
+  }
+  function playRoll() {
+    if (reduce) return;
+    clearInterval(rollTimer); rollN = 1; setRoll(1, false);
+    rollTimer = setInterval(function () { rollN++; setRoll(rollN, true); if (rollN >= 7) clearInterval(rollTimer); }, 900);
+  }
+  function playRise() {
+    if (reduce || !document.body.animate) return;
+    document.querySelectorAll('#rise div').forEach(function (d, i) {
+      d.animate([{ opacity: 0, transform: 'translateY(24px)' }, { opacity: 1, transform: 'none' }], { duration: 1100, delay: i * 80, easing: REVEAL, fill: 'backwards' });
+    });
+  }
+  function playSettle() {
+    if (reduce || !document.body.animate) return;
+    document.getElementById('settle').animate([{ transform: 'scale(1.14)' }, { transform: 'scale(1)' }], { duration: 1800, easing: REVEAL });
+  }
+  function playMult() {
+    if (reduce || !document.body.animate) return;
+    document.querySelector('#mult .cred').animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 1000, easing: REVEAL, fill: 'backwards' });
+    document.getElementById('multtot').animate([{ opacity: 0.15 }, { opacity: 1 }], { duration: 400, delay: 700, fill: 'backwards' });
+  }
+  var PLAY = { count: playCount, bars: playBars, roll: playRoll, rise: playRise, settle: playSettle, mult: playMult, hero: playHero };
+  document.querySelectorAll('[data-play]').forEach(function (b) { b.addEventListener('click', function () { PLAY[b.getAttribute('data-play')](); }); });
+
+  // Play each specimen once when it first scrolls into view. Until then it shows its finished state.
+  if ('IntersectionObserver' in window && !reduce) {
+    var targets = [[frame, 'hero'], [countEl, 'count'], [document.getElementById('bars'), 'bars'], [rollWin, 'roll'], [document.getElementById('rise'), 'rise'], [document.getElementById('settle'), 'settle'], [document.getElementById('mult'), 'mult']];
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        targets.forEach(function (t) { if (t[0] === e.target) PLAY[t[1]](); });
+      });
+    }, { threshold: 0.6 });
+    targets.forEach(function (t) { io.observe(t[0]); });
+  }
+
+  // Chapter bar highlights the section in view.
+  var links = document.querySelectorAll('.bar nav a');
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('section.ch').forEach(function (s) { so.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>

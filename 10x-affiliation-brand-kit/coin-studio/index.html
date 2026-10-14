@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10X Coin Studio</title>
+<style>
+@font-face{font-family:Inter;src:url(../fonts/Inter-Regular.otf);font-weight:400}
+@font-face{font-family:Inter;src:url(../fonts/Inter-Medium.otf);font-weight:500}
+@font-face{font-family:Inter;src:url(../fonts/Inter-SemiBold.otf);font-weight:600}
+@font-face{font-family:Inter;src:url(../fonts/Inter-Bold.otf);font-weight:700}
+:root{--navy:#154359;--navy2:#3f6274;--navy3:#557080;--teal:#066377;--sky:#4bbdf0;--frost:#f0f5f7;--line:#d7e2e7;--line2:#b7cbd3}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,system-ui,sans-serif;background:var(--frost);color:var(--navy);display:grid;grid-template-columns:340px 1fr;-webkit-font-smoothing:antialiased}
+aside{background:#fff;border-right:1px solid var(--line);padding:28px 24px 40px;overflow:auto;display:flex;flex-direction:column;gap:22px}
+h1{font-size:22px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase}
+h1 small{display:block;font-size:12px;font-weight:500;letter-spacing:.2em;color:var(--navy3);margin-top:6px}
+fieldset{border:0;display:flex;flex-direction:column;gap:12px}
+legend{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--navy3);margin-bottom:10px}
+label{display:grid;grid-template-columns:96px 1fr 52px;align-items:center;gap:10px;font-size:13px;color:var(--navy2)}
+label.wide{grid-template-columns:96px 1fr}
+input[type=range]{width:100%;accent-color:var(--teal)}
+output{font-variant-numeric:tabular-nums;text-align:right;font-size:12px;color:var(--navy)}
+select,input[type=number],input[type=text]{width:100%;font:inherit;font-size:13px;color:var(--navy);padding:7px 9px;border:1px solid var(--line2);background:#fff;clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{font:inherit;font-size:12px;padding:6px 10px;border:1px solid var(--line2);background:#fff;color:var(--navy);cursor:pointer;clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)}
+.chips button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn{font:inherit;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:13px 16px;border:0;background:var(--teal);color:#fff;cursor:pointer;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+.btn.ghost{background:var(--frost);color:var(--navy);box-shadow:inset 0 0 0 1px var(--line2)}
+.btn:disabled{opacity:.5;cursor:wait}
+.row{display:flex;gap:8px}.row .btn{flex:1}
+.note{font-size:12px;line-height:1.5;color:var(--navy3)}
+.note code{font-size:11px;background:var(--frost);padding:1px 4px}
+main{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:32px;min-width:0}
+.stage{position:relative;width:min(72vh,100%);aspect-ratio:1;box-shadow:0 0 0 1px var(--line)}
+.stage.checker{background:repeating-conic-gradient(#e3eaee 0 25%,#fff 0 50%) 0 0/24px 24px}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.bar{width:min(72vh,100%);display:flex;align-items:center;gap:12px;font-size:12px;color:var(--navy2);font-variant-numeric:tabular-nums}
+.bar input{flex:1}
+.prog{width:min(72vh,100%);height:4px;background:var(--line)}
+.prog i{display:block;height:100%;width:0;background:var(--sky)}
+@media (max-width:820px){body{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}main{padding:16px}}
+</style>
+</head>
+<body>
+<aside>
+  <h1>10X Coin Studio<small>Renders the site coin, frame by frame</small></h1>
+
+  <fieldset>
+    <legend>Pose</legend>
+    <div class="chips" id="poses"></div>
+    <label>Spin<input type="range" id="spin" min="-180" max="180" step="1"><output></output></label>
+    <label>Lean<input type="range" id="tilt" min="-30" max="30" step="1"><output></output></label>
+    <label>Tip<input type="range" id="rx" min="-30" max="30" step="1"><output></output></label>
+    <label>Fill<input type="range" id="fill" min="40" max="95" step="1"><output></output></label>
+    <label class="wide">Finish<select id="finish"><option value="engraved">Engraved (site default)</option><option value="cutout">Cut-out (X cut through)</option></select></label>
+    <label class="wide">Tint<select id="tint"><option value="#4bbdf0">Sky #4bbdf0 (brand)</option><option value="#2f9fd6">Mid #2f9fd6</option><option value="#1f6f99">Deep #1f6f99</option></select></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Motion</legend>
+    <label class="wide">Type<select id="mode"><option value="loop">Seamless loop (linear turn)</option><option value="intro">Intro turn (smoothstep, ends still)</option><option value="still">Float only (no turn)</option></select></label>
+    <label>Seconds<input type="range" id="dur" min="1" max="14" step="0.1"><output></output></label>
+    <label>Turns<input type="range" id="turns" min="0.25" max="4" step="0.25"><output></output></label>
+    <label>FPS<select id="fps"><option>24</option><option selected>30</option><option>60</option></select><output></output></label>
+    <label class="wide">Direction<select id="dir"><option value="1">Left to right (site)</option><option value="-1">Right to left</option></select></label>
+    <label class="wide">Float<select id="float"><option value="1">On: 5.2% of radius, one per loop</option><option value="0">Off</option></select></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Export</legend>
+    <label class="wide">Size<select id="size"><option>720</option><option selected>1080</option><option>1440</option><option>2048</option></select></label>
+    <label class="wide">Ground<select id="ground"><option value="">Transparent (alpha)</option><option value="#154359">Navy #154359</option><option value="#f0f5f7">Frost #f0f5f7</option><option value="#eef1ee">Mist #eef1ee</option><option value="#ffffff">White</option></select></label>
+    <label class="wide">Shadow<select id="shadow"><option value="0">Off (add it in your edit)</option><option value="1">Soft drop shadow, as in the posts</option></select></label>
+    <div class="row"><button class="btn" id="seq">PNG sequence</button><button class="btn ghost" id="one">This frame</button></div>
+    <p class="note" id="status">The sequence downloads as a .zip of numbered PNGs. In After Effects: File &gt; Import, pick the first frame, tick <em>PNG Sequence</em>, then set the frame rate under Interpret Footage. A loop's last frame is one step before the first, so it repeats without a stutter.</p>
+  </fieldset>
+</aside>
+
+<main>
+  <div class="stage checker" id="stage"><canvas id="gl"></canvas></div>
+  <div class="bar"><button class="btn ghost" id="play">Pause</button><input type="range" id="scrub" min="0" max="1" step="0.001" value="0"><span id="fr">0 / 0</span></div>
+  <div class="prog"><i id="pg"></i></div>
+</main>
+
+<script src="coin-engine.js"></script>
+<script>
+const { createEngine, FLOAT } = window.TenXCoinEngine
+const $ = (id) => document.getElementById(id)
+const TAU = Math.PI * 2, D2R = Math.PI / 180
+const smooth = (p) => p * p * (3 - 2 * p)
+
+// Poses used across the posts (coin-a to coin-f) plus a flat front view.
+const POSES = {
+  'Hero': { spin: 20, tilt: -12, rx: 6, finish: 'engraved' },
+  'Lean right': { spin: -32, tilt: 10, rx: 11, finish: 'engraved' },
+  'Front': { spin: 0, tilt: 0, rx: 0, finish: 'engraved' },
+  'Near front': { spin: 0, tilt: -6, rx: 3, finish: 'engraved' },
+  'Three-quarter': { spin: 54, tilt: -18, rx: 20, finish: 'engraved' },
+  'Cut-out': { spin: -14, tilt: 14, rx: -9, finish: 'cutout' },
+  'Edge on': { spin: 72, tilt: -8, rx: 6, finish: 'engraved' },
+}
+const state = { spin: 20, tilt: -12, rx: 6, fill: 72, finish: 'engraved', tint: '#4bbdf0', mode: 'loop', dur: 6, turns: 1, fps: 30, dir: 1, float: 1, size: 1080, ground: '', shadow: 0 }
+
+const gl = $('gl')
+const PREVIEW = 720
+const engine = createEngine(gl, { size: PREVIEW, fill: state.fill / 100, finish: state.finish, tint: state.tint })
+
+function frames() { return Math.max(1, Math.round(state.dur * state.fps)) }
+// Pose at progress p (0..1). Loops never reach p = 1, so frame N-1 hands back to frame 0 cleanly.
+function poseAt(p) {
+  let spin = state.spin * D2R
+  if (state.mode === 'loop') spin += state.dir * state.turns * TAU * p
+  if (state.mode === 'intro') spin += state.dir * state.turns * TAU * (smooth(p) - 1)
+  const bob = state.float ? Math.sin(TAU * p) * FLOAT : 0
+  return { spin, tilt: state.tilt, rx: state.rx * D2R, bob: state.mode === 'intro' ? bob * (1 - p) : bob }
+}
+
+// UI wiring
+const poseBox = $('poses')
+for (const name of Object.keys(POSES)) {
+  const b = document.createElement('button'); b.textContent = name; b.type = 'button'
+  b.onclick = () => { Object.assign(state, POSES[name]); syncInputs(); reconfigure(); mark(name) }
+  poseBox.appendChild(b)
+}
+function mark(name) { for (const b of poseBox.children) b.setAttribute('aria-pressed', b.textContent === name) }
+const fmt = { spin: (v) => v + '°', tilt: (v) => v + '°', rx: (v) => v + '°', fill: (v) => v + '%', dur: (v) => (+v).toFixed(1) + 's', turns: (v) => v + 'x', fps: () => frames() + 'f' }
+function syncInputs() {
+  for (const k of ['spin', 'tilt', 'rx', 'fill', 'dur', 'turns', 'finish', 'tint', 'mode', 'fps', 'dir', 'float', 'size', 'ground', 'shadow']) {
+    const el = $(k); el.value = state[k]
+    const out = el.parentElement.querySelector('output'); if (out && fmt[k]) out.textContent = fmt[k](state[k])
+  }
+  $('turns').disabled = state.mode === 'still'
+}
+for (const k of ['spin', 'tilt', 'rx', 'fill', 'dur', 'turns', 'finish', 'tint', 'mode', 'fps', 'dir', 'float', 'size', 'ground', 'shadow']) {
+  $(k).addEventListener('input', (e) => {
+    const v = e.target.value
+    state[k] = ['finish', 'tint', 'mode', 'ground'].includes(k) ? v : +v
+    if (['spin', 'tilt', 'rx', 'finish'].includes(k)) mark('')
+    syncInputs(); if (['fill', 'finish', 'tint'].includes(k)) reconfigure()
+    $('stage').className = 'stage' + (state.ground ? '' : ' checker'); $('stage').style.background = state.ground || ''
+  })
+}
+function reconfigure() { engine.configure({ size: PREVIEW, fill: state.fill / 100, finish: state.finish, tint: state.tint }) }
+
+// Preview loop
+let playing = true, t0 = performance.now(), p = 0
+function tick(now) {
+  if (playing) { p = ((now - t0) / 1000 / state.dur) % 1; $('scrub').value = p }
+  engine.render(poseAt(p))
+  const n = frames(); $('fr').textContent = Math.min(n - 1, Math.floor(p * n)) + ' / ' + n
+  requestAnimationFrame(tick)
+}
+$('play').onclick = () => { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; t0 = performance.now() - p * state.dur * 1000 }
+$('scrub').oninput = (e) => { playing = false; $('play').textContent = 'Play'; p = +e.target.value }
+
+// Compose one frame at export size onto a 2D canvas (ground and shadow are baked here, never in WebGL).
+const out = document.createElement('canvas')
+function compose(pose) {
+  engine.render(pose)
+  const s = state.size; out.width = out.height = s
+  const c = out.getContext('2d'); c.clearRect(0, 0, s, s)
+  if (state.ground) { c.fillStyle = state.ground; c.fillRect(0, 0, s, s) }
+  if (state.shadow) { c.shadowColor = 'rgba(4,30,44,.35)'; c.shadowBlur = s * 0.035; c.shadowOffsetY = s * 0.024 }
+  c.drawImage(gl, 0, 0, s, s); c.shadowColor = 'transparent'
+  return new Promise((r) => out.toBlob(r, 'image/png'))
+}
+function baseName() { return `10x-coin_${state.mode}_${state.size}` }
+function download(blob, name) { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000) }
+
+async function withExportSize(fn) {
+  const was = playing; playing = false
+  engine.configure({ size: state.size, fill: state.fill / 100, finish: state.finish, tint: state.tint })
+  try { await fn() } finally { reconfigure(); playing = was; t0 = performance.now() - p * state.dur * 1000 }
+}
+$('one').onclick = () => withExportSize(async () => download(await compose(poseAt(p)), baseName() + '_still.png'))
+$('seq').onclick = () => withExportSize(async () => {
+  const n = frames(), zip = new Zip(), name = baseName()
+  $('seq').disabled = true
+  for (let i = 0; i < n; i++) {
+    const q = state.mode === 'intro' ? (n === 1 ? 1 : i / (n - 1)) : i / n
+    const blob = await compose(poseAt(q))
+    zip.add(`${name}/${name}_${String(i).padStart(4, '0')}.png`, new Uint8Array(await blob.arrayBuffer()))
+    $('pg').style.width = ((i + 1) / n) * 100 + '%'; $('status').textContent = `Rendering frame ${i + 1} of ${n}…`
+    if (i % 4 === 3) await new Promise((r) => setTimeout(r))
+  }
+  download(zip.blob(), `${name}_${n}f_${state.fps}fps.zip`)
+  $('status').textContent = `Done: ${n} frames at ${state.size}px, ${state.fps} fps (${state.dur}s). Import the first PNG as a sequence and set ${state.fps} fps.`
+  $('seq').disabled = false; setTimeout(() => ($('pg').style.width = 0), 1200)
+})
+
+// Minimal store-only ZIP writer (PNGs are already compressed).
+class Zip {
+  constructor() { this.parts = []; this.dir = []; this.offset = 0 }
+  static crc(buf) {
+    let t = Zip.table; if (!t) { t = Zip.table = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0 } }
+    let c = 0xffffffff; for (let i = 0; i < buf.length; i++) c = t[(c ^ buf[i]) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0
+  }
+  add(name, data) {
+    const nm = new TextEncoder().encode(name), crc = Zip.crc(data), d = new Date()
+    const time = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1)
+    const date = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate()
+    const h = new DataView(new ArrayBuffer(30))
+    h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(8, 0, true)
+    h.setUint16(10, time, true); h.setUint16(12, date, true); h.setUint32(14, crc, true)
+    h.setUint32(18, data.length, true); h.setUint32(22, data.length, true); h.setUint16(26, nm.length, true); h.setUint16(28, 0, true)
+    const c = new DataView(new ArrayBuffer(46))
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true); c.setUint16(10, 0, true)
+    c.setUint16(12, time, true); c.setUint16(14, date, true); c.setUint32(16, crc, true); c.setUint32(20, data.length, true); c.setUint32(24, data.length, true)
+    c.setUint16(28, nm.length, true); c.setUint16(30, 0, true); c.setUint16(32, 0, true); c.setUint16(34, 0, true); c.setUint16(36, 0, true)
+    c.setUint32(38, 0, true); c.setUint32(42, this.offset, true)
+    this.parts.push(h, nm, data); this.dir.push(c, nm); this.offset += 30 + nm.length + data.length
+  }
+  blob() {
+    const size = this.dir.reduce((s, x) => s + x.byteLength, 0), e = new DataView(new ArrayBuffer(22)), count = this.dir.length / 2
+    e.setUint32(0, 0x06054b50, true); e.setUint16(8, count, true); e.setUint16(10, count, true); e.setUint32(12, size, true); e.setUint32(16, this.offset, true)
+    return new Blob([...this.parts, ...this.dir, e], { type: 'application/zip' })
+  }
+}
+
+syncInputs(); mark('Hero'); requestAnimationFrame(tick)
+</script>
+</body>
+</html>

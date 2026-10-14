@@ -1,0 +1,101 @@
+/* 10X Affiliation brand tokens as CSS custom properties.
+   Use with fonts/ (Inter 4). Motion values match motion.json. */
+@font-face { font-family: "Inter"; src: url("../fonts/Inter-Light.otf") format("opentype"); font-weight: 300; }
+@font-face { font-family: "Inter"; src: url("../fonts/Inter-Regular.otf") format("opentype"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("../fonts/Inter-Medium.otf") format("opentype"); font-weight: 500; }
+@font-face { font-family: "Inter"; src: url("../fonts/Inter-SemiBold.otf") format("opentype"); font-weight: 600; }
+@font-face { font-family: "Inter"; src: url("../fonts/Inter-Bold.otf") format("opentype"); font-weight: 700; }
+
+:root {
+  /* core */
+  --navy: #154359;
+  --navy-2: #3f6274;
+  --navy-3: #557080;
+  --deep: #185b7b;
+  --teal: #066377;
+  --sky: #4bbdf0;
+  --frost: #f0f5f7;
+  --mist: #f0f0f0;
+  --mist-post: #eef1ee;
+  --white: #ffffff;
+  --line: #d7e2e7;
+  --line-strong: #b7cbd3;
+  --neg: #b42318;
+  --pos: #0b7a5c;
+
+  /* on dark grounds */
+  --ink-2-dark: #c6d7df;
+  --ink-3-dark: #8fb0bd;
+  --accent-deep: #bfeafc;
+  --card-dark: #1b4b62;
+
+  /* coin, as rendered */
+  --coin-tint: #4bbdf0;
+  --coin-light: #258fc3;
+  --coin-body: #0077b0;
+  --coin-shadow: #035587;
+  --coin-edge: #001d35;
+
+  /* grounds */
+  --ground-mist: #eef1ee;
+  --ground-white: #fbfcfc;
+  --ground-frost: #f0f5f7;
+  --ground-sky: linear-gradient(170deg, #eaf3f6 0%, #d6e8ef 100%);
+  --ground-navy: radial-gradient(110% 70% at 85% 0%, #1f5f7d 0%, #154359 48%, #0e3245 100%);
+  --ground-deep: linear-gradient(160deg, #0a7189 0%, #066377 40%, #0b4a5f 100%);
+
+  /* gradients */
+  --grad-figure: linear-gradient(100deg, #4bbdf0 0%, #2a8fc0 45%, #185b7b 100%);
+  --grad-numeral-site: linear-gradient(294deg, #185b7b 20%, #4bbdf0 100%);
+
+  /* type */
+  --font: "Inter", system-ui, sans-serif;
+  --headline: 700 84px/0.98 var(--font);      /* UPPERCASE, letter-spacing -0.022em */
+  --big-number: 300 330px/0.9 var(--font);    /* letter-spacing -0.055em */
+  --stat: 600 92px/1 var(--font);             /* letter-spacing -0.035em */
+  --subhead: 400 62px/1.08 var(--font);       /* letter-spacing -0.025em */
+  --body: 400 31px/1.45 var(--font);
+  --eyebrow: 500 20px/1.4 var(--font);        /* UPPERCASE, letter-spacing 0.3em */
+  --counter: 500 18px/1 var(--font);          /* UPPERCASE, letter-spacing 0.26em */
+
+  /* shape */
+  --chamfer-chip: 6px;
+  --chamfer-button: 10px;
+  --chamfer-pill: 12px;
+  --chamfer-media: 16px;
+  --chamfer-panel: 24px;
+  --chamfer-glass: 40px;
+  --chamfer-stat: 64px;
+
+  /* layout, 1080 x 1350 post */
+  --margin: 80px;
+  --header-top: 70px;
+  --content-top: 196px;
+  --content-bottom: 168px;
+  --footer-bottom: 66px;
+  --story-top-clear: 250px;
+  --story-bottom-clear: 340px;
+
+  /* motion */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);        /* close match for GSAP expo.out */
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-soft-out: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* GSAP power2.out, for video and image fades */
+  --dur-press: 150ms;
+  --dur-ui: 200ms;
+  --dur-panel: 300ms;
+  --dur-counter: 420ms;
+  --dur-card: 900ms;
+  --dur-reveal: 1100ms;
+  --dur-hero: 1300ms;
+  --dur-line2: 1400ms;
+  --dur-count: 1600ms;
+  --dur-image: 1800ms;
+  --dur-hero-video: 2200ms;
+  --dur-coin-turn: 6s;
+  --stagger: 80ms;
+  --stagger-chars: 40ms;
+}
+
+/* chamfer: top-left and bottom-right cut at 45 degrees */
+.chamfer { --c: var(--chamfer-button); clip-path: polygon(var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%, 0 var(--c)); }
