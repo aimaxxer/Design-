@@ -1,0 +1,11 @@
+{
+  "name": "10x-reel-05-infrastructure",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.156 preview",
+    "check": "npx --yes hyperframes@0.8.156 check",
+    "render": "npx --yes hyperframes@0.8.156 render",
+    "publish": "npx --yes hyperframes@0.8.156 publish"
+  }
+}

@@ -1,0 +1,5 @@
+.hyperframes/
+node_modules/
+.transcode-cache/
+**/renders/work-*/
+**/renders/.*

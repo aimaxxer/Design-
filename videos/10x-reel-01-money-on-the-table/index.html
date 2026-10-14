@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>10X Reel 01: Money on the table</title>
+<script src="assets/gsap.min.js"></script>
+<script src="assets/CustomEase.min.js"></script>
+<script src="assets/brand.js"></script>
+<style>
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Light.otf"); font-weight: 300; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Regular.otf"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Medium.otf"); font-weight: 500; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e3245; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Inter", sans-serif; color: #ffffff; background: #154359; -webkit-font-smoothing: antialiased; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+#s1 { opacity: 1; }
+.navy { background: radial-gradient(110% 70% at 85% 0%, #1f5f7d 0%, #154359 48%, #0e3245 100%); }
+.deep { background: radial-gradient(120% 80% at 15% 0%, #0a7189 0%, #066377 45%, #0b4a5f 100%); }
+.frost { background: radial-gradient(120% 70% at 80% 10%, #ffffff 0%, #f0f5f7 55%, #e3ecf0 100%); color: #154359; }
+.w, .ch { display: inline-block; white-space: nowrap; }
+.mask { overflow: hidden; display: block; padding-bottom: 0.06em; }
+.mask > span { display: block; }
+.label { font-weight: 500; font-size: 26px; letter-spacing: 0.3em; }
+.brandbar { position: absolute; left: 80px; right: 80px; top: 270px; display: flex; justify-content: space-between; align-items: center; }
+.brandbar img { height: 52px; width: auto; display: block; }
+.brandbar span { font-weight: 500; font-size: 22px; letter-spacing: 0.26em; color: #c6d7df; }
+
+/* overlays */
+#band { position: absolute; left: 50%; top: 50%; width: 5200px; height: 3000px; margin-left: -2600px; margin-top: -1500px; opacity: 0; z-index: 40;
+  background: linear-gradient(180deg, #4bbdf0 0%, #4bbdf0 6%, #066377 6%, #066377 12%, #154359 12%, #154359 88%, #066377 88%, #066377 94%, #4bbdf0 94%, #4bbdf0 100%); }
+#blocks { position: absolute; inset: 0; z-index: 41; pointer-events: none; }
+#blocks .blk { position: absolute; left: -120px; width: 1320px; height: 386px; opacity: 0;
+  clip-path: polygon(120px 0, 100% 0, calc(100% - 120px) 100%, 0 100%); }
+#grain { position: absolute; inset: 0; z-index: 60; pointer-events: none; background: url("assets/grain.png"); opacity: 0.07; mix-blend-mode: overlay; }
+
+/* s1: hook */
+#s1-bg { position: absolute; inset: -6%; }
+#s1-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#s1 .veil { position: absolute; inset: 0; background: radial-gradient(90% 60% at 30% 55%, rgba(14,50,69,0.72) 0%, rgba(14,50,69,0.9) 70%, rgba(14,50,69,0.95) 100%); }
+#s1-ghost { position: absolute; left: 120px; top: 1120px; display: block; }
+#s1-stack { position: absolute; left: 80px; top: 690px; width: 900px; transform-origin: 0 50%; }
+#s1-l1 { font-weight: 700; font-size: 112px; line-height: 1; letter-spacing: -0.025em; perspective: 900px; }
+#s1-l1 .ch { transform-origin: 50% 100%; }
+#s1-money { font-weight: 700; font-size: 236px; line-height: 0.92; letter-spacing: -0.035em; color: #4bbdf0; margin-top: 6px; transform-origin: 0 60%; }
+#s1-rule { height: 10px; width: 600px; background: #4bbdf0; margin: 22px 0 26px; transform-origin: 0 50%; }
+#s1-l3 { font-weight: 700; font-size: 112px; line-height: 1; letter-spacing: -0.025em; }
+
+/* s2: one word per beat */
+.word-scene .big { position: absolute; left: 80px; top: 820px; font-weight: 700; font-size: 220px; line-height: 1; letter-spacing: -0.035em; transform-origin: 0 50%; }
+.word-scene .marquee { position: absolute; left: 0; top: 1110px; display: block; }
+.word-scene .slash { position: absolute; left: 600px; top: -200px; width: 260px; height: 2400px; }
+#s2a .slash { background: rgba(75,189,240,0.16); }
+#s2a .big { color: #154359; }
+#s2b .slash { background: rgba(191,234,252,0.12); }
+#s2c .slash { background: rgba(75,189,240,0.12); }
+#s2c .big { color: #4bbdf0; }
+.word-scene .tick { position: absolute; left: 84px; top: 760px; font-weight: 500; font-size: 26px; letter-spacing: 0.3em; }
+#s2a .tick { color: #3f6274; } #s2b .tick { color: #bfeafc; } #s2c .tick { color: #c6d7df; }
+
+/* s3: same clients */
+#s3 .gridline { position: absolute; background: #b7cbd3; }
+#s3-sculpt { position: absolute; right: -170px; top: 1080px; width: 760px; height: 760px; }
+#s3-sculpt img { width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(closest-side, rgba(0,0,0,1) 62%, rgba(0,0,0,0) 100%); mask-image: radial-gradient(closest-side, rgba(0,0,0,1) 62%, rgba(0,0,0,0) 100%); }
+#s3-stack { position: absolute; left: 80px; top: 470px; font-weight: 700; font-size: 150px; line-height: 0.95; letter-spacing: -0.03em; color: #154359; }
+#s3-stack .teal { color: #066377; }
+#s3-pill { position: absolute; left: 80px; top: 1100px; display: flex; align-items: center; gap: 16px; padding: 22px 30px; border: 3px solid #066377; color: #066377; font-weight: 600; font-size: 28px; letter-spacing: 0.24em;
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px); }
+#s3-pill i { width: 12px; height: 12px; background: #4bbdf0; transform: rotate(45deg); }
+#s3-label { position: absolute; left: 80px; top: 400px; color: #3f6274; }
+
+/* s4: +40% */
+#s4-glow { position: absolute; left: -200px; top: 360px; width: 1300px; height: 1100px; background: radial-gradient(50% 50% at 50% 50%, rgba(75,189,240,0.42) 0%, rgba(75,189,240,0) 70%); }
+#s4-ghost { position: absolute; left: 200px; top: 1060px; display: block; }
+#s4-eyebrow { position: absolute; left: 80px; top: 390px; color: #c6d7df; }
+#s4-num { position: absolute; left: 62px; top: 450px; display: flex; align-items: flex-start; font-weight: 300; font-size: 330px; line-height: 1; letter-spacing: -0.055em; font-variant-numeric: tabular-nums; }
+#s4-num span { background: linear-gradient(100deg, #4bbdf0 0%, #2a8fc0 45%, #9fd9f5 100%); -webkit-background-clip: text; background-clip: text; color: rgba(0,0,0,0); display: inline-block; }
+#s4-count { width: 400px; text-align: right; transform-origin: 100% 70%; }
+#s4-shine { position: absolute; left: 62px; top: 450px; font-weight: 300; font-size: 330px; line-height: 1; letter-spacing: -0.055em; color: rgba(0,0,0,0);
+  background: linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 42%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0) 58%, rgba(255,255,255,0) 100%) 100% 0 / 300% 100% no-repeat; -webkit-background-clip: text; background-clip: text; font-variant-numeric: tabular-nums; }
+#s4-labeltext { position: absolute; left: 80px; top: 800px; width: 840px; font-weight: 600; font-size: 52px; line-height: 1.1; letter-spacing: 0.02em; }
+#s4-bars { position: absolute; left: 80px; top: 1010px; width: 840px; display: flex; flex-direction: column; gap: 40px; }
+.barrow { display: flex; flex-direction: column; gap: 14px; }
+.barrow .meta { display: flex; justify-content: space-between; font-weight: 500; font-size: 24px; letter-spacing: 0.22em; color: #c6d7df; }
+.barrow .meta b { font-weight: 600; color: #ffffff; letter-spacing: 0.1em; }
+.barrow .track { position: relative; height: 72px; width: 100%; }
+.barrow .bar { position: absolute; left: 0; top: 0; height: 72px; transform-origin: 0 50%; clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%); }
+#bar-old { width: 62%; background: #557080; }
+#bar-new { width: 86.8%; background: linear-gradient(100deg, #4bbdf0 0%, #2a8fc0 45%, #185b7b 100%); }
+#s4-note { position: absolute; left: 80px; top: 1440px; font-weight: 400; font-size: 26px; color: #8fb0bd; }
+
+/* s5: no fees */
+#s5-ghost { position: absolute; left: 380px; top: 1060px; display: block; }
+#s5-head { position: absolute; left: 80px; top: 620px; font-weight: 700; font-size: 190px; line-height: 1; letter-spacing: -0.035em; color: #154359; transform-origin: 0 50%; }
+#s5-bar { position: absolute; left: 80px; top: 838px; width: 300px; height: 12px; background: #066377; transform-origin: 0 50%; }
+#s5-sub { position: absolute; left: 80px; top: 890px; width: 820px; font-weight: 600; font-size: 70px; line-height: 1.08; letter-spacing: -0.015em; color: #3f6274; }
+
+/* s6: end card */
+#s6-glow { position: absolute; left: 40px; top: 560px; width: 1000px; height: 1000px; background: radial-gradient(50% 50% at 50% 50%, rgba(75,189,240,0.38) 0%, rgba(75,189,240,0) 68%); }
+#s6-head { position: absolute; left: 80px; top: 400px; width: 920px; font-weight: 700; font-size: 124px; line-height: 0.95; letter-spacing: -0.03em; perspective: 900px; }
+#s6-head .ch { transform-origin: 50% 100%; }
+#coinwrap { position: absolute; left: 200px; top: 660px; width: 680px; height: 680px; }
+#coin { width: 680px; height: 680px; display: block; }
+#s6-ring { position: absolute; left: 265px; top: 725px; width: 550px; height: 550px; border-radius: 50%; border: 4px solid #4bbdf0; opacity: 0; }
+#s6-cta { position: absolute; left: 80px; top: 1360px; display: flex; align-items: center; gap: 26px; padding: 34px 44px; background: #4bbdf0; color: #154359; font-weight: 600; font-size: 30px; letter-spacing: 0.2em;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); }
+#s6-cta svg { width: 28px; height: 28px; display: block; }
+#s6-link { position: absolute; left: 84px; top: 1500px; font-weight: 500; font-size: 24px; letter-spacing: 0.3em; color: #c6d7df; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+
+  <section class="scene navy" id="s1">
+    <div id="s1-bg"><img src="assets/img/texture-4.jpg" alt="" /></div>
+    <div class="veil"></div>
+    <svg id="s1-ghost" width="1400" height="620" viewBox="0 0 1400 620" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="520" font-family="Inter" font-weight="700" font-size="640" letter-spacing="-38" fill="none" stroke="rgba(75,189,240,0.22)" stroke-width="3">10X</text></svg>
+    <header class="brandbar" id="s1-bar"><img src="assets/img/lockup-white.svg" alt="10X Affiliation" /><span>FOR IB’s</span></header>
+    <div id="s1-stack">
+      <div id="s1-l1">YOU’RE LEAVING</div>
+      <div id="s1-money">MONEY</div>
+      <div id="s1-rule"></div>
+      <div id="s1-l3">ON THE TABLE.</div>
+    </div>
+  </section>
+
+  <section class="scene frost word-scene" id="s2a">
+    <div class="slash"></div><svg class="marquee" width="3200" height="340" viewBox="0 0 3200 340" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="290" font-family="Inter" font-weight="700" font-size="300" letter-spacing="-12" fill="none" stroke="rgba(21,67,89,0.16)" stroke-width="3">EVERY EVERY EVERY</text></svg>
+    <div class="tick label">EVERY</div><div class="big">EVERY.</div>
+  </section>
+  <section class="scene deep word-scene" id="s2b">
+    <div class="slash"></div><svg class="marquee" width="3600" height="340" viewBox="0 0 3600 340" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="290" font-family="Inter" font-weight="700" font-size="300" letter-spacing="-12" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="3">SINGLE SINGLE SINGLE</text></svg>
+    <div class="tick label">SINGLE</div><div class="big">SINGLE.</div>
+  </section>
+  <section class="scene navy word-scene" id="s2c">
+    <div class="slash"></div><svg class="marquee" width="3200" height="340" viewBox="0 0 3200 340" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="290" font-family="Inter" font-weight="700" font-size="300" letter-spacing="-12" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="3">TRADE TRADE TRADE</text></svg>
+    <div class="tick label">TRADE</div><div class="big">TRADE.</div>
+  </section>
+
+  <section class="scene frost" id="s3">
+    <div class="gridline" id="s3-g1" style="left:80px; top:440px; width:920px; height:3px;"></div>
+    <div class="gridline" id="s3-g2" style="left:80px; top:1060px; width:920px; height:3px;"></div>
+    <div id="s3-sculpt"><img src="assets/img/glass-07.jpg" alt="" /></div>
+    <div class="label" id="s3-label">YOUR BOOK</div>
+    <div id="s3-stack">
+      <div class="mask"><span class="teal">SAME</span></div>
+      <div class="mask"><span>CLIENTS.</span></div>
+      <div class="mask"><span class="teal">SAME</span></div>
+      <div class="mask"><span>ACCOUNTS.</span></div>
+    </div>
+    <div id="s3-pill"><i></i>MORE PER LOT</div>
+  </section>
+
+  <section class="scene navy" id="s4">
+    <div id="s4-glow"></div>
+    <svg id="s4-ghost" width="900" height="640" viewBox="0 0 900 640" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="560" font-family="Inter" font-weight="300" font-size="760" letter-spacing="-45" fill="none" stroke="rgba(75,189,240,0.16)" stroke-width="3">40</text></svg>
+    <div class="label" id="s4-eyebrow">ON AVERAGE</div>
+    <div id="s4-num" data-layout-allow-occlusion="true"><span id="s4-plus" data-layout-allow-occlusion="true">+</span><span id="s4-count" data-layout-allow-occlusion="true">0</span><span id="s4-pct" data-layout-allow-occlusion="true">%</span></div>
+    <div id="s4-shine" aria-hidden="true" data-layout-allow-occlusion="true">+40%</div>
+    <div id="s4-labeltext">AVERAGE REBATE INCREASE PER LOT</div>
+    <div id="s4-bars">
+      <div class="barrow" id="row-old"><div class="meta"><span>OLD DEAL</span><b>BASE</b></div><div class="track"><div class="bar" id="bar-old"></div></div></div>
+      <div class="barrow" id="row-new"><div class="meta"><span>NEW DEAL, ON AVERAGE</span><b>+40%</b></div><div class="track"><div class="bar" id="bar-new"></div></div></div>
+    </div>
+    <div id="s4-note">Same clients. Same accounts. Same deposits.</div>
+  </section>
+
+  <section class="scene frost" id="s5">
+    <svg id="s5-ghost" width="1100" height="760" viewBox="0 0 1100 760" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="680" font-family="Inter" font-weight="300" font-size="900" letter-spacing="-54" fill="#dbe5ea">$0</text></svg>
+    <div id="s5-head">NO FEES.</div>
+    <div id="s5-bar"></div>
+    <div id="s5-sub">The broker pays us, not you.</div>
+  </section>
+
+  <section class="scene navy" id="s6">
+    <div id="s6-glow"></div>
+    <header class="brandbar" id="s6-bar"><img src="assets/img/lockup-white-end.svg" alt="10X Affiliation" /><span>FOR IB’s &amp; AFFILIATES</span></header>
+    <div id="s6-head">SCALE 10X SMARTER.</div>
+    <div id="s6-ring"></div>
+    <div id="coinwrap">
+      <video id="coin" class="clip" src="assets/coin-turn.webm" muted playsinline data-start="12" data-duration="3" data-track-index="2"
+        data-automation='{"version":1,"lanes":[{"target":"rate","points":[{"t":0,"v":4},{"t":0.9,"v":1},{"t":3,"v":1}]}]}'></video>
+    </div>
+    <div id="s6-cta">BOOK MY STRATEGY CALL<svg viewBox="0 0 24 24" fill="none" stroke="#154359" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+    <div id="s6-link">LINK IN BIO</div>
+  </section>
+
+  <div id="band"></div>
+  <div id="blocks">
+    <div class="blk" style="top:0; background:#154359;"></div>
+    <div class="blk" style="top:384px; background:#066377;"></div>
+    <div class="blk" style="top:768px; background:#4bbdf0;"></div>
+    <div class="blk" style="top:1152px; background:#066377;"></div>
+    <div class="blk" style="top:1536px; background:#154359;"></div>
+  </div>
+  <div id="grain"></div>
+
+  <audio id="soundtrack" src="assets/soundtrack.mp3" data-start="0" data-duration="15" data-track-index="10" data-volume="1"></audio>
+</div>
+
+<script>
+(function () {
+  var tl = gsap.timeline({ paused: true });
+  var $ = function (s) { return document.querySelector(s); };
+
+  // ---- S1 hook (0 - 2.5): three phrases on the beat, three different entrances
+  tl.fromTo("#s1-bg", { scale: 1.08, rotation: -2 }, { scale: 1.2, rotation: 1, duration: 2.6, ease: "none" }, 0);
+  tl.fromTo("#s1-ghost", { x: 0 }, { x: -140, duration: 2.6, ease: "none" }, 0);
+  tl.fromTo("#s1-bar", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 0.1);
+  B.chars($("#s1-l1")).forEach(function (c, i) {
+    tl.fromTo(c, { opacity: 0, yPercent: 70, rotationX: -60 }, { opacity: 1, yPercent: 0, rotationX: 0, duration: 0.5, ease: "brandReveal" }, 0.12 + i * 0.022);
+  });
+  tl.fromTo("#s1-money", { opacity: 0, scale: 1.55, filter: "blur(18px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.42, ease: "power4.out" }, 0.5);
+  tl.fromTo("#s1-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "brandOut" }, 0.78);
+  tl.fromTo("#s1-l3", { opacity: 0, x: 420 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 1.0);
+  tl.fromTo("#s1-stack", { scale: 1 }, { scale: 1.035, duration: 1.3, ease: "sine.inOut" }, 1.2);
+
+  // ---- S2 (2.5 - 3.75): one word per beat, hard cuts
+  [["#s2a", 2.5], ["#s2b", 3.0], ["#s2c", 3.5]].forEach(function (s, i) {
+    var sc = s[0], t = s[1];
+    B.cut(tl, i ? ["#s2a", "#s2b", "#s2c"][i - 1] : "#s1", sc, t);
+    tl.fromTo(sc + " .big", { scale: 1.18, filter: "blur(10px)" }, { scale: 1, filter: "blur(0px)", duration: 0.32, ease: "expo.out" }, t);
+    tl.fromTo(sc + " .tick", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.25, ease: "brandOut" }, t + 0.04);
+    tl.fromTo(sc + " .marquee", { x: 0 }, { x: -340, duration: 0.6, ease: "none" }, t);
+    tl.fromTo(sc + " .slash", { x: -160, rotation: 20 }, { x: 60, rotation: 20, duration: 0.6, ease: "none" }, t);
+  });
+
+  // ---- band wipe into S3 (swap at 4.05)
+  B.bandWipe(tl, "#band", "#s2c", "#s3", 3.75, 0.6);
+  tl.fromTo("#s3-g1", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.7, ease: "brandOut" }, 4.06);
+  tl.fromTo("#s3-g2", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.7, ease: "brandOut" }, 4.12);
+  tl.fromTo("#s3-label", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, ease: "brandOut" }, 4.1);
+  document.querySelectorAll("#s3-stack .mask > span").forEach(function (sp, i) {
+    tl.fromTo(sp, { yPercent: 108 }, { yPercent: 0, duration: 0.48, ease: "brandReveal" }, [4.12, 4.2, 4.5, 4.58][i]);
+  });
+  tl.fromTo("#s3-sculpt", { opacity: 0, y: 160, rotation: -8 }, { opacity: 1, y: 0, rotation: 0, duration: 1.0, ease: "brandReveal" }, 4.15);
+  tl.fromTo("#s3-sculpt img", { rotation: 0, scale: 1 }, { rotation: 6, scale: 1.06, duration: 1.85, ease: "none" }, 4.15);
+  tl.fromTo("#s3-pill", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.4, ease: "circ.out" }, 5.0);
+
+  // ---- zoom-through into S4 (swap at 6.0)
+  B.zoomThrough(tl, "#s3", "#s4", 5.76);
+  tl.fromTo("#s4-glow", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 1.2, ease: "softOut" }, 6.0);
+  tl.to("#s4-glow", { scale: 1.08, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 2 }, 7.2);
+  tl.fromTo("#s4-ghost", { x: 140, opacity: 0 }, { x: -60, opacity: 1, duration: 4.5, ease: "none" }, 6.0);
+  B.track(tl, $("#s4-eyebrow"), 6.06, 9, 0.7);
+  var count = { v: 0 }, countEl = $("#s4-count");
+  tl.fromTo(count, { v: 0 }, { v: 40, duration: 1.6, ease: "brandOut", onUpdate: function () { countEl.textContent = Math.round(count.v); } }, 6.2);
+  tl.fromTo("#s4-count", { scale: 0.55 }, { scale: 1, duration: 1.6, ease: "brandOut" }, 6.2);
+  tl.fromTo("#s4-plus", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 6.22);
+  tl.fromTo("#s4-pct", { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.4, ease: "brandOut" }, 7.8);
+  tl.fromTo("#s4-labeltext", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.55, ease: "brandReveal" }, 6.6);
+  tl.fromTo(["#bar-old", "#bar-new"], { scaleX: 0 }, { scaleX: 1, duration: 1.1, ease: "brandReveal", stagger: 0.12 }, 7.0);
+  tl.fromTo(["#row-old .meta", "#row-new .meta"], { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "brandOut", stagger: 0.12 }, 7.55);
+  tl.fromTo("#s4-note", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "softOut" }, 8.1);
+  tl.fromTo("#s4-shine", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 1.0, ease: "sine.inOut" }, 8.6);
+
+  // ---- block wipe into S5 (swap near 10.5)
+  B.blockWipe(tl, gsap.utils.toArray("#blocks .blk"), "#s4", "#s5", 10.24);
+  tl.fromTo("#s5-ghost", { opacity: 0, x: 160 }, { opacity: 1, x: 0, duration: 1.4, ease: "brandOut" }, 10.5);
+  tl.fromTo("#s5-head", { opacity: 0, scale: 1.35, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "power4.out" }, 10.56);
+  tl.fromTo("#s5-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "brandOut" }, 10.8);
+  var t5 = 10.92;
+  B.words($("#s5-sub")).forEach(function (w, i) {
+    tl.set(w, { opacity: 1, y: 56 }, t5);
+    tl.to(w, { y: 0, duration: 0.16, ease: "power4.out" }, t5);
+    t5 += 0.16 - 1 / 30;
+  });
+  tl.set("#s5-sub .w", { opacity: 0 }, 0);
+
+  // ---- zoom-through into S6 end card (swap at 12.0)
+  B.zoomThrough(tl, "#s5", "#s6", 11.76);
+  tl.fromTo("#s6-glow", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 1.2, ease: "softOut" }, 12.0);
+  tl.fromTo("#coinwrap", { opacity: 0, scale: 0.55, y: 160, filter: "blur(16px)" }, { opacity: 1, scale: 1, y: 0, filter: "blur(0px)", duration: 0.9, ease: "brandReveal" }, 12.0);
+  tl.fromTo("#s6-ring", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 1.5, duration: 0.9, ease: "softOut", immediateRender: false }, 12.45);
+  tl.fromTo("#s6-bar", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 12.15);
+  B.chars($("#s6-head")).forEach(function (c, i) {
+    tl.fromTo(c, { opacity: 0, yPercent: 70, rotationX: -60 }, { opacity: 1, yPercent: 0, rotationX: 0, duration: 0.5, ease: "brandReveal" }, 12.22 + i * 0.022);
+  });
+  tl.fromTo("#s6-cta", { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 0.5, ease: "brandOut" }, 12.8);
+  tl.fromTo("#s6-cta svg", { x: -10, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "brandOut" }, 13.15);
+  tl.to("#s6-cta svg", { x: 5, y: -5, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, 13.6);
+  B.track(tl, $("#s6-link"), 13.2, 8, 0.6);
+
+  B.grain(tl, "#grain", 15, 11);
+  window.__timelines["main"] = tl;
+})();
+</script>
+</body>
+</html>

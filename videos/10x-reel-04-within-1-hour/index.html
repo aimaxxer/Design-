@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>10X Reel 04: Within 1 hour</title>
+<script src="assets/gsap.min.js"></script>
+<script src="assets/CustomEase.min.js"></script>
+<script src="assets/brand.js"></script>
+<style>
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Light.otf"); font-weight: 300; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Regular.otf"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Medium.otf"); font-weight: 500; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e3245; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Inter", sans-serif; color: #ffffff; background: #154359; -webkit-font-smoothing: antialiased; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+#s1 { opacity: 1; }
+.navy { background: radial-gradient(110% 70% at 85% 0%, #1f5f7d 0%, #154359 48%, #0e3245 100%); }
+.deep { background: radial-gradient(120% 80% at 15% 0%, #0a7189 0%, #066377 45%, #0b4a5f 100%); }
+.frost { background: radial-gradient(120% 70% at 80% 10%, #ffffff 0%, #f0f5f7 55%, #e3ecf0 100%); color: #154359; }
+.w, .ch { display: inline-block; white-space: nowrap; }
+.label { font-weight: 500; font-size: 26px; letter-spacing: 0.3em; }
+.brandbar { position: absolute; left: 80px; right: 80px; top: 270px; display: flex; justify-content: space-between; align-items: center; }
+.brandbar img { height: 52px; width: auto; display: block; }
+.brandbar span { font-weight: 500; font-size: 22px; letter-spacing: 0.26em; color: #c6d7df; }
+.cut14 { clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); }
+#band { position: absolute; left: 50%; top: 50%; width: 5200px; height: 3000px; margin-left: -2600px; margin-top: -1500px; opacity: 0; z-index: 40;
+  background: linear-gradient(180deg, #4bbdf0 0%, #4bbdf0 6%, #066377 6%, #066377 12%, #154359 12%, #154359 88%, #066377 88%, #066377 94%, #4bbdf0 94%, #4bbdf0 100%); }
+#grain { position: absolute; inset: 0; z-index: 60; pointer-events: none; background: url("assets/grain.png"); opacity: 0.07; mix-blend-mode: overlay; }
+
+/* s1 dial */
+#s1-head { position: absolute; left: 80px; top: 400px; width: 920px; font-weight: 700; font-size: 140px; line-height: 0.95; letter-spacing: -0.03em; perspective: 900px; }
+#s1-head .ch { transform-origin: 50% 100%; }
+#s1-sub { position: absolute; left: 80px; top: 560px; width: 900px; font-weight: 700; font-size: 74px; line-height: 1; letter-spacing: -0.02em; color: #4bbdf0; }
+#s1-dial { position: absolute; left: 190px; top: 760px; width: 700px; height: 700px; }
+#s1-center { position: absolute; left: 190px; top: 760px; width: 700px; height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+#s1-min { font-weight: 300; font-size: 230px; line-height: 0.9; letter-spacing: -0.05em; font-variant-numeric: tabular-nums;
+  background: linear-gradient(100deg, #4bbdf0 0%, #2a8fc0 45%, #9fd9f5 100%); -webkit-background-clip: text; background-clip: text; color: rgba(0,0,0,0); }
+#s1-minlabel { font-weight: 500; font-size: 28px; letter-spacing: 0.3em; color: #c6d7df; }
+
+/* s2 steps */
+#s2 { z-index: 3; }
+#s2-ghost { position: absolute; left: 380px; top: 1050px; display: block; }
+#s2-eyebrow { position: absolute; left: 80px; top: 380px; color: #3f6274; }
+#s2-head { position: absolute; left: 80px; top: 420px; width: 900px; font-weight: 700; font-size: 96px; line-height: 0.95; letter-spacing: -0.03em; }
+#s2-rail { position: absolute; left: 118px; top: 690px; width: 4px; height: 640px; background: #b7cbd3; }
+#s2-railfill { position: absolute; left: 118px; top: 690px; width: 4px; height: 640px; background: #4bbdf0; transform-origin: 50% 0; }
+#s2-pin { position: absolute; left: 100px; top: 672px; width: 40px; height: 40px; background: #066377; }
+.step { position: absolute; left: 190px; width: 760px; padding: 28px 34px; background: #ffffff; border: 3px solid #d7e2e7; display: flex; flex-direction: column; gap: 10px;
+  clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px); }
+.step .n { font-weight: 600; font-size: 24px; letter-spacing: 0.24em; color: #066377; }
+.step b { font-weight: 700; font-size: 58px; line-height: 1; letter-spacing: -0.02em; color: #154359; }
+.step span { font-weight: 500; font-size: 28px; color: #3f6274; }
+#st-1 { top: 640px; } #st-2 { top: 900px; } #st-3 { top: 1160px; border-color: #4bbdf0; }
+
+/* s3 phone */
+#s3-bg { position: absolute; inset: -8%; }
+#s3-bg img { width: 100%; height: 100%; object-fit: cover; display: block; filter: blur(30px) brightness(0.55); }
+#s3-veil { position: absolute; inset: 0; background: radial-gradient(90% 60% at 50% 50%, rgba(21,67,89,0.35) 0%, rgba(14,50,69,0.85) 100%); }
+#s3-eyebrow { position: absolute; left: 80px; top: 300px; color: #c6d7df; }
+#phone { position: absolute; left: 200px; top: 380px; width: 680px; height: 1300px; border-radius: 84px; background: #0b2533; padding: 18px; }
+#screen { position: relative; width: 100%; height: 100%; border-radius: 68px; overflow: hidden; background: radial-gradient(120% 70% at 80% 0%, #ffffff 0%, #eaf3f6 50%, #d6e8ef 100%); }
+#island { position: absolute; left: 50%; top: 22px; width: 180px; height: 46px; margin-left: -90px; border-radius: 23px; background: #0b2533; }
+#lock-date { position: absolute; left: 0; right: 0; top: 120px; text-align: center; font-weight: 500; font-size: 30px; color: #3f6274; }
+#lock-time { position: absolute; left: 0; right: 0; top: 160px; text-align: center; font-weight: 300; font-size: 170px; line-height: 1; letter-spacing: -0.03em; color: #154359; }
+.notif { position: absolute; left: 30px; width: 584px; padding: 24px 26px; border-radius: 34px; background: rgba(255,255,255,0.86); box-shadow: 0 18px 40px -18px rgba(21,67,89,0.45); display: grid; grid-template-columns: 64px 1fr; gap: 18px; align-items: center; }
+.notif .ico { width: 64px; height: 64px; border-radius: 16px; background: #154359; display: flex; align-items: center; justify-content: center; }
+.notif .ico i { width: 44px; height: 19px; display: block; background: url("assets/img/10x-mark-white.svg") center / contain no-repeat; }
+.notif .top { display: flex; justify-content: space-between; font-weight: 600; font-size: 24px; color: #154359; }
+.notif .top em { font-style: normal; font-weight: 400; color: #3f6274; }
+.notif p { font-weight: 500; font-size: 28px; line-height: 1.25; color: #154359; margin-top: 4px; }
+#n1 { top: 430px; } #n2 { top: 610px; } #n3 { top: 790px; }
+
+/* s4 fees */
+#s4-ghost { position: absolute; left: 360px; top: 980px; display: block; }
+#s4-head { position: absolute; left: 80px; top: 600px; font-weight: 700; font-size: 210px; line-height: 1; letter-spacing: -0.035em; transform-origin: 0 50%; }
+#s4-sub { position: absolute; left: 80px; top: 850px; width: 840px; font-weight: 700; font-size: 74px; line-height: 1.02; letter-spacing: -0.02em; color: #bfeafc; }
+
+/* s5 end card */
+#s5-glow { position: absolute; left: 40px; top: 600px; width: 1000px; height: 1000px; background: radial-gradient(50% 50% at 50% 50%, rgba(75,189,240,0.38) 0%, rgba(75,189,240,0) 68%); }
+#s5-head { position: absolute; left: 80px; top: 400px; width: 920px; font-weight: 700; font-size: 112px; line-height: 0.95; letter-spacing: -0.03em; perspective: 900px; }
+#s5-head .ch { transform-origin: 50% 100%; }
+#s5-coinwrap { position: absolute; left: 270px; top: 700px; width: 540px; height: 540px; }
+#s5-coin { width: 540px; height: 540px; display: block; }
+#s5-cta { position: absolute; left: 80px; top: 1290px; display: flex; align-items: center; gap: 26px; padding: 34px 44px; background: #4bbdf0; color: #154359; font-weight: 600; font-size: 30px; letter-spacing: 0.2em; }
+#s5-cta svg { width: 28px; height: 28px; display: block; }
+#s5-link { position: absolute; left: 84px; top: 1430px; font-weight: 500; font-size: 24px; letter-spacing: 0.3em; color: #c6d7df; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+
+  <section class="scene navy" id="s1">
+    <header class="brandbar" id="s1-bar"><img src="assets/img/lockup-white.svg" alt="10X Affiliation" /><span>FOR IB’s</span></header>
+    <div id="s1-head">YOUR OFFER.</div>
+    <div id="s1-sub">WITHIN 1 HOUR OF THE CALL.</div>
+    <svg id="s1-dial" viewBox="0 0 700 700" aria-hidden="true">
+      <circle cx="350" cy="350" r="300" fill="none" stroke="rgba(198,215,223,0.18)" stroke-width="16" />
+      <circle id="dial-arc" cx="350" cy="350" r="300" fill="none" stroke="#4bbdf0" stroke-width="16" stroke-linecap="butt" stroke-dasharray="1885" stroke-dashoffset="1885" transform="rotate(-90 350 350)" />
+      <g id="dial-ticks"></g>
+    </svg>
+    <div id="s1-center"><div id="s1-min">0</div><div id="s1-minlabel">MINUTES</div></div>
+  </section>
+
+  <section class="scene frost" id="s2">
+    <svg id="s2-ghost" width="760" height="760" viewBox="0 0 760 760" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="640" font-family="Inter" font-weight="300" font-size="720" letter-spacing="-40" fill="#e3ecf0">1H</text></svg>
+    <div class="label" id="s2-eyebrow">HOW IT WORKS</div>
+    <div id="s2-head">THREE STEPS.</div>
+    <div id="s2-rail"></div><div id="s2-railfill"></div>
+    <div class="step" id="st-1"><span class="n">01</span><b>APPLY</b><span>Two minutes.</span></div>
+    <div class="step" id="st-2"><span class="n">02</span><b>STRATEGY CALL</b><span>A deal sized to your volume.</span></div>
+    <div class="step" id="st-3"><span class="n">03</span><b>YOUR OFFER</b><span>Within 1 hour of the call.</span></div>
+    <div id="s2-pin"></div>
+  </section>
+
+  <section class="scene navy" id="s3">
+    <div id="s3-bg"><img src="assets/img/aurora-3.jpg" alt="" /></div>
+    <div id="s3-veil"></div>
+    <div class="label" id="s3-eyebrow">AFTER YOUR CALL</div>
+    <div id="phone">
+      <div id="screen">
+        <div id="island"></div>
+        <div id="lock-date">Tuesday</div>
+        <div id="lock-time">10:00</div>
+        <div class="notif" id="n1"><div class="ico"><i></i></div><div><div class="top"><span>10X Affiliation</span><em>now</em></div><p>Your rebate offer is ready.</p></div></div>
+        <div class="notif" id="n2"><div class="ico"><i></i></div><div><div class="top"><span>10X Affiliation</span><em>1m ago</em></div><p>Your 10X Trader access is live.</p></div></div>
+        <div class="notif" id="n3"><div class="ico"><i></i></div><div><div class="top"><span>10X Affiliation</span><em>2m ago</em></div><p>Your partner manager’s direct line is set up.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene deep" id="s4">
+    <svg id="s4-ghost" width="900" height="760" viewBox="0 0 900 760" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="660" font-family="Inter" font-weight="300" font-size="860" letter-spacing="-50" fill="none" stroke="rgba(191,234,252,0.2)" stroke-width="3">$0</text></svg>
+    <header class="brandbar" id="s4-bar"><img src="assets/img/lockup-white-3.svg" alt="10X Affiliation" /><span>STRAIGHT ANSWERS</span></header>
+    <div id="s4-head">$0 FEES.</div>
+    <div id="s4-sub">THE BROKER PAYS US, NOT YOU.</div>
+  </section>
+
+  <section class="scene navy" id="s5">
+    <div id="s5-glow"></div>
+    <header class="brandbar" id="s5-bar"><img src="assets/img/lockup-white-end.svg" alt="10X Affiliation" /><span>PARTNER PROGRAM</span></header>
+    <div id="s5-head">A DEAL SIZED TO YOUR VOLUME.</div>
+    <div id="s5-coinwrap">
+      <video id="s5-coin" class="clip" src="assets/coin-turn.webm" muted playsinline data-start="12.5" data-duration="2.5" data-track-index="2"
+        data-automation='{"version":1,"lanes":[{"target":"rate","points":[{"t":0,"v":5},{"t":0.9,"v":1},{"t":2.5,"v":1}]}]}'></video>
+    </div>
+    <div id="s5-cta" class="cut14">BOOK MY STRATEGY CALL<svg viewBox="0 0 24 24" fill="none" stroke="#154359" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+    <div id="s5-link">LINK IN BIO</div>
+  </section>
+
+  <div id="band"></div>
+  <div id="grain"></div>
+  <audio id="soundtrack" src="assets/soundtrack.mp3" data-start="0" data-duration="15" data-track-index="10" data-volume="1"></audio>
+</div>
+
+<script>
+(function () {
+  var tl = gsap.timeline({ paused: true });
+  var $ = function (s) { return document.querySelector(s); };
+
+  // ---- S1 (0 - 3.0): a 60-minute ring draws on the clock ticks
+  tl.fromTo("#s1-bar", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 0.05);
+  B.chars($("#s1-head")).forEach(function (c, i) {
+    tl.fromTo(c, { opacity: 0, yPercent: 70, rotationX: -60 }, { opacity: 1, yPercent: 0, rotationX: 0, duration: 0.45, ease: "brandReveal" }, 0.15 + i * 0.025);
+  });
+  var g = $("#dial-ticks");
+  for (var k = 0; k < 12; k++) {
+    var a = (k / 12) * Math.PI * 2 - Math.PI / 2, r1 = k % 3 === 0 ? 236 : 252, r2 = 272;
+    var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    ln.setAttribute("x1", 350 + r1 * Math.cos(a)); ln.setAttribute("y1", 350 + r1 * Math.sin(a));
+    ln.setAttribute("x2", 350 + r2 * Math.cos(a)); ln.setAttribute("y2", 350 + r2 * Math.sin(a));
+    ln.setAttribute("stroke", "#c6d7df"); ln.setAttribute("stroke-width", k % 3 === 0 ? 8 : 4);
+    g.appendChild(ln);
+    tl.fromTo(ln, { opacity: 0.25 }, { opacity: 1, duration: 0.05, ease: "none" }, 0.2 + k * 0.11);
+  }
+  tl.fromTo("#s1-dial", { opacity: 0, scale: 0.86, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.6, ease: "brandReveal" }, 0.05);
+  tl.fromTo("#dial-arc", { strokeDashoffset: 1885 }, { strokeDashoffset: 0, duration: 1.32, ease: "none" }, 0.2);
+  var mins = { v: 0 }, minEl = $("#s1-min");
+  tl.fromTo(mins, { v: 0 }, { v: 60, duration: 1.32, ease: "none", onUpdate: function () { minEl.textContent = Math.round(mins.v); } }, 0.2);
+  tl.fromTo("#s1-center", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "softOut" }, 0.2);
+  tl.fromTo("#s1-sub", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 1.2);
+  tl.fromTo("#s1-dial", { scale: 1 }, { scale: 1.04, duration: 0.25, ease: "power2.out", immediateRender: false }, 1.52);
+  tl.to("#s1-dial", { scale: 1, duration: 0.6, ease: "brandOut" }, 1.77);
+
+  // ---- circle iris from the dial centre into S2 (S2 full at 3.25)
+  tl.set("#s2", { opacity: 1 }, 2.75);
+  tl.fromTo("#s2", { clipPath: "circle(0px at 540px 1110px)" }, { clipPath: "circle(2300px at 540px 1110px)", duration: 0.5, ease: "brandInOut" }, 2.75);
+  tl.set("#s1", { opacity: 0 }, 3.25);
+  tl.fromTo("#s2-ghost", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.2, ease: "brandOut" }, 2.9);
+  tl.fromTo("#s2-eyebrow", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, ease: "brandOut" }, 2.95);
+  B.words($("#s2-head")).forEach(function (w, i) {
+    tl.fromTo(w, { opacity: 0, yPercent: 60 }, { opacity: 1, yPercent: 0, duration: 0.4, ease: "brandReveal" }, 3.0 + i * 0.07);
+  });
+  tl.fromTo("#s2-rail", { scaleY: 0, transformOrigin: "50% 0" }, { scaleY: 1, duration: 0.6, ease: "brandOut" }, 3.0);
+  tl.fromTo("#s2-railfill", { scaleY: 0 }, { scaleY: 1, duration: 2.0, ease: "brandInOut" }, 3.2);
+  var PIN = [672, 932, 1192];
+  [3.2, 4.2, 5.2].forEach(function (t, i) {
+    var card = "#st-" + (i + 1);
+    tl.fromTo(card, { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.4, ease: i === 1 ? "circ.out" : "expo.out" }, t);
+    if (i === 0) tl.fromTo("#s2-pin", { opacity: 0, scale: 0.4, rotation: 45 }, { opacity: 1, scale: 1, rotation: 45, duration: 0.3, ease: "brandOut" }, t);
+    else tl.fromTo("#s2-pin", { y: PIN[i - 1] - 672 }, { y: PIN[i] - 672, duration: 0.42, ease: "brandInOut", immediateRender: false }, t - 0.3);
+  });
+
+  // keep the finished steps alive until the push
+  tl.fromTo("#s2-ghost", { x: 0 }, { x: -70, duration: 2.9, ease: "none", immediateRender: false }, 4.1);
+  tl.to("#s2-pin", { scale: 1.3, duration: 0.25, ease: "sine.inOut", yoyo: true, repeat: 1 }, 6.0);
+  tl.fromTo("#st-3", { backgroundColor: "#ffffff" }, { backgroundColor: "#e4f4fc", duration: 0.5, ease: "softOut" }, 6.05);
+  tl.fromTo("#s2-head", { x: 0 }, { x: 18, duration: 1.0, ease: "sine.inOut" }, 5.9);
+
+  // ---- vertical push into S3 (whoosh at 6.75)
+  tl.set("#s3", { opacity: 1 }, 6.75);
+  tl.to("#s2", { yPercent: -100, duration: 0.5, ease: "power3.in" }, 6.75);
+  tl.fromTo("#s3", { yPercent: 100 }, { yPercent: 0, duration: 0.55, ease: "brandReveal", immediateRender: false }, 6.95);
+  tl.set("#s2", { opacity: 0 }, 7.25);
+  tl.fromTo("#s3-bg", { scale: 1.06 }, { scale: 1.16, duration: 4.0, ease: "none" }, 7.0);
+  tl.fromTo("#s3-eyebrow", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, ease: "brandOut" }, 7.2);
+  tl.fromTo("#phone", { y: 260, rotation: 4, transformPerspective: 1600, rotationX: 14 }, { y: 0, rotation: 0, rotationX: 0, duration: 0.9, ease: "brandReveal" }, 7.0);
+  tl.fromTo("#lock-time", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "brandOut" }, 7.4);
+  tl.fromTo("#lock-date", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "softOut" }, 7.5);
+  [8.0, 8.75, 9.5].forEach(function (t, i) {
+    tl.fromTo("#n" + (i + 1), { opacity: 0, y: -70, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "brandOut" }, t);
+  });
+  tl.to("#phone", { y: -24, duration: 1.2, ease: "sine.inOut" }, 9.6);
+
+  // ---- band wipe into S4 (swap 11.06)
+  B.bandWipe(tl, "#band", "#s3", "#s4", 10.75, 0.62);
+  tl.fromTo("#s4-ghost", { opacity: 0, x: 140 }, { opacity: 1, x: 0, duration: 1.2, ease: "brandOut" }, 11.06);
+  tl.fromTo("#s4-bar", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.5, ease: "brandReveal" }, 11.1);
+  tl.fromTo("#s4-head", { opacity: 0, scale: 1.4, filter: "blur(16px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "power4.out" }, 11.06);
+  var t4 = 11.4;
+  B.words($("#s4-sub")).forEach(function (w) {
+    tl.set(w, { opacity: 1, y: 56 }, t4);
+    tl.to(w, { y: 0, duration: 0.15, ease: "power4.out" }, t4);
+    t4 += 0.14 - 1 / 30;
+  });
+  tl.set("#s4-sub .w", { opacity: 0 }, 0);
+
+  // ---- zoom-through into S5 end card (swap 12.5)
+  B.zoomThrough(tl, "#s4", "#s5", 12.26);
+  tl.fromTo("#s5-glow", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 1.1, ease: "softOut" }, 12.5);
+  tl.fromTo("#s5-coinwrap", { opacity: 0, scale: 0.6, y: 140, filter: "blur(14px)" }, { opacity: 1, scale: 1, y: 0, filter: "blur(0px)", duration: 0.85, ease: "brandReveal" }, 12.5);
+  tl.fromTo("#s5-bar", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 12.55);
+  B.chars($("#s5-head")).forEach(function (c, i) {
+    tl.fromTo(c, { opacity: 0, yPercent: 70, rotationX: -60 }, { opacity: 1, yPercent: 0, rotationX: 0, duration: 0.45, ease: "brandReveal" }, 12.6 + i * 0.018);
+  });
+  tl.fromTo("#s5-cta", { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 0.5, ease: "brandOut" }, 13.2);
+  tl.fromTo("#s5-cta svg", { x: -10, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "brandOut" }, 13.5);
+  tl.to("#s5-cta svg", { x: 5, y: -5, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, 13.95);
+  B.track(tl, $("#s5-link"), 13.55, 8, 0.6);
+
+  B.grain(tl, "#grain", 15, 41);
+  window.__timelines["main"] = tl;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>10X Reel 03: Structure</title>
+<script src="assets/gsap.min.js"></script>
+<script src="assets/CustomEase.min.js"></script>
+<script src="assets/brand.js"></script>
+<style>
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Light.otf"); font-weight: 300; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Regular.otf"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Medium.otf"); font-weight: 500; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e3245; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Inter", sans-serif; color: #ffffff; background: #f0f5f7; -webkit-font-smoothing: antialiased; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+#s1 { opacity: 1; z-index: 5; background: none; }
+.navy { background: radial-gradient(110% 70% at 85% 0%, #1f5f7d 0%, #154359 48%, #0e3245 100%); }
+.deep { background: radial-gradient(120% 80% at 15% 0%, #0a7189 0%, #066377 45%, #0b4a5f 100%); }
+.frost { background: radial-gradient(120% 70% at 80% 10%, #ffffff 0%, #f0f5f7 55%, #e3ecf0 100%); color: #154359; }
+.w, .ch { display: inline-block; white-space: nowrap; }
+.label { font-weight: 500; font-size: 26px; letter-spacing: 0.3em; }
+.brandbar { position: absolute; left: 80px; right: 80px; top: 270px; display: flex; justify-content: space-between; align-items: center; }
+.brandbar img { height: 52px; width: auto; display: block; }
+.brandbar span { font-weight: 500; font-size: 22px; letter-spacing: 0.26em; color: #c6d7df; }
+.cut14 { clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); }
+#blocks { position: absolute; inset: 0; z-index: 41; pointer-events: none; }
+#grain { position: absolute; inset: 0; z-index: 60; pointer-events: none; background: url("assets/grain.png"); opacity: 0.07; mix-blend-mode: overlay; }
+
+/* s1: the wall, drawn twice so it can split along the diagonal */
+.half { position: absolute; inset: 0; }
+#half-a { clip-path: polygon(0 0, 1080px 0, 1080px 424px, 0 1504px); }
+#half-b { clip-path: polygon(0 1500px, 1080px 420px, 1080px 1920px, 0 1920px); }
+.world { position: absolute; inset: 0; transform-origin: 50% 55%; }
+.wall-eyebrow { position: absolute; left: 80px; top: 360px; font-weight: 700; font-size: 66px; line-height: 1; letter-spacing: -0.02em; }
+.wall-eyebrow em { font-style: normal; color: #4bbdf0; }
+.bricks { position: absolute; left: 80px; top: 500px; width: 920px; display: flex; flex-direction: column; gap: 22px; }
+.brick { position: relative; height: 168px; display: flex; align-items: center; gap: 30px; padding: 0 40px; background: #1b4b62; color: #ffffff; font-weight: 700; font-size: 52px; letter-spacing: -0.01em;
+  clip-path: polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px); }
+.brick i { width: 12px; height: 76px; background: #ff9b93; display: block; flex: none; }
+.brick:nth-child(2n) { background: #1f5671; }
+#crack { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 6; }
+
+/* s2: structure */
+#s2-grid { position: absolute; inset: 0; }
+#s2-grid i { position: absolute; background: #d7e2e7; display: block; }
+#s2-a { position: absolute; left: 80px; top: 470px; width: 920px; font-weight: 700; font-size: 128px; line-height: 0.95; letter-spacing: -0.03em; color: #557080; }
+#s2-b { position: absolute; left: 80px; top: 830px; width: 920px; font-weight: 700; font-size: 150px; line-height: 0.93; letter-spacing: -0.03em; color: #154359; transform-origin: 0 50%; }
+#s2-b em { font-style: normal; color: #066377; display: inline-block; }
+#s2-mark { position: absolute; left: 80px; top: 1124px; width: 840px; height: 14px; background: #4bbdf0; transform-origin: 0 50%; }
+#s2-label { position: absolute; left: 80px; top: 400px; color: #3f6274; }
+
+/* s3: raise your rate */
+#s3-ghost { position: absolute; left: 330px; top: 900px; display: block; }
+#s3-head { position: absolute; left: 80px; top: 520px; width: 920px; font-weight: 700; font-size: 150px; line-height: 0.93; letter-spacing: -0.03em; }
+#s3-head .sky { color: #4bbdf0; }
+#s3-sub { position: absolute; left: 80px; top: 1060px; width: 820px; font-weight: 500; font-size: 52px; line-height: 1.15; color: #c6d7df; }
+#s3-strike { position: absolute; left: 80px; top: 1180px; width: 0; }
+
+/* s4: one partner */
+#s4-sculpt { position: absolute; left: 560px; top: 1080px; width: 760px; height: 760px; }
+#s4-sculpt img { width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: radial-gradient(closest-side, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%); mask-image: radial-gradient(closest-side, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%); opacity: 0.9; }
+#s4-eyebrow { position: absolute; left: 80px; top: 380px; color: #bfeafc; }
+#s4-head { position: absolute; left: 80px; top: 430px; font-weight: 700; font-size: 96px; line-height: 0.95; letter-spacing: -0.03em; }
+#s4-slot { position: absolute; left: 80px; top: 560px; width: 900px; height: 300px; overflow: hidden; }
+#s4-strip { position: absolute; left: 0; top: 0; width: 900px; }
+#s4-strip div { height: 300px; font-weight: 700; font-size: 130px; line-height: 0.95; letter-spacing: -0.03em; color: #bfeafc; }
+#s4-list { position: absolute; left: 80px; top: 920px; display: flex; flex-direction: column; gap: 18px; }
+#s4-list span { display: flex; align-items: center; gap: 18px; font-weight: 500; font-size: 30px; letter-spacing: 0.2em; color: #ffffff; }
+#s4-list span i { width: 14px; height: 14px; background: #4bbdf0; transform: rotate(45deg); display: block; }
+
+/* s5: end card */
+#s5-glow { position: absolute; left: 40px; top: 600px; width: 1000px; height: 1000px; background: radial-gradient(50% 50% at 50% 50%, rgba(75,189,240,0.38) 0%, rgba(75,189,240,0) 68%); }
+#s5-head { position: absolute; left: 80px; top: 400px; width: 920px; font-weight: 700; font-size: 104px; line-height: 0.95; letter-spacing: -0.03em; perspective: 900px; }
+#s5-head .ch { transform-origin: 50% 100%; }
+#s5-coinwrap { position: absolute; left: 270px; top: 720px; width: 540px; height: 540px; }
+#s5-coin { width: 540px; height: 540px; display: block; }
+#s5-cta { position: absolute; left: 80px; top: 1290px; display: flex; align-items: center; gap: 26px; padding: 34px 44px; background: #4bbdf0; color: #154359; font-weight: 600; font-size: 30px; letter-spacing: 0.2em; }
+#s5-cta svg { width: 28px; height: 28px; display: block; }
+#s5-link { position: absolute; left: 84px; top: 1430px; font-weight: 500; font-size: 24px; letter-spacing: 0.3em; color: #c6d7df; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+
+  <section class="scene frost" id="s2">
+    <div id="s2-grid"></div>
+    <div class="label" id="s2-label">THE REAL REASON</div>
+    <div id="s2-a">NOT BECAUSE OF SKILL.</div>
+    <div id="s2-b">BECAUSE OF <em>STRUCTURE.</em></div>
+    <div id="s2-mark"></div>
+  </section>
+
+  <section class="scene" id="s1">
+    <div class="half navy" id="half-a" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">
+      <div class="world">
+        <header class="brandbar"><img src="assets/img/lockup-white.svg" alt="10X Affiliation" /><span>FOR IB’s</span></header>
+        <div class="wall-eyebrow">EVERY WALL <em>YOU HIT.</em></div>
+        <div class="bricks">
+          <div class="brick"><i></i>LOW DEALS</div>
+          <div class="brick"><i></i>NO TRACKING</div>
+          <div class="brick"><i></i>LEADS THAT DON’T DEPOSIT</div>
+          <div class="brick"><i></i>REFERRALS THAT BLOW UP</div>
+          <div class="brick"><i></i>TICKET QUEUES</div>
+        </div>
+      </div>
+    </div>
+    <div class="half navy" id="half-b" aria-hidden="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">
+      <div class="world">
+        <header class="brandbar"><img src="assets/img/lockup-white-4.svg" alt="" /><span>FOR IB’s</span></header>
+        <div class="wall-eyebrow">EVERY WALL <em>YOU HIT.</em></div>
+        <div class="bricks">
+          <div class="brick"><i></i>LOW DEALS</div>
+          <div class="brick"><i></i>NO TRACKING</div>
+          <div class="brick"><i></i>LEADS THAT DON’T DEPOSIT</div>
+          <div class="brick"><i></i>REFERRALS THAT BLOW UP</div>
+          <div class="brick"><i></i>TICKET QUEUES</div>
+        </div>
+      </div>
+    </div>
+    <svg id="crack" viewBox="0 0 1080 1920" aria-hidden="true"><line id="crack-line" x1="0" y1="1500" x2="1080" y2="420" stroke="#4bbdf0" stroke-width="8" stroke-dasharray="1528" stroke-dashoffset="1528" /></svg>
+  </section>
+
+  <section class="scene navy" id="s3">
+    <svg id="s3-ghost" width="900" height="900" viewBox="0 0 900 900" aria-hidden="true" data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><text data-layout-allow-overflow="true" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" x="0" y="780" font-family="Inter" font-weight="300" font-size="900" fill="none" stroke="rgba(75,189,240,0.16)" stroke-width="3">%</text></svg>
+    <header class="brandbar" id="s3-bar"><img src="assets/img/lockup-white-3.svg" alt="10X Affiliation" /><span>FOR IB’s</span></header>
+    <div id="s3-head">WE DON’T JUST RAISE YOUR RATE.</div>
+    <div id="s3-sub">Most IB’s only negotiate their rate.</div>
+  </section>
+
+  <section class="scene deep" id="s4">
+    <div id="s4-sculpt" data-layout-allow-overflow="true"><img src="assets/img/glass-03.jpg" alt="" /></div>
+    <div class="label" id="s4-eyebrow">10X AFFILIATION</div>
+    <div id="s4-head">ONE PARTNER FOR</div>
+    <div id="s4-slot">
+      <div id="s4-strip" data-layout-allow-overflow="true">
+        <div>DEALS.</div><div>PRODUCTS.</div><div>FUNNELS.</div><div>A PARTNER MANAGER.</div>
+      </div>
+    </div>
+    <div id="s4-list">
+      <span id="li-1"><i></i>BETTER BROKER DEALS</span>
+      <span id="li-2"><i></i>10X TRADER</span>
+      <span id="li-3"><i></i>FUNNELS AND UGC NETWORK</span>
+      <span id="li-4"><i></i>A PARTNER MANAGER</span>
+    </div>
+  </section>
+
+  <section class="scene navy" id="s5">
+    <div id="s5-glow"></div>
+    <header class="brandbar" id="s5-bar"><img src="assets/img/lockup-white-end.svg" alt="10X Affiliation" /><span>NO FEES</span></header>
+    <div id="s5-head">YOUR OFFER WITHIN 1 HOUR OF THE CALL.</div>
+    <div id="s5-coinwrap">
+      <video id="s5-coin" class="clip" src="assets/coin-turn.webm" muted playsinline data-start="12.5" data-duration="2.5" data-track-index="2"
+        data-automation='{"version":1,"lanes":[{"target":"rate","points":[{"t":0,"v":5},{"t":0.9,"v":1},{"t":2.5,"v":1}]}]}'></video>
+    </div>
+    <div id="s5-cta" class="cut14">BOOK MY STRATEGY CALL<svg viewBox="0 0 24 24" fill="none" stroke="#154359" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+    <div id="s5-link">LINK IN BIO</div>
+  </section>
+
+  <div id="blocks">
+    <div class="blk" style="top:0; background:#154359;"></div>
+    <div class="blk" style="top:384px; background:#066377;"></div>
+    <div class="blk" style="top:768px; background:#4bbdf0;"></div>
+    <div class="blk" style="top:1152px; background:#066377;"></div>
+    <div class="blk" style="top:1536px; background:#154359;"></div>
+  </div>
+  <div id="grain"></div>
+  <audio id="soundtrack" src="assets/soundtrack.mp3" data-start="0" data-duration="15" data-track-index="10" data-volume="1"></audio>
+</div>
+
+<style>
+#blocks .blk { position: absolute; left: -120px; width: 1320px; height: 386px; opacity: 0; clip-path: polygon(120px 0, 100% 0, calc(100% - 120px) 100%, 0 100%); }
+</style>
+
+<script>
+(function () {
+  var tl = gsap.timeline({ paused: true });
+  var $ = function (s) { return document.querySelector(s); };
+  var both = function (sel) { return gsap.utils.toArray("#half-a " + sel + ", #half-b " + sel); };
+
+  // ---- S1 (0 - 3.5): the wall builds brick by brick on the beat; every move runs on both halves
+  tl.fromTo(both(".brandbar"), { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 0.05);
+  tl.fromTo(both(".wall-eyebrow"), { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "brandReveal" }, 0.15);
+  var HITS = [0.6, 1.1, 1.6, 2.1, 2.6];
+  var FROM = [{ x: -1100 }, { x: 1100 }, { y: -260, scale: 1.12, filter: "blur(12px)" }, { x: -1100 }, { x: 1100 }];
+  [0, 1, 2, 3, 4].forEach(function (k) {
+    var bricks = both(".brick:nth-child(" + (k + 1) + ")");
+    var from = Object.assign({ opacity: 0 }, FROM[k]);
+    var to = { opacity: 1, x: 0, y: 0, scale: 1, filter: "blur(0px)", duration: 0.3, ease: k === 2 ? "power4.out" : "expo.out" };
+    tl.fromTo(bricks, from, to, HITS[k] - 0.12);
+    // the camera leans in a little on every hit (a push, never a shake)
+    tl.to(both(".world"), { scale: 1 + 0.014 * (k + 1), duration: 0.22, ease: "power2.out" }, HITS[k]);
+  });
+  tl.to("#crack-line", { strokeDashoffset: 0, duration: 0.42, ease: "power3.in" }, 3.06);
+  // the split: the two halves part along the 10X diagonal and reveal S2 underneath
+  tl.set("#s2", { opacity: 1 }, 3.5);
+  tl.to("#half-a", { x: -760, y: -760, duration: 0.62, ease: "brandInOut" }, 3.5);
+  tl.to("#half-b", { x: 760, y: 760, duration: 0.62, ease: "brandInOut" }, 3.5);
+  tl.to("#crack-line", { opacity: 0, duration: 0.2, ease: "power2.out" }, 3.55);
+  tl.set("#s1", { opacity: 0 }, 4.15);
+
+  // ---- S2 (3.5 - 6.5): blueprint grid draws, the answer lands on the drop at 5.0
+  var grid = $("#s2-grid"), lines = [];
+  for (var x = 80; x <= 1000; x += 115) { var v = document.createElement("i"); v.style.cssText = "left:" + x + "px; top:0; width:2px; height:1920px;"; grid.appendChild(v); lines.push([v, "y"]); }
+  for (var y = 340; y <= 1580; y += 155) { var h = document.createElement("i"); h.style.cssText = "left:0; top:" + y + "px; width:1080px; height:2px;"; grid.appendChild(h); lines.push([h, "x"]); }
+  lines.forEach(function (l, i) {
+    var prop = l[1] === "y" ? "scaleY" : "scaleX", from = {}, to = { duration: 0.7, ease: "brandOut" };
+    from[prop] = 0; to[prop] = 1;
+    tl.fromTo(l[0], from, to, 3.55 + (i % 9) * 0.04);
+  });
+  tl.fromTo("#s2-label", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, ease: "brandOut" }, 3.65);
+  B.words($("#s2-a")).forEach(function (w, i) {
+    tl.fromTo(w, { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.5, ease: "brandReveal" }, 3.7 + i * 0.07);
+  });
+  tl.to("#s2-a", { opacity: 0.4, duration: 0.3, ease: "power2.out" }, 4.95);
+  tl.fromTo("#s2-b", { opacity: 0, scale: 1.3, filter: "blur(16px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.42, ease: "power4.out" }, 5.0);
+  tl.fromTo("#s2-mark", { scaleX: 0 }, { scaleX: 1, duration: 0.55, ease: "brandOut" }, 5.3);
+  tl.to("#s2-grid", { opacity: 0.55, duration: 0.6, ease: "softOut" }, 5.0);
+
+  // ---- zoom-through into S3 (swap 6.5)
+  B.zoomThrough(tl, "#s2", "#s3", 6.26);
+  tl.fromTo("#s3-bar", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 6.55);
+  tl.fromTo("#s3-ghost", { opacity: 0, x: 120, rotation: 0 }, { opacity: 1, x: -40, rotation: -4, duration: 3.0, ease: "none" }, 6.5);
+  var t3 = 6.6;
+  B.words($("#s3-head")).forEach(function (w, i, arr) {
+    var heavy = i === arr.length - 1;
+    if (heavy) w.style.color = "#4bbdf0";
+    tl.set(w, { opacity: 1, y: heavy ? 90 : 55 }, t3);
+    tl.to(w, { y: 0, duration: heavy ? 0.22 : 0.16, ease: "power4.out" }, t3);
+    t3 += (heavy ? 0.22 : 0.16) - 1 / 30;
+  });
+  tl.set("#s3-head .w", { opacity: 0 }, 0);
+  tl.fromTo("#s3-sub", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 7.8);
+
+  // ---- hard cut into S4 on the downbeat at 9.5; the slot rolls on the beat
+  B.cut(tl, "#s3", "#s4", 9.5);
+  tl.fromTo("#s4-sculpt", { opacity: 0, x: 200, rotation: 10 }, { opacity: 1, x: 0, rotation: 0, duration: 1.0, ease: "brandReveal" }, 9.5);
+  tl.fromTo("#s4-sculpt img", { rotation: 0 }, { rotation: -8, duration: 3.0, ease: "none" }, 9.5);
+  B.track(tl, $("#s4-eyebrow"), 9.52, 9, 0.5);
+  B.chars($("#s4-head")).forEach(function (c, i) {
+    tl.fromTo(c, { opacity: 0, yPercent: 80 }, { opacity: 1, yPercent: 0, duration: 0.4, ease: "brandReveal" }, 9.55 + i * 0.018);
+  });
+  tl.fromTo("#s4-strip", { y: 300 }, { y: 0, duration: 0.3, ease: "expo.out" }, 9.9);
+  [10.4, 10.9, 11.4].forEach(function (t, i) { tl.to("#s4-strip", { y: -300 * (i + 1), duration: 0.28, ease: "brandOut" }, t); });
+  ["#li-1", "#li-2", "#li-3", "#li-4"].forEach(function (s, i) {
+    tl.fromTo(s, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "brandOut" }, 9.95 + i * 0.5);
+  });
+
+  // ---- block wipe into S5 end card (swap ~12.5)
+  B.blockWipe(tl, gsap.utils.toArray("#blocks .blk"), "#s4", "#s5", 12.24);
+  tl.fromTo("#s5-glow", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 1.1, ease: "softOut" }, 12.5);
+  tl.fromTo("#s5-coinwrap", { opacity: 0, scale: 0.6, y: 140, filter: "blur(14px)" }, { opacity: 1, scale: 1, y: 0, filter: "blur(0px)", duration: 0.85, ease: "brandReveal" }, 12.5);
+  tl.fromTo("#s5-bar", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.6, ease: "brandReveal" }, 12.55);
+  B.chars($("#s5-head")).forEach(function (c, i) {
+    tl.fromTo(c, { opacity: 0, yPercent: 70, rotationX: -60 }, { opacity: 1, yPercent: 0, rotationX: 0, duration: 0.45, ease: "brandReveal" }, 12.6 + i * 0.016);
+  });
+  tl.fromTo("#s5-cta", { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 0.5, ease: "brandOut" }, 13.2);
+  tl.fromTo("#s5-cta svg", { x: -10, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "brandOut" }, 13.5);
+  tl.to("#s5-cta svg", { x: 5, y: -5, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, 13.95);
+  B.track(tl, $("#s5-link"), 13.55, 8, 0.6);
+
+  B.grain(tl, "#grain", 15, 37);
+  window.__timelines["main"] = tl;
+})();
+</script>
+</body>
+</html>
