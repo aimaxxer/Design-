@@ -1,13 +1,13 @@
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ArrowDown } from 'lucide-react'
-import { lazy, Suspense, useRef } from 'react'
-import ShinyText from '@/components/bits/ShinyText'
-import SplitText from '@/components/bits/SplitText'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { ChamferButton } from '@/components/ui/ChamferButton'
 import { Chip } from '@/components/ui/Chip'
 import { Logo } from '@/components/ui/Logo'
+import { RollingAmount } from '@/components/ui/RollingAmount'
 import { cta, hero, links } from '@/content'
+import { formatUsd } from '@/lib/projection'
 
 gsap.registerPlugin(useGSAP)
 
@@ -18,8 +18,28 @@ const TenXCoinRow = lazy(() => import('@/coin/TenXCoinRow').then((m) => ({ defau
  * The framework's hero with the 10X coin row in place of the background video: the headline
  * sits in the upper half, six glass coins drift right to left through the lower half.
  */
+/** How long each deposit holds before the next: the first waits for the entry, the top one lingers. */
+const holdFor = (step: number, first: boolean) => (first ? 3200 : step === hero.amounts.length - 1 ? 3200 : 1900)
+
+/** The headline as one sentence for screen readers, at the starting amount (the visual one keeps counting). */
+const headline = `${hero.depositLabel} ${formatUsd(hero.amounts[0])}. ${hero.tradeLabel} ${formatUsd(hero.amounts[0] * 10)}.`
+
 export function Hero() {
   const root = useRef<HTMLElement>(null)
+
+  // The deposit counts up through hero.amounts and loops; the trade amount is always 10x.
+  // Reduced motion keeps the starting amount.
+  const [step, setStep] = useState(0)
+  const firstHold = useRef(true)
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const t = window.setTimeout(() => {
+      firstHold.current = false
+      setStep((s) => (s + 1) % hero.amounts.length)
+    }, holdFor(step, firstHold.current))
+    return () => window.clearTimeout(t)
+  }, [step])
+  const deposit = hero.amounts[step]
 
   useGSAP(
     () => {
@@ -30,6 +50,7 @@ export function Hero() {
         tl.from('[data-hero-coins]', { autoAlpha: 0, y: 60, duration: 2.2 }, 0)
           .from('[data-hero-bar]', { autoAlpha: 0, y: -10, duration: 1 }, 0.2)
           .from('[data-hero-eyebrow]', { autoAlpha: 0, y: 14, duration: 1 }, 0.3)
+          .from('[data-hero-line1]', { autoAlpha: 0, y: 28, filter: 'blur(10px)', duration: 1.4 }, 0.55)
           .from('[data-hero-line2]', { autoAlpha: 0, y: 28, filter: 'blur(10px)', duration: 1.4 }, 0.9)
           .from('[data-hero-sub]', { autoAlpha: 0, y: 16, duration: 1.1 }, 1.05)
           .from('[data-hero-cta] > *', { autoAlpha: 0, y: 12, duration: 1, stagger: 0.08 }, 1.2)
@@ -88,24 +109,21 @@ export function Hero() {
           {hero.eyebrow}
         </p>
 
+        {/* Fluid size: "Trade with $100,000." fits one line from tablet up, and on phones each amount
+            takes its own line, so the headline keeps its height while it counts. */}
         <h1
           id="hero-title"
-          className="font-firs text-[48px] font-normal leading-[0.9] tracking-[-0.04em] sm:text-[76px] lg:text-[100px] xl:text-[120px]"
+          className="font-firs text-[clamp(48px,calc(10vw-12px),120px)] font-normal leading-[0.9] tracking-[-0.04em]"
         >
-          <SplitText
-            tag="span"
-            text={hero.line1}
-            splitType="chars"
-            delay={36}
-            duration={1.3}
-            ease="expo.out"
-            startDelay={0.5}
-            from={{ opacity: 0, yPercent: 60, rotateX: -50 }}
-            to={{ opacity: 1, yPercent: 0, rotateX: 0 }}
-            className="block pb-[0.08em]"
-          />
-          <span data-hero-line2 className="block">
-            <ShinyText text={hero.line2} color="#154359" shineColor="#4bbdf0" speed={2.8} delay={4} angle={110} />
+          <span className="sr-only">{headline}</span>
+          <span aria-hidden data-hero-line1 className="block pb-[0.08em]">
+            {hero.depositLabel} <span className="whitespace-nowrap max-sm:block"><RollingAmount value={deposit} />.</span>
+          </span>
+          <span aria-hidden data-hero-line2 className="block">
+            {hero.tradeLabel}{' '}
+            <span className="whitespace-nowrap max-sm:block">
+              <RollingAmount value={deposit * 10} className="chamfer-em bg-accent px-[0.16em] text-white" />.
+            </span>
           </span>
         </h1>
 

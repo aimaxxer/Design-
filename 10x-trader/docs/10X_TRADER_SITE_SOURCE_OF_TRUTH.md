@@ -116,7 +116,7 @@ The complete copy lives in `src/content.ts` (supplied). The key lines are repeat
 
 ### 6.1 Hero
 - Eyebrow: `10x buying power. Your own broker account.`
-- Headline: `Deposit $1,000.` / `Trade with $10,000.`
+- Headline: `Deposit $X.` / `Trade with $10X.`, counting up through $500, $1,000, $2,500, $5,000 and $10,000 (the trade amount, 10x, in a blue frame with white text), so no single deposit reads as required. Screen readers get the starting line, `Deposit $500. Trade with $5,000.`
 - Sub: `10x buying power in a real broker account that is yours. No evaluation, no rules, withdraw any time. Scale as you perform.`
 - Trust chips: `No evaluation` · `Nothing extra to pay` · `Live the same day` · `4 regulated partner brokers`
 - Qualifier (goal 7): `Built for traders with a strategy that works and a deposit that was holding it back. Still finding your edge? Start smaller and grow into it.`

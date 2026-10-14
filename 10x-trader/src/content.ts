@@ -47,8 +47,10 @@ export const brand = {
 
 export const hero = {
   eyebrow: '10x buying power. Your own broker account.',
-  line1: 'Deposit $1,000.',
-  line2: 'Trade with $10,000.',
+  /** The headline counts up through these deposits ("Deposit $500. / Trade with $5,000."); the trade amount is always 10x. */
+  amounts: [500, 1000, 2500, 5000, 10000],
+  depositLabel: 'Deposit',
+  tradeLabel: 'Trade with',
   sub: '10x buying power in a real broker account that is yours. No evaluation, no rules, withdraw any time. Scale as you perform.',
   secondary: 'See how it works',
   trust: ['No evaluation', 'Nothing extra to pay', 'Live the same day', '4 regulated partner brokers'],

@@ -95,6 +95,10 @@ a {
 .chamfer-24 {
   clip-path: polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px);
 }
+/* Scales with the type: for a frame around headline text. */
+.chamfer-em {
+  clip-path: polygon(0.14em 0, 100% 0, 100% calc(100% - 0.14em), calc(100% - 0.14em) 100%, 0 100%, 0 0.14em);
+}
 
 /* The template's stat numerals. */
 .text-gradient {
