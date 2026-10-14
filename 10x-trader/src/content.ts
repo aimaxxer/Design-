@@ -167,7 +167,7 @@ export const comparison = {
 
 export const calculator = {
   label: '04 · Your numbers',
-  title: ['Same skill.', 'Ten times the base.'],
+  title: ['Same performance.', 'Different outcome.'],
   intro:
     'A +5% month on a $1,000 broker account is $50. The same month on 10X is $500, re-credited at 1:9, and your buying power follows. Run your own numbers.',
   sentence: {

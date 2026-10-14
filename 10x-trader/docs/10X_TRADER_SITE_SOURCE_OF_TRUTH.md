@@ -154,7 +154,7 @@ Columns: 10X Trader · Standard broker · Prop firm. Rows (yes/no), hardest thre
 Intro: `Prop firms sell you size and take the rest. Brokers give you freedom and no size. Only 10X is built to give you both.`
 
 ### 6.5 Calculator
-- Title: `Same skill.` / `Ten times the base.`
+- Title: `Same performance.` / `Different outcome.`
 - Intro: `A +5% month on a $1,000 broker account is $50. The same month on 10X is $500, re-credited at 1:9, and your buying power follows. Run your own numbers.`
 - Methods: `10X` vs `Own account`. Defaults: deposit $1,000, 2% monthly.
 - Note (keep verbatim): `Illustrative at a constant monthly return and 1:9. Not a forecast. The credit amplifies losses the same way it amplifies gains: losses come out of your deposit, and the credit scales down with your balance. Trading leveraged products carries a high level of risk.`
