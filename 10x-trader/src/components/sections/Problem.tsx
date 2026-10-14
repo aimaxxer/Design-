@@ -1,54 +1,86 @@
 import { ArrowUpRight } from 'lucide-react'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { ChamferButton } from '@/components/ui/ChamferButton'
 import { Eyebrow } from '@/components/ui/Eyebrow'
+import { LazyCoin } from '@/components/ui/LazyCoin'
+import { PickCard, type PickItem } from '@/components/ui/PickCard'
+import type { TenXCoinHandle } from '@/coin/mount'
 import { cta, links, problem } from '@/content'
 import { useReveal } from '@/hooks/useReveal'
+import { cn } from '@/lib/cn'
+
+type Card = PickItem & { body: string }
+
+// The bridge line closes the story as the sixth card: its first sentence on top, the second under it.
+const [bridgeTitle, bridgeBody = ''] = problem.bridge.split(/(?<=\.)\s+/)
+
+const steps: Card[] = problem.steps.map((s) => ({ id: `step-${s.n}`, title: s.title, sub: `${problem.stepLabel} ${s.n}`, body: s.body }))
+const LEFT = steps.slice(0, 3)
+const RIGHT: Card[] = [...steps.slice(3), { id: 'bridge', title: bridgeTitle, sub: bridgeBody, body: bridgeBody }]
 
 /**
- * The reader's own story told back to them: five numbered steps beside a sticky bridge line,
- * then the "built against you / built for you" block that hands over to the aligned model.
+ * The reader's own story told back to them in the site's signature second-section layout (the same
+ * coin-and-cards composition as Benefits): five steps and the bridge line around the coin, then the
+ * "built against you / built for you" block that hands over to the aligned model.
  */
 export function Problem() {
   const root = useRef<HTMLElement>(null)
+  const coin = useRef<TenXCoinHandle | null>(null)
+  const [selected, setSelected] = useState(LEFT[0].id)
+  const current = [...LEFT, ...RIGHT].find((c) => c.id === selected) ?? LEFT[0]
   useReveal(root)
 
+  const select = (id: string) => {
+    if (id === selected) return
+    setSelected(id)
+    coin.current?.spin(1, 1.6)
+  }
+
+  const column = (items: Card[], side: 'left' | 'right') => (
+    <ul
+      className={cn(
+        'flex flex-col items-center gap-4 lg:mt-24',
+        side === 'left' ? 'order-2 lg:order-1 lg:items-end' : 'order-3 lg:items-start',
+      )}
+    >
+      {items.map((item) => (
+        <PickCard key={item.id} item={item} active={item.id === selected} controls="problem-detail" onSelect={() => select(item.id)} />
+      ))}
+    </ul>
+  )
+
   return (
-    <section id="problem" ref={root} aria-labelledby="problem-title" className="relative bg-white px-6 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto max-w-7xl">
-        <div className="max-w-2xl text-navy">
-          <Eyebrow>{problem.label}</Eyebrow>
-          <h2
-            id="problem-title"
-            className="font-firs text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px] lg:text-[54px]"
-          >
+    <section id="problem" ref={root} aria-labelledby="problem-title" className="relative overflow-hidden bg-mist px-6 py-20 sm:px-10 sm:py-28">
+      <div className="relative z-20 mx-auto max-w-5xl">
+        <div className="mx-auto max-w-3xl text-center text-navy">
+          <Eyebrow className="mb-2">{problem.label}</Eyebrow>
+          <h2 id="problem-title" className="font-firs text-[40px] font-semibold uppercase leading-none tracking-tight sm:text-[54px]">
             {problem.title}
           </h2>
-          <p className="mt-6 max-w-xl text-[17px] leading-[1.5] text-navy-2 sm:text-[18px]">{problem.intro}</p>
+          <p className="mx-auto mt-6 max-w-xl text-[17px] leading-[1.5] text-navy-2 sm:text-[18px]">{problem.intro}</p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
-          <ol className="divide-y divide-line border-y border-line">
-            {problem.steps.map((step) => (
-              <li key={step.n} data-reveal className="flex gap-5 py-6 sm:gap-6">
-                <span aria-hidden className="chamfer-8 grid size-10 shrink-0 place-items-center bg-line p-px">
-                  <span className="chamfer-8 font-firs tabular grid h-full w-full place-items-center bg-frost text-[18px] text-accent">{step.n}</span>
-                </span>
-                <div>
-                  <h3 className="text-[18px] font-semibold leading-snug text-navy">{step.title}</h3>
-                  <p className="mt-2 max-w-[60ch] text-[15px] leading-[1.55] text-navy-2">{step.body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <div className="self-start lg:sticky lg:top-24">
-            <div data-reveal className="chamfer-24 bg-[rgba(0,104,162,0.25)] p-px">
-              <p className="chamfer-24 font-firs bg-frost p-8 text-[28px] leading-[1.15] tracking-[-0.02em] text-navy sm:p-10 sm:text-[36px]">
-                {problem.bridge}
+        <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_auto_1fr] lg:gap-12">
+          <div className="order-1 flex flex-col items-center text-center text-navy lg:order-2">
+            <LazyCoin
+              className="size-[220px] sm:size-[380px] lg:size-[460px]"
+              fill={0.8}
+              spinPeriod={18}
+              tilt={10}
+              seed={3}
+              label={problem.coinLabel}
+              onReady={(h) => (coin.current = h)}
+            />
+            <div id="problem-detail" aria-live="polite" className="mt-6 grid min-h-[7.5em] max-w-sm justify-items-center">
+              <p key={current.id} className="animate-[detail-in_420ms_cubic-bezier(0.23,1,0.32,1)] text-[15px] leading-relaxed text-navy-2 motion-reduce:animate-none">
+                <span className="mb-2 block text-[13px] font-semibold text-navy">{current.title}</span>
+                {current.body}
               </p>
             </div>
           </div>
+
+          {column(LEFT, 'left')}
+          {column(RIGHT, 'right')}
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[2fr_1fr] lg:gap-5">
@@ -92,6 +124,12 @@ export function Problem() {
           </ChamferButton>
         </div>
       </div>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-0 z-10 h-40 w-full sm:h-56"
+        style={{ background: 'linear-gradient(to bottom, rgba(240, 245, 247, 0) 0%, rgba(240, 245, 247, 0.7) 60%, #F0F5F7 100%)' }}
+      />
     </section>
   )
 }

@@ -18,7 +18,7 @@ document wins. All copy lives in `src/content.ts`.
 | # | id | Content | Coins |
 |---|---|---|---|
 | 0 | `top` | Hero: "Deposit $1,000. / Trade with $10,000.", trust chips, qualifier line | Six drifting coins (`TenXCoinRow`) |
-| 1 | `problem` | Problem: five steps, sticky bridge line, "Built against you / Built for you" | |
+| 1 | `problem` | Problem in the signature coin layout (as Benefits): five steps + the bridge line as cards around the coin, then "Built against you / Built for you" | One coin; it turns when a step is picked |
 | 2 | `model` | The aligned model: three paragraphs + 3 stat cards | Stat-card images are coin stills (`public/images/coin-stat-*.webp`) |
 | 3 | `compare` | 10X vs standard broker vs prop firm, 8 rows (3 above the fold on phones) | |
 | 4 | `calculator` | Sentence calculator + growth chart, $1,000 default | |
@@ -32,6 +32,8 @@ document wins. All copy lives in `src/content.ts`.
 
 ## Notes
 
+- **Second section**: Problem uses the same coin-and-cards layout as Benefits (`components/ui/PickCard.tsx`),
+  so the second section matches the other 10X pages. This replaces the brief's vertical list + sticky panel (section 5.1).
 - **One action**: every primary button reads `cta.primary` ("Start Trading 10X") and links to `links.signUp`.
 - **Proof guard** (`src/lib/placeholders.ts`): while any Proof figure or testimonial still contains `[`,
   the section renders nothing and drops out of the nav counter. Fill `content.proof` to switch it on.

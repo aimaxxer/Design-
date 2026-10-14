@@ -64,6 +64,9 @@ export const problem = {
   label: '01 · The problem',
   title: 'Stop paying to prove yourself.',
   intro: 'You already know this story. Most traders live it for years before they see the pattern.',
+  /** Small line under each step card's title ("Step 1"). */
+  stepLabel: 'Step',
+  coinLabel: 'The 10X coin. It turns over each time you pick a step.',
   steps: [
     {
       n: '1',

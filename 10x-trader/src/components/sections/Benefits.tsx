@@ -1,29 +1,10 @@
 import { useRef, useState } from 'react'
-import { ChamferFrame } from '@/components/ui/ChamferFrame'
 import { LazyCoin } from '@/components/ui/LazyCoin'
+import { PickCard } from '@/components/ui/PickCard'
 import type { TenXCoinHandle } from '@/coin/mount'
 import { benefits, type Benefit } from '@/content'
 import { useReveal } from '@/hooks/useReveal'
 import { cn } from '@/lib/cn'
-
-/** The framework's nomination card, as a toggle: picking one turns the coin and shows the full benefit. */
-function BenefitCard({ item, active, onSelect }: { item: Benefit; active: boolean; onSelect: () => void }) {
-  return (
-    <li data-reveal className="w-full max-w-[20em]">
-      <button
-        type="button"
-        aria-pressed={active}
-        aria-controls="benefit-detail"
-        onClick={onSelect}
-        className="group relative flex h-[5em] w-full flex-col items-center justify-center px-6 text-center text-navy transition-transform duration-200 ease-[var(--ease-out-strong)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-      >
-        <ChamferFrame active={active} />
-        <span className="relative text-[13px] font-semibold">{item.title}</span>
-        <span className="relative mt-0.5 text-[12px] font-normal opacity-80">{item.sub}</span>
-      </button>
-    </li>
-  )
-}
 
 export function Benefits() {
   const root = useRef<HTMLElement>(null)
@@ -47,7 +28,7 @@ export function Benefits() {
       )}
     >
       {items.map((item) => (
-        <BenefitCard key={item.id} item={item} active={item.id === selected} onSelect={() => select(item.id)} />
+        <PickCard key={item.id} item={item} active={item.id === selected} controls="benefit-detail" onSelect={() => select(item.id)} />
       ))}
     </ul>
   )
