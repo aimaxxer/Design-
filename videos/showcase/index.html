@@ -103,11 +103,13 @@ section.notes{padding-block:8px 64px}
     ["04", "Within 1 hour", "Apply, strategy call, your offer within 1 hour of the call. No fees.", "dial · steps ×3 · ding ×3 · hit · hold", "10x-reel-04-within-1-hour"],
     ["05", "Infrastructure", "The partner infrastructure behind top IB’s, ending on the coin logo sting.", "strobe ×8 · HIT · flight ×5 · slogan · STING", "10x-reel-05-infrastructure"]
   ];
+  // Files live next to each project; the published copy of this page swaps in a flat reels/ folder.
+  var SRC = function (id, ext) { return "../" + id + "/renders/" + id + "." + ext; };
   var box = document.getElementById("reels"), vids = [];
   REELS.forEach(function (r) {
     var el = document.createElement("article");
     el.className = "reel";
-    el.innerHTML = '<div class="phone"><video src="reels/' + r[4] + '.mp4" poster="reels/' + r[4] + '.jpg" muted loop playsinline controls preload="metadata"></video></div>' +
+    el.innerHTML = '<div class="phone"><video src="' + SRC(r[4], "mp4") + '" poster="' + SRC(r[4], "jpg") + '" muted loop playsinline controls preload="metadata"></video></div>' +
       '<div class="meta"><span class="n">REEL ' + r[0] + '</span><h2>' + r[1] + '</h2><p>' + r[2] + '</p><span class="rhythm">' + r[3] + '</span><span class="file">videos/' + r[4] + '/</span></div>';
     box.appendChild(el);
     vids.push(el.querySelector("video"));
