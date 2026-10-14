@@ -1,0 +1,126 @@
+{
+  "batch": "batch-4",
+  "title": "Batch 4 - Design Kit",
+  "items": [
+    {
+      "id": "b4-a-manifesto",
+      "type": "kit",
+      "piece": "a-manifesto",
+      "size": "1080x1350",
+      "label": "Manifesto · Navy",
+      "caption": "Good IB’s were never the problem. The structure was.\n\nSix walls you hit while scaling. Solved by one partner.\n\nWhich one's costing you the most? Tell us in the comments.\n\n#forexaffiliate #introducingbroker #forexIB #affiliatebusiness #10XAffiliation"
+    },
+    {
+      "id": "b4-b-split",
+      "type": "kit",
+      "piece": "b-split",
+      "size": "1080x1350",
+      "label": "Photo split · Navy",
+      "caption": "Your volume grew. Your clients trade more. Your deal? Still the one you signed on day one.\n\nWe negotiate with the combined volume of all our partners across four brokers — so you keep on average 40% more per lot.\n\nSame clients. Same accounts. A better deal.\n\nBook your strategy call — link in bio.\n\n#forexaffiliate #IBrebates #introducingbroker #forexIB #10XAffiliation"
+    },
+    {
+      "id": "b4-c-object",
+      "type": "kit",
+      "piece": "c-object",
+      "size": "1080x1350",
+      "label": "Object hero · White",
+      "caption": "Your referrals are your assets.\n\nCopy trading, PAMM and 10X Trader give your clients the structure to keep trading — so every referral keeps paying you.\n\nLink in bio.\n\n#forexaffiliate #copytrading #PAMM #introducingbroker #10XAffiliation"
+    },
+    {
+      "id": "b4-d-ruler",
+      "type": "kit",
+      "piece": "d-ruler",
+      "size": "1080x1350",
+      "label": "Stat ruler · Deep teal",
+      "caption": "+40% more per lot, on average, for our partners.\n\nNegotiated on the combined volume of all our partners. Your offer within 1 hour of the call. Link in bio.\n\n#forexaffiliate #IBrebates #introducingbroker #10XAffiliation"
+    },
+    {
+      "id": "b4-e-phone",
+      "type": "kit",
+      "piece": "e-phone",
+      "size": "1080x1350",
+      "label": "Notification mock · Sky",
+      "caption": "2-minute application. Free strategy call. Your new deal within 1 hour of the call.\n\nLink in bio.\n\n#forexaffiliate #introducingbroker #IBprogram #10XAffiliation"
+    },
+    {
+      "id": "b4-f-mythfact",
+      "type": "kit",
+      "piece": "f-mythfact",
+      "size": "1080x1350",
+      "label": "Myth / fact · Mist",
+      "caption": "Myth: “It takes weeks.”\nFact: 1 hour. That's how long it takes to get your new offer after the call.\n\nBook a free strategy call. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #IBrebates #10XAffiliation"
+    },
+    {
+      "id": "b4-g-ticker",
+      "type": "kit",
+      "piece": "g-ticker",
+      "size": "1080x1350",
+      "label": "Ticker bands · Navy",
+      "caption": "What does it cost you? Nothing.\n\nWe're paid by the broker, out of the same deal that pays you. We only earn when your flow does. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #10XAffiliation"
+    },
+    {
+      "id": "b4-h-quote",
+      "type": "kit",
+      "piece": "h-quote",
+      "size": "1080x1350",
+      "label": "Quote card · White",
+      "caption": "Your referrals are your assets. Let's make them pay.\n\nStructures and services that keep traders active for longer, so every referral keeps paying you month after month. Link in bio.\n\n#forexaffiliate #introducingbroker #copytrading #10XAffiliation"
+    },
+    {
+      "id": "b4-i-bento",
+      "type": "kit",
+      "piece": "i-bento",
+      "size": "1080x1350",
+      "label": "Icon bento · Mist",
+      "caption": "A better rebate deal. 10X Trader. Done-for-you funnels. A dedicated partner manager.\n\nOne partner for all of it. No fees: the broker pays us, not you. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #10XAffiliation"
+    },
+    {
+      "id": "b4-j-timeline",
+      "type": "kit",
+      "piece": "j-timeline",
+      "size": "1080x1350",
+      "label": "Timeline · White",
+      "caption": "No weeks of back-and-forth.\n\nApply in 2 minutes. Free strategy call. Your new rebate offer within 1 hour of the call, plus access to 10X Trader and your partner manager's direct line.\n\nLink in bio.\n\n#forexaffiliate #introducingbroker #IBprogram #forexIB #10XAffiliation"
+    },
+    {
+      "id": "b4-k-chart",
+      "type": "kit",
+      "piece": "k-chart",
+      "size": "1080x1350",
+      "label": "Bar chart · Mist",
+      "caption": "Rebates on 10x the capital.\n\n1x rebates on a standard account. 2–3x with 10X Trader, on the same $1,000 deposit.\n\nPartner-only. Link in bio.\n\n#forexaffiliate #10XTrader #buyingpower #introducingbroker #10XAffiliation"
+    },
+    {
+      "id": "b4-m-brokers",
+      "type": "kit",
+      "piece": "m-brokers",
+      "size": "1080x1350",
+      "label": "Broker proof · White",
+      "caption": "\"Do I have to leave my broker?\"\n\nNo. Keep your broker and add 10X, or move to one of our four partner brokers. We decide it together on the call.\n\nStay or switch. Your call. Link in bio.\n\n#forexaffiliate #introducingbroker #forexbroker #forexIB #10XAffiliation"
+    },
+    {
+      "id": "b4-st-cta",
+      "type": "kit",
+      "piece": "st-cta",
+      "size": "1080x1920",
+      "label": "Hero CTA story · Glass",
+      "caption": ""
+    },
+    {
+      "id": "b4-st-poll",
+      "type": "kit",
+      "piece": "st-poll",
+      "size": "1080x1920",
+      "label": "Poll story · Sky",
+      "caption": ""
+    },
+    {
+      "id": "b4-st-stat",
+      "type": "kit",
+      "piece": "st-stat",
+      "size": "1080x1920",
+      "label": "Stat story · Navy",
+      "caption": ""
+    }
+  ]
+}

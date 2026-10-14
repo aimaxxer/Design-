@@ -1,0 +1,262 @@
+{
+  "batch": "batch-3",
+  "title": "Batch 3 - Posts",
+  "size": "1080x1350",
+  "items": [
+    {
+      "id": "post-01-flow-worth-more",
+      "type": "post",
+      "pillar": "commercials",
+      "tag": "Partner deals",
+      "label": "Gradient manifesto · Navy",
+      "caption": "Your flow is worth more. Your deal just doesn't show it.\n\nOn average 40% more per lot for our partners. Same clients, same accounts. Your new deal within 1 hour of the call.\n\nLink in bio.\n\n#forexaffiliate #introducingbroker #IBrebates #10XAffiliation",
+      "slide": {
+        "tone": "navy",
+        "l": "aurora",
+        "art": "s1",
+        "t": "Your flow is worth more.|Your deal just doesn't show it.",
+        "foot": "Individual results depend on volume and client activity.",
+        "img": "a1",
+        "size": 124,
+        "coin": "coin-d"
+      }
+    },
+    {
+      "id": "post-02-infrastructure-10x",
+      "type": "post",
+      "pillar": "partner-model",
+      "tag": "10X Affiliation",
+      "label": "Photo split · Navy",
+      "caption": "The infrastructure to scale your affiliate business 10X. Starting with a better deal.\n\nBetter rebates, products that convert and a partner team that helps you scale. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #10XAffiliation",
+      "slide": {
+        "tone": "navy",
+        "l": "split",
+        "art": "g6",
+        "t": "The infrastructure|to scale 10X.",
+        "body": "Better deals. Products that convert. A team that helps you scale.",
+        "img": "hero",
+        "pos": "20% 50%"
+      }
+    },
+    {
+      "id": "post-03-every-lot",
+      "type": "post",
+      "pillar": "commercials",
+      "tag": "Commercials",
+      "label": "Arch window · White",
+      "caption": "We negotiate with the combined volume of all our partners. So you keep on average 40% more per lot.\n\nSame clients. Same accounts. Link in bio.\n\n#forexaffiliate #IBrebates #introducingbroker #10XAffiliation",
+      "slide": {
+        "tone": "white",
+        "l": "arch",
+        "art": "s2",
+        "t": "More per lot.|Every lot.",
+        "strap": "Same clients. Same accounts.",
+        "foot": "Average uplift across partners. Your offer depends on your flow.",
+        "img": "t5",
+        "pos": "50% 35%",
+        "size": 92
+      }
+    },
+    {
+      "id": "post-04-one-partner",
+      "type": "post",
+      "pillar": "partner-model",
+      "tag": "Partner stack",
+      "label": "Ticker bands · Navy",
+      "caption": "A better rebate deal. 10X Trader. Done-for-you funnels. A dedicated partner manager.\n\nOne partner for all of it. No fees: the broker pays us, not you. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #10XAffiliation",
+      "slide": {
+        "tone": "navy",
+        "l": "ticker",
+        "t": "10X Affiliation",
+        "body": "The complete partner stack. Deals, products, funnels.",
+        "size": 120,
+        "band": "Deals · Products · Funnels · Partner manager · "
+      }
+    },
+    {
+      "id": "post-05-inside-a-deal",
+      "type": "post",
+      "pillar": "commercials",
+      "tag": "Partner education",
+      "label": "Deal sheet · Sky",
+      "caption": "What's actually inside a 10X partner deal?\n\nA better rebate deal. 10X Trader. Done-for-you funnels, a UGC network and a dedicated partner manager. All included for approved partners. Link in bio.\n\n#forexaffiliate #introducingbroker #IBprogram #10XAffiliation",
+      "slide": {
+        "tone": "sky",
+        "l": "deal",
+        "invert": true,
+        "t": "What's actually inside|a partner deal that scales.",
+        "body": "Better rebates, 10X Trader, funnels and a partner manager.",
+        "size": 72,
+        "rows": [
+          [
+            "Rebate per lot",
+            "+40% on average"
+          ],
+          [
+            "Product",
+            "10X Trader"
+          ],
+          [
+            "Marketing",
+            "Funnels, UGC network"
+          ],
+          [
+            "Support",
+            "A partner manager"
+          ],
+          [
+            "Fees",
+            "$0: the broker pays us"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "post-06-one-dashboard",
+      "type": "post",
+      "pillar": "partner-model",
+      "tag": "Partner infrastructure",
+      "label": "Dashboard · White",
+      "caption": "Dashboard, tracking and CRM. Every client, every lot, every payout, visible.\n\nNo spreadsheets. No chasing. Link in bio.\n\n#forexaffiliate #introducingbroker #IBdashboard #10XAffiliation",
+      "slide": {
+        "tone": "white",
+        "l": "post-top",
+        "t": "One dashboard.|Every client, every lot, every payout.",
+        "blocks": [
+          {
+            "k": "dashboard"
+          }
+        ]
+      }
+    },
+    {
+      "id": "post-07-plus-40",
+      "type": "post",
+      "pillar": "commercials",
+      "tag": "Commercials",
+      "label": "Bar chart · Mist",
+      "caption": "+40% more per lot, on average, for our partners.\n\nNegotiated on the combined volume of all our partners. Your offer within 1 hour of the call. Link in bio.\n\n#forexaffiliate #IBrebates #introducingbroker #10XAffiliation",
+      "slide": {
+        "tone": "frost",
+        "l": "chart",
+        "big": "+40%",
+        "eyebrow": "The average uplift",
+        "t": "More per lot|for our partners.",
+        "body": "Negotiated on the combined volume of all our partners.",
+        "foot": "Average uplift across partners. Your offer depends on your flow.",
+        "bars": [
+          {
+            "v": "Base",
+            "l": "Old deal",
+            "h": 300
+          },
+          {
+            "v": "+40%",
+            "l": "New deal, on average",
+            "h": 420,
+            "g": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "post-08-retention",
+      "type": "post",
+      "pillar": "retention",
+      "tag": "Retention",
+      "label": "Ribbon · Mist",
+      "caption": "Retention isn't an extra. It's where your income lives.\n\nCopy trading, PAMM and signal rooms keep referrals active, even when they don't trade themselves. Link in bio.\n\n#forexaffiliate #copytrading #PAMM #10XAffiliation",
+      "slide": {
+        "tone": "frost",
+        "l": "ribbon",
+        "art": "s2",
+        "t": "Retention isn't an extra.|It's where your income lives.",
+        "body": "Copy trading, PAMM and signal rooms keep referrals active.",
+        "foot": "Copy trading and PAMM carry risk. Leveraged trading carries a high level of risk.",
+        "img": "t2"
+      }
+    },
+    {
+      "id": "post-09-same-deposits",
+      "type": "post",
+      "pillar": "10x-trader",
+      "tag": "10X Trader",
+      "label": "Object hero · White",
+      "caption": "2–3x more rebates on the same deposits.\n\n10X Trader puts 10x buying power behind every deposit. Your clients trade bigger from day one. Partner-only. Link in bio.\n\n#forexaffiliate #10XTrader #buyingpower #10XAffiliation",
+      "slide": {
+        "tone": "white",
+        "l": "object",
+        "art": "coins",
+        "bg": "hero",
+        "pos": "15% center",
+        "t": "2–3x more rebates.|Same deposits.",
+        "foot": "Illustrative. Leveraged trading carries a high level of risk. [INSERT PRODUCT TERMS AND RISK DISCLOSURE]",
+        "img": "coins",
+        "side": [
+          "10X Trader",
+          "Partner-only"
+        ]
+      }
+    },
+    {
+      "id": "post-10-make-them-pay",
+      "type": "post",
+      "pillar": "retention",
+      "tag": "Retention",
+      "label": "Glass card · Macro",
+      "caption": "Your referrals are your assets. Let's make them pay.\n\nStructures and services that keep traders active for longer, so every referral keeps paying you month after month. Link in bio.\n\n#forexaffiliate #introducingbroker #copytrading #10XAffiliation",
+      "slide": {
+        "tone": "deep",
+        "l": "macro",
+        "bg": "hero2",
+        "pos": "30% center",
+        "t": "Your referrals are your assets.|Let's make them pay.",
+        "strap": "Every referral, month after month.",
+        "img": "t5",
+        "body": "Every referral, month after month."
+      }
+    },
+    {
+      "id": "post-11-no-fees",
+      "type": "post",
+      "pillar": "no-fees",
+      "tag": "Straight answers",
+      "label": "Big number · Navy",
+      "caption": "What does it cost you? Nothing.\n\nWe're paid by the broker, out of the same deal that pays you. We only earn when your flow does. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #10XAffiliation",
+      "slide": {
+        "tone": "navy",
+        "l": "bignum",
+        "art": "coins",
+        "bg": "hero3",
+        "pos": "85% center",
+        "t": "No fees. The broker pays us, not you.",
+        "body": "We only earn when your flow does.",
+        "big": "$0",
+        "eyebrow": "Straight answers",
+        "auto": "g3"
+      }
+    },
+    {
+      "id": "post-12-one-hour",
+      "type": "post",
+      "pillar": "speed",
+      "tag": "How it works",
+      "label": "Object hero · Sky",
+      "caption": "2-minute application. Free strategy call. Your new deal within 1 hour of the call.\n\nLink in bio.\n\n#forexaffiliate #introducingbroker #IBprogram #10XAffiliation",
+      "slide": {
+        "tone": "sky",
+        "l": "object",
+        "art": "g1",
+        "bg": "hero",
+        "pos": "70% center",
+        "t": "Your new deal|within 1 hour of the call.",
+        "img": "g8",
+        "side": [
+          "2-minute application",
+          "Free strategy call"
+        ],
+        "size": 74
+      }
+    }
+  ]
+}

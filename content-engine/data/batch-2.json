@@ -1,0 +1,673 @@
+{
+  "batch": "batch-2",
+  "title": "Batch 2 - Carousels",
+  "size": "1080x1350",
+  "items": [
+    {
+      "id": "ib-09-outgrown-your-deal",
+      "type": "carousel",
+      "pillar": "partner-model",
+      "tone": "white",
+      "caption": "Your volume grew. Your clients trade more. Your deal is still the one you signed on day one.\n\n5 signs you've outgrown your IB deal. How many do you recognise?\n\nBook a free strategy call. Link in bio. Your new offer within 1 hour.\n\n#forexaffiliate #introducingbroker #forexIB #IBrebates #10XAffiliation",
+      "slides": [
+        {
+          "l": "macro",
+          "art": "hero2",
+          "pill": "For IBs & affiliates",
+          "t": "5 signs you've outgrown|your IB deal.",
+          "body": "Good IBs were never the problem. The structure was.",
+          "img": "t6"
+        },
+        {
+          "eyebrow": "Signs 1–3",
+          "t": "Sound familiar?",
+          "blocks": [
+            {
+              "k": "numbered",
+              "items": [
+                [
+                  "Your volume grew. Your rate didn't.",
+                  "Still the deal you signed on day one."
+                ],
+                [
+                  "You chase your payouts.",
+                  "No tracking, no dashboard, no clear view of what you're owed."
+                ],
+                [
+                  "Your leads don't deposit.",
+                  "“Open an account with my broker” isn’t a reason to sign up."
+                ]
+              ]
+            }
+          ],
+          "l": "index"
+        },
+        {
+          "eyebrow": "Signs 4–5",
+          "t": "And these two.",
+          "blocks": [
+            {
+              "k": "numbered",
+              "start": 4,
+              "items": [
+                [
+                  "Your referrals blow up in weeks.",
+                  "Small deposits, short lives. Your income goes with them."
+                ],
+                [
+                  "Support is a ticket queue.",
+                  "No partner manager. Marketing is your problem."
+                ]
+              ]
+            }
+          ],
+          "l": "index"
+        },
+        {
+          "eyebrow": "Two or more?",
+          "t": "Your deal is holding you back.|Not your skill.",
+          "body": "We negotiate with the combined volume of all our partners, so you keep *on average 40% more per lot*.",
+          "blocks": [
+            {
+              "k": "rebate"
+            }
+          ],
+          "auto": "g11"
+        },
+        {
+          "l": "cta",
+          "t": "Your flow is worth more.|Your deal just doesn’t show it.",
+          "cta": "Book my strategy call",
+          "checks": [
+            "No fees",
+            "Offer within 1 hour",
+            "2-minute application"
+          ],
+          "foot": "Individual results depend on volume and client activity.",
+          "ctaImg": "t1"
+        }
+      ]
+    },
+    {
+      "id": "ib-10-stay-or-switch",
+      "type": "carousel",
+      "pillar": "speed",
+      "tone": "sky",
+      "caption": "\"Do I have to leave my broker?\"\n\nNo. Keep your broker and add 10X, or move to one of our four partner brokers. We decide it together on the call.\n\nStay or switch. Your call. Link in bio.\n\n#forexaffiliate #introducingbroker #forexbroker #forexIB #10XAffiliation",
+      "slides": [
+        {
+          "l": "object",
+          "art": "g0",
+          "center": false,
+          "pill": "The question every IB asks",
+          "t": "Do I have to leave|my broker?",
+          "body": "*No.* That's the point.",
+          "img": "g9"
+        },
+        {
+          "eyebrow": "Two ways in",
+          "t": "Both work.|You choose.",
+          "blocks": [
+            {
+              "k": "checks",
+              "items": [
+                [
+                  "Stay",
+                  "Keep your broker and add 10X on top."
+                ],
+                [
+                  "Switch",
+                  "Move to one of our four partner brokers."
+                ]
+              ]
+            }
+          ],
+          "auto": "g6"
+        },
+        {
+          "eyebrow": "How we decide",
+          "t": "Together.|On the call.",
+          "body": "Your flow, your clients, your market. *The structure follows your business.*",
+          "l": "ribbon",
+          "img": "t2"
+        },
+        {
+          "eyebrow": "Live today",
+          "t": "Ready when you are.",
+          "blocks": [
+            {
+              "k": "stats",
+              "rows": [
+                [
+                  "4",
+                  "broker deals live"
+                ],
+                [
+                  "1 hour",
+                  "to your new offer after the call"
+                ],
+                [
+                  "$0",
+                  "fees: the broker pays us"
+                ]
+              ]
+            }
+          ],
+          "l": "deal",
+          "rows": [
+            [
+              "Broker deals live",
+              "4"
+            ],
+            [
+              "Your offer",
+              "Within 1 hour of the call"
+            ],
+            [
+              "Fees",
+              "$0: the broker pays us"
+            ]
+          ],
+          "sheet": "Live today"
+        },
+        {
+          "eyebrow": "Straight answer",
+          "t": "What happens after the call?",
+          "body": "Within 1 hour you get *your rebate offer*, access to 10X Trader and *your partner manager's direct line*.",
+          "l": "phone",
+          "notifs": [
+            [
+              "10X Affiliation",
+              "Your rebate offer is ready.",
+              "now"
+            ],
+            [
+              "10X Affiliation",
+              "Your 10X Trader access is live.",
+              "1m ago"
+            ],
+            [
+              "10X Affiliation",
+              "Your partner manager’s direct line is set up.",
+              "2m ago"
+            ]
+          ]
+        },
+        {
+          "l": "cta",
+          "t": "Stay or switch.|Your call.",
+          "cta": "Book my strategy call",
+          "checks": [
+            "Keep your broker",
+            "No fees",
+            "Offer within 1 hour"
+          ],
+          "foot": "Individual results depend on volume and client activity.",
+          "ctaImg": "t1"
+        }
+      ]
+    },
+    {
+      "id": "ib-11-the-first-hour",
+      "type": "carousel",
+      "pillar": "speed",
+      "tone": "frost",
+      "caption": "No weeks of back-and-forth.\n\nApply in 2 minutes. Free strategy call. Your new rebate offer within 1 hour of the call, plus access to 10X Trader and your partner manager's direct line.\n\nLink in bio.\n\n#forexaffiliate #introducingbroker #IBprogram #forexIB #10XAffiliation",
+      "slides": [
+        {
+          "l": "split",
+          "art": "s3",
+          "pill": "How it works",
+          "t": "2 minutes to apply.|1 hour to your new deal.",
+          "body": "Here's exactly what happens.",
+          "tone": "navy",
+          "img": "hero2",
+          "pos": "75% 50%"
+        },
+        {
+          "eyebrow": "The process",
+          "t": "Four steps.|No back-and-forth.",
+          "blocks": [
+            {
+              "k": "numbered",
+              "items": [
+                [
+                  "Apply",
+                  "Two minutes. Tell us about your flow."
+                ],
+                [
+                  "Strategy call",
+                  "Free. We look at your volume, clients and market."
+                ],
+                [
+                  "Your offer",
+                  "Within 1 hour of the call."
+                ],
+                [
+                  "Go live",
+                  "Your partner manager's direct line and access to 10X Trader."
+                ]
+              ]
+            }
+          ],
+          "l": "index"
+        },
+        {
+          "l": "bignum",
+          "big": "1 hour",
+          "eyebrow": "From call to offer",
+          "t": "To your new rebate offer.",
+          "body": "Not weeks of waiting on a broker.",
+          "tone": "deep",
+          "auto": "g1"
+        },
+        {
+          "eyebrow": "After that",
+          "t": "One partner manager.|Who knows your business.",
+          "body": "Plus marketing, funnels and a UGC network behind you. *A partner, not a ticket queue.*",
+          "art": "s2"
+        },
+        {
+          "l": "cta",
+          "t": "Book your strategy call.|Your offer within 1 hour.",
+          "cta": "Book my strategy call",
+          "checks": [
+            "Free",
+            "2-minute application",
+            "No fees"
+          ],
+          "foot": "Individual results depend on volume and client activity.",
+          "ctaImg": "hero3"
+        }
+      ]
+    },
+    {
+      "id": "ib-12-just-starting-out",
+      "type": "carousel",
+      "pillar": "partner-model",
+      "tone": "white",
+      "caption": "No flow yet? That's fine.\n\nFunnels, marketing and a UGC network to help you create flow. And 10X Trader gives you a product worth promoting.\n\nBuilt for IB’s who are just getting started. Link in bio.\n\n#forexaffiliate #newIB #introducingbroker #affiliatemarketing #10XAffiliation",
+      "slides": [
+        {
+          "l": "aurora",
+          "art": "hero3",
+          "pill": "For new IBs & affiliates",
+          "t": "No flow yet?|Build it with us.",
+          "body": "Funnels, marketing and a product worth promoting.",
+          "tone": "deep",
+          "img": "a3",
+          "size": 140,
+          "coin": "coin-a"
+        },
+        {
+          "eyebrow": "01 · Give value first",
+          "t": "Free value for|your community.",
+          "blocks": [
+            {
+              "k": "checks",
+              "items": [
+                [
+                  "Signals",
+                  "Something your followers come back for."
+                ],
+                [
+                  "Education & live sessions",
+                  "Builds the trust to deposit."
+                ],
+                [
+                  "Tools",
+                  "Useful from day one."
+                ]
+              ]
+            }
+          ],
+          "auto": "g7"
+        },
+        {
+          "eyebrow": "02 · Convert",
+          "t": "Done-for-you funnels.|Followers into clients.",
+          "body": "Pages and follow-ups built for your market and language.",
+          "blocks": [
+            {
+              "k": "funnel"
+            }
+          ],
+          "auto": "g2"
+        },
+        {
+          "eyebrow": "03 · Get seen",
+          "t": "Marketing & UGC network.|So you’re not doing it alone.",
+          "body": "Creators, content and done-for-you ads that grow your reach.",
+          "l": "ribbon",
+          "img": "t2",
+          "flip": true
+        },
+        {
+          "eyebrow": "04 · Something worth promoting",
+          "t": "10X Trader.|The easiest yes.",
+          "body": "*10x buying power from day one.* A pitch that sells itself.",
+          "l": "object",
+          "img": "coins",
+          "size": 78
+        },
+        {
+          "l": "cta",
+          "t": "Starting out is fine.|Let’s build your flow.",
+          "cta": "Book my strategy call",
+          "checks": [
+            "Funnels",
+            "UGC network",
+            "10X Trader"
+          ],
+          "foot": "Leveraged trading carries a high level of risk. Individual results depend on volume and client activity.",
+          "ctaImg": "hero3"
+        }
+      ]
+    },
+    {
+      "id": "ib-13-when-clients-stop-trading",
+      "type": "carousel",
+      "pillar": "retention",
+      "tone": "sky",
+      "caption": "Not every referral blows up. Some just go quiet.\n\nNo time, no confidence, no trades. And no rebates for you.\n\nCopy trading and PAMM keep clients active, even when they don't trade themselves. Your referrals are your assets. Link in bio.\n\n#forexaffiliate #copytrading #PAMM #introducingbroker #10XAffiliation",
+      "slides": [
+        {
+          "l": "arch",
+          "art": "g8",
+          "center": true,
+          "pill": "Retention",
+          "t": "Your clients stopped trading.|Your income didn’t have to.",
+          "tone": "white",
+          "img": "t5"
+        },
+        {
+          "eyebrow": "The quiet problem",
+          "t": "Not every referral blows up.|Some just go quiet.",
+          "body": "No time, no confidence, no trades. *And no rebates for you.*",
+          "l": "manifesto",
+          "tone": "navy",
+          "size": 116
+        },
+        {
+          "eyebrow": "What changes",
+          "t": "Keep them active.",
+          "blocks": [
+            {
+              "k": "compare",
+              "rows": [
+                [
+                  "Client stops trading manually",
+                  "Copy trading keeps the account active"
+                ],
+                [
+                  "No time to follow the markets",
+                  "PAMM: a manager trades for them"
+                ],
+                [
+                  "Your rebates stop",
+                  "Your referral keeps paying you"
+                ]
+              ]
+            }
+          ],
+          "auto": "g3"
+        },
+        {
+          "eyebrow": "The result",
+          "t": "Your referrals are|your assets.",
+          "body": "Clients stay active, even when they don't trade themselves.",
+          "blocks": [
+            {
+              "k": "trader"
+            }
+          ],
+          "auto": "g9"
+        },
+        {
+          "l": "cta",
+          "t": "Keep every referral|working for you.",
+          "cta": "Book my strategy call",
+          "checks": [
+            "Copy trading",
+            "PAMM",
+            "Signal rooms"
+          ],
+          "foot": "Copy trading and PAMM carry risk. Leveraged trading carries a high level of risk.",
+          "ctaImg": "t2"
+        }
+      ]
+    },
+    {
+      "id": "ib-14-best-referrals-keep-growing",
+      "type": "carousel",
+      "pillar": "retention",
+      "tone": "deep",
+      "caption": "What if your best clients never hit a ceiling?\n\n10X Trader starts every client with 10x buying power. As they perform, buying power grows. And when your clients scale, your IB earnings scale with them.\n\nPartner-only. Link in bio.\n\n#forexaffiliate #10XTrader #buyingpower #introducingbroker #10XAffiliation",
+      "slides": [
+        {
+          "l": "macro",
+          "art": "coins",
+          "pill": "Exclusive · 10X Trader",
+          "t": "What if your best clients|never hit a ceiling?",
+          "img": "t5",
+          "pos": "50% 30%"
+        },
+        {
+          "eyebrow": "Day one",
+          "t": "Every client|starts with 10x.",
+          "blocks": [
+            {
+              "k": "buying"
+            }
+          ],
+          "note": "Illustrative example client.",
+          "auto": "g4"
+        },
+        {
+          "eyebrow": "Illustrative · as they perform",
+          "t": "Then it|scales.",
+          "blocks": [
+            {
+              "k": "stats",
+              "rows": [
+                [
+                  "$10k",
+                  "start"
+                ],
+                [
+                  "$20k",
+                  "performs"
+                ],
+                [
+                  "$50k",
+                  "scaled up"
+                ],
+                [
+                  "$100k",
+                  "scaled further"
+                ]
+              ]
+            }
+          ],
+          "auto": "g10"
+        },
+        {
+          "eyebrow": "Why it matters",
+          "t": "More capital for performers.|Not a blown account.",
+          "body": "*When your clients scale, your IB earnings scale with them.*",
+          "art": "s2"
+        },
+        {
+          "l": "bignum",
+          "big": "2–3x",
+          "eyebrow": "Your earnings as IB",
+          "t": "More rebates on the same deposits.",
+          "body": "And more as they scale.",
+          "auto": "g5"
+        },
+        {
+          "l": "cta",
+          "art": "coins",
+          "t": "Get access to|10X Trader.",
+          "cta": "Get access to 10X Trader",
+          "checks": [
+            "For selected partners only",
+            "No fees"
+          ],
+          "foot": "Illustrative example. Leveraged trading carries a high level of risk. [INSERT PRODUCT TERMS AND RISK DISCLOSURE]",
+          "ctaImg": "t2"
+        }
+      ]
+    },
+    {
+      "id": "ib-15-stop-chasing-payouts",
+      "type": "carousel",
+      "pillar": "partner-model",
+      "tone": "frost",
+      "caption": "No tracking. No tools. Payouts you have to chase.\n\nFull partner infrastructure is included: dashboard, tracking and CRM. Every client, every lot, every payout, visible.\n\nAnd a partner manager instead of a ticket queue. Link in bio.\n\n#forexaffiliate #introducingbroker #IBdashboard #forexIB #10XAffiliation",
+      "slides": [
+        {
+          "l": "ticker",
+          "art": "s1",
+          "pill": "Partner infrastructure",
+          "t": "Stop chasing payouts.|See every lot.",
+          "body": "Dashboard, tracking and CRM. Included.",
+          "tone": "deep",
+          "size": 108,
+          "band": "Dashboard · Tracking · CRM · Every client · Every lot · Every payout · "
+        },
+        {
+          "eyebrow": "What changes",
+          "t": "From guessing|to knowing.",
+          "blocks": [
+            {
+              "k": "compare",
+              "rows": [
+                [
+                  "No tracking, no tools",
+                  "Dashboard, tracking and CRM"
+                ],
+                [
+                  "Payouts you have to chase",
+                  "Every payout visible"
+                ],
+                [
+                  "Guessing who pays you",
+                  "See what every client earns you"
+                ]
+              ]
+            }
+          ],
+          "auto": "g11"
+        },
+        {
+          "eyebrow": "Your partner dashboard",
+          "t": "Every client.|Every lot. Every payout.",
+          "blocks": [
+            {
+              "k": "checks",
+              "items": [
+                [
+                  "Every client",
+                  "In one place."
+                ],
+                [
+                  "Every lot",
+                  "Tracked, not estimated."
+                ],
+                [
+                  "Every payout",
+                  "Visible, not chased."
+                ]
+              ]
+            }
+          ],
+          "auto": "g0"
+        },
+        {
+          "eyebrow": "Support",
+          "t": "A partner manager.|Not a ticket queue.",
+          "body": "One person who knows your business, *with a direct line.*",
+          "l": "manifesto",
+          "tone": "navy",
+          "size": 120
+        },
+        {
+          "l": "cta",
+          "t": "Your flow is worth more.|Now you can see it.",
+          "cta": "Book my strategy call",
+          "checks": [
+            "Dashboard & CRM",
+            "No fees",
+            "Offer within 1 hour"
+          ],
+          "foot": "Individual results depend on volume and client activity.",
+          "ctaImg": "hero2"
+        }
+      ]
+    },
+    {
+      "id": "ib-16-myths-about-switching",
+      "type": "carousel",
+      "pillar": "no-fees",
+      "tone": "white",
+      "caption": "\"I'll lose my clients.\" \"It'll cost me.\" \"It takes weeks.\" \"It's only for big IB’s.\"\n\n4 myths that keep IB’s on a bad deal. Straight answers inside.\n\nBook a free strategy call. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #IBrebates #10XAffiliation",
+      "slides": [
+        {
+          "l": "aurora",
+          "art": "s2",
+          "pill": "Myth vs. reality",
+          "t": "4 myths that keep IBs|on a bad deal.",
+          "tone": "frost",
+          "img": "a2",
+          "size": 132,
+          "coin": "coin-c"
+        },
+        {
+          "eyebrow": "Myth 1",
+          "t": "“I’ll lose my clients.”",
+          "body": "*You won't.* Keep your broker and add 10X, or move to one of our partner brokers. We decide it together.",
+          "art": "s1",
+          "l": "mythfact2",
+          "img": "g6"
+        },
+        {
+          "eyebrow": "Myth 2",
+          "t": "“It’ll cost me.”",
+          "body": "*No fees.* The broker pays us, out of the same deal that pays you.",
+          "art": "s3",
+          "l": "mythfact2",
+          "img": "g8"
+        },
+        {
+          "eyebrow": "Myth 3",
+          "t": "“It takes weeks.”",
+          "body": "*1 hour.* That's how long it takes to get your new offer after the call.",
+          "art": "s2",
+          "l": "mythfact2",
+          "img": "g10"
+        },
+        {
+          "eyebrow": "Myth 4",
+          "t": "“It’s only for big IBs.”",
+          "body": "*Starting out is fine.* Funnels, marketing and the UGC network help you create flow.",
+          "art": "coins",
+          "l": "mythfact2",
+          "img": "g11"
+        },
+        {
+          "l": "cta",
+          "t": "No myths.|Just a better deal.",
+          "cta": "Book my strategy call",
+          "checks": [
+            "No fees",
+            "Offer within 1 hour",
+            "Keep your broker"
+          ],
+          "foot": "Individual results depend on volume and client activity.",
+          "ctaImg": "hero2"
+        }
+      ]
+    }
+  ]
+}

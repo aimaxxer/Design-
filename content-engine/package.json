@@ -1,0 +1,15 @@
+{
+  "name": "10x-content-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Renders 10X Affiliation posts and carousels from JSON batch files, checked against the source of truth.",
+  "type": "module",
+  "scripts": {
+    "check": "node check.mjs",
+    "render": "node render.mjs",
+    "build": "node render.mjs --strict"
+  },
+  "dependencies": {
+    "playwright": "1.56.1"
+  }
+}

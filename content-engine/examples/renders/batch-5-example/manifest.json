@@ -1,0 +1,40 @@
+{
+  "batch": "batch-5-example",
+  "title": "Batch 5 example: one carousel, two posts",
+  "items": [
+    {
+      "id": "ib-17-five-questions",
+      "type": "carousel",
+      "pillar": "commercials",
+      "size": "1080x1350",
+      "files": [
+        "ib-17-five-questions/ib-17-five-questions-01.jpg",
+        "ib-17-five-questions/ib-17-five-questions-02.jpg",
+        "ib-17-five-questions/ib-17-five-questions-03.jpg",
+        "ib-17-five-questions/ib-17-five-questions-04.jpg",
+        "ib-17-five-questions/ib-17-five-questions-05.jpg"
+      ],
+      "caption": "Five questions to ask before you sign your next deal.\n\nMost IB’s only negotiate their rate. The best deals also answer who pays, how your rate grows and what keeps your clients trading. Our partners earn on average 40% more per lot.\n\nWhich question has your broker never answered? Tell us in the comments.\n\n#forexaffiliate #introducingbroker #IBrebates #10XAffiliation"
+    },
+    {
+      "id": "post-13-whats-the-catch",
+      "type": "post",
+      "pillar": "no-fees",
+      "size": "1080x1350",
+      "files": [
+        "post-13-whats-the-catch/post-13-whats-the-catch-01.jpg"
+      ],
+      "caption": "The first question every IB asks us.\n\nNo fees. The broker pays us, out of the same deal that pays you. We only earn when your flow does.\n\nChat with a partner manager on WhatsApp. Link in bio.\n\n#forexaffiliate #introducingbroker #forexIB #10XAffiliation"
+    },
+    {
+      "id": "post-14-measured",
+      "type": "post",
+      "pillar": "commercials",
+      "size": "1080x1350",
+      "files": [
+        "post-14-measured/post-14-measured-01.jpg"
+      ],
+      "caption": "Same clients. Same accounts. On average 40% more per lot for our partners.\n\nIndividual results depend on volume and client activity.\n\nSee what your flow is worth. Link in bio.\n\n#forexaffiliate #IBrebates #introducingbroker #10XAffiliation"
+    }
+  ]
+}

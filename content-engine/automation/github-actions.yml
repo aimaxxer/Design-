@@ -1,0 +1,29 @@
+# Optional: renders every batch file on each push and attaches the JPGs, captions and manifests to the run.
+# To switch it on, copy this file to .github/workflows/content-engine.yml in the repo root.
+name: content-engine
+
+on:
+  push:
+    paths: ["content-engine/data/**", "content-engine/engine/**", "content-engine/sot.json"]
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: content-engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci || npm install
+      - run: npx playwright install --with-deps chromium
+      # Fails the run if any batch breaks a brand rule (banned words, IB’s, risk line).
+      - run: node check.mjs data/*.json
+      - run: node render.mjs data/*.json --out out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rendered-batches
+          path: content-engine/out
