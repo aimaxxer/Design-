@@ -7,9 +7,12 @@ import { Comparison } from '@/components/sections/Comparison'
 import { Faq } from '@/components/sections/Faq'
 import { Footer } from '@/components/sections/Footer'
 import { Hero } from '@/components/sections/Hero'
+import { Ladder } from '@/components/sections/Ladder'
 import { Model } from '@/components/sections/Model'
 import { Plans } from '@/components/sections/Plans'
+import { Problem } from '@/components/sections/Problem'
 import { Process } from '@/components/sections/Process'
+import { Proof } from '@/components/sections/Proof'
 import { useChapter } from '@/hooks/useChapter'
 import { SCROLL_SENTINEL_ID } from '@/hooks/useScrolled'
 import { ScrollProvider } from '@/providers/ScrollProvider'
@@ -49,7 +52,7 @@ export default function App() {
             <div ref={setContent} className="relative">
               <span id={SCROLL_SENTINEL_ID} aria-hidden className="pointer-events-none absolute left-0 top-10 h-px w-px" />
               <a
-                href="#features"
+                href="#problem"
                 data-move-focus
                 className="chamfer-10 absolute left-4 top-4 z-50 -translate-y-24 bg-navy px-4 py-3 text-[12px] font-medium text-white focus:translate-y-0"
               >
@@ -59,12 +62,15 @@ export default function App() {
                 <>
                   <main>
                     <Hero />
-                    <Benefits />
+                    <Problem />
                     <Model />
-                    <Process />
-                    <Calculator />
-                    <Plans />
                     <Comparison />
+                    <Calculator />
+                    <Process />
+                    <Ladder />
+                    <Benefits />
+                    <Plans />
+                    <Proof />
                     <Faq />
                   </main>
                   <Footer />

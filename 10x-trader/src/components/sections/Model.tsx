@@ -1,7 +1,9 @@
 import { ArrowUpRight } from 'lucide-react'
 import { useRef } from 'react'
 import CountUp from '@/components/bits/CountUp'
-import { model } from '@/content'
+import { ChamferButton } from '@/components/ui/ChamferButton'
+import { Eyebrow } from '@/components/ui/Eyebrow'
+import { cta, links, model } from '@/content'
 import { useReveal } from '@/hooks/useReveal'
 import { asset } from '@/lib/asset'
 import { cn } from '@/lib/cn'
@@ -37,7 +39,7 @@ function StatCard({ stat, shape }: { stat: Stat; shape: (typeof CARD_SHAPES)[num
         />
       </div>
       <figcaption className={cn('absolute', shape.text)}>
-        <p className="font-firs text-gradient inline-block text-[36px] font-semibold uppercase leading-none sm:text-[52px]">
+        <p className="font-firs text-gradient inline-block text-[36px] font-semibold leading-none sm:text-[52px]">
           {stat.prefix}
           <CountUp to={stat.count} duration={1.4} className="tabular" />
           {stat.suffix}
@@ -57,14 +59,17 @@ export function Model() {
     <section id="model" ref={root} aria-labelledby="model-title" className="relative overflow-hidden bg-frost px-6 py-20 sm:px-10 sm:py-28">
       <div className="relative z-20 mx-auto max-w-7xl">
         <div className="flex flex-col gap-8 text-navy lg:flex-row lg:justify-between lg:gap-16">
-          <h2
-            id="model-title"
-            className="font-firs text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px] lg:text-[54px]"
-          >
-            {model.title[0]}
-            <br />
-            {model.title[1]}
-          </h2>
+          <div>
+            <Eyebrow>{model.label}</Eyebrow>
+            <h2
+              id="model-title"
+              className="font-firs text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px] lg:text-[54px]"
+            >
+              {model.title[0]}
+              <br />
+              {model.title[1]}
+            </h2>
+          </div>
           <div className="max-w-xl">
             {model.paragraphs.map((p, i) => (
               <p key={i} className={cn('text-[17px] leading-[1.5] sm:text-[18px]', i > 0 && 'mt-5')}>
@@ -86,6 +91,12 @@ export function Model() {
           {model.stats.map((stat, i) => (
             <StatCard key={stat.text} stat={stat} shape={CARD_SHAPES[i]} />
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-start lg:justify-end">
+          <ChamferButton href={links.signUp} size="md">
+            {cta.primary}
+          </ChamferButton>
         </div>
       </div>
 

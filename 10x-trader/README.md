@@ -10,35 +10,39 @@ npm run build    # type-check + production build -> dist/
 npx oxlint src   # lint the app source
 ```
 
-## Sections (8 chapters, live-site anchors kept)
+## Sections
+
+The page follows `docs/10X_TRADER_SITE_SOURCE_OF_TRUTH.md`: when anything conflicts with it, that
+document wins. All copy lives in `src/content.ts`.
 
 | # | id | Content | Coins |
 |---|---|---|---|
-| 01 | `top` | Hero: "Enter the markets / 10X smarter" | Six drifting coins (`TenXCoinRow`) in place of the framework's video |
-| 02 | `features` | Benefits, framework nominations layout | One coin in place of the centre video; it turns when a benefit is picked |
-| 03 | `model` | The 10X model, framework "about" layout + 3 stat cards | Stat-card images are stills of the coin (`public/images/coin-stat-*.webp`) |
-| 04 | `process` | Process flow, 4 steps on a rising staircase | |
-| 05 | `calculator` | Sentence calculator + growth chart | |
-| 06 | `plans` | Standard, Prime, Prime X | One coin per plan, a shade deeper per tier |
-| 07 | `compare` | 10X vs traditional brokers vs prop firms | |
-| 08 | `faq` | 5 questions, then the closing CTA and legal footer | Closing coin |
-
-All copy lives in `src/content.ts`, taken from www.10xtrader.com (October 2026).
+| 0 | `top` | Hero: "Deposit $1,000. / Trade with $10,000.", trust chips, qualifier line | Six drifting coins (`TenXCoinRow`) |
+| 1 | `problem` | Problem: five steps, sticky bridge line, "Built against you / Built for you" | |
+| 2 | `model` | The aligned model: three paragraphs + 3 stat cards | Stat-card images are coin stills (`public/images/coin-stat-*.webp`) |
+| 3 | `compare` | 10X vs standard broker vs prop firm, 8 rows (3 above the fold on phones) | |
+| 4 | `calculator` | Sentence calculator + growth chart, $1,000 default | |
+| 5 | `process` | Live the same day: 4 steps on a rising staircase | |
+| 6 | `ladder` | Where it goes: three rungs | |
+| 7 | `features` | What you get: six benefits around one coin | One coin; it turns when a benefit is picked |
+| 8 | `plans` | Standard, Prime, Prime X | One coin per plan |
+| 9 | `proof` | Traders, numbers, community. **Hidden** while `content.proof` has `[placeholder]` values | |
+| 10 | `faq` | 11 questions + WhatsApp / Discord line | |
+| 11 | footer | Closing CTA, chips, WhatsApp button, tagline, legal | Closing coin |
 
 ## Notes
 
-- **Calculator** (`src/lib/projection.ts`) reproduces the live site's formula exactly (checked against
-  its output). It opens on a modest scenario ($5,000 at 2% a month since January 2025) with a
-  "hypothetical illustration" note, instead of the live site's 5% since 2022.
-- **Coins** come from `/Users/sam/Design /10x-coin` (copied into `src/coin/`). three.js loads in its own
-  chunk; below-the-fold coins build their WebGL scene only when they are about to scroll into view.
-  At most about six canvases exist, and each pauses offscreen.
-- **Links**: "Open an account" goes to `https://app.10xtrader.com/sign-up/standard` (the live site
-  uses that link for every plan), "Log in" to `https://app.10xtrader.com/`, legal links to the live
-  `/legals/*` pages.
-- **Not carried over**: the live site's social links (Twitter, YouTube, Instagram, Telegram) have no
-  URLs, so they are left out until real ones exist; its chat widget is not part of this page.
-- Copy edits from the live site: fixed "trade bigger while and scale faster" and two punctuation slips.
+- **One action**: every primary button reads `cta.primary` ("Start Trading 10X") and links to `links.signUp`.
+- **Proof guard** (`src/lib/placeholders.ts`): while any Proof figure or testimonial still contains `[`,
+  the section renders nothing and drops out of the nav counter. Fill `content.proof` to switch it on.
+- **Open items** (source of truth, section 8): `links.whatsapp` and `links.discord` are `#` until the
+  real links exist; plan names and conditions are to be confirmed; Proof figures are to be supplied.
+- **Calculator** (`src/lib/projection.ts`) keeps the live site's formula. The deposit field takes
+  $100 to $100,000 (out-of-range entries settle to the nearest end on blur).
+- **Header at narrower widths**: the notch nav shows from 1280px; below that the floating CTA takes
+  over. The logo tagline and "Log in" show wherever they fit beside the nav.
+- **Coins**: three.js loads in its own chunk; below-the-fold coins build their WebGL scene only when
+  they are about to scroll into view. At most about six canvases exist, and each pauses offscreen.
 
 ## Handover: continuing the build
 
@@ -56,13 +60,14 @@ src/
   content.ts             ALL visible copy, numbers and links. Edit copy here only.
   index.css              Design tokens (@theme), chamfer-* clip-path utilities, .text-gradient, calculator field styles
   App.tsx                Inset shell (white frame + rounded card that scrolls internally), section order, overlays
+  lib/placeholders.ts    Proof guard: hides the Proof section while its copy has [placeholders]
   providers/ScrollProvider.tsx  Lenis smooth scroll on the inner scroller, driven by GSAP's ticker; owns #hash links
-  hooks/useChapter.ts    The 8 section ids the notch nav, page counter and mobile CTA track
+  hooks/useChapter.ts    The section ids the notch nav, page counter and mobile CTA track
   hooks/useReveal.ts     [data-reveal] elements rise in on scroll (GSAP ScrollTrigger.batch)
   lib/projection.ts      Calculator formula (matches the live 10xtrader.com calculator exactly)
-  components/sections/   Hero, Benefits, Model, Process, Calculator, Plans, Comparison, Faq, Footer
-  components/ui/         ChamferButton, ChamferFrame, Accordion, AnimatedNumber, Logo, LazyCoin
-  components/overlays/   Notch nav, "01 - 08" counter, scroll hint, floating mobile CTA
+  components/sections/   Hero, Problem, Model, Comparison, Calculator, Process, Ladder, Benefits, Plans, Proof, Faq, Footer
+  components/ui/         ChamferButton, ChamferFrame, Chip, Eyebrow, Accordion, AnimatedNumber, Logo, LazyCoin
+  components/overlays/   Notch nav, chapter counter, scroll hint, floating mobile CTA
   components/bits/       React Bits components (SplitText, ShinyText, CountUp)
   coin/                  The 3D 10X coin (three.js): see below
 public/images/coin-stat-*.webp   Stills of the coin used as the stat-card images

@@ -5,6 +5,7 @@ import { lazy, Suspense, useRef } from 'react'
 import ShinyText from '@/components/bits/ShinyText'
 import SplitText from '@/components/bits/SplitText'
 import { ChamferButton } from '@/components/ui/ChamferButton'
+import { Chip } from '@/components/ui/Chip'
 import { Logo } from '@/components/ui/Logo'
 import { cta, hero, links } from '@/content'
 
@@ -31,7 +32,9 @@ export function Hero() {
           .from('[data-hero-eyebrow]', { autoAlpha: 0, y: 14, duration: 1 }, 0.3)
           .from('[data-hero-line2]', { autoAlpha: 0, y: 28, filter: 'blur(10px)', duration: 1.4 }, 0.9)
           .from('[data-hero-sub]', { autoAlpha: 0, y: 16, duration: 1.1 }, 1.05)
+          .from('[data-hero-trust] > *', { autoAlpha: 0, y: 10, duration: 1, stagger: 0.06 }, 1.1)
           .from('[data-hero-cta] > *', { autoAlpha: 0, y: 12, duration: 1, stagger: 0.08 }, 1.2)
+          .from('[data-hero-qualifier]', { autoAlpha: 0, y: 10, duration: 1 }, 1.35)
 
         // Scroll: the copy lifts away faster than the coins, which gives the stage some depth.
         gsap.to('[data-hero-copy]', {
@@ -67,19 +70,17 @@ export function Hero() {
 
       <header data-hero-bar className="relative z-20 flex items-center justify-between gap-4 px-4 pt-5 text-navy sm:px-10 sm:pt-8">
         <a href="#top" aria-label="10X Trader, back to top">
-          <Logo />
+          {/* The long tagline shows wherever the header has room for it beside the notch nav. */}
+          <Logo taglineClassName="hidden md:block xl:hidden min-[1440px]:block" />
         </a>
         <div className="flex items-center gap-4 sm:gap-6">
           <a
             href={links.logIn}
-            className="hidden whitespace-nowrap text-[10px] font-medium uppercase tracking-[0.14em] text-navy transition-colors duration-200 hover:text-accent sm:inline sm:text-[11px]"
+            className="hidden whitespace-nowrap text-[10px] font-medium uppercase tracking-[0.14em] text-navy transition-colors duration-200 hover:text-accent sm:inline sm:text-[11px] xl:hidden min-[1440px]:inline"
           >
             {cta.logIn}
           </a>
-          <ChamferButton href={links.signUp}>
-            <span className="hidden sm:inline">{cta.primary}</span>
-            <span className="sm:hidden">{cta.short}</span>
-          </ChamferButton>
+          <ChamferButton href={links.signUp}>{cta.primary}</ChamferButton>
         </div>
       </header>
 
@@ -111,10 +112,16 @@ export function Hero() {
 
         <p
           data-hero-sub
-          className="mt-8 max-w-md text-[12px] font-medium uppercase leading-[1.8] tracking-[0.22em] opacity-90 sm:text-[14px]"
+          className="mt-8 max-w-2xl text-[12px] font-medium uppercase leading-[1.8] tracking-[0.22em] opacity-90 sm:text-[14px]"
         >
           {hero.sub}
         </p>
+
+        <ul data-hero-trust aria-label="At a glance" className="mt-6 flex max-w-3xl flex-wrap justify-center gap-2">
+          {hero.trust.map((item) => (
+            <Chip key={item}>{item}</Chip>
+          ))}
+        </ul>
 
         <div data-hero-cta className="mt-9 flex flex-col items-center gap-5 sm:flex-row sm:gap-8">
           <ChamferButton href={links.signUp} size="md">
@@ -132,6 +139,10 @@ export function Hero() {
             />
           </a>
         </div>
+
+        <p data-hero-qualifier className="mt-6 max-w-2xl text-[13px] leading-[1.6] text-navy-3">
+          {hero.qualifier}
+        </p>
       </div>
 
       <div data-hero-coins className="relative -mt-4 min-h-[clamp(220px,34dvh,520px)] w-full flex-1 sm:-mt-6">

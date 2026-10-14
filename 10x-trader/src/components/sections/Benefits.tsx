@@ -57,7 +57,7 @@ export function Benefits() {
       <div className="relative z-20 mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1fr_auto_1fr] lg:gap-12">
         <div className="order-1 flex flex-col items-center text-center text-navy lg:order-2">
           <p className="text-[12px] uppercase tracking-[0.24em]">{benefits.label}</p>
-          <h2 id="benefits-title" className="font-firs text-[44px] font-semibold uppercase leading-none tracking-tight sm:text-[54px]">
+          <h2 id="benefits-title" className="font-firs max-w-[460px] text-[44px] font-semibold uppercase leading-none tracking-tight sm:text-[54px]">
             {benefits.title}
           </h2>
 

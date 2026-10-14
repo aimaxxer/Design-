@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Accordion } from '@/components/ui/Accordion'
-import { faq } from '@/content'
+import { faq, links } from '@/content'
 import { useReveal } from '@/hooks/useReveal'
 
 export function Faq() {
@@ -20,6 +20,21 @@ export function Faq() {
         </h2>
         <div data-reveal>
           <Accordion items={faq.items} defaultOpen={faq.items[0].id} />
+          <p className="mt-8 text-[15px] leading-relaxed text-navy-2">
+            {faq.outro.split(/(WhatsApp|Discord)/).map((part, i) =>
+              part === 'WhatsApp' || part === 'Discord' ? (
+                <a
+                  key={i}
+                  href={part === 'WhatsApp' ? links.whatsapp : links.discord}
+                  className="font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors duration-200 hover:text-navy"
+                >
+                  {part}
+                </a>
+              ) : (
+                part
+              ),
+            )}
+          </p>
         </div>
       </div>
     </section>

@@ -20,7 +20,7 @@ export function TopNav({ active }: { active: number }) {
   return (
     <nav
       aria-label="Primary"
-      className="absolute left-1/2 top-0 z-40 hidden -translate-x-1/2 items-center gap-6 rounded-b-[28px] bg-white px-6 py-4 md:flex lg:gap-10 lg:px-10"
+      className="absolute left-1/2 top-0 z-40 hidden -translate-x-1/2 items-center gap-6 rounded-b-[28px] bg-white px-6 py-4 xl:flex lg:gap-10 lg:px-10"
     >
       <span aria-hidden className="absolute -left-6 top-0 size-6 bg-white" style={cornerMask('left')} />
       {nav.map((item) => {
@@ -91,13 +91,13 @@ export function ScrollHint() {
   )
 }
 
-/** Phones and tablets have no notch nav, so a compact CTA rides along once you leave the hero. */
+/** Below the notch nav's breakpoint there is no nav, so the CTA rides along once you leave the hero. */
 export function MobileCta({ active }: { active: number }) {
   const show = active > 0
   return (
     <div
       className={cn(
-        'absolute bottom-3 left-1/2 z-40 -translate-x-1/2 transition-[opacity,transform] duration-300 ease-[var(--ease-out-strong)] md:hidden',
+        'absolute bottom-3 left-1/2 z-40 -translate-x-1/2 transition-[opacity,transform] duration-300 ease-[var(--ease-out-strong)] xl:hidden',
         show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0',
       )}
       inert={!show}
@@ -106,7 +106,7 @@ export function MobileCta({ active }: { active: number }) {
         href={links.signUp}
         className="chamfer-10 group inline-flex items-center gap-2 whitespace-nowrap bg-accent px-5 py-3 text-[11px] font-medium uppercase tracking-[0.14em] text-white shadow-[0_12px_32px_-12px_rgba(0,104,162,0.55)] transition-transform active:scale-[0.97]"
       >
-        {cta.short}
+        {cta.primary}
         <ArrowUpRight aria-hidden strokeWidth={1.75} className="size-3.5" />
       </a>
     </div>

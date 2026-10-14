@@ -14,13 +14,13 @@ export function LogoMark({ className }: { className?: string }) {
 }
 
 /** The template's two-line lockup: mark, name, and a light sub-line underneath. */
-export function Logo({ className }: { className?: string }) {
+export function Logo({ className, taglineClassName }: { className?: string; taglineClassName?: string }) {
   return (
     <span className={cn('flex items-center gap-2.5', className)}>
       <LogoMark className="h-[18px] w-auto shrink-0 sm:h-5" />
       <span className="flex flex-col leading-none">
         <span className="text-[14px] font-semibold tracking-tight sm:text-[15px]">{brand.word}</span>
-        <span className="mt-1 whitespace-nowrap text-[10px] font-light opacity-90 sm:text-[11px]">{brand.tagline}</span>
+        <span className={cn('mt-1 whitespace-nowrap text-[10px] font-light opacity-90 sm:text-[11px]', taglineClassName)}>{brand.tagline}</span>
       </span>
     </span>
   )

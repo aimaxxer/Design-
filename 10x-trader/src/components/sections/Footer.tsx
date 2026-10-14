@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { useRef } from 'react'
 import { ChamferButton } from '@/components/ui/ChamferButton'
+import { Chip } from '@/components/ui/Chip'
 import { LazyCoin } from '@/components/ui/LazyCoin'
 import { Logo } from '@/components/ui/Logo'
 import { closing, cta, footer, links } from '@/content'
@@ -21,12 +22,18 @@ export function Footer() {
               <br />
               <span className="text-gradient">{closing.title[1]}</span>
             </h2>
+            <p className="mt-8 max-w-xl text-[17px] leading-[1.5] text-navy-2 sm:text-[18px]">{closing.body}</p>
+            <ul aria-label="At a glance" className="mt-6 flex flex-wrap gap-2">
+              {closing.bullets.map((item) => (
+                <Chip key={item}>{item}</Chip>
+              ))}
+            </ul>
             <div className="mt-10 flex flex-wrap items-center gap-4 sm:gap-6">
               <ChamferButton href={links.signUp} size="md">
                 {cta.primary}
               </ChamferButton>
-              <ChamferButton href={links.logIn} size="md" variant="outline">
-                {cta.logIn}
+              <ChamferButton href={links.whatsapp} size="md" variant="outline">
+                {cta.whatsapp}
               </ChamferButton>
             </div>
           </div>
@@ -43,9 +50,12 @@ export function Footer() {
 
         <div className="mt-20 border-t border-line pt-10 sm:mt-24">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-            <a href="#top" aria-label="10X Trader, back to top" className="shrink-0">
-              <Logo />
-            </a>
+            <div className="max-w-sm shrink-0">
+              <a href="#top" aria-label="10X Trader, back to top" className="inline-block">
+                <Logo />
+              </a>
+              <p className="mt-4 text-[13px] leading-[1.6] text-navy-2">{footer.tagline}</p>
+            </div>
             <nav aria-label={footer.legalTitle}>
               <ul className="flex flex-wrap gap-x-6 gap-y-3">
                 {footer.legal.map((item) => (

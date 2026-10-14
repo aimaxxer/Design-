@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { CircleCheck } from 'lucide-react'
 import { useRef } from 'react'
 import { ChamferButton } from '@/components/ui/ChamferButton'
+import { Eyebrow } from '@/components/ui/Eyebrow'
 import { cta, links, processFlow } from '@/content'
 import { useReveal } from '@/hooks/useReveal'
 import { cn } from '@/lib/cn'
@@ -41,6 +42,7 @@ export function Process() {
     <section id="process" ref={root} aria-labelledby="process-title" className="relative bg-white px-6 py-20 sm:px-10 sm:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl text-navy">
+          <Eyebrow>{processFlow.label}</Eyebrow>
           <h2
             id="process-title"
             className="font-firs text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px] lg:text-[54px]"

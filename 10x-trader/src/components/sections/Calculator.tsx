@@ -1,11 +1,15 @@
 import { useMemo, useRef, useState, type CSSProperties } from 'react'
 import { AnimatedNumber } from '@/components/ui/AnimatedNumber'
-import { calculator } from '@/content'
+import { ChamferButton } from '@/components/ui/ChamferButton'
+import { Eyebrow } from '@/components/ui/Eyebrow'
+import { calculator, cta, links } from '@/content'
 import { useReveal } from '@/hooks/useReveal'
 import { cn } from '@/lib/cn'
 import { formatCompactUsd, formatPct, formatUsd, MONTHS, monthsSince, project, series, type Method } from '@/lib/projection'
 
-const MAX_DEPOSIT = 10_000_000
+/** The deposit field's range ($100 to $100,000); out-of-range entries settle to the nearest end on blur. */
+const MIN_DEPOSIT = 100
+const MAX_DEPOSIT = 100_000
 const MAX_PCT = 50
 
 const withCommas = (digits: string) => (digits ? Number(digits).toLocaleString('en-US') : '')
@@ -126,6 +130,7 @@ export function Calculator() {
     <section id="calculator" ref={root} aria-labelledby="calculator-title" className="relative bg-mist px-6 py-20 sm:px-10 sm:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl text-navy">
+          <Eyebrow>{calculator.label}</Eyebrow>
           <h2
             id="calculator-title"
             className="font-firs text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px] lg:text-[54px]"
@@ -148,8 +153,8 @@ export function Calculator() {
                   inputMode="numeric"
                   autoComplete="off"
                   value={withCommas(depositDigits)}
-                  onChange={(e) => setDepositDigits(e.target.value.replace(/\D/g, '').slice(0, 8))}
-                  onBlur={() => setDepositDigits(String(deposit))}
+                  onChange={(e) => setDepositDigits(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                  onBlur={() => setDepositDigits(String(Math.max(deposit, MIN_DEPOSIT)))}
                   className="inline-field tabular"
                   style={fit(withCommas(depositDigits).length)}
                 />
@@ -226,6 +231,12 @@ export function Calculator() {
         </div>
 
         <p className="mt-8 max-w-3xl text-[12px] leading-[1.6] text-navy-3">{calculator.note}</p>
+
+        <div className="mt-12 flex justify-start lg:justify-end">
+          <ChamferButton href={links.signUp} size="md">
+            {cta.primary}
+          </ChamferButton>
+        </div>
       </div>
     </section>
   )
