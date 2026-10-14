@@ -185,7 +185,7 @@ export const calculator = {
   defaults: { deposit: 1000, monthlyPct: 2, month: 0, year: 2025, method: '10x' as const },
   firstYear: 2015,
   chartLabel: 'Account balance over time',
-  legend: { tenX: '10X account', traditional: 'Own account' },
+  legend: { tenX: '10X account', traditional: 'Standard broker account' },
   note: 'Illustrative at a constant monthly return and 1:9. Not a forecast. The credit amplifies losses the same way it amplifies gains: losses come out of your deposit, and the credit scales down with your balance. Trading leveraged products carries a high level of risk.',
 }
 
