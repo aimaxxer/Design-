@@ -32,9 +32,8 @@ export function Hero() {
           .from('[data-hero-eyebrow]', { autoAlpha: 0, y: 14, duration: 1 }, 0.3)
           .from('[data-hero-line2]', { autoAlpha: 0, y: 28, filter: 'blur(10px)', duration: 1.4 }, 0.9)
           .from('[data-hero-sub]', { autoAlpha: 0, y: 16, duration: 1.1 }, 1.05)
-          .from('[data-hero-trust] > *', { autoAlpha: 0, y: 10, duration: 1, stagger: 0.06 }, 1.1)
           .from('[data-hero-cta] > *', { autoAlpha: 0, y: 12, duration: 1, stagger: 0.08 }, 1.2)
-          .from('[data-hero-qualifier]', { autoAlpha: 0, y: 10, duration: 1 }, 1.35)
+          .from('[data-hero-trust] > *', { autoAlpha: 0, y: 10, duration: 1, stagger: 0.06 }, 1.3)
 
         // Scroll: the copy lifts away faster than the coins, which gives the stage some depth.
         gsap.to('[data-hero-copy]', {
@@ -117,12 +116,6 @@ export function Hero() {
           {hero.sub}
         </p>
 
-        <ul data-hero-trust aria-label="At a glance" className="mt-6 flex max-w-3xl flex-wrap justify-center gap-2">
-          {hero.trust.map((item) => (
-            <Chip key={item}>{item}</Chip>
-          ))}
-        </ul>
-
         <div data-hero-cta className="mt-9 flex flex-col items-center gap-5 sm:flex-row sm:gap-8">
           <ChamferButton href={links.signUp} size="md">
             {cta.primary}
@@ -140,9 +133,11 @@ export function Hero() {
           </a>
         </div>
 
-        <p data-hero-qualifier className="mt-6 max-w-2xl text-[13px] leading-[1.6] text-navy-3">
-          {hero.qualifier}
-        </p>
+        <ul data-hero-trust aria-label="At a glance" className="mt-8 flex max-w-4xl flex-wrap justify-center gap-2">
+          {hero.trust.map((item) => (
+            <Chip key={item}>{item}</Chip>
+          ))}
+        </ul>
       </div>
 
       <div data-hero-coins className="relative -mt-4 min-h-[clamp(220px,34dvh,520px)] w-full flex-1 sm:-mt-6">

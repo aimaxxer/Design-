@@ -60,7 +60,7 @@ Reorder `App.tsx` to exactly this. Each section must answer the question the pre
 
 | # | Section id | Beat | Question it answers | Component | Status |
 |---|---|---|---|---|---|
-| 0 | `top` | Hero: the promise | What is this? | `Hero` | rewrite copy, add trust chips + qualifier line |
+| 0 | `top` | Hero: the promise | What is this? | `Hero` | rewrite copy, add trust chips under the CTAs |
 | 1 | `problem` | The problem: "Stop paying to prove yourself" | Why would I leave what I have? | `Problem` | **new** |
 | 2 | `model` | The aligned model | So what is different, and why should I trust it? | `Model` | rewrite copy |
 | 3 | `compare` | Side by side | Prove it | `Comparison` | rewrite rows, 3 above the fold on mobile |
@@ -102,7 +102,7 @@ Build in the existing style: `ChamferFrame`/`chamfer-24` panels, `font-firs` upp
 - **Guard**: if any stat value or testimonial field still contains `[`, render nothing (`return null`) and log a console warning in dev. The section must never ship with placeholders.
 
 ### 5.4 Existing component changes
-- `Hero`: render `hero.trust` as four small chips under the sub line, and `hero.qualifier` as a one-line `text-navy-3` sentence under the CTAs. `line1`/`line2` are the two headline lines.
+- `Hero`: render `hero.trust` as four small chips under the CTAs. The `hero.qualifier` line is not shown (removed from the hero at the owner's request). `line1`/`line2` are the two headline lines.
 - `Comparison`: add `comparison.intro` under the title; on screens `< sm`, show only the first `comparison.foldAfter` rows with a "Show all rows" toggle.
 - `Model`: render three paragraphs; keep the three stat cards. The second stat has `count: 0` with prefix `$`; make sure the CountUp renders "$0" cleanly.
 - `Process`: four steps as in content; keep the layout.
@@ -221,7 +221,7 @@ Goal → check:
 4. Alternative is worse: Problem section has both the prop story and the broker dead-end; Comparison has three columns and eight rows; no prop firm is named.
 5. Trust: Model P3 states how 10X earns; FAQ contains "How does 10X make money?" and "What if 10X disappears tomorrow?"; "in your name" appears in Process, Comparison and Proof.
 6. Authority: "The aligned model" is used as a title; "Built against you / Built for you" block exists.
-7. Qualify: the hero qualifier line renders under the CTAs.
+7. Qualify: no longer checked in the hero (the qualifier line was removed at the owner's request).
 8. Objections: all 11 FAQ items present in the given order; the first is "Is this actually better than trading at my broker?".
 9. One action: `grep` finds exactly one primary button label string, "Start Trading 10X"; "Open an account" returns zero hits.
 10. Small next step: Process has "Two minutes" and "live the same day"; closing has "2-minute sign-up".
