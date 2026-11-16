@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scale IB — Live Session (mockup)</title>
+<style>
+:root {
+  --gold: #f4b740;
+  --gold-hi: #ffd786;
+  --gold-lo: #b97a17;
+  --app: #08080a;
+  --text: #f4f4f2;
+  --soft: #c9c9cc;
+  --muted: #86868c;
+  --dim: #55555b;
+  --line: rgba(255, 255, 255, .07);
+  --line-2: rgba(255, 255, 255, .11);
+  --glass: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .018));
+  --red: #ef4a4f;
+  --blue: #8fb1ff;
+  --green: #74d6a2;
+  --pink: #ef97cf;
+  --display: "Inter Display", "Inter", system-ui, sans-serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --emoji: "Noto Color Emoji";
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  width: 1920px; height: 1240px;
+  font-family: var(--sans);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum" 1, "cv11" 1, "ss01" 1;
+}
+.emoji { font-family: var(--emoji); font-size: .95em; }
+svg { display: block; }
+.i { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- Presentation backdrop ---------- */
+.backdrop {
+  width: 1920px; height: 1240px;
+  display: grid; place-items: center;
+  background:
+    radial-gradient(1100px 620px at 50% -10%, #f0f0f0 0%, rgba(240, 240, 240, 0) 70%),
+    linear-gradient(180deg, #d6d6d6 0%, #bdbdbd 100%);
+}
+.app {
+  position: relative;
+  width: 1792px; height: 1112px;
+  border-radius: 40px;
+  padding: 22px 28px 26px;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 380px at 38% -6%, rgba(244, 183, 64, .07), rgba(244, 183, 64, 0) 70%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .014) 0 1px, transparent 1px 22px),
+    var(--app);
+  box-shadow: 0 50px 90px -30px rgba(0, 0, 0, .55), 0 0 0 1px rgba(0, 0, 0, .6), inset 0 0 0 1px rgba(255, 255, 255, .05);
+  display: flex; flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.top { display: flex; align-items: center; height: 60px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { width: 42px; height: 42px; }
+.wordmark { font-family: var(--display); font-size: 22px; font-weight: 600; letter-spacing: -.4px; }
+.wordmark span { color: var(--gold); margin-left: 5px; }
+.nav { display: flex; gap: 6px; margin-left: 58px; }
+.nav a {
+  position: relative; padding: 10px 16px; font-size: 14.5px; color: var(--muted);
+  text-decoration: none; display: flex; align-items: center; gap: 8px;
+}
+.nav a.active { color: var(--text); }
+.nav a.active::after {
+  content: ""; position: absolute; left: 16px; right: 16px; bottom: -2px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, rgba(244, 183, 64, 0), var(--gold), rgba(244, 183, 64, 0));
+}
+.nav .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 3px rgba(239, 74, 79, .2); }
+.top-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.icon-btn {
+  position: relative; width: 44px; height: 44px; border-radius: 14px;
+  display: grid; place-items: center; color: var(--soft);
+  background: var(--glass); border: 1px solid var(--line-2);
+}
+.icon-btn .badge-dot { position: absolute; top: 10px; right: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 2px #121214; }
+.profile {
+  display: flex; align-items: center; gap: 11px; height: 44px; padding: 0 14px 0 5px;
+  border-radius: 14px; background: var(--glass); border: 1px solid var(--line-2); font-size: 14px;
+}
+.avatar {
+  display: grid; place-items: center; flex: none;
+  width: 34px; height: 34px; border-radius: 10px;
+  font-size: 12.5px; font-weight: 600; color: #fff;
+}
+.profile .chev { color: var(--muted); margin-left: 18px; }
+
+/* ---------- Title row ---------- */
+.title-row { display: flex; align-items: center; margin-top: 30px; height: 70px; }
+.eyebrow { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.eyebrow b { color: var(--soft); font-weight: 500; }
+h1 { margin: 6px 0 0; font-family: var(--display); font-weight: 400; font-size: 34px; letter-spacing: -.6px; line-height: 1.1; }
+.vr { width: 1px; height: 54px; background: var(--line-2); margin: 0 30px; }
+.host-chip { display: flex; align-items: center; gap: 14px; }
+.host-thumb {
+  width: 54px; height: 54px; border-radius: 15px; overflow: hidden; position: relative;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .14), 0 10px 24px rgba(0, 0, 0, .5);
+}
+.host-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; transform: scale(1.5); transform-origin: 50% 22%; }
+.host-thumb::after { content: ""; position: absolute; inset: 0; border-radius: 15px; background: linear-gradient(160deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, 0) 45%); }
+.hc-name { display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 500; }
+.hc-sub { margin-top: 4px; font-size: 13px; color: var(--muted); }
+.verified { width: 16px; height: 16px; }
+.follow {
+  margin-left: 10px; height: 32px; padding: 0 14px; border-radius: 10px; font-size: 13px; font-weight: 500;
+  display: flex; align-items: center; gap: 6px; color: var(--gold);
+  background: rgba(244, 183, 64, .08); border: 1px solid rgba(244, 183, 64, .28);
+}
+.title-actions { margin-left: auto; display: flex; align-items: center; gap: 22px; }
+.live-meta { display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: var(--soft); }
+.live-pill {
+  display: flex; align-items: center; gap: 7px; height: 28px; padding: 0 11px; border-radius: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .8px; color: #fff;
+  background: linear-gradient(180deg, #f2585c, #c9363b); box-shadow: 0 6px 18px rgba(239, 74, 79, .35), inset 0 1px 0 rgba(255, 255, 255, .3);
+}
+.live-pill i { width: 6px; height: 6px; border-radius: 50%; background: #fff; }
+.live-meta .sep { width: 1px; height: 16px; background: var(--line-2); }
+.live-meta .watch { display: flex; align-items: center; gap: 7px; }
+.add-btn { display: flex; align-items: center; gap: 10px; font-size: 14.5px; font-weight: 500; }
+.add-btn .plus { width: 30px; height: 30px; border-radius: 50%; background: #f4f4f2; color: #0a0a0b; display: grid; place-items: center; }
+.gold-btn {
+  height: 42px; padding: 0 22px; border-radius: 14px; display: flex; align-items: center; gap: 9px;
+  font-size: 14.5px; font-weight: 600; color: #1d1405;
+  background: linear-gradient(180deg, #ffe2a0 0%, #f6be52 48%, #d9962a 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7), inset 0 -2px 6px rgba(120, 70, 0, .25), 0 10px 26px -8px rgba(244, 183, 64, .55);
+}
+
+/* ---------- Agenda row ---------- */
+.agenda-row {
+  display: flex; align-items: center; height: 66px; margin-top: 22px;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.date-badge {
+  width: 46px; height: 48px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 1px solid var(--line-2); background: var(--glass); line-height: 1;
+}
+.date-badge b { font-family: var(--display); font-weight: 500; font-size: 17px; }
+.date-badge span { font-size: 11px; color: var(--muted); margin-top: 3px; }
+.agenda-label { margin-left: 18px; font-size: 16px; color: var(--muted); }
+.agenda-label b { color: var(--text); font-weight: 500; margin-left: 8px; }
+.agenda-label small { color: var(--text); font-size: 13.5px; margin-left: 4px; }
+.steps { display: flex; align-items: center; gap: 10px; margin-left: 34px; }
+.step {
+  display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; border-radius: 11px;
+  font-size: 13.5px; color: var(--muted); border: 1px solid var(--line); background: rgba(255, 255, 255, .015);
+}
+.step .ck { width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .1); color: var(--soft); }
+.step.done { color: var(--soft); }
+.step.current {
+  color: var(--text); border-color: rgba(244, 183, 64, .35);
+  background: linear-gradient(180deg, rgba(244, 183, 64, .12), rgba(244, 183, 64, .04));
+}
+.step.current .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(244, 183, 64, .2), 0 0 12px var(--gold); }
+.step.current .now { font-size: 11px; font-weight: 600; color: #1d1405; background: var(--gold); border-radius: 6px; padding: 2px 6px; }
+.step .num { font-size: 12px; color: var(--dim); }
+.step-line { width: 18px; height: 1px; background: var(--line-2); }
+.arrows { margin-left: auto; display: flex; gap: 10px; }
+.arrow-btn { width: 44px; height: 40px; border-radius: 12px; display: grid; place-items: center; border: 1px solid var(--line-2); background: var(--glass); color: var(--soft); }
+
+/* ---------- Main grid ---------- */
+.main { flex: 1; display: flex; gap: 20px; margin-top: 20px; min-height: 0; }
+.left { flex: 1; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.stage { height: 532px; display: flex; gap: 14px; }
+.tile {
+  position: relative; border-radius: 26px; overflow: hidden;
+  background: linear-gradient(180deg, #131316, #0d0d0f);
+  box-shadow: inset 0 0 0 1px var(--line-2), 0 24px 50px -20px rgba(0, 0, 0, .8);
+}
+
+/* chart tile */
+.chart-tile { flex: 1; display: flex; flex-direction: column; }
+.chart-head { display: flex; align-items: center; gap: 14px; height: 60px; padding: 0 18px 0 16px; border-bottom: 1px solid var(--line); }
+.share-tag {
+  display: flex; align-items: center; gap: 7px; height: 30px; padding: 0 11px; border-radius: 9px;
+  font-size: 12.5px; color: var(--soft); background: rgba(255, 255, 255, .06); border: 1px solid var(--line-2);
+}
+.share-tag .i { width: 15px; height: 15px; color: var(--gold); }
+.sym { display: flex; align-items: baseline; gap: 10px; }
+.sym b { font-family: var(--display); font-size: 18px; font-weight: 600; letter-spacing: -.2px; }
+.sym span { font-size: 12.5px; color: var(--muted); }
+.tf { display: flex; gap: 2px; padding: 3px; border-radius: 10px; background: rgba(255, 255, 255, .04); border: 1px solid var(--line); margin-left: 6px; }
+.tf span { font-size: 12px; color: var(--muted); padding: 5px 9px; border-radius: 7px; }
+.tf span.on { color: #1d1405; background: var(--gold); font-weight: 600; }
+.px { margin-left: auto; text-align: right; }
+.px b { font-family: var(--display); font-size: 19px; font-weight: 500; letter-spacing: -.2px; }
+.px div { font-size: 12px; color: var(--gold); margin-top: 2px; }
+.chart-body { position: relative; flex: 1; }
+#chart { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* host tile */
+.host-tile { width: 398px; flex: none; box-shadow: 0 0 0 2px rgba(244, 183, 64, .85), 0 0 46px -6px rgba(244, 183, 64, .45), 0 24px 50px -20px rgba(0, 0, 0, .8); }
+.host-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 46% 30%; }
+.host-tile::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, .78) 100%);
+}
+.host-top { position: absolute; z-index: 2; top: 14px; left: 14px; right: 14px; display: flex; justify-content: space-between; align-items: center; }
+.host-badge {
+  height: 26px; padding: 0 10px; border-radius: 8px; display: flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .7px; color: #1d1405;
+  background: linear-gradient(180deg, #ffe2a0, #f0b445);
+}
+.hd { height: 26px; padding: 0 9px; border-radius: 8px; display: flex; align-items: center; font-size: 11.5px; font-weight: 600; color: #fff; background: rgba(0, 0, 0, .45); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, .14); margin-left: auto; margin-right: 8px; }
+.speaking { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; gap: 3px; background: rgba(244, 183, 64, .95); box-shadow: 0 0 18px rgba(244, 183, 64, .6); }
+.speaking i { width: 3px; border-radius: 2px; background: #1d1405; }
+.host-bottom { position: absolute; z-index: 2; left: 14px; right: 14px; bottom: 14px; display: flex; align-items: flex-end; justify-content: space-between; }
+.nameplate {
+  display: flex; align-items: center; gap: 10px; padding: 9px 14px 9px 10px; border-radius: 14px;
+  background: rgba(14, 14, 16, .55); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, .12);
+}
+.nameplate .mic { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; background: rgba(244, 183, 64, .16); color: var(--gold); }
+.nameplate .mic .i { width: 16px; height: 16px; }
+.nameplate b { display: block; font-size: 14.5px; font-weight: 600; }
+.nameplate span { display: block; font-size: 12px; color: var(--soft); margin-top: 2px; }
+.reactions { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.reactions span { font-family: var(--emoji); display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; font-size: 19px; background: rgba(14, 14, 16, .5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, .12); }
+.reactions span:nth-child(1) { opacity: .35; transform: translate(-6px, 4px) scale(.8); }
+.reactions span:nth-child(2) { opacity: .7; transform: translateX(5px) scale(.9); }
+.reactions .count { font-family: var(--sans); width: auto; height: 22px; padding: 0 8px; border-radius: 8px; font-size: 11.5px; font-weight: 600; color: var(--gold); }
+
+/* ---------- Control dock ---------- */
+.dock {
+  height: 64px; flex: none; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 12px 0 16px;
+  border-radius: 20px; background: var(--glass); box-shadow: inset 0 0 0 1px var(--line);
+}
+.caption { display: flex; align-items: center; gap: 10px; min-width: 0; font-size: 13px; color: var(--soft); }
+.caption .cc { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .5px; padding: 4px 6px; border-radius: 6px; border: 1px solid var(--line-2); color: var(--muted); }
+.caption em { font-style: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.caption em b { color: var(--text); font-weight: 500; }
+.controls { display: flex; align-items: center; gap: 10px; }
+.ctl {
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: var(--text);
+  background: rgba(255, 255, 255, .07); border: 1px solid var(--line-2);
+}
+.ctl.on { color: #1d1405; background: linear-gradient(180deg, #ffe2a0, #f0b445); border-color: transparent; box-shadow: 0 6px 18px -4px rgba(244, 183, 64, .6); }
+.ctl.leave { width: 66px; border-radius: 22px; color: #fff; background: linear-gradient(180deg, #f2585c, #c9363b); border-color: transparent; }
+.ctl-sep { width: 1px; height: 26px; background: var(--line-2); margin: 0 4px; }
+.dock-right { display: flex; justify-content: flex-end; align-items: center; gap: 6px; }
+.dr { position: relative; height: 40px; min-width: 40px; padding: 0 10px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 7px; color: var(--soft); font-size: 13px; }
+.dr.on { color: var(--gold); background: rgba(244, 183, 64, .1); }
+.dr .bd { position: absolute; top: 7px; right: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+/* ---------- Stat cards ---------- */
+.stats { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1.35fr; gap: 14px; min-height: 0; }
+.card {
+  position: relative; overflow: hidden; border-radius: 26px; padding: 20px 22px;
+  background: linear-gradient(180deg, #17171a, #0e0e10);
+  box-shadow: inset 0 0 0 1px var(--line-2), 0 24px 50px -24px rgba(0, 0, 0, .9);
+}
+.card h3 { margin: 0; font-size: 15.5px; font-weight: 500; letter-spacing: -.1px; }
+.card .big { position: absolute; left: 22px; bottom: 18px; font-family: var(--display); font-weight: 300; font-size: 44px; letter-spacing: -1.2px; line-height: 1; }
+.card .foot { position: absolute; right: 22px; bottom: 22px; font-size: 12.5px; color: var(--soft); }
+
+.c-viewers .spot {
+  position: absolute; right: -60px; top: -90px; width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 236, 190, .95) 0%, rgba(244, 183, 64, .55) 14%, rgba(201, 132, 28, .2) 38%, rgba(201, 132, 28, 0) 66%);
+  filter: blur(4px);
+}
+.c-viewers .beam {
+  position: absolute; right: 30px; top: 30px; width: 380px; height: 220px; transform: rotate(32deg); transform-origin: 100% 0;
+  background: radial-gradient(60% 50% at 100% 0%, rgba(255, 220, 150, .16), rgba(255, 220, 150, 0) 70%);
+}
+.c-viewers .orb {
+  position: absolute; right: 22px; top: 18px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  color: #1a1a1a; background: radial-gradient(circle at 35% 30%, #fff, #e8e8e8 60%, #bdbdbd); box-shadow: 0 0 22px rgba(255, 235, 190, .9);
+}
+.c-viewers .delta { position: absolute; left: 22px; bottom: 70px; font-size: 12.5px; color: var(--soft); display: flex; align-items: center; gap: 6px; }
+.c-viewers .delta b { color: var(--gold); font-weight: 600; }
+
+.c-engage { background: #2a1704; }
+.c-engage .gold {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(70% 90% at 78% 40%, #ffe6a6 0%, #f5b23e 26%, #c0700f 54%, #4a2504 85%),
+    #3a1d03;
+}
+.c-engage .ring {
+  position: absolute; right: 26px; top: 22px; width: 112px; height: 112px; border-radius: 50%;
+  background: conic-gradient(from -90deg, #fff6d8 0 92%, rgba(255, 255, 255, .12) 92% 100%);
+  -webkit-mask: radial-gradient(circle, transparent 46px, #000 47px, #000 54px, transparent 55px);
+  mask: radial-gradient(circle, transparent 46px, #000 47px, #000 54px, transparent 55px);
+  filter: drop-shadow(0 0 10px rgba(255, 230, 170, .8));
+}
+.c-engage .ribs {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 48%;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .10) 0 2px, rgba(0, 0, 0, .10) 2px 5px, rgba(255, 255, 255, .03) 5px 9px);
+  backdrop-filter: blur(16px) brightness(.92);
+  border-right: 1px solid rgba(255, 255, 255, .2);
+}
+.c-engage h3, .c-engage .sub { position: relative; z-index: 2; }
+.c-engage .big, .c-engage .foot { z-index: 2; }
+.c-engage h3, .c-engage .big { text-shadow: 0 2px 14px rgba(60, 25, 0, .45); }
+.c-engage .foot { color: #fff4dc; }
+.c-engage .sub { margin-top: 6px; font-size: 12.5px; color: rgba(255, 244, 220, .8); }
+
+.c-chat h3 { position: relative; z-index: 2; font-size: 17px; }
+.c-chat .pill-r {
+  position: absolute; z-index: 2; right: 18px; top: 16px; height: 30px; padding: 0 12px; border-radius: 10px; display: flex; align-items: center; gap: 4px;
+  font-size: 12.5px; color: var(--soft); background: rgba(255, 255, 255, .06); border: 1px solid var(--line-2);
+}
+.c-chat .pill-r b { color: var(--text); }
+.bars { position: absolute; left: 28px; right: 28px; bottom: 16px; height: 128px; display: flex; align-items: flex-end; justify-content: space-between; }
+.bar { position: relative; width: 38px; height: 100%; display: flex; align-items: flex-end; }
+.bar .g {
+  position: absolute; left: 0; right: 0; bottom: 0; border-radius: 11px 11px 6px 6px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .24), rgba(255, 255, 255, .05) 55%, rgba(255, 255, 255, .02));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), inset 0 0 0 1px rgba(255, 255, 255, .08);
+}
+.bar .y {
+  position: absolute; left: 3px; right: 3px; bottom: 0; border-radius: 9px 9px 5px 5px;
+  background: linear-gradient(180deg, #ffd27a, #e4a232 70%, #b77714);
+  box-shadow: 0 0 22px -2px rgba(244, 183, 64, .55), inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+.peak-line { position: absolute; left: 22px; right: 22px; border-top: 1.5px dashed rgba(255, 255, 255, .45); z-index: 1; }
+.peak-pill {
+  position: absolute; z-index: 3; height: 28px; padding: 0 12px; border-radius: 14px; display: flex; align-items: center;
+  font-size: 12.5px; font-weight: 600; color: #111; background: #fff; box-shadow: 0 6px 18px rgba(0, 0, 0, .5);
+}
+
+/* ---------- Chat ---------- */
+.chat {
+  width: 404px; flex: none; display: flex; flex-direction: column; border-radius: 28px; padding: 18px 18px 16px;
+  background: linear-gradient(180deg, #141417, #0d0d0f); box-shadow: inset 0 0 0 1px var(--line-2), 0 24px 50px -20px rgba(0, 0, 0, .8);
+}
+.chat-head { display: flex; align-items: center; justify-content: space-between; }
+.chat-head h2 { margin: 0; font-family: var(--display); font-size: 19px; font-weight: 500; letter-spacing: -.2px; }
+.chat-head .viewers { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--soft); }
+.chat-head .viewers i { width: 7px; height: 7px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 3px rgba(239, 74, 79, .2); }
+.tabs { display: flex; gap: 4px; margin-top: 14px; padding: 4px; border-radius: 13px; background: rgba(255, 255, 255, .04); border: 1px solid var(--line); }
+.tabs > span { flex: 1; height: 32px; display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 9px; font-size: 13px; color: var(--muted); }
+.tabs > span.on { color: var(--text); background: rgba(255, 255, 255, .09); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08); }
+.tabs .n { font-size: 11px; font-weight: 600; color: #1d1405; background: var(--gold); border-radius: 6px; padding: 1px 5px; }
+.pinned {
+  margin-top: 14px; padding: 12px 14px; border-radius: 16px; font-size: 13px; line-height: 1.45; color: var(--soft);
+  background: linear-gradient(180deg, rgba(244, 183, 64, .12), rgba(244, 183, 64, .04)); border: 1px solid rgba(244, 183, 64, .28);
+}
+.pinned .ph { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--gold); font-weight: 600; letter-spacing: .2px; margin-bottom: 5px; }
+.pinned .ph .i { width: 13px; height: 13px; }
+.pinned b { color: var(--text); font-weight: 600; }
+.msgs { flex: 1; min-height: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; padding: 12px 2px 12px; position: relative; }
+.msgs::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 40px; background: linear-gradient(#111113, rgba(17, 17, 19, 0)); z-index: 2; }
+.msg { display: flex; gap: 10px; font-size: 13.5px; line-height: 1.45; color: #dcdcde; }
+.msg .avatar { width: 28px; height: 28px; border-radius: 9px; font-size: 11px; margin-top: 1px; }
+.msg .who { font-weight: 600; margin-right: 4px; }
+.msg .t { color: var(--dim); font-size: 11.5px; margin-right: 6px; }
+.msg .who::after { content: ":"; color: var(--muted); }
+.tag { display: inline-flex; align-items: center; height: 17px; padding: 0 5px; border-radius: 5px; font-size: 10px; font-weight: 700; letter-spacing: .4px; margin-right: 5px; vertical-align: 1px; }
+.tag.mod { color: #0d1a12; background: var(--green); }
+.tag.vip { color: #1b0f19; background: var(--pink); }
+.tag.host { color: #1d1405; background: var(--gold); }
+.msg.host-msg { padding: 10px 12px; margin: 0 -4px; border-radius: 14px; background: rgba(255, 255, 255, .04); border: 1px solid var(--line-2); }
+.gift {
+  display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 14px; font-size: 13px; color: #fff4dc;
+  background: linear-gradient(90deg, rgba(244, 183, 64, .32), rgba(244, 183, 64, .06)); border: 1px solid rgba(244, 183, 64, .35);
+}
+.gift .gi { width: 30px; height: 30px; border-radius: 10px; display: grid; place-items: center; color: #1d1405; background: linear-gradient(180deg, #ffe2a0, #f0b445); flex: none; }
+.gift b { color: #fff; }
+.gift small { display: block; font-size: 11.5px; color: rgba(255, 244, 220, .7); margin-top: 1px; }
+.poll { padding: 14px; border-radius: 16px; background: rgba(255, 255, 255, .035); border: 1px solid var(--line-2); }
+.poll .pq { display: flex; justify-content: space-between; font-size: 13.5px; font-weight: 500; }
+.poll .pq span { font-size: 11.5px; font-weight: 500; color: var(--muted); }
+.opt { position: relative; margin-top: 9px; height: 32px; border-radius: 10px; overflow: hidden; background: rgba(255, 255, 255, .04); display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 12.5px; }
+.opt .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 10px; }
+.opt.a .fill { width: 68%; background: linear-gradient(90deg, rgba(244, 183, 64, .55), rgba(244, 183, 64, .3)); }
+.opt.b .fill { width: 32%; background: rgba(255, 255, 255, .1); }
+.opt span { position: relative; }
+.opt.a span:first-of-type { color: #fff; font-weight: 500; }
+.opt b { position: relative; font-weight: 600; }
+.composer { display: flex; align-items: center; gap: 8px; margin-top: 12px; height: 50px; padding: 0 6px 0 14px; border-radius: 16px; background: rgba(255, 255, 255, .05); border: 1px solid var(--line-2); font-size: 13.5px; color: var(--muted); }
+.composer .ic { color: var(--muted); }
+.composer .send { margin-left: auto; width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; color: #1d1405; background: linear-gradient(180deg, #ffe2a0, #f0b445); }
+.chat-foot { display: flex; justify-content: space-between; margin-top: 9px; padding: 0 4px; font-size: 11.5px; color: var(--dim); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe3a3"/><stop offset=".5" stop-color="#f4b740"/><stop offset="1" stop-color="#b8771a"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="backdrop">
+<div class="app">
+
+  <!-- Header -->
+  <header class="top">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 42 42">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffe6a8"/><stop offset=".45" stop-color="#f4b740"/><stop offset="1" stop-color="#a8680f"/>
+          </linearGradient>
+        </defs>
+        <rect width="42" height="42" rx="12" fill="url(#lg)"/>
+        <rect x=".5" y=".5" width="41" height="41" rx="11.5" fill="none" stroke="rgba(255,255,255,.45)"/>
+        <g fill="#140d03" stroke="#140d03" stroke-width="1.6" stroke-linecap="round">
+          <line x1="12.5" y1="20" x2="12.5" y2="32"/><rect x="10" y="23" width="5" height="6.5" rx="1.2" stroke="none"/>
+          <line x1="21" y1="14" x2="21" y2="28"/><rect x="18.5" y="17" width="5" height="8" rx="1.2" stroke="none"/>
+          <line x1="29.5" y1="8.5" x2="29.5" y2="22.5"/><rect x="27" y="11" width="5" height="8.5" rx="1.2" stroke="none"/>
+        </g>
+      </svg>
+      <div class="wordmark">Scale<span>IB</span></div>
+    </div>
+    <nav class="nav">
+      <a class="active"><i class="live-dot"></i>Live</a>
+      <a>Schedule</a>
+      <a>Replays</a>
+      <a>Academy</a>
+      <a>Community</a>
+    </nav>
+    <div class="top-right">
+      <div class="icon-btn"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+      <div class="icon-btn"><svg class="i" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/><path d="M19 8v6M16 11h6"/></svg></div>
+      <div class="icon-btn"><svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><i class="badge-dot"></i></div>
+      <div class="profile">
+        <div class="avatar" style="background:linear-gradient(135deg,#6f7cff,#3d2f8f)">JB</div>
+        <span>Jordan Blake</span>
+        <svg class="i chev" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- Title row -->
+  <section class="title-row">
+    <div>
+      <div class="eyebrow">Live webinar <span style="color:var(--dim)">•</span> <b>Forex Masterclass</b></div>
+      <h1>London Session: Gold Breakdown</h1>
+    </div>
+    <div class="vr"></div>
+    <div class="host-chip">
+      <div class="host-thumb"><img src="assets/host.jpg" alt=""></div>
+      <div>
+        <div class="hc-name">Marcus Reid
+          <svg class="verified" viewBox="0 0 24 24"><path fill="#f4b740" d="M12 1.8l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.1L12 22.2l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.1z"/><path d="m8.2 12.2 2.6 2.6 5-5.2" fill="none" stroke="#1d1405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="hc-sub">Head Trader · 24.8k followers</div>
+      </div>
+      <div class="follow"><svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M12 5v14M5 12h14"/></svg>Follow</div>
+    </div>
+    <div class="title-actions">
+      <div class="live-meta">
+        <span class="live-pill"><i></i>LIVE</span>
+        <span>01:24:36</span>
+        <span class="sep"></span>
+        <span class="watch"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>1,284 watching</span>
+      </div>
+      <div class="add-btn"><span class="plus"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px;stroke-width:2.2"><path d="M12 5v14M5 12h14"/></svg></span>Invite</div>
+      <div class="gold-btn"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px;stroke-width:2"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4M12 2v13"/></svg>Share session</div>
+    </div>
+  </section>
+
+  <!-- Agenda row -->
+  <section class="agenda-row">
+    <div class="date-badge"><b>16</b><span>Nov</span></div>
+    <div class="agenda-label">Session agenda <b>2/5</b><small>covered</small></div>
+    <div class="steps">
+      <div class="step done"><span class="ck"><svg class="i" viewBox="0 0 24 24" style="width:11px;height:11px;stroke-width:3"><path d="m5 12 5 5 9-10"/></svg></span>Market recap</div>
+      <div class="step-line"></div>
+      <div class="step done"><span class="ck"><svg class="i" viewBox="0 0 24 24" style="width:11px;height:11px;stroke-width:3"><path d="m5 12 5 5 9-10"/></svg></span>DXY &amp; yields</div>
+      <div class="step-line"></div>
+      <div class="step current"><span class="pulse"></span>XAUUSD setup<span class="now">NOW</span></div>
+      <div class="step-line"></div>
+      <div class="step"><span class="num">04</span>Risk &amp; position sizing</div>
+      <div class="step-line"></div>
+      <div class="step"><span class="num">05</span>Live Q&amp;A</div>
+    </div>
+    <div class="arrows">
+      <div class="arrow-btn"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></div>
+      <div class="arrow-btn"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <section class="main">
+    <div class="left">
+
+      <div class="stage">
+        <!-- Shared chart -->
+        <div class="tile chart-tile">
+          <div class="chart-head">
+            <div class="share-tag"><svg class="i" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Marcus's screen</div>
+            <div class="sym"><b>XAUUSD</b><span>Gold Spot / U.S. Dollar</span></div>
+            <div class="tf"><span>5m</span><span class="on">15m</span><span>1H</span><span>4H</span><span>1D</span></div>
+            <div class="px"><b>2,404.85</b><div>+14.90 (+0.62%)</div></div>
+          </div>
+          <div class="chart-body"><svg id="chart"></svg></div>
+        </div>
+
+        <!-- Host camera -->
+        <div class="tile host-tile">
+          <img src="assets/host.jpg" alt="Host presenting">
+          <div class="host-top">
+            <span class="host-badge">
+              <svg viewBox="0 0 24 24" width="12" height="12"><path fill="#1d1405" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>HOST
+            </span>
+            <span class="hd">HD · 1080p</span>
+            <span class="speaking"><i style="height:9px"></i><i style="height:16px"></i><i style="height:12px"></i></span>
+          </div>
+          <div class="host-bottom">
+            <div class="nameplate">
+              <span class="mic"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5"/></svg></span>
+              <div><b>Marcus Reid</b><span>Head Trader · Scale IB</span></div>
+            </div>
+            <div class="reactions">
+              <span>👏</span><span>🚀</span><span>🔥</span><span class="count">+38</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call controls -->
+      <div class="dock">
+        <div class="caption"><span class="cc">CC</span><em><b>Marcus:</b> “Wait for the 15m close above 2,405, then add.”</em></div>
+        <div class="controls">
+          <div class="ctl"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5"/></svg></div>
+          <div class="ctl"><svg class="i" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/></svg></div>
+          <div class="ctl on"><svg class="i" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4M12 13V8M9.5 10.5 12 8l2.5 2.5"/></svg></div>
+          <div class="ctl"><svg class="i" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8a8 8 0 0 0 16 0v-3a2 2 0 0 0-4 0"/></svg></div>
+          <div class="ctl"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+          <div class="ctl"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#ef4a4f" stroke="none"/><circle cx="12" cy="12" r="8.5"/></svg></div>
+          <div class="ctl"><svg class="i" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="19" cy="12" r="1.2" fill="currentColor"/></svg></div>
+          <span class="ctl-sep"></span>
+          <div class="ctl leave"><svg class="i" viewBox="0 0 24 24" style="transform:rotate(135deg)"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+        </div>
+        <div class="dock-right">
+          <div class="dr"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5h.01"/></svg></div>
+          <div class="dr"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 13.8c1.8.9 3 2.8 3 5.2"/></svg>1.2k</div>
+          <div class="dr on"><svg class="i" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.4A8.5 8.5 0 1 1 21 12z"/></svg><i class="bd"></i></div>
+          <div class="dr"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stats">
+        <div class="card c-viewers">
+          <div class="beam"></div>
+          <div class="spot"></div>
+          <div class="orb"><svg class="i" viewBox="0 0 24 24" style="width:15px;height:15px;stroke-width:2.2"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
+          <h3>Live Viewers</h3>
+          <div class="delta"><b>+212</b> in the last 10 min · Peak 1,412</div>
+          <div class="big">1,284</div>
+        </div>
+
+        <div class="card c-engage">
+          <div class="gold"></div>
+          <div class="ring"></div>
+          <div class="ribs"></div>
+          <h3>Engagement</h3>
+          <div class="sub">Chat, polls &amp; reactions</div>
+          <div class="big">92%</div>
+          <div class="foot">Last 30 min</div>
+        </div>
+
+        <div class="card c-chat" id="activity">
+          <h3>Chat Activity</h3>
+          <div class="pill-r">Messages / min: <b>64</b></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live chat -->
+    <aside class="chat">
+      <div class="chat-head">
+        <h2>Live Chat</h2>
+        <div class="viewers"><i></i>1,284 in chat</div>
+      </div>
+      <div class="tabs">
+        <span class="on">Chat</span>
+        <span>Q&amp;A <span class="n">12</span></span>
+        <span>Polls</span>
+      </div>
+      <div class="pinned">
+        <div class="ph"><svg class="i" viewBox="0 0 24 24"><path d="M9 4h6l-1 6 4 4H6l4-4zM12 14v7"/></svg>PINNED BY MARCUS</div>
+        Key levels today: <b>2,388</b> support · <b>2,412</b> resistance. Max risk <b>1%</b> per trade.
+      </div>
+
+      <div class="msgs">
+        <div class="gift">
+          <div class="gi"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px;stroke-width:2"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v7h14v-7M12 8v12M12 8S10.5 3.5 8 4.2 8.6 8 12 8zM12 8s1.5-4.5 4-3.8S15.4 8 12 8z"/></svg></div>
+          <div><b>RyanT</b> gifted 5 VIP passes<small>to the room · 5 traders upgraded</small></div>
+        </div>
+        <div class="msg"><div class="avatar" style="background:linear-gradient(135deg,#a2577f,#4c2340)">PS</div>
+          <div><span class="t">18:40</span><span class="tag vip">VIP</span><span class="who" style="color:var(--pink)">Priya_S</span>Long on the retest, SL under 2,392 <span class="emoji">✅</span></div></div>
+        <div class="msg"><div class="avatar" style="background:linear-gradient(135deg,#8a7a5a,#3b3222)">KA</div>
+          <div><span class="t">18:41</span><span class="who" style="color:#e9d3a3">Kofi.A</span>What R:R are you aiming for on this one?</div></div>
+        <div class="msg host-msg"><div class="avatar" style="background:url(assets/host.jpg) 50% 14%/260% no-repeat"></div>
+          <div><span class="t">18:41</span><span class="tag host">HOST</span><span class="who" style="color:var(--gold)">Marcus Reid</span>@Kofi.A roughly 1:3, target is the 2,412 level</div></div>
+        <div class="msg"><div class="avatar" style="background:linear-gradient(135deg,#6a5acd,#2e2563)">LP</div>
+          <div><span class="t">18:42</span><span class="who" style="color:#b7a8ff">Lena.P</span>First session here and it finally clicks <span class="emoji">🙌</span></div></div>
+        <div class="msg"><div class="avatar" style="background:linear-gradient(135deg,#3e8f68,#1c4a35)">DF</div>
+          <div><span class="t">18:42</span><span class="tag mod">MOD</span><span class="who" style="color:var(--green)">dana.fx</span>Replay + slides go out right after the session <span class="emoji">📌</span></div></div>
+      </div>
+
+      <div class="poll">
+        <div class="pq">Where does gold close today? <span>1,036 votes</span></div>
+        <div class="opt a"><div class="fill"></div><span>Above 2,400</span><b>68%</b></div>
+        <div class="opt b"><div class="fill"></div><span>Below 2,400</span><b>32%</b></div>
+      </div>
+
+      <div class="composer">
+        <svg class="i ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+        Send a message…
+        <div class="send"><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px;stroke-width:2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></div>
+      </div>
+      <div class="chat-foot"><span>Slow mode · 3s</span><span>Chat rules</span></div>
+    </aside>
+  </section>
+</div>
+</div>
+
+<script>
+// ---------- Chat activity bars (static sample data) ----------
+(function () {
+  const card = document.getElementById('activity');
+  const heights = [62, 88, 54, 96, 70, 112, 84, 66, 92];
+  const golds   = [26, 0, 34, 0, 30, 46, 0, 28, 38];
+  const bars = document.createElement('div');
+  bars.className = 'bars';
+  heights.forEach((h, i) => {
+    const b = document.createElement('div');
+    b.className = 'bar';
+    b.innerHTML = `<div class="g" style="height:${h}px"></div>` + (golds[i] ? `<div class="y" style="height:${golds[i]}px"></div>` : '');
+    bars.appendChild(b);
+  });
+  card.appendChild(bars);
+  // peak line through the tallest bar
+  const cardRect = card.getBoundingClientRect();
+  const barsRect = bars.getBoundingClientRect();
+  const peakY = barsRect.bottom - 112 - cardRect.top + 10;
+  const line = document.createElement('div');
+  line.className = 'peak-line';
+  line.style.top = peakY + 'px';
+  card.appendChild(line);
+  const pill = document.createElement('div');
+  pill.className = 'peak-pill';
+  pill.textContent = 'Peak: 18:31';
+  pill.style.top = (peakY - 14) + 'px';
+  pill.style.left = '34px';
+  card.appendChild(pill);
+})();
+
+// ---------- Candlestick chart ----------
+(function () {
+  const svg = document.getElementById('chart');
+  const W = svg.clientWidth, H = svg.clientHeight;
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, parent = svg) => {
+    const n = document.createElementNS(NS, tag);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    parent.appendChild(n);
+    return n;
+  };
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+  // seeded RNG so the chart is identical on every render
+  let s = 7;
+  const rnd = () => { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; };
+
+  const anchors = [[0, 2398.2], [7, 2396.9], [14, 2394.2], [20, 2392.1], [27, 2390.6], [31, 2389.9], [32, 2388.6], [33, 2390.9],
+                   [38, 2393.6], [44, 2398.9], [49, 2401.8], [52, 2398.4], [54, 2397.9], [58, 2400.6], [61, 2402.9], [63, 2404.85]];
+  const N = 64;
+  const target = i => {
+    for (let k = 0; k < anchors.length - 1; k++) {
+      const [a, pa] = anchors[k], [b, pb] = anchors[k + 1];
+      if (i >= a && i <= b) return pa + (pb - pa) * ((i - a) / (b - a || 1));
+    }
+    return anchors[anchors.length - 1][1];
+  };
+  const candles = [];
+  let prev = 2398.6;
+  for (let i = 0; i < N; i++) {
+    const o = prev;
+    let c = target(i) + (i === N - 1 || i === 32 || i === 33 ? 0 : (rnd() - .5) * 1.5);
+    let hi = Math.max(o, c) + rnd() * 1.0 + .15;
+    let lo = Math.min(o, c) - rnd() * 1.0 - .15;
+    if (i === 32) lo = 2385.4;                // liquidity sweep wick
+    if (i === 33) { c = 2391.2; lo = Math.min(lo, o - .4); }
+    if (i === 53) lo = 2396.9;                // retest low
+    candles.push({ o, c, hi, lo, v: 0.35 + rnd() * .65 + (i === 32 || i === 33 ? .9 : 0) + (i > 40 && i < 50 ? .3 : 0) });
+    prev = c;
+  }
+
+  const padL = 14, padR = 66, padT = 16, padB = 28;
+  const pw = W - padL - padR, ph = H - padT - padB;
+  const pMin = 2381.5, pMax = 2416;
+  const SLOTS = 82;
+  const slot = pw / SLOTS;
+  const X = i => padL + slot * (i + .5);
+  const Y = p => padT + (pMax - p) / (pMax - pMin) * ph;
+  const fmt = p => p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  // defs
+  const defs = el('defs', {});
+  defs.innerHTML = `
+    <linearGradient id="up" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd98a"/><stop offset="1" stop-color="#e09a26"/></linearGradient>
+    <linearGradient id="dn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,255,255,.30)"/><stop offset="1" stop-color="rgba(255,255,255,.12)"/></linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(244,183,64,.16)"/><stop offset="1" stop-color="rgba(244,183,64,0)"/></linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="rgba(244,183,64,.9)"/><stop offset=".35" stop-color="rgba(244,183,64,.35)"/><stop offset="1" stop-color="rgba(244,183,64,0)"/></radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f4b740"/></marker>`;
+
+  // grid + price axis
+  for (let p = 2385; p <= 2415; p += 5) {
+    el('line', { x1: padL, x2: padL + pw, y1: Y(p), y2: Y(p), stroke: 'rgba(255,255,255,.05)' });
+    const t = el('text', { x: W - padR + 14, y: Y(p) + 4, fill: '#6c6c72', 'font-size': 11.5, 'font-family': 'Inter' });
+    t.textContent = fmt(p);
+  }
+  // time axis (15m candles ending 18:45)
+  for (let i = 3; i < N; i += 8) {
+    el('line', { x1: X(i), x2: X(i), y1: padT, y2: padT + ph, stroke: 'rgba(255,255,255,.035)' });
+    const mins = 18 * 60 + 45 - (N - 1 - i) * 15;
+    const lbl = `${String(Math.floor(mins / 60)).padStart(2, '0')}:${String(mins % 60).padStart(2, '0')}`;
+    const t = el('text', { x: X(i), y: H - 9, fill: '#6c6c72', 'font-size': 11.5, 'font-family': 'Inter', 'text-anchor': 'middle' });
+    t.textContent = lbl;
+  }
+  el('line', { x1: W - padR, x2: W - padR, y1: padT, y2: padT + ph, stroke: 'rgba(255,255,255,.06)' });
+
+  // volume
+  const vMaxH = 54;
+  candles.forEach((k, i) => {
+    const h = Math.min(1, k.v / 2) * vMaxH;
+    el('rect', { x: X(i) - slot * .3, y: padT + ph - h, width: slot * .6, height: h, rx: 1.5,
+      fill: k.c >= k.o ? 'rgba(244,183,64,.16)' : 'rgba(255,255,255,.07)' });
+  });
+
+  // close-price area glow
+  let d = `M ${X(0)} ${Y(candles[0].c)}`;
+  candles.forEach((k, i) => { d += ` L ${X(i)} ${Y(k.c)}`; });
+  el('path', { d: d + ` L ${X(N - 1)} ${padT + ph} L ${X(0)} ${padT + ph} Z`, fill: 'url(#area)', opacity: .55 });
+
+  // support / resistance
+  const level = (p, color, label, dash) => {
+    el('line', { x1: padL, x2: padL + pw, y1: Y(p), y2: Y(p), stroke: color, 'stroke-width': 1.2, 'stroke-dasharray': dash });
+    const g = el('g', {});
+    const tw = label.length * 6.3 + 18;
+    el('rect', { x: padL + 8, y: Y(p) - 11, width: tw, height: 22, rx: 7, fill: '#141417', stroke: color, 'stroke-opacity': .8 }, g);
+    const t = el('text', { x: padL + 8 + tw / 2, y: Y(p) + 4, fill: color, 'font-size': 11, 'font-weight': 600, 'font-family': 'Inter', 'text-anchor': 'middle', 'letter-spacing': .3 }, g);
+    t.textContent = label;
+  };
+  level(2412, '#f4b740', 'RESISTANCE 2,412', '6 5');
+  level(2388, 'rgba(255,255,255,.55)', 'SUPPORT 2,388', '6 5');
+
+  // long position tool (entry 2397.5, target 2412, stop 2392.5)
+  const x0 = X(54) - slot * .5, x1 = padL + pw - 4;
+  el('rect', { x: x0, y: Y(2412), width: x1 - x0, height: Y(2397.5) - Y(2412), fill: 'rgba(244,183,64,.10)', stroke: 'rgba(244,183,64,.35)' });
+  el('rect', { x: x0, y: Y(2397.5), width: x1 - x0, height: Y(2392.5) - Y(2397.5), fill: 'rgba(239,74,79,.12)', stroke: 'rgba(239,74,79,.35)' });
+  el('line', { x1: x0, x2: x1, y1: Y(2397.5), y2: Y(2397.5), stroke: 'rgba(255,255,255,.6)', 'stroke-width': 1 });
+  const tag = (x, y, text, fill, color) => {
+    const tw = text.length * 6.2 + 18;
+    el('rect', { x: x - tw / 2, y: y - 11, width: tw, height: 22, rx: 7, fill });
+    const t = el('text', { x, y: y + 4, fill: color, 'font-size': 11, 'font-weight': 600, 'font-family': 'Inter', 'text-anchor': 'middle' });
+    t.textContent = text;
+  };
+  const ltag = (y, text, fill, color) => { const tw = text.length * 6.2 + 18; tag(x0 + 8 + tw / 2, y, text, fill, color); };
+  ltag(Y(2412) + 17, 'Target 2,412.00 · R:R 2.9', 'rgba(244,183,64,.92)', '#1d1405');
+  ltag(Y(2392.5) - 15, 'Stop 2,392.50', 'rgba(239,74,79,.85)', '#fff');
+
+  // candles
+  candles.forEach((k, i) => {
+    const up = k.c >= k.o, x = X(i), bw = slot * .58;
+    const col = up ? '#f4b740' : 'rgba(255,255,255,.42)';
+    el('line', { x1: x, x2: x, y1: Y(k.hi), y2: Y(k.lo), stroke: col, 'stroke-width': 1.2 });
+    const top = Y(Math.max(k.o, k.c)), h = Math.max(1.5, Math.abs(Y(k.o) - Y(k.c)));
+    el('rect', { x: x - bw / 2, y: top, width: bw, height: h, rx: 1.6, fill: up ? 'url(#up)' : 'url(#dn)',
+      stroke: up ? 'rgba(255,220,150,.6)' : 'rgba(255,255,255,.35)', 'stroke-width': .8 });
+  });
+
+  // liquidity sweep callout
+  const sx = X(32), sy = Y(2385.4);
+  el('circle', { cx: sx, cy: sy + 1, r: 9, fill: 'none', stroke: '#f4b740', 'stroke-width': 1.4, 'stroke-dasharray': '3 3' });
+  el('path', { d: `M ${sx + 9} ${sy + 6} Q ${sx + 40} ${sy + 26} ${sx + 64} ${sy + 22}`, fill: 'none', stroke: 'rgba(244,183,64,.8)', 'stroke-width': 1.2 });
+  tag(sx + 118, sy + 22, 'Liquidity sweep', '#1a1a1d', '#f4b740');
+
+  // hand-drawn projection arrow from last candle to target
+  const lx = X(N - 1), ly = Y(2404.85);
+  el('path', { d: `M ${lx + 10} ${ly - 8} C ${lx + 50} ${ly - 14}, ${lx + 78} ${Y(2408.6)}, ${lx + 104} ${Y(2410.9)}`,
+    fill: 'none', stroke: '#f4b740', 'stroke-width': 2.2, 'stroke-linecap': 'round', 'stroke-dasharray': '1 5', 'marker-end': 'url(#ah)' });
+
+  // current price line + axis tag
+  el('line', { x1: padL, x2: W - padR, y1: ly, y2: ly, stroke: 'rgba(244,183,64,.7)', 'stroke-width': 1, 'stroke-dasharray': '2 3' });
+  el('rect', { x: W - padR + 4, y: ly - 20, width: padR - 8, height: 40, rx: 7, fill: '#f4b740' });
+  let t = el('text', { x: W - padR / 2, y: ly - 4, fill: '#1d1405', 'font-size': 11.5, 'font-weight': 700, 'font-family': 'Inter', 'text-anchor': 'middle' });
+  t.textContent = '2,404.85';
+  t = el('text', { x: W - padR / 2, y: ly + 11, fill: 'rgba(29,20,5,.75)', 'font-size': 10.5, 'font-weight': 500, 'font-family': 'Inter', 'text-anchor': 'middle' });
+  t.textContent = '02:18';
+
+  // presenter's laser pointer on the last candle
+  const px = lx + 2, py = Y(candles[N - 1].hi) - 16;
+  el('circle', { cx: px, cy: py, r: 22, fill: 'url(#glow)', filter: 'url(#soft)' });
+  el('circle', { cx: px, cy: py, r: 5, fill: '#fff4d6', stroke: '#f4b740', 'stroke-width': 2 });
+  const g = el('g', {});
+  el('rect', { x: px - 100, y: py - 12, width: 74, height: 24, rx: 8, fill: '#f4b740' }, g);
+  const pt = el('text', { x: px - 63, y: py + 4, fill: '#1d1405', 'font-size': 11.5, 'font-weight': 600, 'font-family': 'Inter', 'text-anchor': 'middle' }, g);
+  pt.textContent = 'Marcus';
+  el('path', { d: `M ${px - 26} ${py} L ${px - 8} ${py}`, stroke: '#f4b740', 'stroke-width': 1.5 });
+})();
+</script>
+</body>
+</html>
